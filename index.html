@@ -28,25 +28,25 @@
 			        <!-- Links -->
 			        <ul class="navbar-nav mr-auto">
 			            <li class="nav-item active">
-			                <a class="nav-link" href="#">Home
+			                <a class="nav-link" href="#firstPage">Home
 			                    <span class="sr-only">(current)</span>
 			                </a>
 			            </li>
 			            <li class="nav-item">
-			                <a class="nav-link" href="#">About Me</a>
+			                <a class="nav-link" href="#aboutPage">About Me</a>
 			            </li>
 			            <li class="nav-item">
-			                <a class="nav-link" href="#">Pictures</a>
+			                <a class="nav-link" href="#photoPage">Pictures</a>
 			            </li>
 
 			            <!-- Dropdown -->
 			            <li class="nav-item dropdown">
 			                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hobies</a>
 			                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-			                    <a class="dropdown-item" href="#">Light Novels</a>
-			                    <a class="dropdown-item" href="#">Games</a>
-			                    <a class="dropdown-item" href="#">Mangas</a>
-			                    <a class="dropdown-item" href="#">Anime</a>
+			                    <a class="dropdown-item" href="#lightNovels">Light Novels</a>
+			                    <a class="dropdown-item" href="#Games">Games</a>
+			                    <a class="dropdown-item" href="#Manga">Manga</a>
+			                    <a class="dropdown-item" href="#Anime">Anime</a>
 			                </div>
 			            </li>
 
@@ -74,31 +74,56 @@
 			<div id="Main">
 				<!--Entrence page-->
 				<div id="firstPage">
-					<div>
-						<h1 id="Name">Nikola Veselinovic</h1>
-						<h3 id="ocupation">student/front end developer/OTAKU</h3>
+					<div class="containerMidMid">
+						<h1 id="NameFirstPage">Nikola Veselinovic</h1>
+						<h3 id="ocupationFirstPage">student/front end developer/OTAKU</h3>
 					</div>
 				</div>
+				<hr>
 				<!--/Entrence page-->
 				<!--About me-->
 				<div id="aboutPage">
-					<div class="TextBox" id="AboutMeText">
-						<h3>An IT student full of ideas.</h3>
-						<p>I am attending University of Belgrade, Faculty of Mathematics. At the time of making this web page i am attending as a third year student. I very pasionit about programing and i am very creative, i find that it goes well together for a front end developer. Recently i have been taking an intrest in machene learning and its integration with web apps, i am also very interested in internet security. I teand to be very friendly but i dont get close to others easily.
-						</p>
-					</div>
+					<div id="textAboutMeContainer">
+						<div id="AboutMeText">
+							<h4>An IT student full of ideas.</h4>
+							<p>I am attending University of Belgrade, Faculty of Mathematics. At the time of making this web page i am attending as a third year student. I very pasionit about programing and i am very creative, i find that it goes well together for a front end developer. Recently i have been taking an intrest in machene learning and its integration with web apps, i am also very interested in internet security. I teand to be very friendly but i dont get close to others easily.
+							</p>
+						</div>
+					</div>	
 					<div class="imageBox">
 						<img src="AboutMePhoto.jpg" id="AboutMeImage">
 					</div>
 				</div>
+				<hr>
 				<!--!About me-->
 				<!--Pictures-->
 				<div id="photoPage">
+					<img src="https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.0-9/13932670_1085329021559332_5089707604656416751_n.jpg?_nc_cat=0&oh=4933ed1d95968d43569334398f8db051&oe=5BE3991A" class="imagesPP" id="firstImage">
+					<img src="https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.0-9/12241393_917272855031617_3898674482890776345_n.jpg?_nc_cat=0&oh=fa75c71c12d8d76f9636ec915f28666f&oe=5BD85FA7" class="imagesPP" id="secondImage">
+					<img src="https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.0-9/10336710_718841278208110_1424248903707817224_n.jpg?_nc_cat=0&oh=102445f6180f643d1e6c695bdd654e6c&oe=5BB056C6" class="imagesPP" id="thirdImage">
+					<img src="https://scontent.fbeg1-1.fna.fbcdn.net/v/t1.0-9/12987156_1008068222618746_1686296390787828463_n.jpg?_nc_cat=0&oh=995610c59f2844fc78ca436a2d306599&oe=5BDCDBE3" class="imagesPP" id="forthImage">
 				</div>
+				<hr>
 				<!--!Pictures-->
 				<!--Hobies-->
 				<div id="hobiesPage">
+					<div id="lightNovels">
+						<p>Light Novels go here</p>
+					</div>
+					<hr>
+					<div id="Games">
+						<p>Games go here</p>
+					</div>
+					<hr>
+					<div id="Manga">
+						<p>Mangas go here</p>
+					</div>
+					<hr>
+					<div id="Anime">
+						<p>Anime go here</p>
+					</div>
 				</div>
+				<hr>
 				<!--!Hobies-->
 			</div>
 			<!--/Main-->
