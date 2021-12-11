@@ -13,7 +13,12 @@
     </title>
 </head>
 <body>
-	<button id="nvButton" class="f2 b bn b--none br-100 bg-transparent grow">Nikola Veselinović</button>
+	<div>
+		<button id="nvButton" class="f2 b bn b--none br-100 bg-transparent grow">Nikola Veselinović</button>
+		<button id="ngmusicButton" class="f2 b bn b--none br-100 bg-transparent grow" onclick="playMusic()">🔈</button>
+		<audio id="bgmusic" src="./music/kryptic-minds-code-46.mp3" loop>
+		</audio>
+	</div>
 	<div class="w-100">
 		<div class="w-100 bg-gray bb bw2 b--black-60 divide">
 		</div>
@@ -75,6 +80,11 @@
 		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b">
 			<text id="contactButtonText">
 				CONTACTS
+			</text>
+		</button>
+		<button id="hobbiesButton" class="b--none bg-transparent hobbiesButtonAnimation b">
+			<text id="hobbiesButtonText">
+				HOBBIES
 			</text>
 		</button>
 		<svg id="profileButton" class="profileButtonAnimation" width="690" height="682">
@@ -185,5 +195,7 @@
 			</a>
 		</svg>
 	</div>
+	<script src="functions.js">
+	</script>
 </body>
 </html>

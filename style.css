@@ -26,6 +26,12 @@ a{
 	left:3%;
 }
 
+#ngmusicButton{
+	position:absolute;
+	top:1%;
+	right:3%;
+}
+
 .projectsButtonAnimation{
 	animation-duration: 2.5s;
 	animation-name: slideInFromLeft;
@@ -122,6 +128,64 @@ a{
 }
 
 #contactButton:hover #contactButtonText{
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.hobbiesButtonAnimation{
+	animation-duration: 3s;
+	animation-name: slideInHobbies;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInHobbies {
+	0% {
+		transform: translateX(250%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+#hobbiesButton{
+	top: 50%;
+	right: 10%;
+	position: absolute;
+	z-index: 1;
+	width: 180px;
+	height: 120px;
+	background-image: url('images/hobbie.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#hobbiesButtonText{
+	opacity: 0;
+	font-size: 1.22em;
+	top: 14px;
+  	left: 46px;
+	transform: rotate(30deg);
+	transform-origin: 0 0;
+	position: absolute;
+	color: white;
+}
+
+#hobbiesButton:hover{
+	background-image: url('images/hobbie_green.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	-webkit-transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -o-transition: background-image 1s;
+    -ms-transition: background-image 1s;
+    transition: background-image 1s;
+}
+
+#hobbiesButton:hover #hobbiesButtonText{
 	opacity: 1;
 	-webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
