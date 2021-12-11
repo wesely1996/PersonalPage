@@ -16,9 +16,23 @@ a{
 
 .divide{
 	position: absolute;
-	top: 38%;
+	top: 53%;
 }
 
+#wallImg{
+	z-index: -2;
+	top: 0%;
+	width: 100%;
+	position: absolute;
+}
+
+#tableImg{
+	z-index: -1;
+	top: 53%;
+	width: 100%;
+	height: 47%;
+	position: absolute;
+}
 
 #nvButton{
 	position:absolute;
@@ -49,34 +63,44 @@ a{
 }
 
 #projectsButton{
-	top: 8%;
+	bottom: 13%;
 	left: 50%;
 	transform: translate(-50%,0);
 	position: absolute;
 	z-index: 1;
+	width: 35%;
+	min-height: 70%;
+	background-image: url('images/laptop.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 #projectsButtonText{
-	fill-opacity: 0;
+	opacity: 0;
+	color: black;
+	font-size: 2.5em;
+	top: 7%;
+	transform: translate(-50%,0);
+	position: absolute;
+	text-shadow: 3px 3px 5px #a8a8a8;
 }
 
-#projectButtonArea:hover #laptopFrame{
-	fill: #3D3D3D;
-	-webkit-transition: fill 1s;
-    -moz-transition: fill 1s;
-    -o-transition: fill 1s;
-    -ms-transition: fill 1s;
-    transition: fill 1s;
+#projectsButton:hover{
+	background-image: url('images/laptop_gray.png');
+	-webkit-transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -o-transition: background-image 1s;
+    -ms-transition: background-image 1s;
+    transition: background-image 1s;
 }
 
-#projectButtonArea:hover #projectsButtonText{
-	fill-opacity: 1;
-	text-shadow: 3px 3px 3px #a0a0a0;
-	-webkit-transition: fill-opacity 1s;
-    -moz-transition: fill-opacity 1s;
-    -o-transition: fill-opacity 1s;
-    -ms-transition: fill-opacity 1s;
-    transition: fill-opacity 1s;
+#projectsButton:hover #projectsButtonText{
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
 }
 
 .contactsButtonAnimation{
@@ -95,13 +119,13 @@ a{
 }
 
 #contactButton{
-	top: 50%;
+	bottom: 25%;
 	left: 10%;
 	position: absolute;
 	transform: translate(-50%,0);
 	z-index: 1;
-	width: 180px;
-	height: 120px;
+	min-width: 10%;
+	min-height: 20%;
 	background-image: url('images/mobile_phone.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -109,13 +133,13 @@ a{
 
 #contactButtonText{
 	opacity: 0;
-	font-size: 1.22em;
-	top: 14px;
-  	left: 46px;
-	transform: rotate(30deg);
+	font-size: 1.5em;
+	top: 20%;
+	transform: translate(-50%,0);
 	transform-origin: 0 0;
 	position: absolute;
 	color: white;
+	text-shadow: 3px 3px 5px #424242;
 }
 
 #contactButton:hover{
@@ -131,7 +155,6 @@ a{
 
 #contactButton:hover #contactButtonText{
 	opacity: 1;
-	text-shadow: 2px 2px 2px #929292;
 	-webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -155,12 +178,12 @@ a{
 }
 
 #hobbiesButton{
-	top: 43%;
+	bottom: 15%;
 	right: 5%;
 	position: absolute;
 	z-index: 1;
-	width: 300px;
-	height: 300px;
+	min-width: 18%;
+	min-height: 27%;
 	background-image: url('images/hobbie.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -168,13 +191,13 @@ a{
 
 #hobbiesButtonText{
 	opacity: 0;
-	font-size: 1.3em;
+	font-size: 1.7em;
 	top: 35%;
-  	left: 51%;
-	transform: rotate(-7deg);
+	transform: translate(-50%,0);
 	transform-origin: 0 0;
 	position: absolute;
 	color: white;
+	text-shadow: 3px 3px 5px #1b1b1b;
 }
 
 #hobbiesButton:hover{
@@ -190,7 +213,6 @@ a{
 
 #hobbiesButton:hover #hobbiesButtonText{
 	opacity: 1;
-	text-shadow: 2px 2px 2px #7c7c7c;
 	-webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -214,32 +236,42 @@ a{
 }
 
 #profileButton{
-	top: 30%;
+	bottom: 0%;
 	left: 50%;
 	transform: translate(-50%,0);
 	position: absolute;
-	z-index: 2;
+	z-index: 1;
+	min-width: 35%;
+	min-height: 50%;
+	background-image: url('images/hacker.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 #profileButtonText{
-	fill-opacity: 0;
+	opacity: 0;
+	color: rgb(255, 255, 255);
+	top:65%;
+	transform: translate(-50%,0);
+	position: absolute;
+	font-size: 2.5em;
+	text-shadow: 3px 3px 5px #646464;
 }
 
-#profileButtonArea:hover #hackerBody{
-	fill: #130a3a;
-	-webkit-transition: fill 1s;
-    -moz-transition: fill 1s;
-    -o-transition: fill 1s;
-    -ms-transition: fill 1s;
-    transition: fill 1s;
+#profileButton:hover{
+	background-image: url('images/hacker_purple.png');
+	-webkit-transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -o-transition: background-image 1s;
+    -ms-transition: background-image 1s;
+    transition: background-image 1s;
 }
 
-#profileButtonArea:hover #profileButtonText{
-	fill-opacity: 1;
-	text-shadow: 3px 3px 3px #747474;
-	-webkit-transition: fill-opacity 1s;
-    -moz-transition: fill-opacity 1s;
-    -o-transition: fill-opacity 1s;
-    -ms-transition: fill-opacity 1s;
-    transition: fill-opacity 1s;
+#profileButton:hover #profileButtonText{
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
 }
