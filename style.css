@@ -24,6 +24,7 @@ a{
 	position:absolute;
 	top:1%;
 	left:3%;
+	text-shadow: 2px 2px 2px #c2c2c2;
 }
 
 #ngmusicButton{
@@ -70,6 +71,7 @@ a{
 
 #projectButtonArea:hover #projectsButtonText{
 	fill-opacity: 1;
+	text-shadow: 3px 3px 3px #a0a0a0;
 	-webkit-transition: fill-opacity 1s;
     -moz-transition: fill-opacity 1s;
     -o-transition: fill-opacity 1s;
@@ -129,6 +131,7 @@ a{
 
 #contactButton:hover #contactButtonText{
 	opacity: 1;
+	text-shadow: 2px 2px 2px #929292;
 	-webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -152,12 +155,12 @@ a{
 }
 
 #hobbiesButton{
-	top: 50%;
-	right: 10%;
+	top: 43%;
+	right: 5%;
 	position: absolute;
 	z-index: 1;
-	width: 180px;
-	height: 120px;
+	width: 300px;
+	height: 300px;
 	background-image: url('images/hobbie.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -165,10 +168,10 @@ a{
 
 #hobbiesButtonText{
 	opacity: 0;
-	font-size: 1.22em;
-	top: 14px;
-  	left: 46px;
-	transform: rotate(30deg);
+	font-size: 1.3em;
+	top: 35%;
+  	left: 51%;
+	transform: rotate(-7deg);
 	transform-origin: 0 0;
 	position: absolute;
 	color: white;
@@ -187,6 +190,7 @@ a{
 
 #hobbiesButton:hover #hobbiesButtonText{
 	opacity: 1;
+	text-shadow: 2px 2px 2px #7c7c7c;
 	-webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
     -o-transition: opacity 1s;
@@ -232,6 +236,7 @@ a{
 
 #profileButtonArea:hover #profileButtonText{
 	fill-opacity: 1;
+	text-shadow: 3px 3px 3px #747474;
 	-webkit-transition: fill-opacity 1s;
     -moz-transition: fill-opacity 1s;
     -o-transition: fill-opacity 1s;
