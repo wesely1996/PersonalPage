@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('mainmenu').classList.remove("hide");
+    document.getElementById('loading').classList.add("hide");
+ }, false);
+
 var bgmusic = document.getElementById("bgmusic");
 bgmusic.volume = 0.2;
 
