@@ -90,7 +90,7 @@ a{
 }
 
 #projectsButton:hover{
-	background-image: url('images/laptop_gray.png');
+	background-image: url('./images/laptop_gray.png');
 	-webkit-transition: background-image 1s;
     -moz-transition: background-image 1s;
     -o-transition: background-image 1s;
@@ -147,7 +147,7 @@ a{
 }
 
 #contactButton:hover{
-	background-image: url('images/mobile_phone_red.png');
+	background-image: url('./images/mobile_phone_red.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	-webkit-transition: background-image 1s;
@@ -205,7 +205,7 @@ a{
 }
 
 #hobbiesButton:hover{
-	background-image: url('images/hobbie_green.png');
+	background-image: url('./images/hobbie_green.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	-webkit-transition: background-image 1s;
@@ -263,7 +263,7 @@ a{
 }
 
 #profileButton:hover{
-	background-image: url('images/hacker_purple.png');
+	background-image: url('./images/hacker_purple.png');
 	-webkit-transition: background-image 1s;
     -moz-transition: background-image 1s;
     -o-transition: background-image 1s;
