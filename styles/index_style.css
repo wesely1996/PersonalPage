@@ -30,6 +30,14 @@ a{
 	position: absolute;
 }
 
+#clipbord{
+	z-index: -1;
+	top: 1%;
+	right: 1.5%;
+	height: 45%;
+	position: absolute;
+}
+
 #tableImg{
 	z-index: -1;
 	top: 53%;
@@ -41,14 +49,15 @@ a{
 #nvButton{
 	position:absolute;
 	top:1%;
-	left:3%;
+	left:2%;
 	text-shadow: 2px 2px 2px #c2c2c2;
+	background-color: rgba(255, 255, 255, 0.6) ;
 }
 
 #ngmusicButton{
 	position:absolute;
-	top:1%;
-	right:3%;
+	top:3%;
+	right:2.2%;
 }
 
 .projectsButtonAnimation{
@@ -74,7 +83,7 @@ a{
 	z-index: 1;
 	width: 35%;
 	min-height: 70%;
-	background-image: url('images/laptop.png');
+	background-image: url('../images/laptop.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -90,7 +99,7 @@ a{
 }
 
 #projectsButton:hover{
-	background-image: url('./images/laptop_gray.png');
+	background-image: url('./../images/laptop_gray.png');
 	-webkit-transition: background-image 1s;
     -moz-transition: background-image 1s;
     -o-transition: background-image 1s;
@@ -123,21 +132,21 @@ a{
 }
 
 #contactButton{
-	bottom: 25%;
+	bottom: 7%;
 	left: 10%;
 	position: absolute;
 	transform: translate(-50%,0);
 	z-index: 1;
 	min-width: 10%;
 	min-height: 20%;
-	background-image: url('images/mobile_phone.png');
+	background-image: url('../images/mobile_phone.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 #contactButtonText{
 	opacity: 0;
-	font-size: 1.5em;
+	font-size: 2em;
 	top: 20%;
 	transform: translate(-50%,0);
 	transform-origin: 0 0;
@@ -147,7 +156,7 @@ a{
 }
 
 #contactButton:hover{
-	background-image: url('./images/mobile_phone_red.png');
+	background-image: url('./../images/mobile_phone_red.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	-webkit-transition: background-image 1s;
@@ -188,14 +197,14 @@ a{
 	z-index: 1;
 	min-width: 18%;
 	min-height: 27%;
-	background-image: url('images/hobbie.png');
+	background-image: url('../images/hobbie.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 #hobbiesButtonText{
 	opacity: 0;
-	font-size: 1.7em;
+	font-size: 2em;
 	top: 35%;
 	transform: translate(-50%,0);
 	transform-origin: 0 0;
@@ -205,7 +214,7 @@ a{
 }
 
 #hobbiesButton:hover{
-	background-image: url('./images/hobbie_green.png');
+	background-image: url('./../images/hobbie_green.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 	-webkit-transition: background-image 1s;
@@ -247,7 +256,7 @@ a{
 	z-index: 1;
 	min-width: 35%;
 	min-height: 50%;
-	background-image: url('images/hacker.png');
+	background-image: url('../images/hacker.png');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -263,7 +272,7 @@ a{
 }
 
 #profileButton:hover{
-	background-image: url('./images/hacker_purple.png');
+	background-image: url('./../images/hacker_purple.png');
 	-webkit-transition: background-image 1s;
     -moz-transition: background-image 1s;
     -o-transition: background-image 1s;
@@ -278,4 +287,99 @@ a{
     -o-transition: opacity 1s;
     -ms-transition: opacity 1s;
     transition: opacity 1s;
+}
+
+.photosButtonAnimation{
+	animation-duration: 3.5s;
+	animation-name: slideInPhotos;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInPhotos {
+	0% {
+		transform: translateX(-400%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+#photosButton{
+	bottom: 39%;
+	left: 19%;
+	padding: 0%;
+	position: absolute;
+	width: 12%;
+	height: 29%;
+	transform: translateX(-50%);
+	background-image: url('../images/deskPhotoFrame.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#photosButtonText{
+	opacity: 0;
+	color: rgb(255, 255, 255);
+	top:45%;
+	left: 50%;
+	transform: translate(-47%,-50%);
+	position: absolute;
+	font-size: 2em;
+	text-shadow: 3px 3px 5px #646464;
+}
+
+#photosButton:hover{
+	background-image: url('../images/deskPhotoFrame_blue.png');
+	-webkit-transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -o-transition: background-image 1s;
+    -ms-transition: background-image 1s;
+    transition: background-image 1s;
+}
+
+#photosButton:hover #photosButtonText{
+	opacity: 1;
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.polaroid{
+	width: 100%;
+	height: 100%;
+}
+
+#ciButton{
+	width: 5%;
+	height: 12%;
+	right: 14%;
+	top: 8%;
+	position: absolute;
+	padding: 0%;
+}
+
+#ciButton:hover #ciPhoto{
+	opacity: 1;
+	-webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    -ms-transition: opacity 2s;
+    transition: opacity 2s;
+}
+
+#ciPin{
+	width: 20%;
+	left: 40%;
+	top: 4%;
+	position: absolute;
+}
+
+.photo{
+	left:49%;
+	width: 85%;
+	top: 40%;
+	transform: translate(-50%,-50%);
+	position: absolute;
 }

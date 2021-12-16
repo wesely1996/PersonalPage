@@ -7,20 +7,22 @@
 		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="./styles/index_style.css">
+	<!-- preloading/prefetching assets that will be used in the page -->
 	<link rel="preload" as="image" href="./images/V3.gif">
-	<link rel="prefetch" as="image" href="./images/sound_on.png">
+	<link rel="prefetch" as="image" href="./images/sound_on.PNG">
 	<link rel="prefetch" as="image" href="./images/laptop_gray.png">
 	<link rel="prefetch" as="image" href="./images/mobile_phone_red.png">
 	<link rel="prefetch" as="image" href="./images/hobbie_green.png">
 	<link rel="prefetch" as="image" href="./images/hacker_purple.png">
+	<link rel="prefetch" as="image" href="./images/deskPhotoFrame_blue.png">
     <title> 
         Nikola Veselinović
     </title>
 </head>
 <body>
 	<div>
-		<button id="nvButton" class="f2 b bn b--none br-100 bg-white grow">Nikola Veselinović</button>
+		<button id="nvButton" class="f2 b bn b--none br-100 grow">Nikola Veselinović</button>
 		<button id="ngmusicButton" class="f2 b bn b--none br-100 bg-transparent grow" onclick="playMusic()">
 			<img id="musicImg" src="./images/sound_off.png" alt="🔈" height="35px"/>
 		</button>
@@ -34,14 +36,21 @@
 		<div class="w-100 bg-gray bb bw2 b--black-60 divide"></div>
 		<img id="wallImg" src="./images/white_brick_wall.png" alt=""/>
 		<img id="tableImg" src="./images/table.png" alt=""/>
+		<div>
+			<img id="clipbord" src="./images/corkboard.png" alt=""/>
+			<button id="ciButton" 
+			class=" bn b--none bg-transparent" 
+			onclick="window.open('https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2020-2021/13-chicken-invaders','_blank')">
+				<img class="polaroid" src="./images/polaroid.png" alt=""/>
+				<img id="ciPhoto" class="photo hide" src="./images/CI_copy.png" alt="Chicken Invaders Copy"/>
+				<img id="ciPin" src="./images/pin_3.png" alt=""/>
+			</button>
+		</div>
 		<button id="projectsButton" class="b--none bg-transparent projectsButtonAnimation b">
 			<text id="projectsButtonText">
 				PROJECTS
 			</text>
 		</button>
-		<div id="contactBuble">
-			<!-- TODO: Contact Bubble -->
-		</div>
 		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b">
 			<text id="contactButtonText">
 				CONTACTS
@@ -58,8 +67,13 @@
 				PROFILE
 			</text>
 		</button>
+		<button id="photosButton" class="b bn b--none bg-transparent photosButtonAnimation" >
+			<text id="photosButtonText">
+				PHOTOS
+			</text>
+		</button>
 	</div>
-	<script src="functions.js">
+	<script src="./src/index_functions.js">
 	</script>
 </body>
 </html>

@@ -13,7 +13,7 @@ function playMusic() {
         mb.alt = "🔈";
         bgmusic.pause();
     }else{
-        mb.src = "./images/sound_on.png";
+        mb.src = "./images/sound_on.PNG";
         mb.alt = "🔊";
         bgmusic.play();
     }
