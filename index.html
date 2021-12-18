@@ -11,11 +11,6 @@
 	<!-- preloading/prefetching assets that will be used in the page -->
 	<link rel="preload" as="image" href="./images/V3.gif">
 	<link rel="prefetch" as="image" href="./images/sound_on.PNG">
-	<link rel="prefetch" as="image" href="./images/laptop_gray.png">
-	<link rel="prefetch" as="image" href="./images/mobile_phone_red.png">
-	<link rel="prefetch" as="image" href="./images/hobbie_green.png">
-	<link rel="prefetch" as="image" href="./images/hacker_purple.png">
-	<link rel="prefetch" as="image" href="./images/deskPhotoFrame_blue.png">
     <title> 
         Nikola Veselinović
     </title>
@@ -24,7 +19,7 @@
 	<div>
 		<button id="nvButton" class="f2 b bn b--none br-100 grow">Nikola Veselinović</button>
 		<button id="ngmusicButton" class="f2 b bn b--none br-100 bg-transparent grow" onclick="playMusic()">
-			<img id="musicImg" src="./images/sound_off.png" alt="🔈" height="35px"/>
+			<img src="./images/sound_off.png" alt="🔈" height="35px"/>
 		</button>
 		<audio id="bgmusic" src="./music/kryptic-minds-code-46.mp3" loop>
 		</audio>
@@ -33,47 +28,81 @@
 		<img src="./images/V3.gif" style="top: 50%; left: 50%; position: absolute; transform: translate(-50%,-50%);">
 	</div>
 	<div id="mainmenu" class="w-100 hide">
-		<div class="w-100 bg-gray bb bw2 b--black-60 divide"></div>
 		<img id="wallImg" src="./images/white_brick_wall.png" alt=""/>
-		<img id="tableImg" src="./images/table.png" alt=""/>
+		<img id="deskImg" src="./images/wood_desk.png" alt=""/>
 		<div>
 			<img id="clipbord" src="./images/corkboard.png" alt=""/>
 			<button id="ciButton" 
 			class=" bn b--none bg-transparent" 
 			onclick="window.open('https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2020-2021/13-chicken-invaders','_blank')">
 				<img class="polaroid" src="./images/polaroid.png" alt=""/>
-				<img id="ciPhoto" class="photo hide" src="./images/CI_copy.png" alt="Chicken Invaders Copy"/>
+				<img id="ciPhoto" class="photo transitionOpacity" src="./images/CI_copy.png" alt="Chicken Invaders Copy"/>
+				<div id="ciText" class="photo transitionOpacity hide">Chicken Invaders Copy</div>
 				<img id="ciPin" src="./images/pin_3.png" alt=""/>
 			</button>
 		</div>
-		<button id="projectsButton" class="b--none bg-transparent projectsButtonAnimation b">
-			<text id="projectsButtonText">
+		<button id="projectsButton" class="b--none bg-transparent projectsButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/projects.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/laptop_gray.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/laptop.png" alt=""/>
+			<text id="projectsButtonText"
+			class="transitionOpacity">
 				PROJECTS
 			</text>
 		</button>
-		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b">
-			<text id="contactButtonText">
+		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b bgimgTransition">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/mobile_phone_red.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/mobile_phone.png" alt=""/>
+			<text id="contactButtonText"
+			class="transitionOpacity">
 				CONTACTS
 			</text>
 		</button>
-		<button id="hobbiesButton" class="b--none bg-transparent hobbiesButtonAnimation b">
-			<text id="hobbiesButtonText">
+		<button id="hobbiesButton" class="b--none bg-transparent hobbiesButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/hobbies.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/hobbie_green.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/hobbie.png" alt=""/>
+			<text id="hobbiesButtonText"
+			class="transitionOpacity">
 				HOBBIES
 			</text>
 		</button>
-		<button id="profileButton" class="b--none bg-transparent profileButtonAnimation b">
+		<button id="profileButton" class="b--none bg-transparent profileButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/profile.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/hacker_purple.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/hacker.png" alt=""/>
 			<text id="profileButtonText" 
+			class="transitionOpacity"
 			text-anchor="middle">
 				PROFILE
 			</text>
 		</button>
-		<button id="photosButton" class="b bn b--none bg-transparent photosButtonAnimation" >
-			<text id="photosButtonText">
+		<button id="photosButton" class="b bn b--none bg-transparent photosButtonAnimation bgimgTransition" 
+		onclick="window.open('./pages/photos.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/deskPhotoFrame_blue.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/deskPhotoFrame.png" alt=""/>
+			<text id="photosButtonText" class="transitionOpacity">
 				PHOTOS
 			</text>
 		</button>
+		<div id="businessCard" class="bg-white pa2 b d-flex flex-column justify-content-end bcAnimation">
+			<div class="d-flex flex-row w-100 justify-content-end flex-shrink">
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://www.linkedin.com/in/nikola-veselinovic-104778228/','_blank')">
+					<img src="./images/LinkedIn_logo_initials.png" alt="LinkedIn"/>
+				</button>
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://github.com/wesely1996','_blank')">
+					<img src="./images/github.png" alt="GitHub"/>
+				</button>
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://www.facebook.com/weselinowic/','_blank')">
+					<img src="./images/facebooklogo.png" alt="FaceBook"/>
+				</button>
+			</div>
+		</div>
 	</div>
-	<script src="./src/index_functions.js">
+	<script src="./functions/index_functions.js">
 	</script>
 </body>
 </html>
