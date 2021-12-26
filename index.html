@@ -50,7 +50,8 @@
 				PROJECTS
 			</text>
 		</button>
-		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b bgimgTransition">
+		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b bgimgTransition"
+		onclick="showContacts()">
 			<img class="fullBackImg slowTransitionOpacity" src="./images/mobile_phone_red.png" alt=""/>
 			<img class="fullImg transitionOpacity" src="./images/mobile_phone.png" alt=""/>
 			<text id="contactButtonText"
@@ -58,6 +59,8 @@
 				CONTACTS
 			</text>
 		</button>
+		<div id="contactBubble" class="hide">
+		</div>
 		<button id="hobbiesButton" class="b--none bg-transparent hobbiesButtonAnimation b bgimgTransition"
 		onclick="window.open('./pages/hobbies.html', '_self')">
 			<img class="fullBackImg slowTransitionOpacity" src="./images/hobbie_green.png" alt=""/>
