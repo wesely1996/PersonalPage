@@ -376,6 +376,19 @@ a{
 #ciButton{
 	right: 14%;
 	top: 8%;
+	transform: rotate(-4deg);
+}
+
+#sbButton{
+	right: 26%;
+	top: 16%;
+	transform: rotate(-15deg);
+}
+
+#ddButton{
+	right: 20%;
+	top: 25%;
+	transform: rotate(3deg);
 }
 
 .pinButton{
@@ -383,11 +396,6 @@ a{
 	height: 12%;
 	position: absolute;
 	padding: 0%;
-}
-
-#ddButton{
-	right: 20%;
-	top: 25%;
 }
 
 .pinText{
