@@ -391,6 +391,12 @@ a{
 	transform: rotate(3deg);
 }
 
+#pbButton{
+	right: 10%;
+	top: 25%;
+	/* transform: rotate(7deg); */
+}
+
 .pinButton{
 	width: 5%;
 	height: 12%;
