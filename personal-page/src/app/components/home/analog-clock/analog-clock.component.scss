@@ -1,0 +1,79 @@
+@use "../../../styles/theme.scss" as variables;
+
+.clock-container {
+  width: 230px;
+  height: 230px;
+  padding: 10px;
+  background: variables.$color-background-07;
+  border: 2px solid variables.$color-primary;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-container:hover {
+  box-shadow: 0px 0px 10px variables.$color-primary;
+}
+
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 2px solid variables.$color-primary;
+  border-radius: 50%;
+  position: relative;
+  background: transparent;
+  box-shadow: 0 0 5px variables.$color-primary;
+}
+
+.hand {
+  width: 50%;
+  height: 2px;
+  background: variables.$color-primary;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  transition: all 0.05s ease-in-out;
+  box-shadow: 0 0 5px variables.$color-primary;
+}
+
+.hand.hr {
+  height: 3px;
+  width: 35%;
+}
+
+.hand.min {
+  height: 2px;
+  width: 45%;
+}
+
+.hand.sec {
+  height: 1px;
+  width: 50%;
+  background: variables.$color-primary;
+  box-shadow: 0 0 10px variables.$color-primary;
+}
+
+.center-dot {
+  width: 10px;
+  height: 10px;
+  background: variables.$color-primary;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  box-shadow: 0 0 5px variables.$color-primary;
+}
+
+.tick {
+  position: absolute;
+  width: 4px;
+  height: 12px;
+  background: variables.$color-primary;
+  top: calc(50% - 5px);
+  left: calc(50% - 3px);
+  transform-origin: center;
+  box-shadow: 0 0 4px variables.$color-primary;
+  border-radius: 2px;
+}

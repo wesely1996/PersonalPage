@@ -1,0 +1,10 @@
+<div #dialog class="terminal-dialog">
+  <div class="terminal-header">
+    <span class="title">{{ title }}</span>
+    <button class="close-btn" (click)="close()">✖</button>
+  </div>
+  @if (component != null) { @switch (component) { @case ('app-web-browser') {
+  <app-web-browser [address]="componentData" style="height: 100%">
+  </app-web-browser>
+  } } }
+</div>

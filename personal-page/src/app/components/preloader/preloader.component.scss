@@ -1,0 +1,64 @@
+@use "../../styles/theme.scss" as variables;
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: variables.$color-background;
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  font-size: 1.5vw;
+  white-space: pre;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.preload-container {
+  max-width: 95vw;
+  min-width: 33vw;
+}
+
+@media (max-width: 1500px) {
+  .preloader {
+    font-size: 3vw;
+  }
+
+  .preload-container {
+    min-width: 70vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .preloader {
+    font-size: 4vw;
+  }
+
+  .preload-container {
+    left: 5vw;
+    right: 5vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .preloader {
+    font-size: 3vw;
+  }
+
+  .preload-container {
+    left: 5vw;
+    right: 5vw;
+  }
+}
+
+.cursor {
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,43 @@
+@use "../../styles/theme.scss" as variables;
+
+.terminal-dialog {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  bottom: 20%;
+  right: 20%;
+  background: variables.$color-background-09;
+  border: 2px solid variables.$color-primary;
+  border-radius: 5px;
+  font-family: variables.$font-terminal;
+  color: variables.$color-primary;
+  box-shadow: 0 0 15px variables.$color-primary;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.terminal-header {
+  background: variables.$color-background-09;
+  padding: 10px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 2px solid variables.$color-primary;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: variables.$color-primary;
+  font-size: variables.$font-base-size;
+  cursor: pointer;
+}
+
+.terminal-body {
+  flex-grow: 1;
+  padding: 15px;
+  overflow: auto;
+}

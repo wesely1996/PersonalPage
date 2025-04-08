@@ -1,0 +1,11 @@
+@use "../../styles/theme.scss" as variables;
+
+:host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; // Keeps it in the background
+  background: variables.$color-background;
+}

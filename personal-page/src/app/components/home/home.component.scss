@@ -1,0 +1,34 @@
+@use "../../styles/theme.scss" as variables;
+
+.home-app-container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background: variables.$color-background-08;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.home-app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  gap: variables.$base-gap;
+}

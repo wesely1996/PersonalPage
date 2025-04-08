@@ -1,0 +1,73 @@
+@use "../../styles/theme.scss" as variables;
+
+.nav-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 3rem;
+  padding: 5px 15px;
+  z-index: 100;
+  background: variables.$color-background-09;
+  border-radius: 15%;
+}
+
+button {
+  background: transparent;
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: variables.$color-primary;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+
+  &:hover {
+    color: variables.$color-hover;
+    opacity: 1;
+    font-weight: bold;
+    text-shadow: 0 0 5px variables.$color-hover, 0 0 10px variables.$color-hover;
+
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.active {
+    color: variables.$color-active;
+
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-container {
+    gap: 1rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}

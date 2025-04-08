@@ -1,0 +1,7 @@
+<app-background [backgroundState]="backgroundState"></app-background>
+@if (isLoading || !isFirstLoadingFinished) {
+<app-preloader (FirstLoadingFinished)="FirstLoadFinished()"></app-preloader>
+} @if (!isLoading && isFirstLoadingFinished){
+<app-navigation-bar></app-navigation-bar>
+<router-outlet />
+}

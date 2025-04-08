@@ -1,0 +1,11 @@
+<div class="game-container">
+  @if(!gameRunning){
+  <div class="game-title">
+    <h1>HACKER RUN GAME</h1>
+    <p>Current high score: {{ highScore }}</p>
+    <br />
+    <h2>Click to play</h2>
+  </div>
+  }
+  <canvas #gameCanvas width="500" height="250"></canvas>
+</div>

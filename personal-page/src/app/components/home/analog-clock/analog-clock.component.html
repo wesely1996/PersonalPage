@@ -1,0 +1,14 @@
+<div class="clock-container">
+  <div class="clock">
+    <div
+      class="tick"
+      *ngFor="let i of ticks"
+      [style.transform]="'rotate(' + i * 30 + 'deg) translateY(-90px)'"
+    ></div>
+
+    <div class="hand hr"></div>
+    <div class="hand min"></div>
+    <div class="hand sec"></div>
+    <div class="center-dot"></div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+@use "../../styles/theme.scss" as variables;
+
+.projects-component {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  bottom: 10%;
+  right: 10%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  background: variables.$color-background-08;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.projects-component-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  padding: 1rem;
+  gap: variables.$base-gap;
+}

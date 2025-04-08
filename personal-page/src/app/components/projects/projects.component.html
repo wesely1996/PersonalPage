@@ -1,0 +1,21 @@
+<div class="projects-component">
+  <div class="projects-component-container" *ngFor="let project of projects">
+    <app-project-selection-button
+      [projectName]="project.name"
+      (click)="openProject(project.id)"
+    >
+    </app-project-selection-button>
+  </div>
+</div>
+
+@if (selectedProject != null) {
+<app-terminal-dialog
+  [title]="selectedProject.name"
+  [component]="selectedProject.component"
+  [componentData]="selectedProject.link"
+  [width]="'100%'"
+  [height]="'100%'"
+  (closeDialogEvent)="closeDialog()"
+>
+</app-terminal-dialog>
+}
