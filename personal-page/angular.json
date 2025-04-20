@@ -30,6 +30,9 @@
               }
             ],
             "styles": ["src/styles.scss", "src/app/styles/theme.scss"],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/app"]
+            },
             "scripts": []
           },
           "configurations": {

@@ -3,8 +3,10 @@
     <span class="title">{{ title }}</span>
     <button class="close-btn" (click)="close()">✖</button>
   </div>
-  @if (component != null) { @switch (component) { @case ('app-web-browser') {
+  @if (component != null) { @switch (component) { @case ('web-browser') {
   <app-web-browser [address]="componentData" style="height: 100%">
   </app-web-browser>
+  } @case ('article') {
+  <app-article [address]="componentData" style="height: 100%"> </app-article>
   } } }
 </div>

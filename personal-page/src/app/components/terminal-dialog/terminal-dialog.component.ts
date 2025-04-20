@@ -9,11 +9,12 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WebBrowserComponent } from '../web-browser/web-browser.component';
+import { ArticleComponent } from '../article/article.component';
 
 @Component({
   selector: 'app-terminal-dialog',
   standalone: true,
-  imports: [CommonModule, WebBrowserComponent],
+  imports: [CommonModule, WebBrowserComponent, ArticleComponent],
   templateUrl: './terminal-dialog.component.html',
   styleUrls: ['./terminal-dialog.component.scss'],
 })

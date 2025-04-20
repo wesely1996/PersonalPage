@@ -2,6 +2,8 @@
   <div class="projects-component-container" *ngFor="let project of projects">
     <app-project-selection-button
       [projectName]="project.name"
+      [startDate]="project.yearStarted"
+      [endDate]="project.yearFinished ?? null"
       (click)="openProject(project.id)"
     >
     </app-project-selection-button>

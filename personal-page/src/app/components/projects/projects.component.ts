@@ -31,7 +31,13 @@ export class ProjectsComponent {
 
   ngOnInit() {
     this.http.get<Project[]>('json/projects.json').subscribe((data) => {
-      this.projects = data;
+      this.projects = data.sort((a, b) =>
+        a.yearStarted > b.yearStarted
+          ? -1
+          : b.yearStarted > a.yearStarted
+          ? 1
+          : 0
+      );
     });
   }
 

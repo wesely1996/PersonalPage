@@ -1,4 +1,4 @@
-@use "../../styles/theme.scss" as variables;
+@use "styles/theme.scss" as variables;
 
 .terminal-dialog {
   position: absolute;
@@ -9,15 +9,29 @@
   background: variables.$color-background-09;
   border: 2px solid variables.$color-primary;
   border-radius: 5px;
+  padding: 10px;
   font-family: variables.$font-terminal;
   color: variables.$color-primary;
   box-shadow: 0 0 15px variables.$color-primary;
   display: flex;
   flex-direction: column;
   z-index: 1000;
+
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .terminal-header {
+  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   background: variables.$color-background-09;
   padding: 10px;
   cursor: grab;

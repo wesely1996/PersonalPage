@@ -1,0 +1,45 @@
+@use "styles/theme.scss" as variables;
+
+.article-content {
+  font-family: variables.$font-terminal;
+  padding: 1rem;
+  color: #e0e0e0;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: variables.$color-primary;
+    border-bottom: 1px solid #333;
+  }
+
+  a {
+    color: rgba(255, 0, 0, 0.6);
+    text-decoration: underline;
+  }
+
+  code {
+    background: #222;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+
+  pre {
+    background: #111;
+    padding: 1rem;
+    overflow: auto;
+    border-radius: 5px;
+  }
+
+  blockquote {
+    border-left: 4px solid #555;
+    padding-left: 1rem;
+    color: #aaa;
+  }
+
+  ul,
+  ol {
+    padding-left: 2rem;
+  }
+}

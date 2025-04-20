@@ -4,7 +4,7 @@
     "name": "Personal Page (Legacy)",
     "yearStarted": 2021,
     "yearFinished": 2022,
-    "component": "app-web-browser",
+    "component": "web-browser",
     "link": "https://wesely1996.github.io/PersonalPage/"
   },
   {
@@ -12,22 +12,22 @@
     "name": "Wedding Invitation",
     "yearStarted": 2024,
     "yearFinished": 2024,
-    "component": "app-web-browser",
+    "component": "web-browser",
     "link": "https://vencanje-teodore-i-nikole.com/"
   },
   {
     "id": 3,
     "name": "Car Recommendation System",
     "yearStarted": 2024,
-    "component": "app-web-browser",
-    "link": "https://github.com/wesely1996/CarRecomendationSystem"
+    "component": "article",
+    "link": "https://raw.githubusercontent.com/wesely1996/CarRecomendationSystem/refs/heads/main/README.md"
   },
   {
     "id": 4,
     "name": "Prison Break (Game)",
     "yearStarted": 2022,
     "yearFinished": 2022,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/Platformer"
   },
   {
@@ -35,7 +35,7 @@
     "name": "Snowboarding (Game)",
     "yearStarted": 2022,
     "yearFinished": 2022,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/Snowboarding"
   },
   {
@@ -43,7 +43,7 @@
     "name": "Delivery Driver (Game)",
     "yearStarted": 2022,
     "yearFinished": 2022,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/Delivery-Driver"
   },
   {
@@ -51,7 +51,7 @@
     "name": "Mapper algorithm for Netflix data",
     "yearStarted": 2021,
     "yearFinished": 2021,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/mapper_algoritam_sa_Netflix_podatcima"
   },
   {
@@ -59,7 +59,7 @@
     "name": "Picture Blur chip",
     "yearStarted": 2020,
     "yearFinished": 2020,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/mi15200_ml13090_PictureBlur"
   },
   {
@@ -67,7 +67,7 @@
     "name": "Super Mario Neural Network Project",
     "yearStarted": 2019,
     "yearFinished": 2019,
-    "component": "app-web-browser",
+    "component": "article",
     "link": "https://github.com/wesely1996/SuperMarioANNProject"
   }
 ]
