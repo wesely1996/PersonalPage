@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-prod": "ng build -c production --base-href \"https://wesely1996.github.io/PersonalPage/\"",
+    "build-prod": "ng build --output-path ../docs --base-href /PersonalPage",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
