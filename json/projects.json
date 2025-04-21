@@ -5,7 +5,7 @@
     "yearStarted": 2021,
     "yearFinished": 2022,
     "component": "web-browser",
-    "link": "https://wesely1996.github.io/PersonalPage/"
+    "link": "./personal-page-legacy/index.html"
   },
   {
     "id": 2,

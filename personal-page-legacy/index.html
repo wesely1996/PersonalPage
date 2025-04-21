@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+		rel="stylesheet" 
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+	<link rel="stylesheet" href="./styles/index_style.css">
+	<!-- preloading/prefetching assets that will be used in the page -->
+	<link rel="preload" as="image" href="./images/V3.gif">
+	<link rel="prefetch" as="image" href="./images/sound_on.PNG">
+    <title> 
+        Nikola Veselinović
+    </title>
+</head>
+<body>
+	<div>
+		<button id="nvButton" class="f2 b bn b--none br-100 grow">Nikola Veselinović</button>
+	</div>
+	<div id="loading" class="w-100">
+		<img src="./images/V3.gif" style="top: 50%; left: 50%; position: absolute; transform: translate(-50%,-50%);">
+	</div>
+	<div id="mainmenu" class="w-100 hide">
+		<img id="wallImg" src="./images/white_brick_wall.png" alt=""/>
+		<img id="deskImg" src="./images/wood_desk.png" alt=""/>
+		<div>
+			<img id="clipbord" src="./images/corkboard.png" alt=""/>
+			<button id="ciButton" 
+			class="pinButton bn b--none bg-transparent" 
+			onclick="window.open('https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2020-2021/13-chicken-invaders','_blank')">
+				<img class="polaroid" src="./images/polaroid.png" alt=""/>
+				<img class="pinPhoto photo transitionOpacity" src="./images/CI_copy.png" alt="Chicken Invaders Copy"/>
+				<div class="pinText photo transitionOpacity hide">Chicken Invaders Copy</div>
+				<img class="pinPin" src="./images/pin_3.png" alt=""/>
+			</button>
+
+			<button id="ddButton" 
+			class="pinButton bn b--none bg-transparent" 
+			onclick="window.open('https://github.com/wesely1996/Delivery-Driver','_blank')">
+				<img class="polaroid" src="./images/polaroid.png" alt=""/>
+				<img class="pinPhoto photo transitionOpacity" src="./images/DeliveryDriver.png" alt="Delivery Driver"/>
+				<div class="pinText photo transitionOpacity hide">Delivery Driver</div>
+				<img class="pinPin" src="./images/pin_3.png" alt=""/>
+			</button>
+
+			<button id="sbButton" 
+			class="pinButton bn b--none bg-transparent" 
+			onclick="window.open('https://github.com/wesely1996/Snowboarding','_blank')">
+				<img class="polaroid" src="./images/polaroid.png" alt=""/>
+				<img class="pinPhoto photo transitionOpacity" src="./images/snowboarder.PNG" alt="Snowboarding"/>
+				<div class="pinText photo transitionOpacity hide">Snowboarding</div>
+				<img class="pinPin" src="./images/pin_3.png" alt=""/>
+			</button>
+			<button id="pbButton" 
+			class="pinButton bn b--none bg-transparent" 
+			onclick="window.open('https://github.com/wesely1996/Platformer','_blank')">
+				<img class="polaroid" src="./images/polaroid.png" alt=""/>
+				<img class="pinPhoto photo transitionOpacity" src="./images/PrisonBreak.PNG" alt="Snowboarding"/>
+				<div class="pinText photo transitionOpacity hide">Prison Break</div>
+				<img class="pinPin" src="./images/pin_3.png" alt=""/>
+			</button>
+		</div>
+		<button id="projectsButton" class="b--none bg-transparent projectsButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/projects.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/laptop_gray.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/laptop.png" alt=""/>
+			<text id="projectsButtonText"
+			class="transitionOpacity">
+				PROJECTS
+			</text>
+		</button>
+		<button id="contactButton" class="b--none bg-transparent contactsButtonAnimation b bgimgTransition"
+		onclick="showContacts()">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/mobile_phone_red.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/mobile_phone.png" alt=""/>
+			<text id="contactButtonText"
+			class="transitionOpacity">
+				CONTACTS
+			</text>
+		</button>
+		<div id="contactBubble" class="hide">
+		</div>
+		<button id="hobbiesButton" class="b--none bg-transparent hobbiesButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/hobbies.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/hobbie_green.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/hobbie.png" alt=""/>
+			<text id="hobbiesButtonText"
+			class="transitionOpacity">
+				HOBBIES
+			</text>
+		</button>
+		<button id="profileButton" class="b--none bg-transparent profileButtonAnimation b bgimgTransition"
+		onclick="window.open('./pages/profile.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/hacker_purple.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/hacker.png" alt=""/>
+			<text id="profileButtonText" 
+			class="transitionOpacity"
+			text-anchor="middle">
+				CV
+			</text>
+		</button>
+		<button id="photosButton" class="b bn b--none bg-transparent photosButtonAnimation bgimgTransition" 
+		onclick="window.open('./pages/photos.html', '_self')">
+			<img class="fullBackImg slowTransitionOpacity" src="./images/deskPhotoFrame_blue.png" alt=""/>
+			<img class="fullImg transitionOpacity" src="./images/deskPhotoFrame.png" alt=""/>
+			<text id="photosButtonText" class="transitionOpacity">
+				PHOTOS
+			</text>
+		</button>
+		<div id="businessCard" class="bg-white pa2 b d-flex flex-column justify-content-end bcAnimation">
+			<div class="d-flex flex-row w-100 justify-content-end flex-shrink">
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://www.linkedin.com/in/nikola-veselinovic-104778228/','_blank')">
+					<img src="./images/LinkedIn_logo_initials.png" alt="LinkedIn"/>
+				</button>
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://github.com/wesely1996','_blank')">
+					<img src="./images/github.png" alt="GitHub"/>
+				</button>
+				<button class="bn b--none bg-transparent cardIcons"
+				onclick="window.open('https://www.facebook.com/weselinowic/','_blank')">
+					<img src="./images/facebooklogo.png" alt="FaceBook"/>
+				</button>
+			</div>
+		</div>
+	</div>
+	<script src="./functions/index_functions.js">
+	</script>
+</body>
+</html>

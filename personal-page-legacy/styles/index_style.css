@@ -1,0 +1,503 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/white_brick_wall.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+a{
+	text-decoration: none;
+}
+
+.hide{
+	opacity: 0;
+}
+
+.transitionOpacity{
+	-webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.slowTransitionOpacity{
+	-webkit-transition: opacity 2s 1s;
+    -moz-transition: opacity 2s 1s;
+    -o-transition: opacity 2s 1s;
+    -ms-transition: opacity 2s 1s;
+    transition: opacity 2s 1s;
+}
+
+#wallImg{ 
+	z-index: -5;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 53%;
+	position: absolute;
+}
+
+#deskImg{
+	z-index: -4;
+	bottom: 0%;
+	left: 0%;
+	height: 47%;
+	width: 100%;
+	position: absolute;
+}
+
+#clipbord{
+	z-index: -1;
+	top: 1%;
+	right: 1.5%;
+	height: 45%;
+	position: absolute;
+}
+
+#nvButton{
+	position:absolute;
+	top:1%;
+	left:2%;
+	text-shadow: 2px 2px 2px #c2c2c2;
+	background-color: rgba(255, 255, 255, 0.6) ;
+}
+
+#ngmusicButton{
+	position:absolute;
+	top:5%;
+	right:2.4%;
+	transform: translateY(-50%);
+}
+
+.projectsButtonAnimation{
+	animation-duration: 2.5s;
+	animation-name: slideInFromLeft;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translate(-300%, -50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
+}
+
+#projectsButton{
+	top: 54%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+	z-index: 1;
+	width: 35%;
+	height: 66%;
+}
+
+#projectsButtonText{
+	opacity: 0;
+	color: black;
+	font-size: 2.5em;
+	top: 7%;
+	transform: translate(-50%,0);
+	position: absolute;
+	text-shadow: 3px 3px 5px #a8a8a8;
+}
+
+.bgimgTransition{
+	-webkit-transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -o-transition: background-image 1s;
+    -ms-transition: background-image 1s;
+    transition: background-image 1s;
+}
+
+#projectsButton:hover .fullImg{
+	opacity: 0;
+}
+
+#projectsButton:hover .fullBackImg{
+	opacity: 1;
+	-webkit-transition: opacity 0s;
+    -moz-transition: opacity 0s;
+    -o-transition: opacity 0s;
+    -ms-transition: opacity 0s;
+    transition: opacity 0s;
+}
+
+#projectsButton:hover #projectsButtonText{
+	opacity: 1;
+}
+
+.contactsButtonAnimation{
+	animation-duration: 3s;
+	animation-name: slideInPhone;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInPhone {
+	0% {
+		transform: translateX(-350%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+#contactButton{
+	bottom: 7%;
+	left: 10%;
+	position: absolute;
+	transform: translate(-50%,0);
+	z-index: 1;
+	width: 10%;
+	height: 16%;
+}
+
+#contactButtonText{
+	opacity: 0;
+	font-size: 2em;
+	top: 27%;
+	transform: translate(-50%,0);
+	transform-origin: 0 0;
+	position: absolute;
+	color: white;
+	text-shadow: 3px 3px 5px #424242;
+}
+
+#contactButton:hover .fullImg{
+	opacity: 0;
+}
+
+#contactButton:hover .fullBackImg{
+	opacity: 1;
+	-webkit-transition: opacity 0s;
+    -moz-transition: opacity 0s;
+    -o-transition: opacity 0s;
+    -ms-transition: opacity 0s;
+    transition: opacity 0s;
+}
+
+#contactButton:hover #contactButtonText{
+	opacity: 1;
+}
+
+.hobbiesButtonAnimation{
+	animation-duration: 3s;
+	animation-name: slideInHobbies;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInHobbies {
+	0% {
+		transform: translateX(250%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+#hobbiesButton{
+	bottom: 15%;
+	right: 5%;
+	position: absolute;
+	z-index: 1;
+	min-width: 18%;
+	min-height: 27%;
+}
+
+#hobbiesButtonText{
+	opacity: 0;
+	font-size: 2em;
+	top: 35%;
+	transform: translate(-50%,0);
+	transform-origin: 0 0;
+	position: absolute;
+	color: white;
+	text-shadow: 3px 3px 5px #1b1b1b;
+}
+
+#hobbiesButton:hover .fullImg{
+	opacity: 0;
+}
+
+#hobbiesButton:hover .fullBackImg{
+	opacity: 1;
+	-webkit-transition: opacity 0s;
+    -moz-transition: opacity 0s;
+    -o-transition: opacity 0s;
+    -ms-transition: opacity 0s;
+    transition: opacity 0s;
+}
+
+#hobbiesButton:hover #hobbiesButtonText{
+	opacity: 1;
+}
+
+.profileButtonAnimation{
+	animation-duration: 2.5s;
+	animation-name: slideInFromRight;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(130%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+#profileButton{
+	bottom: -13%;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 1;
+	min-width: 35%;
+	height: 65%;
+}
+
+#profileButtonText{
+	opacity: 0;
+	color: rgb(255, 255, 255);
+	top:60%;
+	transform: translate(-50%,0);
+	position: absolute;
+	font-size: 2.5em;
+	text-shadow: 3px 3px 5px #646464;
+}
+
+#profileButton:hover .fullImg{
+	opacity: 0;
+}
+
+#profileButton:hover .fullBackImg{
+	opacity: 1;
+	-webkit-transition: opacity 0s;
+    -moz-transition: opacity 0s;
+    -o-transition: opacity 0s;
+    -ms-transition: opacity 0s;
+    transition: opacity 0s;
+}
+
+#profileButton:hover #profileButtonText{
+	opacity: 1;
+}
+
+.photosButtonAnimation{
+	animation-duration: 3.5s;
+	animation-name: slideInPhotos;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInPhotos {
+	0% {
+		transform: translateX(-300%);
+	}
+	20% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+#photosButton{
+	bottom: 39%;
+	left: 19%;
+	padding: 0%;
+	position: absolute;
+	width: 12%;
+	height: 29%;
+	transform: translateX(-50%);
+}
+
+#photosButtonText{
+	opacity: 0;
+	color: rgb(255, 255, 255);
+	top:45%;
+	left: 50%;
+	transform: translate(-47%,-50%);
+	position: absolute;
+	font-size: 2em;
+	text-shadow: 3px 3px 5px #646464;
+}
+
+.fullImg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+
+.fullBackImg{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+}
+
+#photosButton:hover .fullImg{
+	opacity: 0;
+}
+
+#photosButton:hover .fullBackImg{
+	opacity: 1;
+	-webkit-transition: opacity 0s;
+    -moz-transition: opacity 0s;
+    -o-transition: opacity 0s;
+    -ms-transition: opacity 0s;
+    transition: opacity 0s;
+}
+
+#photosButton:hover #photosButtonText{
+	opacity: 1;
+}
+
+.polaroid{
+	width: 100%;
+	height: 100%;
+}
+
+#ciButton{
+	right: 14%;
+	top: 8%;
+	transform: rotate(-4deg);
+}
+
+#sbButton{
+	right: 26%;
+	top: 16%;
+	transform: rotate(-15deg);
+}
+
+#ddButton{
+	right: 20%;
+	top: 25%;
+	transform: rotate(3deg);
+}
+
+#pbButton{
+	right: 10%;
+	top: 25%;
+	/* transform: rotate(7deg); */
+}
+
+.pinButton{
+	width: 5%;
+	height: 12%;
+	position: absolute;
+	padding: 0%;
+}
+
+.pinText{
+	color: white;
+	text-shadow: 1px 1px 2px gray;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.pinButton:hover .pinPhoto{
+	opacity: 0;
+}
+
+.pinButton:hover .pinText{
+	opacity: 1;
+}
+
+.pinPin{
+	width: 20%;
+	left: 40%;
+	top: 4%;
+	position: absolute;
+}
+
+.photo{
+	left:49%;
+	width: 85%;
+	top: 40%;
+	transform: translate(-50%,-50%);
+	position: absolute;
+}
+
+.bcAnimation{
+	animation-duration: 4s;
+	animation-name: slideInBC;
+	animation-iteration-count: 1;
+}
+
+@keyframes slideInBC {
+	0% {
+		transform: translateX(-500%) rotate(0deg);
+	}
+	15% {
+		transform: translateX(-500%) rotate(0deg);
+	}
+	100% {
+		transform: translateX(0%) rotate(-10deg);
+	}
+}
+
+#businessCard{
+	position: absolute;
+	bottom: 27%;
+	left: 22%;
+	height: 7.5%;
+	width: 6%;
+	box-shadow: 4px 4px 9px rgb(71, 71, 71);
+	transform: rotate(-10deg);
+	background-image: url('../images/businessCard.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	padding: 0.1em;
+}
+
+.cardIcons{
+	margin: 2px;
+	padding: 0px;
+	width: 15%;
+}
+
+#contactBubble{
+	background-image: url("../images/speech_bubble.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 18%;
+	left: 7%;
+	z-index: 10;
+	font-size: 0.6em;
+	font-weight: bold;
+}
+
+#contactInfo{
+	margin: 4% 4% 22% 4%;
+}
+
+.contactsBubbleSize{
+	width: 180px;
+	height: 135px;
+}
+
+#contactsCloseButton{
+	position: absolute;
+	z-index: 11;
+	top: 6%;
+	right: 6%;
+	font-size: 1em;
+	font-weight: bolder;
+}
