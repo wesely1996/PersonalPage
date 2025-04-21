@@ -34,6 +34,7 @@
   right: 0;
   background: variables.$color-background-09;
   padding: 10px;
+  height: 28px;
   cursor: grab;
   display: flex;
   justify-content: space-between;
@@ -50,8 +51,12 @@
   cursor: pointer;
 }
 
-.terminal-body {
-  flex-grow: 1;
-  padding: 15px;
-  overflow: auto;
+.terminal-content {
+  position: fixed;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
 }

@@ -22,8 +22,8 @@ export class AppComponent implements OnInit {
   title = 'personal-page';
 
   isMobile = false;
-  isLoading = true; // TODO: this should be true
-  isFirstLoadingFinished = false; // TODO: this should be false
+  isLoading = false; // TODO: this should be true on production
+  isFirstLoadingFinished = true; // TODO: this should be false on production
 
   state = 'loading';
   backgroundState: string = 'matrix';
