@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./codex-shortcut.component.scss'],
 })
 export class CodexShortcutComponent {
-  avatarUrl: string = 'avatar.png';
+  avatarUrl: string = 'images/avatar.png';
   name: string = 'Nikola Veselinović';
   title: string = 'Software Development Engineer';
   degree: string = 'Bachelor in Computer Science';

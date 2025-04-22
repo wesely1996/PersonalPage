@@ -45,6 +45,11 @@
 }
 
 @media (max-width: 900px) {
+  .weather-container {
+    width: 230px;
+    height: 180px;
+  }
+
   .weather-title {
     font-size: variables.$font-title-size-small-screen;
   }

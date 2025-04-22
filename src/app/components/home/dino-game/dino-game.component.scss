@@ -26,3 +26,21 @@
   font-weight: bold;
   text-shadow: 0 0 3px variables.$color-primary;
 }
+
+@media (max-width: 600px) {
+  .game-container {
+    height: 200px;
+  }
+
+  h2 {
+    font-size: variables.$font-h4-size;
+  }
+
+  h3 {
+    font-size: variables.$font-h4-size;
+  }
+
+  br {
+    display: none;
+  }
+}

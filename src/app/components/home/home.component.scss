@@ -32,3 +32,10 @@
   padding: 1rem;
   gap: variables.$base-gap;
 }
+
+@media (max-width: 600px) {
+  .shortcut-container {
+    display: flex;
+    flex-direction: row;
+  }
+}

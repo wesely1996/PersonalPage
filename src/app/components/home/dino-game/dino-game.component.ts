@@ -197,6 +197,7 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   @HostListener('mousedown')
+  @HostListener('touchstart')
   onMouseDown() {
     if (!this.gameRunning) {
       this.resetGame();
@@ -208,6 +209,8 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   @HostListener('mouseup')
+  @HostListener('touchend')
+  @HostListener('touchcancel')
   onMouseUp() {
     this.jumpPressed = false;
     this.jumpCount++;
