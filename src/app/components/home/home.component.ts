@@ -17,6 +17,4 @@ import { DinoGameComponent } from './dino-game/dino-game.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-  @Input() isMobile: boolean = false;
-}
+export class HomeComponent {}

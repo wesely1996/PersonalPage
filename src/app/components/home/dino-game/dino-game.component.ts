@@ -8,6 +8,7 @@ import {
   OnDestroy,
   AfterViewInit,
   Component,
+  Inject,
 } from '@angular/core';
 
 @Component({
@@ -49,17 +50,17 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
   baseColor = '#00ff00';
   backgorundColor = 'rgba(0,0,0,0.6)';
 
-  constructor(private el: ElementRef) {}
+  constructor(@Inject(ElementRef) private el: ElementRef) {}
 
   ngOnInit() {
     document.addEventListener('click', this.handleDocumentClick);
     this.dinoImg.src = 'images/dino-player.png';
+    this.loadHighScore();
   }
 
   ngAfterViewInit() {
     this.ctx = this.canvasRef.nativeElement.getContext('2d')!;
-    this.resetGame();
-    this.startGame();
+    this.clearGame();
   }
 
   resetGame() {
@@ -82,10 +83,14 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   stopGame() {
+    this.clearGame();
+    this.saveScore();
+  }
+
+  clearGame() {
     this.gameRunning = false;
     cancelAnimationFrame(this.animationFrameId);
     clearInterval(this.scoreInterval);
-    this.saveScore();
   }
 
   loop = () => {
@@ -231,6 +236,11 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
     } else {
       this.highScore = +prev;
     }
+  }
+
+  loadHighScore() {
+    const prev = localStorage.getItem('dinoHighScore');
+    if (prev) this.highScore = +prev;
   }
 
   ngOnDestroy() {

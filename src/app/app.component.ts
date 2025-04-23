@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ScreenSizeService } from './services/screen-size.service';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
@@ -9,11 +8,11 @@ import { BackgroundComponent } from './components/background/background.componen
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet,
     PreloaderComponent,
     CommonModule,
     NavigationBarComponent,
     BackgroundComponent,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -21,20 +20,13 @@ import { BackgroundComponent } from './components/background/background.componen
 export class AppComponent implements OnInit {
   title = 'personal-page';
 
-  isMobile = false;
   isLoading = false; // TODO: this should be true on production
   isFirstLoadingFinished = true; // TODO: this should be false on production
 
   state = 'loading';
   backgroundState: string = 'matrix';
 
-  constructor(private screenSizeService: ScreenSizeService) {}
-
   ngOnInit() {
-    this.screenSizeService.isMobile$.subscribe((isMobile: boolean) => {
-      this.isMobile = isMobile;
-    });
-
     if (document.readyState === 'complete') {
       this.isLoading = false;
     } else {
