@@ -4,6 +4,7 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
 import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { SkipPreloadComponent } from './components/preloader/skip-preload/skip-preload.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { BackgroundComponent } from './components/background/background.componen
     NavigationBarComponent,
     BackgroundComponent,
     RouterOutlet,
+    SkipPreloadComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

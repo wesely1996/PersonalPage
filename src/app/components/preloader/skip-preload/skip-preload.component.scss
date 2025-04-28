@@ -1,0 +1,40 @@
+@use "styles/theme.scss" as variables;
+
+.skip-preload {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 100px;
+  z-index: 9999;
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  font-size: variables.$font-h2-size;
+}
+
+button {
+  background: transparent;
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  border: none;
+
+  animation: fadeIn 2s;
+
+  &:hover {
+    color: variables.$color-hover;
+    opacity: 1;
+    font-weight: bold;
+    text-shadow: 0 0 5px variables.$color-hover, 0 0 10px variables.$color-hover;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
