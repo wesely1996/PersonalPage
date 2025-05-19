@@ -11,4 +11,15 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 export class PdfViewerComponent {
   @Input() pdfUrl: string = '';
   zoom = 1;
+
+  download() {
+    const link = document.createElement('a');
+    link.href = this.pdfUrl;
+    link.download = this.getFileName(this.pdfUrl);
+    link.click();
+  }
+
+  private getFileName(url: string): string {
+    return url.split('/').pop() || 'download.pdf';
+  }
 }

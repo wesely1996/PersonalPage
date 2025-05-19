@@ -1,12 +1,17 @@
 <div class="pdf-wrapper">
-  <pdf-viewer
-    [src]="pdfUrl"
-    [render-text]="true"
-    [original-size]="false"
-    [fit-to-page]="true"
-    [show-all]="true"
-    [zoom]="zoom"
-    [autoresize]="true"
-    class="pdf-viewer"
-  ></pdf-viewer>
+  <div class="pdf-viewer">
+    <pdf-viewer
+      [autoresize]="true"
+      [src]="pdfUrl"
+      [original-size]="false"
+      [render-text]="false"
+      [show-all]="false"
+      style="display: block; position: relative; height: 100%; width: 100%"
+      [fit-to-page]="true"
+    >
+    </pdf-viewer>
+    <button class="download-button" (click)="download()">
+      <img src="icons/downloading.png" alt="DOWNLOAD" />
+    </button>
+  </div>
 </div>
