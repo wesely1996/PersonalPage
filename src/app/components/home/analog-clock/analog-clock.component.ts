@@ -18,9 +18,9 @@ export class AnalogClockComponent implements OnInit {
 
   updateClock(): void {
     const now = new Date();
-    const sec = now.getSeconds() * 6;
-    const min = now.getMinutes() * 6 + sec / 60;
-    const hr = ((now.getHours() % 12) / 12) * 360 + min / 12;
+    const sec = -90 + now.getSeconds() * 6;
+    const min = -90 + now.getMinutes() * 6 + sec / 60;
+    const hr = -90 + (now.getHours() % 12) * 30 + min / 12;
 
     const secHand = document.querySelector('.hand.sec') as HTMLElement;
     const minHand = document.querySelector('.hand.min') as HTMLElement;
