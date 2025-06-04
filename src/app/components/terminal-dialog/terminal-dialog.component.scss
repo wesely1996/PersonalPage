@@ -6,10 +6,9 @@
   left: 20%;
   bottom: 20%;
   right: 20%;
-  background: variables.$color-background-09;
+  background: variables.$color-background;
   border: 2px solid variables.$color-primary;
   border-radius: 5px;
-  padding: 10px;
   font-family: variables.$font-terminal;
   color: variables.$color-primary;
   box-shadow: 0 0 15px variables.$color-primary;
@@ -17,7 +16,7 @@
   flex-direction: column;
   z-index: 1000;
 
-  overflow: auto;
+  overflow: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
 
@@ -54,9 +53,23 @@
 .terminal-content {
   position: fixed;
   position: absolute;
+
   top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   padding: 5px;
+  width: 95%;
+  width: -webkit-calc(100% - 1rem);
+  width: -moz-calc(100% - 1rem);
+  width: calc(100% - 1rem);
+  height: 90%;
+  height: -webkit-calc(100% - 50px - 1rem);
+  height: -moz-calc(100% - 50px- 1rem);
+  height: calc(100% - 50px - 1rem);
+
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
