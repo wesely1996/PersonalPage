@@ -1,0 +1,36 @@
+.reveal-mask {
+  position: absolute;
+  top: 8vh;
+  left: 12.5vw;
+  width: 75vw;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  pointer-events: none;
+  z-index: 10;
+
+  @media (max-width: 1600px) {
+    left: 5vw;
+    width: 90vw;
+  }
+
+  @media (max-width: 900px) {
+    left: 0;
+    width: 100vw;
+  }
+}
+
+.reveal-box {
+  background: black;
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

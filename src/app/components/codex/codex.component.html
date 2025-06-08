@@ -1,3 +1,9 @@
 <app-pdf-viewer
   [pdfUrl]="'personal-page-legacy/CV_Nikola_Veselinovic_latest.pdf'"
 ></app-pdf-viewer>
+
+<div class="reveal-mask">
+  @for (box of grid; track box) {
+  <div class="reveal-box" [style.animation-delay.ms]="box.delay"></div>
+  }
+</div>
