@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./shortcut-button.component.scss'],
 })
 export class ShortcutButtonComponent {
+  @Input() image: string = 'project-folder-icon';
   @Input() text: string = '';
   @Input() src: string = '';
 }
