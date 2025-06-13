@@ -1,7 +1,13 @@
+@if(showComonent == "home"){
 <div class="archive-container">
-  <app-shortcut-button text="Projects" src="/projects"></app-shortcut-button>
+  <app-shortcut-button
+    text="Library"
+    (click)="showComponent('library')"
+    [noReroute]="true"
+  ></app-shortcut-button>
   <app-shortcut-button text="Projects" src="/projects"></app-shortcut-button>
   <app-shortcut-button text="Projects" src="/projects"></app-shortcut-button>
   <app-shortcut-button text="Projects" src="/projects"></app-shortcut-button>
   <app-shortcut-button text="Projects" src="/projects"></app-shortcut-button>
 </div>
+} @else if(showComonent == "library"){ <app-book-table></app-book-table> }

@@ -1,4 +1,4 @@
-<div class="shortcut-button" [routerLink]="src">
+<div class="shortcut-button" (click)="handleClick()">
   <img src="icons/{{ image }}.png" alt="Folder Icon" class="folder-icon" />
   <span class="text">{{ text }}</span>
 </div>
