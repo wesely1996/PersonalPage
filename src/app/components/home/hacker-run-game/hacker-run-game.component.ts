@@ -12,18 +12,20 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-dino-game',
+  selector: 'app-hacker-run-game',
   imports: [CommonModule],
-  templateUrl: './dino-game.component.html',
-  styleUrls: ['./dino-game.component.scss'],
+  templateUrl: './hacker-run-game.component.html',
+  styleUrls: ['./hacker-run-game.component.scss'],
 })
-export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
+export class HackerRunGameComponent
+  implements OnInit, AfterViewInit, OnDestroy
+{
   @ViewChild('gameCanvas', { static: true })
   canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private animationFrameId = 0;
 
-  dinoY = 0;
+  hackerY = 0;
   velocityY = 0;
   gravity = 0.6;
   jumping = false;
@@ -64,7 +66,7 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   resetGame() {
-    this.dinoY = 0;
+    this.hackerY = 0;
     this.velocityY = 0;
     this.jumping = false;
     this.jumpHoldTime = 0;
@@ -112,10 +114,10 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
       this.velocityY += this.gravity;
     }
 
-    this.dinoY += this.velocityY;
-    this.dinoY = Math.min(this.dinoY, this.groundLevel - 20); // Floor
-    if (this.dinoY === this.groundLevel - 20) this.jumpCount = 0;
-    this.dinoY = Math.max(this.dinoY, 0); // Ceiling
+    this.hackerY += this.velocityY;
+    this.hackerY = Math.min(this.hackerY, this.groundLevel - 20); // Floor
+    if (this.hackerY === this.groundLevel - 20) this.jumpCount = 0;
+    this.hackerY = Math.max(this.hackerY, 0); // Ceiling
 
     // Move ground obstacle
     this.obstacleX -= 5;
@@ -132,8 +134,8 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     // Collisions
-    const dinoBottom = this.dinoY + 20;
-    const dinoTop = this.dinoY;
+    const dinoBottom = this.hackerY + 20;
+    const dinoTop = this.hackerY;
 
     if (
       this.obstacleX < 40 &&
@@ -162,7 +164,7 @@ export class DinoGameComponent implements OnInit, AfterViewInit, OnDestroy {
     ctx.fillRect(0, 0, 500, 250);
 
     // Dino sprite
-    ctx.drawImage(this.dinoImg, 20, this.dinoY, 20, 20);
+    ctx.drawImage(this.dinoImg, 20, this.hackerY, 20, 20);
 
     this.drawGroundObstacle(ctx);
 

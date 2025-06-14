@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { WeatherComponent } from './weather/weather.component';
 import { ShortcutButtonComponent } from '../shortcut-button/shortcut-button.component';
 import { CodexShortcutComponent } from './codex-shortcut/codex-shortcut.component';
 import { AnalogClockComponent } from './analog-clock/analog-clock.component';
-import { DinoGameComponent } from './dino-game/dino-game.component';
+import { HackerRunGameComponent } from './hacker-run-game/hacker-run-game.component';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ import { DinoGameComponent } from './dino-game/dino-game.component';
     CodexShortcutComponent,
     ShortcutButtonComponent,
     AnalogClockComponent,
-    DinoGameComponent,
+    HackerRunGameComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
