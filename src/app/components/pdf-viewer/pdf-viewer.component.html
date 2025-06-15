@@ -1,11 +1,15 @@
-<div class="pdf-wrapper">
-  <div class="pdf-viewer">
+<div
+  class="pdf-wrapper"
+  [style.width]="wrapperWidth"
+  [style.height]="wrapperHeight"
+>
+  <div class="pdf-viewer" [style.width]="pdfWidth" [style.height]="pdfHeight">
     <pdf-viewer
       [autoresize]="true"
       [src]="pdfUrl"
       [original-size]="false"
       [render-text]="false"
-      [show-all]="false"
+      [show-all]="true"
       style="display: block; position: relative; height: 100%; width: 100%"
       [fit-to-page]="true"
     >

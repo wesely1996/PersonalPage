@@ -9,6 +9,16 @@
     </app-web-browser>
     } @case ('article') {
     <app-article [address]="componentData" style="height: 100%"> </app-article>
+    } @case ('pdf-viewer') {
+    <app-pdf-viewer
+      [pdfUrl]="componentData"
+      wrapperWidth="100%"
+      wrapperHeight="100%"
+      pdfWidth="100%"
+      pdfHeight="100%"
+      style="height: 100%; width: 100%"
+    >
+    </app-pdf-viewer>
     } } }
   </div>
 </div>

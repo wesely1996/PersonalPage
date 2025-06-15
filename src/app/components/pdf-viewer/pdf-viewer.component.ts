@@ -10,6 +10,10 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 })
 export class PdfViewerComponent {
   @Input() pdfUrl: string = '';
+  @Input() wrapperWidth: string = '100vw';
+  @Input() wrapperHeight: string = '90vh';
+  @Input() pdfWidth: string = '80%';
+  @Input() pdfHeight: string = '100%';
   zoom = 1;
 
   download() {

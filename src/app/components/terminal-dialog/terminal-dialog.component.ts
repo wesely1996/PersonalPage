@@ -10,11 +10,17 @@ import {
 import { CommonModule } from '@angular/common';
 import { WebBrowserComponent } from '../web-browser/web-browser.component';
 import { ArticleComponent } from '../article/article.component';
+import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-terminal-dialog',
   standalone: true,
-  imports: [CommonModule, WebBrowserComponent, ArticleComponent],
+  imports: [
+    CommonModule,
+    WebBrowserComponent,
+    ArticleComponent,
+    PdfViewerComponent,
+  ],
   templateUrl: './terminal-dialog.component.html',
   styleUrls: ['./terminal-dialog.component.scss'],
 })
