@@ -1,0 +1,22 @@
+[
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "status": { "type": "Reading", "current_chapter": "Chapter 5" },
+    "link": "https://example.com/1984"
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Sci-Fi",
+    "status": { "type": "Finished" }
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "status": { "type": "Paused", "last_chapter_read": "Chapter 7" },
+    "link": "https://example.com/the-hobbit"
+  }
+]
