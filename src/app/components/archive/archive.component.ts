@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { ShortcutButtonComponent } from '../shortcut-button/shortcut-button.component';
-import { BookTableComponent } from './book-table/book-table.component';
+import { WorkInProgressComponent } from '../work-in-progress/work-in-progress.component';
 
 @Component({
   selector: 'app-archive',
-  imports: [ShortcutButtonComponent, BookTableComponent],
+  imports: [WorkInProgressComponent],
   templateUrl: './archive.component.html',
   styleUrl: './archive.component.scss',
 })
