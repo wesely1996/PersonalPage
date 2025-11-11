@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1759862846910,
+  "timestamp": 1762872506955,
   "index": "https://wesely1996.github.io/PersonalPage/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "https://wesely1996.github.io/PersonalPage/chunk-L2HEV66R.js",
         "https://wesely1996.github.io/PersonalPage/chunk-NYZOWURK.js",
         "https://wesely1996.github.io/PersonalPage/index.html",
-        "https://wesely1996.github.io/PersonalPage/main-OIP4AGWF.js",
+        "https://wesely1996.github.io/PersonalPage/main-EDFJOVQW.js",
         "https://wesely1996.github.io/PersonalPage/manifest.webmanifest",
         "https://wesely1996.github.io/PersonalPage/polyfills-FFHMD2TL.js",
         "https://wesely1996.github.io/PersonalPage/styles-AVTS2G6W.css"
@@ -91,7 +91,22 @@
       "patterns": []
     }
   ],
-  "dataGroups": [],
+  "dataGroups": [
+    {
+      "name": "google-sheets-csv",
+      "patterns": [
+        "https:\\/\\/docs\\.google\\.com\\/spreadsheets\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 86400000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
   "hashTable": {
     "https://wesely1996.github.io/PersonalPage/chunk-ALIQTIYY.js": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
     "https://wesely1996.github.io/PersonalPage/chunk-BMBYILCS.js": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
@@ -125,8 +140,8 @@
     "https://wesely1996.github.io/PersonalPage/images/V3.gif": "976355e0797f0ed5e896eefe7c8f22a482d62241",
     "https://wesely1996.github.io/PersonalPage/images/avatar.png": "75a7f45dc8505241893f2a6e4d03d5bfe0a0511f",
     "https://wesely1996.github.io/PersonalPage/images/dino-player.png": "2969cc205d1be8b03d848b0c727eebb6d18c72bc",
-    "https://wesely1996.github.io/PersonalPage/index.html": "9c73ce7c815284e06091f815f22a94fa39520423",
-    "https://wesely1996.github.io/PersonalPage/main-OIP4AGWF.js": "8a73eb7c8e896142c0aeff9cf35e409b0ce78ff4",
+    "https://wesely1996.github.io/PersonalPage/index.html": "7f702a9c10df677321fb266373715e04e07e8167",
+    "https://wesely1996.github.io/PersonalPage/main-EDFJOVQW.js": "8e440e5772f194465f2551200b393a8661fc0c4b",
     "https://wesely1996.github.io/PersonalPage/manifest.webmanifest": "c1ada47f141241323ba1f198ab828205041cc1a2",
     "https://wesely1996.github.io/PersonalPage/personal-page-legacy/images/CI_copy.png": "bcc50f77bd028c6196d82109b46488dd593b8e55",
     "https://wesely1996.github.io/PersonalPage/personal-page-legacy/images/DeliveryDriver.png": "77d0f6cc4bf132a88cafae9dbd8a9d730174afc9",
