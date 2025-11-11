@@ -1,0 +1,20 @@
+<div class="cookbook">
+  <h2>Cookbook</h2>
+  <div class="grid">
+    <button *ngFor="let r of recipes" (click)="openRecipe(r)">
+      {{ r?.Name || r?.name || 'Recipe' }}
+    </button>
+  </div>
+
+  @if (selected) {
+    <app-terminal-dialog
+      [title]="selected?.Name || selected?.name || 'Recipe'"
+      [component]="'recipe'"
+      [componentData]="selected"
+      [width]="'80%'"
+      [height]="'80%'"
+      (closeDialogEvent)="closeDialog()"
+    ></app-terminal-dialog>
+  }
+</div>
+

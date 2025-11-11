@@ -26,5 +26,31 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "google-sheets-csv",
+      "urls": [
+        "https://docs.google.com/spreadsheets/**"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 10,
+        "maxAge": "1d",
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "codex-pdf",
+      "urls": [
+        "/personal-page-legacy/**/*.pdf"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 5,
+        "maxAge": "1d",
+        "timeout": "5s"
+      }
+    }
   ]
 }

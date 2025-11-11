@@ -1,0 +1,42 @@
+@use "styles/theme.scss" as variables;
+
+.data-table {
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 6px 10px;
+  background: variables.$color-background-07;
+  border: 1px solid variables.$color-primary;
+  color: variables.$color-primary;
+}
+
+.table-wrapper { flex: 1; overflow: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid variables.$color-primary;
+  padding: 6px 8px;
+}
+
+th {
+  cursor: pointer;
+}
+
+.empty { opacity: 0.7; }

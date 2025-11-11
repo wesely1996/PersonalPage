@@ -1,0 +1,34 @@
+<div class="data-table">
+  <div class="header">
+    <h2>{{ title }}</h2>
+    <input
+      type="text"
+      placeholder="Search..."
+      [(ngModel)]="query"
+      (ngModelChange)="applyFilter()"
+    />
+  </div>
+  <div class="table-wrapper" *ngIf="columns.length; else empty">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let col of columns" (click)="sortBy(col)">
+            {{ col }}
+            <span class="sort" *ngIf="sortKey === col">
+              {{ sortDir === 'asc' ? '▲' : '▼' }}
+            </span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of filtered">
+          <td *ngFor="let col of columns">{{ row[col] }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #empty>
+    <div class="empty">No data</div>
+  </ng-template>
+</div>
+

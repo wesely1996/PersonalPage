@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 import { WebBrowserComponent } from '../web-browser/web-browser.component';
 import { ArticleComponent } from '../article/article.component';
 import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
+import { RecipeDetailsComponent } from '../recipe-details/recipe-details.component';
 
 @Component({
   selector: 'app-terminal-dialog',
@@ -20,6 +21,7 @@ import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
     WebBrowserComponent,
     ArticleComponent,
     PdfViewerComponent,
+    RecipeDetailsComponent,
   ],
   templateUrl: './terminal-dialog.component.html',
   styleUrls: ['./terminal-dialog.component.scss'],

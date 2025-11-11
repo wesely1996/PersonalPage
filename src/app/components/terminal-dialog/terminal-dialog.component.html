@@ -19,6 +19,9 @@
       style="height: 100%; width: 100%"
     >
     </app-pdf-viewer>
+    } @case ('recipe') {
+    <app-recipe-details [data]="componentData" style="height: 100%">
+    </app-recipe-details>
     } } }
   </div>
 </div>

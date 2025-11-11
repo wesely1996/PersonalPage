@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { SkipPreloadComponent } from './components/preloader/skip-preload/skip-preload.component';
+import { environment } from '../environments/environment';
+import { ProjectsCacheService } from './services/projects-cache/projects-cache.service';
+import { CodexCacheService } from './services/codex-cache/codex-cache.service';
 
 @Component({
   selector: 'app-root',
@@ -22,19 +25,33 @@ import { SkipPreloadComponent } from './components/preloader/skip-preload/skip-p
 export class AppComponent implements OnInit {
   title = 'personal-page';
 
-  isLoading = false; // TODO: this should be true on production
-  isFirstLoadingFinished = true; // TODO: this should be false on production
+  isLoading = environment.isLoading;
+  isFirstLoadingFinished = environment.isFirstLoadingFinished;
 
   state = 'loading';
   backgroundState: string = 'matrix';
 
+  constructor(
+    private projectsCache: ProjectsCacheService,
+    private codexCache: CodexCacheService
+  ) {}
+
   ngOnInit() {
     if (document.readyState === 'complete') {
       this.isLoading = false;
+      // Prefetch projects in background to warm cache
+      setTimeout(() => {
+        this.projectsCache.prefetch();
+        this.codexCache.prefetch();
+      });
     } else {
       document.addEventListener('readystatechange', () => {
         if (document.readyState === 'complete') {
           this.isLoading = false;
+          setTimeout(() => {
+            this.projectsCache.prefetch();
+            this.codexCache.prefetch();
+          });
         }
       });
     }

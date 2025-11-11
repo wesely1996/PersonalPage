@@ -1,0 +1,26 @@
+<div class="recipe">
+  <h2>{{ data?.Name || data?.name }}</h2>
+
+  <div class="section" *ngIf="data?.Description">
+    <h3>Description</h3>
+    <p>{{ data.Description }}</p>
+  </div>
+
+  <div class="section" *ngIf="data?.Ingredients">
+    <h3>Ingredients</h3>
+    <pre>{{ data.Ingredients }}</pre>
+  </div>
+
+  <div class="section" *ngIf="data?.Steps">
+    <h3>Steps</h3>
+    <pre>{{ data.Steps }}</pre>
+  </div>
+
+  <div class="section others">
+    <h3>Details</h3>
+    <div class="kv" *ngFor="let entry of otherEntries">
+      <strong>{{ entry.key }}:</strong>
+      <span>{{ entry.value }}</span>
+    </div>
+  </div>
+</div>

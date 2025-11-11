@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-codex',
@@ -12,6 +13,7 @@ export class CodexComponent implements OnInit {
   rows = 10;
   cols = 10;
   totalDuration = 2000;
+  pdfUrl = environment.codexPdfUrl;
 
   ngOnInit(): void {
     const boxCount = this.rows * this.cols;

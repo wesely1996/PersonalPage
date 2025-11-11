@@ -1,0 +1,7 @@
+@use "styles/theme.scss" as variables;
+
+.recipe { color: variables.$color-primary; font-family: variables.$font-terminal; }
+.section { margin-bottom: 10px; }
+pre { white-space: pre-wrap; }
+.kv { margin: 2px 0; }
+

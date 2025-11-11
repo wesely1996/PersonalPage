@@ -1,4 +1,6 @@
-.archive-container {
+@use "styles/theme.scss" as variables;
+
+.archive-component {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,7 +8,21 @@
   width: 100%;
   height: 100%;
 
-  app-shortcut-button {
+  .archive-component-container {
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding: 1rem;
+    background-color: variables.$color-background-08;
+    gap: variables.$base-gap;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 10px;
+  }
+  app-archive-selection-button {
     margin: 10px;
   }
 }
