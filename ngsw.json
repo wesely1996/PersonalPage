@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1762872506955,
+  "timestamp": 1762874961162,
   "index": "https://wesely1996.github.io/PersonalPage/index.html",
   "assetGroups": [
     {
@@ -16,7 +16,7 @@
         "https://wesely1996.github.io/PersonalPage/chunk-L2HEV66R.js",
         "https://wesely1996.github.io/PersonalPage/chunk-NYZOWURK.js",
         "https://wesely1996.github.io/PersonalPage/index.html",
-        "https://wesely1996.github.io/PersonalPage/main-EDFJOVQW.js",
+        "https://wesely1996.github.io/PersonalPage/main-U7D2WNUC.js",
         "https://wesely1996.github.io/PersonalPage/manifest.webmanifest",
         "https://wesely1996.github.io/PersonalPage/polyfills-FFHMD2TL.js",
         "https://wesely1996.github.io/PersonalPage/styles-AVTS2G6W.css"
@@ -105,6 +105,20 @@
         "ignoreVary": true
       },
       "version": 1
+    },
+    {
+      "name": "codex-pdf",
+      "patterns": [
+        "\\/personal-page-legacy\\/(?:.+\\/)?[^/]*\\.pdf"
+      ],
+      "strategy": "freshness",
+      "maxSize": 5,
+      "maxAge": 86400000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
     }
   ],
   "hashTable": {
@@ -140,8 +154,8 @@
     "https://wesely1996.github.io/PersonalPage/images/V3.gif": "976355e0797f0ed5e896eefe7c8f22a482d62241",
     "https://wesely1996.github.io/PersonalPage/images/avatar.png": "75a7f45dc8505241893f2a6e4d03d5bfe0a0511f",
     "https://wesely1996.github.io/PersonalPage/images/dino-player.png": "2969cc205d1be8b03d848b0c727eebb6d18c72bc",
-    "https://wesely1996.github.io/PersonalPage/index.html": "7f702a9c10df677321fb266373715e04e07e8167",
-    "https://wesely1996.github.io/PersonalPage/main-EDFJOVQW.js": "8e440e5772f194465f2551200b393a8661fc0c4b",
+    "https://wesely1996.github.io/PersonalPage/index.html": "24db1b762f4a4b4bf512f9e856b28ff8fa4cb761",
+    "https://wesely1996.github.io/PersonalPage/main-U7D2WNUC.js": "1f76154be7a4cbc3edb558929ff9c3b58ebcf29b",
     "https://wesely1996.github.io/PersonalPage/manifest.webmanifest": "c1ada47f141241323ba1f198ab828205041cc1a2",
     "https://wesely1996.github.io/PersonalPage/personal-page-legacy/images/CI_copy.png": "bcc50f77bd028c6196d82109b46488dd593b8e55",
     "https://wesely1996.github.io/PersonalPage/personal-page-legacy/images/DeliveryDriver.png": "77d0f6cc4bf132a88cafae9dbd8a9d730174afc9",
