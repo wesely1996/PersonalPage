@@ -2,6 +2,11 @@
 $color-primary: rgba(0, 255, 0, 1); // Matrix green
 $color-hover: hsl(120, 100%, 60%);
 $color-active: rgba(0, 255, 0, 1);
+// Borders
+$border-width-default: 1px;
+$border-color-primary: $color-primary;
+$border-color-faint: rgba(0, 255, 0, 0.2);
+$border-none: 0;
 
 // Backgrounds
 $color-background: rgba(0, 0, 0, 1);
@@ -10,6 +15,8 @@ $color-background-08: rgba(0, 0, 0, 0.8);
 $color-background-07: rgba(0, 0, 0, 0.7);
 $color-background-05: rgba(0, 0, 0, 0.5);
 $transparent-background: rgba(0, 0, 0, 0);
+$panel-background: $color-background-05;
+$card-background: $color-background-08;
 
 // Fonts
 $font-terminal: "Courier New", monospace;
@@ -26,7 +33,22 @@ $font-p-size: 0.85rem;
 $font-p-size-small-screen: 0.7rem;
 $font-base-size: 1rem;
 $font-base-size-small-screen: 0.8rem;
+$font-weight-bold: 700;
 
 // Elements
 $base-gap: 0.5rem;
 $small-gap: 0.1rem;
+$container-padding: 1rem;
+$card-padding: 10px;
+$card-margin: 10px;
+$radius-card: 10px;
+$radius-panel: 10px;
+$shadow-soft: 0 0 12px rgba(0, 255, 0, 0.1);
+$shadow-text-strong: 0 0 10px rgba(0, 0, 0, 1), 0 0 28px rgba(0, 0, 0, 0.8);
+
+// Layout
+$layout-top-offset: 8vh;
+$layout-bottom-offset: 8vh;
+$layout-side-offset: 5vw;
+$layout-inset: 10%;
+$breakpoint-desktop: 900px;
