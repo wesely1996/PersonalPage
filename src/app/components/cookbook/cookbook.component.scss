@@ -1,6 +1,20 @@
 @use "styles/theme.scss" as variables;
 
-.cookbook { color: variables.$color-primary; font-family: variables.$font-terminal; }
-.grid { display: flex; flex-wrap: wrap; gap: 10px; }
-button { padding: 8px 12px; background: variables.$color-background-07; border: 1px solid variables.$color-primary; color: variables.$color-primary; cursor: pointer; }
+.cookbook {
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+}
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  background: variables.$color-background-07;
+  border: 1px solid variables.$color-primary;
+  color: variables.$color-primary;
+  cursor: pointer;
+}

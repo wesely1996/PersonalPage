@@ -1,59 +1,55 @@
 # PersonalPage
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
+Personal portfolio built with Angular to showcase both backend craftsmanship and frontend range. Includes project highlights, interactive media lists, and a polished landing experience.
 
-## Development server
+## Highlights
 
-To start a local development server, run:
+- Single-page Angular 19 app with standalone components and route-based sections (home, projects, blog-like articles, media libraries).
+- Content flexibility: renders Markdown articles (`ngx-markdown`), CSV-driven tables (`papaparse`), and PDF previews for the CV (`ng2-pdf-viewer`).
+- Responsive layout with SCSS, Angular CDK, and reusable UI primitives (navigation bar, shortcut buttons, terminal-style dialogs, background effects, preloaders).
+- PWA-ready setup via `@angular/service-worker` and `public/manifest.webmanifest` for offline-friendly builds.
+- Deployed to GitHub Pages with `angular-cli-ghpages`; configured base href for the hosted path.
 
-```bash
-ng serve
-```
+## Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Framework: Angular 19 (standalone), TypeScript, RxJS, Angular Router, Angular Service Worker.
+- UI: Angular CDK, custom SCSS styles, component-scoped styling.
+- Content handling: `ngx-markdown`, `marked`, `ng2-pdf-viewer`, `papaparse`, `date-fns` utilities.
+- Tooling: Angular CLI, Karma/Jasmine for unit tests, `angular-cli-ghpages` for publishing.
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- `src/app` - feature components, services, routing, and app config (standalone pattern).
+- `src/styles.scss` - global styling; component SCSS files live next to their templates.
+- `public/` - static assets, icons, and `manifest.webmanifest` for PWA metadata.
+- `src/app/app.routes.ts` - route definitions; `app.config.ts` - global providers and service worker setup.
+- Tests live alongside sources as `*.spec.ts`.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Getting Started
 
 ```bash
-ng build
+npm install
+npm start
+# then visit http://localhost:4200/
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Scripts
 
-## Running unit tests
+- `npm start` - Run dev server with HMR.
+- `npm run watch` - Incremental build in development mode.
+- `npm run build` - Production build to `dist/personal-page/`.
+- `npm run build-prod` - Production build and deploy to GitHub Pages.
+- `npm test` - Run unit tests with Karma/Jasmine.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Development Notes
 
-```bash
-ng test
-```
+- Prefer strongly typed APIs; avoid `any`. Use standalone components and keep templates focused.
+- Co-locate tests and styles with their components; extract presentational pieces as templates grow.
+- Review `ngsw-config.json` and `public/` assets if adjusting PWA or asset paths.
 
-## Running end-to-end tests
+## What This Demonstrates
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Frontend architecture with Angular standalone components and modular routing.
+- Data-driven UI (Markdown, CSV ingestion, PDF rendering) without a backend.
+- Build/deploy automation for static hosting and PWA readiness.
+- Testing discipline with Karma/Jasmine to validate UI logic.

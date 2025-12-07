@@ -1,10 +1,20 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CodexCacheService } from './services/codex-cache/codex-cache.service';
+import { ProjectsCacheService } from './services/projects-cache/projects-cache.service';
 
 describe('AppComponent', () => {
+  const projectsCacheStub = { prefetch: jasmine.createSpy('prefetch') };
+  const codexCacheStub = { prefetch: jasmine.createSpy('prefetch') };
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [RouterTestingModule, AppComponent],
+      providers: [
+        { provide: ProjectsCacheService, useValue: projectsCacheStub },
+        { provide: CodexCacheService, useValue: codexCacheStub },
+      ],
     }).compileComponents();
   });
 
@@ -20,10 +30,9 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('personal-page');
   });
 
-  it('should render title', () => {
+  it('should start with matrix background state', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, personal-page');
+    const app = fixture.componentInstance;
+    expect(app.backgroundState).toBe('matrix');
   });
 });

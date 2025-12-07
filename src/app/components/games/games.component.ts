@@ -7,15 +7,8 @@ import { WorkInProgressComponent } from '../work-in-progress/work-in-progress.co
   selector: 'app-games',
   standalone: true,
   imports: [DataTableComponent, WorkInProgressComponent],
-  template: `
-    <div>
-      <!-- <app-data-table [title]="'Games'" [csvUrl]="csv"></app-data-table> -->
-      <div class="absolute-position top-8vh flex-center-top">
-        <h1 class="text-center text-light mt-4">Games</h1>
-      </div>
-      <app-work-in-progress></app-work-in-progress>
-    </div>
-  `,
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.scss'],
 })
 export class GamesComponent {
   csv = environment.gamesCsvUrl;
