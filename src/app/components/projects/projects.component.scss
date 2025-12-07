@@ -2,17 +2,18 @@
 
 .projects-component {
   position: absolute;
-  top: 10%;
-  left: 10%;
-  bottom: 10%;
-  right: 10%;
-
+  top: variables.$layout-top-offset;
+  left: variables.$layout-side-offset;
+  right: variables.$layout-side-offset;
+  bottom: variables.$layout-bottom-offset;
+  padding: variables.$container-padding;
   display: flex;
   flex-wrap: wrap;
+  gap: variables.$card-margin;
   justify-content: center;
-  align-content: center;
-
-  background: variables.$color-background-08;
+  align-content: flex-start;
+  align-items: flex-start;
+  background: variables.$panel-background;
   overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -22,11 +23,19 @@
   }
 }
 
+.projects-component {
+  @media (min-width: variables.$breakpoint-desktop) {
+    align-content: center;
+    align-items: center;
+  }
+}
+
 .projects-component-container {
   display: flex;
   width: auto;
   height: auto;
   align-items: center;
-  padding: 1rem;
+  padding: 0;
   gap: variables.$base-gap;
+  flex: 0 0 auto;
 }

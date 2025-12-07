@@ -35,7 +35,7 @@
   background-color: variables.$color-background-05;
 
   &.error {
-    color: #ff6b6b;
+    color: variables.$color-error-red;
   }
 }
 
@@ -63,7 +63,8 @@
   background: variables.$card-background;
   border: variables.$border-width-default solid variables.$border-color-primary;
   box-shadow: variables.$shadow-soft;
-  color: #f5f5f5;
+  color: variables.$color-text-light;
+  min-width: 45%;
 }
 
 .blog-title {
@@ -74,11 +75,11 @@
 
 .blog-date {
   font-size: variables.$font-p-size;
-  color: rgba(255, 255, 255, 0.7);
+  color: variables.$color-text-muted;
   margin-bottom: 10px;
 }
 
-.blog-content {
+:host ::ng-deep .blog-content {
   line-height: 1.5;
   word-wrap: break-word;
 
@@ -97,12 +98,26 @@
   }
 
   a {
-    color: rgba(255, 0, 0, 0.7);
+    color: variables.$color-link-accent;
   }
 
   code {
-    background: #111;
+    background: variables.$color-code-surface;
     padding: 2px 4px;
     border-radius: 4px;
+  }
+
+  pre {
+    background: variables.$color-code-surface;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre;
+    margin: 0.75rem 0;
+  }
+
+  pre code {
+    display: block;
+    min-width: 100%;
   }
 }

@@ -2,27 +2,64 @@
 
 .archive-component {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
 
   .archive-component-container {
     display: flex;
-    width: auto;
-    height: auto;
+    flex-direction: row;
     align-items: center;
-    padding: 1rem;
-    background-color: variables.$color-background-08;
+    justify-content: center;
     gap: variables.$base-gap;
+    padding: 1rem;
+    margin: 0 8vw;
+    width: calc(100% - 16vw);
+    background-color: variables.$color-background-08;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   a {
     text-decoration: none;
     padding: 10px;
+    flex-shrink: 0;
   }
   app-archive-selection-button {
     margin: 10px;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .archive-component {
+    .archive-component-container {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (orientation: portrait), (max-width: 768px) {
+  .archive-component {
+    .archive-component-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: calc(100vh - 4rem);
+    }
+
+    a {
+      width: auto;
+    }
   }
 }

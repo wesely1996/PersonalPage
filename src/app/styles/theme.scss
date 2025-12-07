@@ -2,6 +2,11 @@
 $color-primary: rgba(0, 255, 0, 1); // Matrix green
 $color-hover: hsl(120, 100%, 60%);
 $color-active: rgba(0, 255, 0, 1);
+$color-text-light: #f5f5f5;
+$color-text-muted: rgba(255, 255, 255, 0.7);
+$color-link-accent: rgba(255, 0, 0, 0.7);
+$color-code-surface: #111;
+$color-error-red: #fa3535;
 // Borders
 $border-width-default: 1px;
 $border-color-primary: $color-primary;
