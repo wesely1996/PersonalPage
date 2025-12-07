@@ -25,6 +25,16 @@
   }
 }
 
+.terminal-dialog {
+  @media (max-width: variables.$breakpoint-desktop),
+    (max-height: variables.$breakpoint-desktop) {
+    top: variables.$layout-top-offset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 .terminal-header {
   position: fixed;
   position: absolute;

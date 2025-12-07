@@ -1,6 +1,5 @@
 <div class="cookbook">
-  <h2>Cookbook</h2>
-  <div class="grid">
+  <!-- <div class="grid">
     <button *ngFor="let r of recipes" (click)="openRecipe(r)">
       {{ r?.Name || r?.name || 'Recipe' }}
     </button>
@@ -15,6 +14,9 @@
       [height]="'80%'"
       (closeDialogEvent)="closeDialog()"
     ></app-terminal-dialog>
-  }
+  } -->
+  <div class="absolute-position top-8vh flex-center-top">
+    <h1 class="text-center text-light mt-4">Cookbook</h1>
+  </div>
+  <app-work-in-progress></app-work-in-progress>
 </div>
-

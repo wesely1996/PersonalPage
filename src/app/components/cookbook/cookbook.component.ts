@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { GoogleSheetsService } from '../../services/google-sheets/google-sheets-service.service';
 import { TerminalDialogComponent } from '../terminal-dialog/terminal-dialog.component';
 import { environment } from '../../../environments/environment';
+import { WorkInProgressComponent } from '../work-in-progress/work-in-progress.component';
 
 @Component({
   selector: 'app-cookbook',
   standalone: true,
-  imports: [CommonModule, TerminalDialogComponent],
+  imports: [CommonModule, TerminalDialogComponent, WorkInProgressComponent],
   templateUrl: './cookbook.component.html',
   styleUrl: './cookbook.component.scss',
 })

@@ -13,4 +13,13 @@ body {
 
 .top-8vh {
   top: 8vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.flex-center-top {
+  display: flex;
+  justify-content: center; // center horizontally
+  align-items: flex-start;
 }
