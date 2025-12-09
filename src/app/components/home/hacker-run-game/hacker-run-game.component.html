@@ -3,15 +3,16 @@
   <div class="game-title">
     <h1>HACKER RUN GAME</h1>
     <p>
-      Current high score:
-      @if(isLoadingHighScore){
+      Current high score: @if(isLoadingHighScore){
       <span>Loading...</span>
       } @else {
       <span>{{ highScoreName }} - {{ highScore }}</span>
       }
     </p>
     <br />
+    @if(!isLoadingHighScore){
     <h2>Click to play</h2>
+    }
   </div>
   }
   <canvas #gameCanvas width="500" height="250"></canvas>
