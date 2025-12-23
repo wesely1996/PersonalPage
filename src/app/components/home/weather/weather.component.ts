@@ -12,17 +12,34 @@ import { addHours } from 'date-fns';
 export class WeatherComponent implements OnInit {
   weatherData: any;
   apiKey: string = '536a50aa17e8463dbe0165247252903';
-  location: string = 'Belgrade'; // Change to user’s location if needed
+  location: string = 'Belgrade'; // Change to user's location if needed
+  private readonly locationStorageKey = 'app-weather-location';
 
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.location = position
-        ? `${position.coords.latitude},${position.coords.longitude}`
-        : 'Belgrade';
-    });
-    this.fetchWeather();
+    const cachedLocation = this.getCachedLocation();
+
+    if (cachedLocation) {
+      this.location = cachedLocation;
+      this.fetchWeather();
+      return;
+    }
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          this.location = position
+            ? `${position.coords.latitude},${position.coords.longitude}`
+            : this.location;
+          this.cacheLocation(this.location);
+          this.fetchWeather();
+        },
+        () => this.fetchWeather()
+      );
+    } else {
+      this.fetchWeather();
+    }
   }
 
   fetchWeather() {
@@ -36,6 +53,23 @@ export class WeatherComponent implements OnInit {
       this.http.get(url).subscribe((data) => {
         this.weatherData = data;
       });
+    }
+  }
+
+  private getCachedLocation(): string | null {
+    try {
+      return localStorage.getItem(this.locationStorageKey);
+    } catch {
+      return null;
+    }
+  }
+
+  private cacheLocation(location: string): void {
+    try {
+      localStorage.setItem(this.locationStorageKey, location);
+    } catch {
+      // If storage is unavailable, we still fetch using the current location.
+      return;
     }
   }
 }
