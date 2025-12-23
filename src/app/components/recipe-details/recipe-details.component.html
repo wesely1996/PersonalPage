@@ -1,26 +1,35 @@
-<div class="recipe">
-  <h2>{{ data?.Name || data?.name }}</h2>
+<div class="recipe" *ngIf="data; else missing">
+  <h2 class="recipe-title">{{ title }}</h2>
 
-  <div class="section" *ngIf="data?.Description">
-    <h3>Description</h3>
-    <p>{{ data.Description }}</p>
-  </div>
-
-  <div class="section" *ngIf="data?.Ingredients">
-    <h3>Ingredients</h3>
-    <pre>{{ data.Ingredients }}</pre>
-  </div>
-
-  <div class="section" *ngIf="data?.Steps">
-    <h3>Steps</h3>
-    <pre>{{ data.Steps }}</pre>
-  </div>
-
-  <div class="section others">
-    <h3>Details</h3>
-    <div class="kv" *ngFor="let entry of otherEntries">
-      <strong>{{ entry.key }}:</strong>
-      <span>{{ entry.value }}</span>
+  <div class="rating" *ngIf="rating">
+    <span class="label">Rating</span>
+    <div class="stars">
+      <span *ngFor="let filled of starSlots" [class.filled]="filled">&#9733;</span>
     </div>
   </div>
+
+  <div class="section" *ngIf="ingredients.length">
+    <h3>Ingredients</h3>
+    <div class="ingredients-table">
+      <div class="row header">
+        <span>Ingredient</span>
+        <span>Quantity</span>
+      </div>
+      <div class="row" *ngFor="let item of ingredients">
+        <span class="name">{{ item.name }}</span>
+        <span class="quantity">{{ item.quantity || '—' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section instructions" *ngIf="steps.length">
+    <h3>Instructions</h3>
+    <ol>
+      <li *ngFor="let step of steps">{{ step }}</li>
+    </ol>
+  </div>
 </div>
+
+<ng-template #missing>
+  <div class="empty">No recipe selected.</div>
+</ng-template>

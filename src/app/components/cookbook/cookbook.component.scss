@@ -1,20 +1,138 @@
 @use "styles/theme.scss" as variables;
 
 .cookbook {
+  height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: variables.$layout-top-offset;
   color: variables.$color-primary;
   font-family: variables.$font-terminal;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.panel {
+  width: 80vw;
+  max-width: 1100px;
+  background: variables.$color-background-08;
+  border: 1px solid variables.$color-primary;
+  border-radius: variables.$radius-panel;
+  box-shadow: 0 0 18px rgba(0, 255, 0, 0.25);
+  padding: 1.25rem;
 }
 
-button {
-  padding: 8px 12px;
-  background: variables.$color-background-07;
+.panel-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  h1 {
+    margin: 0;
+    font-size: variables.$font-title-size;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  input {
+    width: min(480px, 100%);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid variables.$color-primary;
+    background: variables.$color-background-07;
+    color: variables.$color-primary;
+    font-family: variables.$font-terminal;
+  }
+}
+
+.table-wrapper {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   border: 1px solid variables.$color-primary;
-  color: variables.$color-primary;
-  cursor: pointer;
+  border-radius: 8px;
+  background: variables.$color-background-09;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+
+  th,
+  td {
+    padding: 0.9rem 0.8rem;
+    border-bottom: 1px solid variables.$color-background-07;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  th {
+    font-size: variables.$font-h3-size;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid variables.$color-primary;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid variables.$color-background-07;
+  }
+
+  tr {
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  tbody tr:hover {
+    background: variables.$color-background-07;
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.8);
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.rating-col {
+  width: 140px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 4px;
+
+  span {
+    color: variables.$color-background-07;
+    text-shadow: none;
+    transition: color 0.15s ease;
+
+    &.filled {
+      color: variables.$color-primary;
+      text-shadow: 0 0 6px rgba(0, 255, 0, 0.4);
+    }
+  }
+}
+
+.empty {
+  text-align: center;
+  padding: 2rem 0;
+  opacity: 0.7;
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .panel {
+    width: 92vw;
+    padding: 1rem;
+  }
+
+  .table-wrapper {
+    max-height: none;
+  }
+
+  table th,
+  table td {
+    padding: 0.7rem;
+  }
 }

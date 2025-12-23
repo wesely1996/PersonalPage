@@ -34,10 +34,11 @@ describe('CookbookComponent', () => {
     fixture.detectChanges();
     expect(sheets.fetchBooksFromSheet).not.toHaveBeenCalled();
     expect(component.recipes).toEqual([]);
+    expect(component.filtered).toEqual([]);
   });
 
   it('should load recipes when csv url is configured', fakeAsync(() => {
-    const rows = [{ Name: 'Tomato Soup' }];
+    const rows = [{ Title: 'Tomato Soup', Rating: '3' }];
     environment.cookbookCsvUrl = 'https://example.com/cookbook.csv';
     sheets.fetchBooksFromSheet.and.returnValue(Promise.resolve(rows));
 
@@ -45,6 +46,23 @@ describe('CookbookComponent', () => {
     tick();
 
     expect(sheets.fetchBooksFromSheet).toHaveBeenCalledWith(environment.cookbookCsvUrl);
-    expect(component.recipes).toEqual(rows);
+    expect(component.recipes.length).toBe(1);
+    expect(component.recipes[0].title).toBe('Tomato Soup');
+    expect(component.recipes[0].rating).toBe(3);
+    expect(component.filtered.length).toBe(1);
   }));
+
+  it('should filter recipes by query', () => {
+    component.recipes = [
+      { title: 'Apple Pie', instructions: 'Bake', ingredients: '', rating: 5 },
+      { title: 'Tomato Soup', instructions: 'Simmer', ingredients: '', rating: 4 },
+    ];
+    component.applyFilter();
+    expect(component.filtered.length).toBe(2);
+
+    component.query = 'pie';
+    component.applyFilter();
+    expect(component.filtered.length).toBe(1);
+    expect(component.filtered[0].title).toBe('Apple Pie');
+  });
 });

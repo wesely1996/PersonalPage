@@ -1,7 +1,101 @@
 @use "styles/theme.scss" as variables;
 
-.recipe { color: variables.$color-primary; font-family: variables.$font-terminal; }
-.section { margin-bottom: 10px; }
-pre { white-space: pre-wrap; }
-.kv { margin: 2px 0; }
+.recipe {
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+  padding: 8px;
+}
 
+.recipe-title {
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 0.04em;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+
+  .label {
+    text-transform: uppercase;
+    font-size: variables.$font-p-size;
+    letter-spacing: 0.1em;
+  }
+}
+
+.stars {
+  display: inline-flex;
+  gap: 4px;
+
+  span {
+    color: variables.$color-background-07;
+    &.filled {
+      color: variables.$color-primary;
+      text-shadow: 0 0 6px rgba(0, 255, 0, 0.4);
+    }
+  }
+}
+
+.section {
+  margin-bottom: 1.5rem;
+
+  h3 {
+    margin: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: variables.$font-h3-size;
+  }
+}
+
+.ingredients-table {
+  border: 1px solid variables.$color-primary;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.75rem;
+    border-bottom: 1px solid variables.$color-background-07;
+    gap: 0.5rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .header {
+    background: variables.$color-background-07;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .name {
+    font-weight: 600;
+  }
+
+  .quantity {
+    text-align: left;
+  }
+}
+
+.section.instructions {
+  border: 1px solid variables.$color-background-07;
+  border-radius: 8px;
+}
+
+ol {
+  padding-left: 2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.7;
+}

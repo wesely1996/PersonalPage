@@ -19,26 +19,22 @@ describe('RecipeDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should return empty entries when data is missing', () => {
-    component.data = null as any;
-    expect(component.otherEntries).toEqual([]);
+  it('should parse ingredients into name and quantity pairs', () => {
+    component.data = { ingredients: 'eggs:2, milk:1 cup, sugar' };
+    expect(component.ingredients).toEqual([
+      { name: 'eggs', quantity: '2' },
+      { name: 'milk', quantity: '1 cup' },
+      { name: 'sugar', quantity: '' },
+    ]);
   });
 
-  it('should expose non-core fields via otherEntries', () => {
-    component.data = {
-      Name: 'Cake',
-      Description: 'Tasty',
-      Ingredients: 'Flour',
-      Steps: 'Mix',
-      PrepTime: '30m',
-      Servings: 4,
-    };
-    fixture.detectChanges();
-    const entries = component.otherEntries;
-    expect(entries).toEqual(jasmine.arrayContaining([
-      { key: 'PrepTime', value: '30m' },
-      { key: 'Servings', value: 4 },
-    ]));
-    expect(entries.find((e) => e.key === 'Name')).toBeUndefined();
+  it('should extract steps from newline separated text', () => {
+    component.data = { instructions: 'Step one\n\nStep two' };
+    expect(component.steps).toEqual(['Step one', 'Step two']);
+  });
+
+  it('should clamp rating between 0 and 5', () => {
+    component.data = { Rating: 8 };
+    expect(component.rating).toBe(5);
   });
 });

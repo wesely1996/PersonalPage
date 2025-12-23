@@ -13,5 +13,6 @@ export const environment = {
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vTP-z6WUTLlI8o8mO-QVkZ_n1A3fxyCYShPCnLpe89-5cnMIiPBq8x0uRUO8mie_4OPtrKxpyFdLTS4/pub?gid=678074887&single=true&output=csv',
   gamesCsvUrl: '',
   tvShowsCsvUrl: '',
-  cookbookCsvUrl: '',
+  cookbookCsvUrl:
+    'https://docs.google.com/spreadsheets/d/e/2PACX-1vTP-z6WUTLlI8o8mO-QVkZ_n1A3fxyCYShPCnLpe89-5cnMIiPBq8x0uRUO8mie_4OPtrKxpyFdLTS4/pub?gid=1102776021&single=true&output=csv',
 };

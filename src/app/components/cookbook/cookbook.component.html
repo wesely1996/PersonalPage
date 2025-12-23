@@ -1,22 +1,52 @@
 <div class="cookbook">
-  <!-- <div class="grid">
-    <button *ngFor="let r of recipes" (click)="openRecipe(r)">
-      {{ r?.Name || r?.name || 'Recipe' }}
-    </button>
+  <div class="panel">
+    <div class="panel-header">
+      <h1>Cookbook</h1>
+      <input
+        type="text"
+        placeholder="Search recipes by name or ingredients..."
+        [value]="query"
+        (input)="applyFilter(($any($event.target)).value)"
+      />
+    </div>
+
+    <div class="table-wrapper" *ngIf="filtered.length; else emptyState">
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th class="rating-col">Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let recipe of filtered" (click)="openRecipe(recipe)">
+            <td>{{ recipe.title }}</td>
+            <td>
+              <div class="stars">
+                <span
+                  *ngFor="let filled of getStars(recipe.rating); let i = index"
+                  [class.filled]="filled"
+                >
+                  &#9733;
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #emptyState>
+      <div class="empty">No recipes found.</div>
+    </ng-template>
   </div>
 
   @if (selected) {
-    <app-terminal-dialog
-      [title]="selected?.Name || selected?.name || 'Recipe'"
-      [component]="'recipe'"
-      [componentData]="selected"
-      [width]="'80%'"
-      [height]="'80%'"
-      (closeDialogEvent)="closeDialog()"
-    ></app-terminal-dialog>
-  } -->
-  <div class="absolute-position top-8vh flex-center-top">
-    <h1 class="text-center text-light mt-4">Cookbook</h1>
-  </div>
-  <app-work-in-progress></app-work-in-progress>
+  <app-terminal-dialog
+    [title]="selected?.title || 'Recipe'"
+    [component]="'recipe'"
+    [componentData]="selected"
+    (closeDialogEvent)="closeDialog()"
+  ></app-terminal-dialog>
+  }
 </div>
