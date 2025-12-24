@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { GoogleSheetsService } from '../../services/google-sheets/google-sheets-service.service';
+import { SearchInputComponent } from '../search-input/search-input.component';
 import { TerminalDialogComponent } from '../terminal-dialog/terminal-dialog.component';
 import { environment } from '../../../environments/environment';
 
@@ -15,7 +16,7 @@ type RecipeRow = {
 @Component({
   selector: 'app-cookbook',
   standalone: true,
-  imports: [CommonModule, TerminalDialogComponent],
+  imports: [CommonModule, SearchInputComponent, TerminalDialogComponent],
   templateUrl: './cookbook.component.html',
   styleUrl: './cookbook.component.scss',
 })

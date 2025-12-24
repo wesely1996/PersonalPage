@@ -12,7 +12,8 @@
 
 .panel {
   width: 80vw;
-  max-width: 1100px;
+  max-width: 1200px;
+  height: 100%;
   background: variables.$color-background-08;
   border: 1px solid variables.$color-primary;
   border-radius: variables.$radius-panel;
@@ -33,31 +34,13 @@
     text-align: center;
     letter-spacing: 0.04em;
   }
-
-  input {
-    width: min(480px, 100%);
-    padding: 0.6rem 0.8rem;
-    border-radius: 6px;
-    border: 1px solid variables.$color-primary;
-    background: variables.$color-background-07;
-    color: variables.$color-primary;
-    font-family: variables.$font-terminal;
-  }
 }
 
 .table-wrapper {
-  max-height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  max-height: 85%;
   border: 1px solid variables.$color-primary;
   border-radius: 8px;
   background: variables.$color-background-09;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 table {
@@ -95,7 +78,32 @@ table {
   }
 }
 
+tbody {
+  display: block;
+  max-height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
 .rating-col {
+  width: 140px;
+}
+
+tbody td:nth-child(2) {
   width: 140px;
 }
 
@@ -128,6 +136,10 @@ table {
   }
 
   .table-wrapper {
+    max-height: none;
+  }
+
+  tbody {
     max-height: none;
   }
 

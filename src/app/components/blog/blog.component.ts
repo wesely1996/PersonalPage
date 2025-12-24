@@ -4,6 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { marked } from 'marked';
 import { environment } from '../../../environments/environment';
 import { GoogleSheetsService } from '../../services/google-sheets/google-sheets-service.service';
+import { SearchInputComponent } from '../search-input/search-input.component';
 
 type BlogRow = Record<string, unknown>;
 
@@ -12,20 +13,23 @@ interface BlogPost {
   readonly title: string;
   readonly date: Date;
   readonly displayDate: string;
+  readonly content: string;
   readonly html: SafeHtml;
 }
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SearchInputComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.scss',
 })
 export class BlogComponent {
   posts: BlogPost[] = [];
+  filtered: BlogPost[] = [];
   loading = false;
   error: string | null = null;
+  query = '';
 
   constructor(
     private readonly sheets: GoogleSheetsService,
@@ -56,9 +60,11 @@ export class BlogComponent {
           if (dateDiff !== 0) return dateDiff;
           return this.compareIds(b.id, a.id);
         });
+      this.applyFilter();
     } catch (_err) {
       this.error = 'Failed to load blog posts.';
       this.posts = [];
+      this.filtered = [];
     } finally {
       this.loading = false;
     }
@@ -86,8 +92,24 @@ export class BlogComponent {
       title,
       date: parsedDate,
       displayDate: this.formatDate(parsedDate),
+      content,
       html: this.sanitizer.bypassSecurityTrustHtml(html),
     };
+  }
+
+  applyFilter(raw?: string) {
+    if (typeof raw === 'string') {
+      this.query = raw;
+    }
+    const q = (this.query ?? '').trim().toLowerCase();
+    if (!q) {
+      this.filtered = [...this.posts];
+      return;
+    }
+    this.filtered = this.posts.filter((post) => {
+      const haystack = `${post.title} ${post.content}`.toLowerCase();
+      return haystack.includes(q);
+    });
   }
 
   private formatDate(date: Date): string {

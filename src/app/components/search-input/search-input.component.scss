@@ -1,0 +1,17 @@
+@use "styles/theme.scss" as variables;
+
+.search-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  width: max(480px, 100%);
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid variables.$color-primary;
+  background: variables.$color-background-07;
+  color: variables.$color-primary;
+  font-family: variables.$font-terminal;
+}

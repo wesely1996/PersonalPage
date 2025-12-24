@@ -1,15 +1,31 @@
 <div class="blog">
-  <div class="state" *ngIf="loading">Loading blog posts...</div>
-  <div class="state error" *ngIf="!loading && error">{{ error }}</div>
-  <div class="state" *ngIf="!loading && !error && posts.length === 0">
-    No posts available yet.
+  <div class="blog-search">
+    <app-search-input
+      [placeholder]="'Search posts by title or content...'"
+      [value]="query"
+      (valueChange)="applyFilter($event)"
+    ></app-search-input>
   </div>
 
-  <div class="blog-grid" *ngIf="!loading && !error && posts.length">
-    <article class="blog-card" *ngFor="let post of posts">
-      <h2 class="blog-title">{{ post.title }}</h2>
-      <div class="blog-date">{{ post.displayDate }}</div>
-      <div class="blog-content" [innerHTML]="post.html"></div>
-    </article>
+  <div class="blog-body">
+    <div class="state" *ngIf="loading">Loading blog posts...</div>
+    <div class="state error" *ngIf="!loading && error">{{ error }}</div>
+    <div class="state" *ngIf="!loading && !error && posts.length === 0">
+      No posts available yet.
+    </div>
+    <div
+      class="state"
+      *ngIf="!loading && !error && posts.length && filtered.length === 0"
+    >
+      No posts match your search.
+    </div>
+
+    <div class="blog-grid" *ngIf="!loading && !error && filtered.length">
+      <article class="blog-card" *ngFor="let post of filtered">
+        <h2 class="blog-title">{{ post.title }}</h2>
+        <div class="blog-date">{{ post.displayDate }}</div>
+        <div class="blog-content" [innerHTML]="post.html"></div>
+      </article>
+    </div>
   </div>
 </div>

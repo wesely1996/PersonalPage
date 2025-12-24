@@ -2,12 +2,11 @@
   <div class="panel">
     <div class="panel-header">
       <h1>Cookbook</h1>
-      <input
-        type="text"
-        placeholder="Search recipes by name or ingredients..."
+      <app-search-input
+        [placeholder]="'Search recipes by name or ingredients...'"
         [value]="query"
-        (input)="applyFilter(($any($event.target)).value)"
-      />
+        (valueChange)="applyFilter($event)"
+      ></app-search-input>
     </div>
 
     <div class="table-wrapper" *ngIf="filtered.length; else emptyState">
