@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-archive',
+  standalone: true,
   imports: [ArchiveSelectionButtonComponent, RouterLink],
   templateUrl: './archive.component.html',
   styleUrl: './archive.component.scss',

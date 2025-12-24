@@ -8,6 +8,7 @@ import {
 
 @Component({
   selector: 'app-matrix-background',
+  standalone: true,
   templateUrl: './matrix-background.component.html',
   styleUrls: ['./matrix-background.component.scss'],
 })

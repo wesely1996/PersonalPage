@@ -33,6 +33,13 @@
   gap: variables.$base-gap;
 }
 
+.home-placeholder {
+  min-width: 240px;
+  min-height: 120px;
+  border-radius: 12px;
+  background: variables.$color-background-07;
+}
+
 @media (max-width: 600px) {
   .shortcut-container {
     display: flex;

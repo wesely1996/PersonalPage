@@ -19,6 +19,7 @@ import { ScreenSizeService } from '../../../services/screen-size/screen-size.ser
 
 @Component({
   selector: 'app-hacker-run-game',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './hacker-run-game.component.html',
   styleUrls: ['./hacker-run-game.component.scss'],
@@ -39,7 +40,7 @@ export class HackerRunGameComponent
 
   jumpPressed = false;
   jumpHeight = 0;
-  maxJumpHeight = 210;
+  maxJumpHeight = 180;
 
   obstacleX = 500;
   obstacleHeight = 20;

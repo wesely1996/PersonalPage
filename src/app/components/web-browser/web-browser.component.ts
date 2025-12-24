@@ -3,6 +3,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-web-browser',
+  standalone: true,
   imports: [],
   templateUrl: './web-browser.component.html',
   styleUrl: './web-browser.component.scss',

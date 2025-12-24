@@ -4,6 +4,7 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-codex',
+  standalone: true,
   templateUrl: './codex.component.html',
   styleUrl: './codex.component.scss',
   imports: [PdfViewerComponent],

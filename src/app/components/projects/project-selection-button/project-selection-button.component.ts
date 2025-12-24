@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-project-selection-button',
+  standalone: true,
   imports: [],
   templateUrl: './project-selection-button.component.html',
   styleUrl: './project-selection-button.component.scss',

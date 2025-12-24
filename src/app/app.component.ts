@@ -11,6 +11,7 @@ import { CodexCacheService } from './services/codex-cache/codex-cache.service';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
     PreloaderComponent,
     CommonModule,

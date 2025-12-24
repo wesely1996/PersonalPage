@@ -7,6 +7,7 @@ import { HackerRunGameComponent } from './hacker-run-game/hacker-run-game.compon
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [
     WeatherComponent,
     CodexShortcutComponent,

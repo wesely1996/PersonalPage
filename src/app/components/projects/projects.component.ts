@@ -6,6 +6,7 @@ import { ProjectsCacheService, Project } from '../../services/projects-cache/pro
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
   imports: [
     ProjectSelectionButtonComponent,
     TerminalDialogComponent,

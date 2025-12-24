@@ -1,7 +1,11 @@
 <div class="home-app-container">
   <div class="home-app">
     <app-analog-clock></app-analog-clock>
-    <app-weather></app-weather>
+    @defer (on idle) {
+      <app-weather></app-weather>
+    } @placeholder {
+      <div class="home-placeholder"></div>
+    }
     <app-codex-shortcut></app-codex-shortcut>
     <div class="shortcut-container">
       <app-shortcut-button
@@ -22,6 +26,10 @@
         image="cookbook"
       ></app-shortcut-button>
     </div>
-    <app-hacker-run-game></app-hacker-run-game>
+    @defer (on viewport) {
+      <app-hacker-run-game></app-hacker-run-game>
+    } @placeholder {
+      <div class="home-placeholder"></div>
+    }
   </div>
 </div>

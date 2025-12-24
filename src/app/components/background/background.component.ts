@@ -4,6 +4,7 @@ import { MatrixBackgroundComponent } from './matrix-background/matrix-background
 
 @Component({
   selector: 'app-background',
+  standalone: true,
   templateUrl: './background.component.html',
   imports: [CommonModule, MatrixBackgroundComponent],
   styleUrls: ['./background.component.scss'],

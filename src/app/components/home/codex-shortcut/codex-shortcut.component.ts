@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-codex-shortcut',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './codex-shortcut.component.html',
   styleUrls: ['./codex-shortcut.component.scss'],

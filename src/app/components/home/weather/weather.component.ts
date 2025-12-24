@@ -5,6 +5,7 @@ import { addHours } from 'date-fns';
 
 @Component({
   selector: 'app-weather',
+  standalone: true,
   templateUrl: './weather.component.html',
   imports: [CommonModule],
   styleUrls: ['./weather.component.scss'],

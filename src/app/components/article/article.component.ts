@@ -5,6 +5,7 @@ import { marked } from 'marked';
 
 @Component({
   selector: 'app-article',
+  standalone: true,
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss'],
 })
