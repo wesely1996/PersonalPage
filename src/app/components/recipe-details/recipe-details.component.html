@@ -1,6 +1,11 @@
 <div class="recipe" *ngIf="data; else missing">
   <h2 class="recipe-title">{{ title }}</h2>
 
+  <div class="categories" *ngIf="categories.length">
+    <span class="label">Categories</span>
+    <span class="values">{{ categories.join(', ') }}</span>
+  </div>
+
   <div class="rating" *ngIf="rating">
     <span class="label">Rating</span>
     <div class="stars">

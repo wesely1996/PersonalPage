@@ -3,7 +3,7 @@
     <div class="panel-header">
       <h1>Cookbook</h1>
       <app-search-input
-        [placeholder]="'Search recipes by name or ingredients...'"
+        [placeholder]="'Search recipes by name, ingredients, or category...'"
         [value]="query"
         (valueChange)="applyFilter($event)"
       ></app-search-input>
@@ -13,14 +13,55 @@
       <table>
         <thead>
           <tr>
-            <th>Title</th>
-            <th class="rating-col">Rating</th>
+            <th
+              class="sortable"
+              (click)="toggleSort('title')"
+              [attr.data-sort]="getSortIndicator('title')"
+            >
+              Title
+              <img
+                *ngIf="getSortIndicator('title') !== 'none'"
+                src="icons/arrow.png"
+                alt="^"
+                class="folder-icon sort-arrow"
+                [class.asc]="getSortIndicator('title') === 'asc'"
+              />
+            </th>
+            <th
+              class="category-col sortable"
+              (click)="toggleSort('categories')"
+              [attr.data-sort]="getSortIndicator('categories')"
+            >
+              Category
+              <img
+                *ngIf="getSortIndicator('categories') !== 'none'"
+                src="icons/arrow.png"
+                alt="^"
+                class="folder-icon sort-arrow"
+                [class.asc]="getSortIndicator('categories') === 'asc'"
+              />
+            </th>
+            <th
+              class="rating-col sortable"
+              (click)="toggleSort('rating')"
+              [attr.data-sort]="getSortIndicator('rating')"
+            >
+              Rating
+              <img
+                *ngIf="getSortIndicator('rating') !== 'none'"
+                src="icons/arrow.png"
+                alt="^"
+                class="folder-icon sort-arrow"
+                [class.asc]="getSortIndicator('rating') === 'asc'"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let recipe of filtered" (click)="openRecipe(recipe)">
             <td>{{ recipe.title }}</td>
-            <td>
+            <td class="category-col">{{ recipe.categories?.join(", ") }}</td>
+            <td class="rating-col">
               <div class="stars">
                 <span
                   *ngFor="let filled of getStars(recipe.rating); let i = index"

@@ -26,6 +26,21 @@
   }
 }
 
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+
+  .label {
+    text-transform: uppercase;
+    font-size: variables.$font-p-size;
+    letter-spacing: 0.1em;
+  }
+}
+
 .stars {
   display: inline-flex;
   gap: 4px;

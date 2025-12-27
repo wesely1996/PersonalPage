@@ -34,7 +34,12 @@ describe('RecipeDetailsComponent', () => {
   });
 
   it('should clamp rating between 0 and 5', () => {
-    component.data = { Rating: 8 };
+    component.data = { rating: 8 };
     expect(component.rating).toBe(5);
+  });
+
+  it('should split categories by comma', () => {
+    component.data = { categories: 'Dinner, Comfort Food' };
+    expect(component.categories).toEqual(['Dinner', 'Comfort Food']);
   });
 });

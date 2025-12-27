@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataTableComponent } from '../data-table/data-table.component';
+import { DataTableComponent } from '../common/data-table/data-table.component';
 import { environment } from '../../../environments/environment';
 import { WorkInProgressComponent } from '../work-in-progress/work-in-progress.component';
 

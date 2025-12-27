@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { GoogleSheetsService } from '../../services/google-sheets/google-sheets-service.service';
+import { GoogleSheetsService } from '../../../services/google-sheets/google-sheets-service.service';
 import { DataTableComponent } from './data-table.component';
 
 describe('DataTableComponent', () => {
@@ -18,6 +18,7 @@ describe('DataTableComponent', () => {
     fixture = TestBed.createComponent(DataTableComponent);
     component = fixture.componentInstance;
     component.csvUrl = 'https://example.com/data.csv';
+    component.columns = ['Name', 'Genre', 'Rating', 'Extra'];
   });
 
   it('should create', () => {
@@ -25,7 +26,7 @@ describe('DataTableComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should load rows and build ordered columns', fakeAsync(() => {
+  it('should load rows and populate filtered data', fakeAsync(() => {
     const rows = [
       { Name: 'Alpha', Genre: 'Action', Rating: '5', Extra: 'X' },
       { Name: 'Beta', Genre: 'Drama', Rating: '4', Extra: 'Y' },
@@ -37,7 +38,7 @@ describe('DataTableComponent', () => {
 
     expect(sheets.fetchBooksFromSheet).toHaveBeenCalledWith(component.csvUrl);
     expect(component.rows.length).toBe(2);
-    expect(component.columns).toEqual(['Name', 'Genre', 'Rating', 'Extra']);
+    expect(component.filtered.length).toBe(2);
   }));
 
   it('should filter and sort rows', fakeAsync(() => {
@@ -56,9 +57,10 @@ describe('DataTableComponent', () => {
     expect(component.filtered.length).toBe(1);
     expect(component.filtered[0]['Name']).toBe('Bravo');
 
-    component.sortBy('Name');
+    component.toggleSort('Name');
     expect(component.sortKey).toBe('Name');
-    component.sortBy('Name');
-    expect(component.sortDir).toBe('desc');
+    expect(component.sortDirection).toBe('desc');
+    component.toggleSort('Name');
+    expect(component.sortDirection).toBe('asc');
   }));
 });

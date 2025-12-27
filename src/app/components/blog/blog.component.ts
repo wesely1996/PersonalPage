@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { marked } from 'marked';
 import { environment } from '../../../environments/environment';
 import { GoogleSheetsService } from '../../services/google-sheets/google-sheets-service.service';
-import { SearchInputComponent } from '../search-input/search-input.component';
+import { SearchInputComponent } from '../common/search-input/search-input.component';
 
 type BlogRow = Record<string, unknown>;
 

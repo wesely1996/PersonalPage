@@ -1,0 +1,48 @@
+<div class="data-table">
+  <div class="panel" [style.width]="tableWidth" [style.height]="tableHeight">
+    <div class="panel-header">
+      <h1>{{ title }}</h1>
+      <app-search-input
+        [placeholder]="'Search...'"
+        [value]="query"
+        (valueChange)="applyFilter($event)"
+      ></app-search-input>
+    </div>
+
+    <div
+      class="table-wrapper"
+      *ngIf="filtered.length && columns.length; else empty"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th
+              *ngFor="let col of columns"
+              class="sortable"
+              (click)="toggleSort(col)"
+              [attr.data-sort]="getSortIndicator(col)"
+            >
+              {{ col }}
+              <img
+                *ngIf="getSortIndicator(col) !== 'none'"
+                src="icons/arrow.png"
+                alt="^"
+                class="folder-icon sort-arrow"
+                [class.asc]="getSortIndicator(col) === 'asc'"
+              />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of filtered">
+            <td *ngFor="let col of columns">{{ row[col] }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #empty>
+      <div class="empty">No data</div>
+    </ng-template>
+  </div>
+</div>

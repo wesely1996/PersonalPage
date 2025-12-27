@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { parseDelimitedList } from '../../helpers/parse-delimited-list';
 
 type Ingredient = { name: string; quantity: string };
 
@@ -14,30 +15,31 @@ export class RecipeDetailsComponent {
   @Input() data: any;
 
   get title(): string {
-    return this.data?.title ?? this.data?.Title ?? this.data?.Name ?? 'Recipe';
+    return this.data?.title ?? 'Recipe';
   }
 
   get rating(): number {
-    const value =
-      this.data?.Rating ??
-      this.data?.rating ??
-      this.data?.score ??
-      this.data?.Score ??
-      0;
+    const value = this.data?.rating ?? 0;
     const num = Number(value);
     if (Number.isNaN(num)) return 0;
     return Math.max(0, Math.min(5, Math.round(num)));
   }
 
+  get categories(): string[] {
+    return parseDelimitedList(this.data?.categories ?? '');
+  }
+
   get ingredients(): Ingredient[] {
-    const raw = this.data?.ingredients ?? this.data?.Ingredients ?? '';
+    const raw = this.data?.ingredients ?? '';
     if (!raw || typeof raw !== 'string') return [];
     return raw
       .split(',')
       .map((chunk: string) => chunk.trim())
       .filter(Boolean)
       .map((entry) => {
-        const [name, quantity] = entry.split(':').map((part) => part?.trim() || '');
+        const [name, quantity] = entry
+          .split(':')
+          .map((part) => part?.trim() || '');
         return {
           name: name || entry,
           quantity: quantity || '',
@@ -46,8 +48,7 @@ export class RecipeDetailsComponent {
   }
 
   get steps(): string[] {
-    const raw =
-      this.data?.instructions ?? this.data?.Instructions ?? this.data?.Steps ?? '';
+    const raw = this.data?.instructions ?? '';
     if (!raw) return [];
     return String(raw)
       .split(/\n+/)
