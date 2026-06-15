@@ -1,0 +1,462 @@
+@use "styles/theme.scss" as variables;
+
+// ---------------------------------------------------------------------
+// Keyframes
+// ---------------------------------------------------------------------
+
+@keyframes glitch-jitter {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-4px, 2px);
+  }
+  40% {
+    transform: translate(3px, -2px);
+  }
+  60% {
+    transform: translate(-2px, 1px);
+    clip-path: inset(10% 0 40% 0);
+  }
+  80% {
+    transform: translate(2px, -1px);
+    clip-path: inset(60% 0 5% 0);
+  }
+}
+
+@keyframes glitch-rgb-split {
+  0%,
+  100% {
+    text-shadow:
+      2px 0 rgba(255, 0, 0, 0.7),
+      -2px 0 rgba(0, 200, 255, 0.7);
+  }
+  50% {
+    text-shadow:
+      -4px 0 rgba(255, 0, 0, 0.7),
+      4px 0 rgba(0, 200, 255, 0.7);
+  }
+}
+
+@keyframes crt-mask-retract-top {
+  0%,
+  25% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes crt-mask-retract-bottom {
+  0%,
+  25% {
+    height: 50%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes crt-line-flash {
+  0% {
+    opacity: 0;
+    height: 2px;
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+  25% {
+    opacity: 1;
+    height: 4px;
+    box-shadow: 0 0 30px 10px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    opacity: 0;
+    height: 100%;
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+}
+
+@keyframes scanlines-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.15;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes open-book-spread {
+  from {
+    transform: scale(0.85) rotateX(8deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+// ---------------------------------------------------------------------
+// Layout shell
+// ---------------------------------------------------------------------
+
+.library {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: variables.$color-background;
+  font-family: variables.$font-terminal;
+}
+
+.library.body-lock .shelf-scroll {
+  overflow-y: hidden;
+}
+
+// ---------------------------------------------------------------------
+// Intro overlay: glitch -> black -> CRT power-on
+// ---------------------------------------------------------------------
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: variables.$color-background;
+}
+
+.intro-overlay.phase-glitch {
+  background: #050505;
+}
+
+.intro-overlay.phase-black {
+  background: #000;
+}
+
+.intro-overlay.phase-crt {
+  background: transparent;
+}
+
+.glitch-text {
+  font-size: 3rem;
+  font-weight: variables.$font-weight-bold;
+  letter-spacing: 0.5rem;
+  color: variables.$color-primary;
+  animation:
+    glitch-jitter 0.25s infinite,
+    glitch-rgb-split 0.25s infinite;
+}
+
+// Two black curtains that retract toward the top/bottom edges, revealing
+// the bookshelf scene behind the overlay from the center outward.
+.crt-mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #000;
+  z-index: 1;
+}
+
+.crt-mask-top {
+  top: 0;
+  height: 50%;
+  animation: crt-mask-retract-top 0.9s ease-in forwards;
+}
+
+.crt-mask-bottom {
+  bottom: 0;
+  height: 50%;
+  animation: crt-mask-retract-bottom 0.9s ease-in forwards;
+}
+
+.crt-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: variables.$color-primary;
+  z-index: 2;
+  animation: crt-line-flash 0.9s ease-in forwards;
+}
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06) 0px,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+  animation: scanlines-fade 0.9s ease-out forwards;
+}
+
+// ---------------------------------------------------------------------
+// Scene
+// ---------------------------------------------------------------------
+
+.library-scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shelf-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2rem variables.$layout-side-offset;
+  padding-top: calc(variables.$layout-top-offset + 2rem);
+  box-sizing: border-box;
+  scrollbar-color: variables.$color-primary variables.$color-background;
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .shelf-scroll {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.shelf-row {
+  margin-bottom: 2.5rem;
+}
+
+// ---------------------------------------------------------------------
+// Wooden shelf
+// ---------------------------------------------------------------------
+
+.shelf {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.shelf-books {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 12rem;
+  padding-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.shelf-plank {
+  position: absolute;
+  left: -1rem;
+  right: -1rem;
+  bottom: 0;
+  height: 1.25rem;
+  border-radius: 2px;
+  background-image:
+    url("/images/library/wood-plank.jpg"),
+    linear-gradient(to bottom, #8a5a32 0%, #6e4424 55%, #4a2c14 100%);
+  background-size: cover, cover;
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.08);
+}
+
+.shelf-plank::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.4rem;
+  height: 0.4rem;
+  background: #2e1a0c;
+  border-radius: 0 0 2px 2px;
+}
+
+// ---------------------------------------------------------------------
+// Book spines
+// ---------------------------------------------------------------------
+
+.book-spine {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 2.6rem;
+  height: 11rem;
+  padding: 0.75rem 0.25rem;
+  border-radius: 3px 3px 0 0;
+  background-image:
+    url("/images/library/leather.jpg"),
+    repeating-linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.07) 0px,
+      rgba(255, 255, 255, 0.07) 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px
+    );
+  background-size: cover, cover;
+  background-blend-mode: multiply, multiply;
+  box-shadow:
+    inset -4px 0 6px rgba(0, 0, 0, 0.35),
+    inset 4px 0 6px rgba(255, 255, 255, 0.08),
+    0 4px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: variables.$color-text-light;
+  font-family: variables.$font-terminal;
+  overflow: hidden;
+}
+
+.book-spine:hover,
+.book-spine:focus-visible {
+  transform: translateY(-6px) rotateZ(-1deg);
+  box-shadow:
+    inset -4px 0 6px rgba(0, 0, 0, 0.35),
+    inset 4px 0 6px rgba(255, 255, 255, 0.08),
+    0 10px 14px rgba(0, 0, 0, 0.6);
+}
+
+.spine-title {
+  font-size: 0.8rem;
+  font-weight: variables.$font-weight-bold;
+  letter-spacing: 0.05rem;
+  line-height: 1.1;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.spine-author {
+  font-size: 0.65rem;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+// ---------------------------------------------------------------------
+// Open book overlay
+// ---------------------------------------------------------------------
+
+.book-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+  animation: fade-in 0.2s ease;
+}
+
+.open-book {
+  display: flex;
+  width: min(90vw, 60rem);
+  max-height: 85vh;
+  background: #2b2b2b;
+  border-radius: variables.$radius-panel;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.8),
+    variables.$shadow-soft;
+  overflow: hidden;
+  animation: open-book-spread 0.35s ease-out;
+  transform-origin: center;
+}
+
+.page {
+  flex: 1 1 50%;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #efe6d2;
+  background-image: url("/images/library/paper.jpg");
+  background-size: cover;
+  color: #2b2418;
+  font-family: variables.$font-terminal;
+}
+
+.page-left {
+  border-right: 2px solid rgba(0, 0, 0, 0.25);
+  box-shadow: inset -12px 0 24px -12px rgba(0, 0, 0, 0.4);
+}
+
+.page-right {
+  box-shadow: inset 12px 0 24px -12px rgba(0, 0, 0, 0.4);
+}
+
+.page h2 {
+  margin-top: 0;
+  font-size: variables.$font-h2-size;
+}
+
+.page .author {
+  font-style: italic;
+  margin-top: -0.5rem;
+}
+
+.page .meta {
+  font-size: variables.$font-p-size;
+  margin: 0.25rem 0;
+}
+
+.stars {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.stars .filled {
+  color: #b8860b;
+}
+
+.synopsis {
+  line-height: 1.5;
+}
+
+.quote {
+  margin-top: 1.5rem;
+  font-style: italic;
+  border-left: 3px solid rgba(0, 0, 0, 0.3);
+  padding-left: 1rem;
+}
+
+.link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #4a2c14;
+  text-decoration: underline;
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .open-book {
+    flex-direction: column;
+    width: 92vw;
+    max-height: 90vh;
+  }
+
+  .page-left {
+    border-right: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 -12px 24px -12px rgba(0, 0, 0, 0.4);
+  }
+
+  .page-right {
+    box-shadow: inset 0 12px 24px -12px rgba(0, 0, 0, 0.4);
+  }
+}

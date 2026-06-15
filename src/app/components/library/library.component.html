@@ -1,7 +1,70 @@
-<div>
-  <!-- <app-data-table [title]="'Library'" [csvUrl]="csv"></app-data-table> -->
-  <div class="absolute-position top-8vh flex-center-top">
-    <h1 class="text-center text-light mt-4">Library</h1>
+<div class="library" [class.body-lock]="selectedBook">
+  <!-- Intro overlay: glitch -> black -> CRT power-on -->
+  <div
+    class="intro-overlay"
+    *ngIf="introPhase !== 'ready'"
+    [class.phase-glitch]="introPhase === 'glitch'"
+    [class.phase-black]="introPhase === 'black'"
+    [class.phase-crt]="introPhase === 'crt'"
+  >
+    <div class="glitch-text" *ngIf="introPhase === 'glitch'">LIBRARY</div>
+    <ng-container *ngIf="introPhase === 'crt'">
+      <div class="crt-mask crt-mask-top"></div>
+      <div class="crt-mask crt-mask-bottom"></div>
+      <div class="crt-line"></div>
+      <div class="scanlines"></div>
+    </ng-container>
   </div>
-  <app-work-in-progress></app-work-in-progress>
+
+  <!-- Scene -->
+  <div class="library-scene">
+    <div class="shelf-scroll" #shelfScroll>
+      <div class="shelf-row" *ngFor="let shelf of shelves">
+        <div class="shelf">
+          <div class="shelf-plank"></div>
+          <div class="shelf-books">
+            <div
+              class="book-spine"
+              *ngFor="let book of shelf"
+              [style.background-color]="spineColor(book.genre)"
+              [style.width.rem]="spineWidth(book.title)"
+              (click)="openBook(book)"
+            >
+              <span class="spine-title">{{ book.title }}</span>
+              <span class="spine-author">{{ book.author }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open book overlay -->
+  <div class="book-backdrop" *ngIf="selectedBook" (click)="closeBook()">
+    <div class="open-book" (click)="$event.stopPropagation()">
+      <div class="page page-left">
+        <h2>{{ selectedBook.title }}</h2>
+        <p class="author">by {{ selectedBook.author }}</p>
+        <p class="meta">Genre: {{ selectedBook.genre }}</p>
+        <p class="meta" *ngIf="selectedBook.year">Year: {{ selectedBook.year }}</p>
+        <div class="stars">
+          <span *ngFor="let filled of stars(selectedBook.score)" [class.filled]="filled">&#9733;</span>
+        </div>
+        <p class="meta" *ngIf="selectedBook.status">
+          Status: {{ selectedBook.status.type }}
+          <ng-container *ngIf="selectedBook.status.current_chapter">
+            ({{ selectedBook.status.current_chapter }})
+          </ng-container>
+          <ng-container *ngIf="selectedBook.status.last_chapter_read">
+            ({{ selectedBook.status.last_chapter_read }})
+          </ng-container>
+        </p>
+      </div>
+      <div class="page page-right">
+        <p class="synopsis" *ngIf="selectedBook.synopsis">{{ selectedBook.synopsis }}</p>
+        <p class="quote" *ngIf="selectedBook.quote">&ldquo;{{ selectedBook.quote }}&rdquo;</p>
+        <a class="link" *ngIf="selectedBook.link" [href]="selectedBook.link" target="_blank" rel="noopener">More info</a>
+      </div>
+    </div>
+  </div>
 </div>
