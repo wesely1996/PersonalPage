@@ -3,20 +3,905 @@
     "title": "1984",
     "author": "George Orwell",
     "genre": "Dystopian",
+    "score": 5,
+    "year": 1949,
+    "synopsis": "In a totalitarian future, Winston Smith struggles against a regime that controls truth, history, and even thought itself.",
+    "quote": "War is peace. Freedom is slavery. Ignorance is strength.",
     "status": { "type": "Reading", "current_chapter": "Chapter 5" },
     "link": "https://example.com/1984"
   },
   {
-    "title": "Dune",
-    "author": "Frank Herbert",
-    "genre": "Sci-Fi",
-    "status": { "type": "Finished" }
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "score": 4,
+    "year": 1945,
+    "synopsis": "Farm animals overthrow their human owner only to fall under the rule of pigs who grow just as tyrannical.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "score": 5,
+    "year": 1932,
+    "synopsis": "A genetically engineered society pursues happiness through pleasure and conformity, at the cost of individuality.",
+    "status": { "type": "Unread" }
   },
   {
     "title": "The Hobbit",
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy",
+    "score": 4,
+    "year": 1937,
+    "synopsis": "A reluctant hobbit, Bilbo Baggins, sets out across Middle-earth with a band of dwarves to reclaim their mountain home from a dragon.",
+    "quote": "Not all those who wander are lost.",
     "status": { "type": "Paused", "last_chapter_read": "Chapter 7" },
     "link": "https://example.com/the-hobbit"
+  },
+  {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1954,
+    "synopsis": "A hobbit and his companions set out from the Shire to destroy a powerful ring before it falls into the hands of a dark lord.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1954,
+    "synopsis": "The fellowship splits apart as war spreads across Middle-earth and two hobbits press on toward Mordor.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1955,
+    "synopsis": "The final battle for Middle-earth unfolds as the ring-bearer nears Mount Doom and old kingdoms rise again.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1997,
+    "synopsis": "An orphaned boy discovers he is a wizard and begins his first year at a magical school full of secrets.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "score": 4,
+    "year": 1998,
+    "synopsis": "A mysterious force begins attacking students at Hogwarts, and Harry must uncover the truth behind a long-hidden chamber.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "author": "J.K. Rowling",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1999,
+    "synopsis": "An escaped prisoner is rumored to be hunting Harry, who uncovers long-buried secrets about his past.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Lion, the Witch and the Wardrobe",
+    "author": "C.S. Lewis",
+    "genre": "Fantasy",
+    "score": 4,
+    "year": 1950,
+    "synopsis": "Four siblings step through a wardrobe into a snowbound land ruled by a witch and awaiting the return of a lion king.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "genre": "Fantasy",
+    "score": 5,
+    "year": 1996,
+    "synopsis": "Noble houses vie for the Iron Throne while an ancient enemy stirs beyond a great wall in the north.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "genre": "Fantasy",
+    "score": 4,
+    "year": 2007,
+    "synopsis": "A legendary figure recounts his rise from a gifted but troubled youth to one of the most feared men in the world.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "American Gods",
+    "author": "Neil Gaiman",
+    "genre": "Fantasy",
+    "score": 4,
+    "year": 2001,
+    "synopsis": "A man caught between old gods and new finds himself at the center of a brewing storm across modern America.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Good Omens",
+    "author": "Terry Pratchett & Neil Gaiman",
+    "genre": "Fantasy",
+    "score": 4,
+    "year": 1990,
+    "synopsis": "An angel and a demon team up to stop the apocalypse after a clerical mix-up misplaces the Antichrist.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1951,
+    "synopsis": "A disillusioned teenager wanders New York City over a few days, grappling with alienation and loss.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 1960,
+    "synopsis": "A young girl in the segregated South watches her father defend a Black man falsely accused of a crime.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Of Mice and Men",
+    "author": "John Steinbeck",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1937,
+    "synopsis": "Two displaced ranch workers dream of owning their own land during the hardships of the Great Depression.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 1939,
+    "synopsis": "A family of tenant farmers travels west during the Dust Bowl in search of work and dignity.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Gone with the Wind",
+    "author": "Margaret Mitchell",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1936,
+    "synopsis": "A headstrong Southern woman navigates love and survival against the backdrop of the Civil War and its aftermath.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Old Man and the Sea",
+    "author": "Ernest Hemingway",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1952,
+    "synopsis": "An aging fisherman battles a giant marlin far out at sea in a test of endurance and pride.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel Garcia Marquez",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 1967,
+    "synopsis": "Generations of the Buendia family live out triumph and tragedy in the isolated town of Macondo.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Lord of the Flies",
+    "author": "William Golding",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1954,
+    "synopsis": "Stranded on a deserted island, a group of boys descends into savagery as their attempts at order collapse.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Catch-22",
+    "author": "Joseph Heller",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1961,
+    "synopsis": "A bombardier in World War II tries every absurd trick imaginable to be declared unfit for combat.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Bell Jar",
+    "author": "Sylvia Plath",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1963,
+    "synopsis": "A young woman's promising future unravels as she struggles with her mental health in 1950s America.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "One Flew Over the Cuckoo's Nest",
+    "author": "Ken Kesey",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1962,
+    "synopsis": "A rebellious new patient upends the rigid routine of a psychiatric ward run by a controlling nurse.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 1987,
+    "synopsis": "A formerly enslaved woman is haunted by the past in the form of a mysterious young woman who arrives at her home.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Color Purple",
+    "author": "Alice Walker",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1982,
+    "synopsis": "Told through letters, a woman's life in the early twentieth-century South reveals resilience amid hardship.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction",
+    "score": 3,
+    "year": 1988,
+    "synopsis": "A shepherd boy travels from Spain to Egypt in search of a treasure foretold by a recurring dream.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 2001,
+    "synopsis": "A boy survives a shipwreck and spends months adrift on a lifeboat with a Bengal tiger.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 2003,
+    "synopsis": "A boy's betrayal of his closest friend in Kabul haunts him for decades as Afghanistan is transformed by war.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "A Thousand Splendid Suns",
+    "author": "Khaled Hosseini",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 2007,
+    "synopsis": "Two women from different generations forge an unlikely bond as their lives are shaped by decades of conflict.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "genre": "Fiction",
+    "score": 5,
+    "year": 2005,
+    "synopsis": "A girl growing up in Nazi Germany finds comfort in stolen books while sheltering a secret in her basement.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "All the Light We Cannot See",
+    "author": "Anthony Doerr",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 2014,
+    "synopsis": "A blind French girl and a German soldier cross paths during the Allied invasion of occupied France.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Goldfinch",
+    "author": "Donna Tartt",
+    "genre": "Fiction",
+    "score": 3,
+    "year": 2013,
+    "synopsis": "After a museum bombing kills his mother, a boy clings to a stolen painting as he drifts through a turbulent life.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 2018,
+    "synopsis": "A girl raised alone in the marshes of North Carolina becomes a suspect when a local man is found dead.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Fight Club",
+    "author": "Chuck Palahniuk",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 1996,
+    "synopsis": "An insomniac office worker forms an underground fight club that spirals into something far more dangerous.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "genre": "Fiction",
+    "score": 3,
+    "year": 2012,
+    "synopsis": "Two teenagers with cancer fall in love while grappling with mortality, meaning, and the books they share.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "No Country for Old Men",
+    "author": "Cormac McCarthy",
+    "genre": "Fiction",
+    "score": 4,
+    "year": 2005,
+    "synopsis": "A cash windfall from a drug deal gone wrong sets a relentless killer on the trail of an ordinary man.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "American Psycho",
+    "author": "Bret Easton Ellis",
+    "genre": "Fiction",
+    "score": 3,
+    "year": 1991,
+    "synopsis": "A wealthy New York investment banker hides a violent double life behind a veneer of status and routine.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 1965,
+    "synopsis": "On the desert planet Arrakis, Paul Atreides rises amid prophecy, betrayal, and the politics of a galaxy-spanning empire.",
+    "quote": "Fear is the mind-killer.",
+    "status": { "type": "Finished" }
+  },
+  {
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 1951,
+    "synopsis": "A mathematician devises a plan to preserve civilization through the coming collapse of a galactic empire.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "I, Robot",
+    "author": "Isaac Asimov",
+    "genre": "Sci-Fi",
+    "score": 4,
+    "year": 1950,
+    "synopsis": "A series of interconnected stories explores the rise of robots and the laws meant to keep them in check.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Slaughterhouse-Five",
+    "author": "Kurt Vonnegut",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 1969,
+    "synopsis": "A soldier becomes unstuck in time, reliving moments of his life out of order, including the bombing of Dresden.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Ender's Game",
+    "author": "Orson Scott Card",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 1985,
+    "synopsis": "A gifted child is trained at a military academy to lead humanity's defense against an alien threat.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 1979,
+    "synopsis": "Moments before Earth's destruction, an ordinary man is whisked off on a chaotic tour of the galaxy.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Neuromancer",
+    "author": "William Gibson",
+    "genre": "Sci-Fi",
+    "score": 4,
+    "year": 1984,
+    "synopsis": "A washed-up hacker is hired for one last job that plunges him into a dangerous virtual underworld.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Snow Crash",
+    "author": "Neal Stephenson",
+    "genre": "Sci-Fi",
+    "score": 4,
+    "year": 1992,
+    "synopsis": "A pizza-delivery hacker investigates a digital drug that threatens both the virtual and real worlds.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Jurassic Park",
+    "author": "Michael Crichton",
+    "genre": "Sci-Fi",
+    "score": 4,
+    "year": 1990,
+    "synopsis": "A theme park populated with cloned dinosaurs descends into chaos when its safety systems fail.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Andromeda Strain",
+    "author": "Michael Crichton",
+    "genre": "Sci-Fi",
+    "score": 3,
+    "year": 1969,
+    "synopsis": "Scientists race to contain a deadly extraterrestrial microorganism brought back by a crashed satellite.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Martian",
+    "author": "Andy Weir",
+    "genre": "Sci-Fi",
+    "score": 5,
+    "year": 2011,
+    "synopsis": "An astronaut stranded alone on Mars must use ingenuity and grit to survive until rescue is possible.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Ready Player One",
+    "author": "Ernest Cline",
+    "genre": "Sci-Fi",
+    "score": 3,
+    "year": 2011,
+    "synopsis": "In a virtual reality-obsessed future, a teenager hunts for a hidden prize left behind by the creator of a global game.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "Dystopian",
+    "score": 5,
+    "year": 1953,
+    "synopsis": "In a future where books are outlawed, a fireman whose job is to burn them begins to question everything.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "A Clockwork Orange",
+    "author": "Anthony Burgess",
+    "genre": "Dystopian",
+    "score": 4,
+    "year": 1962,
+    "synopsis": "A violent young delinquent undergoes a controversial treatment meant to strip him of free will.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "genre": "Dystopian",
+    "score": 5,
+    "year": 1985,
+    "synopsis": "In a theocratic regime, a woman is stripped of her rights and forced into reproductive servitude.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Hunger Games",
+    "author": "Suzanne Collins",
+    "genre": "Dystopian",
+    "score": 5,
+    "year": 2008,
+    "synopsis": "A teenage girl volunteers for a televised fight to the death to spare her younger sister.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Divergent",
+    "author": "Veronica Roth",
+    "genre": "Dystopian",
+    "score": 3,
+    "year": 2011,
+    "synopsis": "In a society divided into rigid factions, a girl discovers she doesn't fit neatly into any of them.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Maze Runner",
+    "author": "James Dashner",
+    "genre": "Dystopian",
+    "score": 3,
+    "year": 2009,
+    "synopsis": "A boy wakes with no memory inside a vast maze, where escape means confronting deadly creatures and hidden secrets.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "Dystopian",
+    "score": 5,
+    "year": 2006,
+    "synopsis": "A father and son journey across a devastated landscape, holding onto hope in a world stripped of almost everything.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "score": 5,
+    "year": 1977,
+    "synopsis": "A family caretaking an isolated hotel for the winter is slowly consumed by the malevolent forces within it.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "It",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "score": 5,
+    "year": 1986,
+    "synopsis": "A group of childhood friends confronts an ancient shape-shifting evil that returns to their town decades later.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Carrie",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1974,
+    "synopsis": "A bullied teenager with telekinetic powers is pushed past her breaking point at her high school prom.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Stand",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1978,
+    "synopsis": "Survivors of a global pandemic split into opposing camps as good and evil prepare for a final confrontation.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Misery",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1987,
+    "synopsis": "An injured novelist is held captive by an obsessive fan who forces him to write for her alone.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Interview with the Vampire",
+    "author": "Anne Rice",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1976,
+    "synopsis": "A centuries-old vampire recounts his transformation and the moral torment that has followed him ever since.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Exorcist",
+    "author": "William Peter Blatty",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1971,
+    "synopsis": "A mother seeks help from priests when her young daughter appears to be possessed by a malevolent spirit.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Rosemary's Baby",
+    "author": "Ira Levin",
+    "genre": "Horror",
+    "score": 4,
+    "year": 1967,
+    "synopsis": "A young woman grows increasingly suspicious of her neighbors and her own pregnancy after moving into a new apartment.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "World War Z",
+    "author": "Max Brooks",
+    "genre": "Horror",
+    "score": 4,
+    "year": 2006,
+    "synopsis": "Survivors from around the world recount their experiences of a global war against the undead.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Twilight",
+    "author": "Stephenie Meyer",
+    "genre": "Romance",
+    "score": 3,
+    "year": 2005,
+    "synopsis": "A teenage girl falls for a mysterious classmate who turns out to be a vampire with a dangerous past.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Notebook",
+    "author": "Nicholas Sparks",
+    "genre": "Romance",
+    "score": 3,
+    "year": 1996,
+    "synopsis": "A man reads the story of two young lovers separated by class and circumstance to a woman in a nursing home.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Outlander",
+    "author": "Diana Gabaldon",
+    "genre": "Romance",
+    "score": 4,
+    "year": 1991,
+    "synopsis": "A woman from the 1940s is mysteriously transported back to eighteenth-century Scotland, where she falls in love.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Me Before You",
+    "author": "Jojo Moyes",
+    "genre": "Romance",
+    "score": 4,
+    "year": 2012,
+    "synopsis": "A young woman becomes caregiver to a former adventurer left paralyzed by an accident, and the two form an unexpected bond.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "genre": "Mystery/Thriller",
+    "score": 3,
+    "year": 2003,
+    "synopsis": "A symbologist races to decode a trail of clues hidden in art and history after a murder at the Louvre.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Angels & Demons",
+    "author": "Dan Brown",
+    "genre": "Mystery/Thriller",
+    "score": 3,
+    "year": 2000,
+    "synopsis": "A symbologist is called to the Vatican to stop a secret society's plot involving a stolen weapon of mass destruction.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "author": "Stieg Larsson",
+    "genre": "Mystery/Thriller",
+    "score": 4,
+    "year": 2005,
+    "synopsis": "A journalist and a brilliant hacker team up to investigate a decades-old disappearance with dark family secrets.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Gone Girl",
+    "author": "Gillian Flynn",
+    "genre": "Mystery/Thriller",
+    "score": 5,
+    "year": 2012,
+    "synopsis": "When a woman vanishes on her anniversary, suspicion falls on her husband as the truth proves far stranger than expected.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "author": "Thomas Harris",
+    "genre": "Mystery/Thriller",
+    "score": 5,
+    "year": 1988,
+    "synopsis": "A young FBI trainee seeks the help of an imprisoned killer to catch another serial murderer on the loose.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "And Then There Were None",
+    "author": "Agatha Christie",
+    "genre": "Mystery/Thriller",
+    "score": 5,
+    "year": 1939,
+    "synopsis": "Ten strangers are lured to an isolated island where they are killed off one by one according to a sinister rhyme.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Murder on the Orient Express",
+    "author": "Agatha Christie",
+    "genre": "Mystery/Thriller",
+    "score": 4,
+    "year": 1934,
+    "synopsis": "A detective must identify a killer among the passengers of a luxury train stranded by snow.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Girl on the Train",
+    "author": "Paula Hawkins",
+    "genre": "Mystery/Thriller",
+    "score": 3,
+    "year": 2015,
+    "synopsis": "A woman's daily train commute draws her into the investigation of a neighbor's disappearance.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Diary of a Young Girl",
+    "author": "Anne Frank",
+    "genre": "Biography",
+    "score": 5,
+    "year": 1947,
+    "synopsis": "A teenager's diary documents her family's two years in hiding during the Nazi occupation of the Netherlands.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Night",
+    "author": "Elie Wiesel",
+    "genre": "Biography",
+    "score": 5,
+    "year": 1956,
+    "synopsis": "A survivor recounts his experience as a teenager in Nazi concentration camps during the Holocaust.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Long Walk to Freedom",
+    "author": "Nelson Mandela",
+    "genre": "Biography",
+    "score": 5,
+    "year": 1994,
+    "synopsis": "Nelson Mandela recounts his life from rural childhood through decades of imprisonment to the presidency of South Africa.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Into the Wild",
+    "author": "Jon Krakauer",
+    "genre": "Biography",
+    "score": 4,
+    "year": 1996,
+    "synopsis": "A young man abandons his possessions and comfortable life to live off the land in the Alaskan wilderness, with tragic results.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Unbroken",
+    "author": "Laura Hillenbrand",
+    "genre": "Biography",
+    "score": 5,
+    "year": 2010,
+    "synopsis": "An Olympic runner survives a plane crash, weeks adrift at sea, and brutal captivity as a prisoner of war.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "genre": "Biography",
+    "score": 4,
+    "year": 2011,
+    "synopsis": "A comprehensive biography of the Apple co-founder, drawn from interviews with Jobs and those around him.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Educated",
+    "author": "Tara Westover",
+    "genre": "Biography",
+    "score": 5,
+    "year": 2018,
+    "synopsis": "Raised off the grid with no formal schooling, the author describes her journey to a university education and beyond.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Eat, Pray, Love",
+    "author": "Elizabeth Gilbert",
+    "genre": "Biography",
+    "score": 3,
+    "year": 2006,
+    "synopsis": "After a difficult divorce, a woman travels through Italy, India, and Indonesia in search of balance and meaning.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "genre": "Non-Fiction",
+    "score": 5,
+    "year": 2011,
+    "synopsis": "A sweeping look at how Homo sapiens came to dominate the planet, from the cognitive revolution to the present day.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 1988,
+    "synopsis": "A landmark explanation of cosmology, black holes, and the nature of time written for a general audience.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 1976,
+    "synopsis": "An influential argument that genes, not individuals or species, are the primary drivers of evolution.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Into Thin Air",
+    "author": "Jon Krakauer",
+    "genre": "Non-Fiction",
+    "score": 5,
+    "year": 1997,
+    "synopsis": "A firsthand account of a disastrous 1996 expedition to climb Mount Everest that claimed several lives.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Immortal Life of Henrietta Lacks",
+    "author": "Rebecca Skloot",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 2010,
+    "synopsis": "The story of the woman whose cells, taken without her knowledge, became one of the most important tools in medicine.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Freakonomics",
+    "author": "Steven D. Levitt & Stephen J. Dubner",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 2005,
+    "synopsis": "An economist applies his tools to everyday questions, uncovering surprising hidden patterns behind human behavior.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "The Tipping Point",
+    "author": "Malcolm Gladwell",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 2000,
+    "synopsis": "An exploration of how small changes can trigger widespread trends, ideas, and social behaviors.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "genre": "Non-Fiction",
+    "score": 5,
+    "year": 2018,
+    "synopsis": "A practical guide to building good habits and breaking bad ones through small, consistent changes.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "genre": "Non-Fiction",
+    "score": 4,
+    "year": 2011,
+    "synopsis": "A Nobel laureate examines the two systems that drive how people think, decide, and make judgments.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "genre": "History",
+    "score": 4,
+    "year": 1997,
+    "synopsis": "An examination of how geography, agriculture, and disease shaped the divergent fates of human societies.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "A People's History of the United States",
+    "author": "Howard Zinn",
+    "genre": "History",
+    "score": 4,
+    "year": 1980,
+    "synopsis": "American history retold from the perspective of workers, women, and minorities often left out of traditional accounts.",
+    "status": { "type": "Unread" }
+  },
+  {
+    "title": "1776",
+    "author": "David McCullough",
+    "genre": "History",
+    "score": 4,
+    "year": 2005,
+    "synopsis": "A detailed account of the pivotal year of the American Revolution, from the siege of Boston to the crossing of the Delaware.",
+    "status": { "type": "Unread" }
   }
 ]
