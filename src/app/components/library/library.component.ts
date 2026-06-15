@@ -45,6 +45,10 @@ const SPINE_MAX_LINES = 3;
 // adds to the rendered width on top of the `width` style binding.
 const SPINE_PADDING_X_REM = 0.5;
 
+// Typical vertical scrollbar width; subtracted unconditionally so packing
+// stays consistent whether or not the scrollbar happens to be visible yet.
+const SCROLLBAR_WIDTH_PX = 17;
+
 @Component({
   selector: 'app-library',
   standalone: true,
@@ -138,7 +142,9 @@ export class LibraryComponent implements OnInit {
     if (scrollEl) {
       const style = getComputedStyle(scrollEl);
       const paddingX = parseFloat(style.paddingLeft) + parseFloat(style.paddingRight);
-      return scrollEl.clientWidth - paddingX - shelfPadding;
+      // Always account for the scrollbar's width, even if it isn't
+      // rendered yet on first load, so packing doesn't change once it appears.
+      return scrollEl.clientWidth - paddingX - shelfPadding - SCROLLBAR_WIDTH_PX;
     }
 
     const width = document.documentElement.clientWidth || window.innerWidth;
