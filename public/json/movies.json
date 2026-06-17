@@ -1,0 +1,492 @@
+[
+  {
+    "title": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "genre": "Action",
+    "year": 2008,
+    "score": 5,
+    "synopsis": "Batman faces the Joker, a chaos-driven criminal mastermind who plunges Gotham into anarchy in one of cinema's defining performances.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0468569/"
+  },
+  {
+    "title": "No Country for Old Men",
+    "director": "Joel & Ethan Coen",
+    "genre": "Mystery/Thriller",
+    "year": 2007,
+    "score": 5,
+    "synopsis": "A hunter stumbles upon a drug deal gone wrong and a suitcase of cash, setting a remorseless killer on his trail across West Texas.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0477348/"
+  },
+  {
+    "title": "There Will Be Blood",
+    "director": "Paul Thomas Anderson",
+    "genre": "Drama",
+    "year": 2007,
+    "score": 5,
+    "synopsis": "A ruthless oil prospector's ambition curdles into obsession across the California oilfields of the early 20th century.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0469494/"
+  },
+  {
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "score": 5,
+    "synopsis": "A thief who steals corporate secrets through dream-sharing technology is tasked with planting an idea rather than stealing one.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1375666/"
+  },
+  {
+    "title": "The Social Network",
+    "director": "David Fincher",
+    "genre": "Drama",
+    "year": 2010,
+    "score": 5,
+    "synopsis": "The founding of Facebook is dramatised through overlapping depositions, fractured friendships, and ruthless ambition.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1285016/"
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "director": "George Miller",
+    "genre": "Action",
+    "year": 2015,
+    "score": 5,
+    "synopsis": "In a post-apocalyptic wasteland, Furiosa rebels against a warlord to free enslaved women in a non-stop kinetic masterpiece.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1392190/"
+  },
+  {
+    "title": "Whiplash",
+    "director": "Damien Chazelle",
+    "genre": "Drama",
+    "year": 2014,
+    "score": 5,
+    "synopsis": "A young jazz drummer pursues greatness under a tyrannical conservatory instructor in an exhausting duel of wills.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2582802/"
+  },
+  {
+    "title": "Blade Runner 2049",
+    "director": "Denis Villeneuve",
+    "genre": "Sci-Fi",
+    "year": 2017,
+    "score": 5,
+    "synopsis": "A new blade runner unearths a long-buried secret that could plunge what's left of society into chaos.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1856101/"
+  },
+  {
+    "title": "Parasite",
+    "director": "Bong Joon-ho",
+    "genre": "Drama",
+    "year": 2019,
+    "score": 5,
+    "synopsis": "Greed and class discrimination collide when an unemployed family insinuates itself into the lives of a wealthy Seoul household.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt6751668/"
+  },
+  {
+    "title": "1917",
+    "director": "Sam Mendes",
+    "genre": "Drama",
+    "year": 2019,
+    "score": 5,
+    "synopsis": "Two British soldiers race across no-man's-land in a single seemingly unbroken shot to deliver a message that could save 1,600 lives.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt8579674/"
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "director": "Daniel Kwan & Daniel Scheinert",
+    "genre": "Sci-Fi",
+    "year": 2022,
+    "score": 5,
+    "synopsis": "A laundromat owner discovers she must connect with parallel-universe versions of herself to prevent a nihilistic force from destroying all reality.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt6710474/"
+  },
+  {
+    "title": "The Prestige",
+    "director": "Christopher Nolan",
+    "genre": "Mystery/Thriller",
+    "year": 2006,
+    "score": 5,
+    "synopsis": "Two rival magicians destroy each other's lives in pursuit of the perfect illusion in a puzzle-box thriller with a devastating final act.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0482571/"
+  },
+  {
+    "title": "Children of Men",
+    "director": "Alfonso Cuarón",
+    "genre": "Sci-Fi",
+    "year": 2006,
+    "score": 5,
+    "synopsis": "In a future where humanity has become infertile, a bureaucrat must escort the only pregnant woman on Earth to safety.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0206634/"
+  },
+  {
+    "title": "The Departed",
+    "director": "Martin Scorsese",
+    "genre": "Mystery/Thriller",
+    "year": 2006,
+    "score": 5,
+    "synopsis": "A cop infiltrates the mob while a mob mole infiltrates the police in a double-crossing thriller where everyone is a suspect.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0407887/"
+  },
+  {
+    "title": "Her",
+    "director": "Spike Jonze",
+    "genre": "Sci-Fi",
+    "year": 2013,
+    "score": 5,
+    "synopsis": "A lonely writer develops a relationship with an artificially intelligent operating system in a tender, melancholy love story.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1798709/"
+  },
+  {
+    "title": "Arrival",
+    "director": "Denis Villeneuve",
+    "genre": "Sci-Fi",
+    "year": 2016,
+    "score": 5,
+    "synopsis": "A linguist is recruited to communicate with alien visitors and discovers that learning their language changes her perception of time.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2543164/"
+  },
+  {
+    "title": "Moonlight",
+    "director": "Barry Jenkins",
+    "genre": "Drama",
+    "year": 2016,
+    "score": 5,
+    "synopsis": "A young Black man in Miami navigates identity, sexuality, and belonging across three chapters of his life.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt4975722/"
+  },
+  {
+    "title": "Portrait of a Lady on Fire",
+    "director": "Céline Sciamma",
+    "genre": "Romance",
+    "year": 2019,
+    "score": 5,
+    "synopsis": "A painter is commissioned to create a secret wedding portrait of an unwilling young noblewoman on a windswept Breton island.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt8613070/"
+  },
+  {
+    "title": "A Separation",
+    "director": "Asghar Farhadi",
+    "genre": "Drama",
+    "year": 2011,
+    "score": 5,
+    "synopsis": "An Iranian couple's decision to separate unravels into a moral labyrinth of guilt, class, and religion.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1832382/"
+  },
+  {
+    "title": "Pan's Labyrinth",
+    "director": "Guillermo del Toro",
+    "genre": "Horror",
+    "year": 2006,
+    "score": 5,
+    "synopsis": "A girl in post-Civil War Spain escapes into a dark fairy tale where an ancient faun claims she is a lost princess.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0457430/"
+  },
+  {
+    "title": "Anatomy of a Fall",
+    "director": "Justine Triet",
+    "genre": "Mystery/Thriller",
+    "year": 2023,
+    "score": 5,
+    "synopsis": "A woman is tried for her husband's death after he falls from their mountain chalet — and the trial dismantles everything you thought you knew.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt17009710/"
+  },
+  {
+    "title": "Past Lives",
+    "director": "Celine Song",
+    "genre": "Romance",
+    "year": 2023,
+    "score": 5,
+    "synopsis": "Two childhood sweethearts reconnect across decades and continents, and must reckon with the lives they chose not to live.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt13238346/"
+  },
+  {
+    "title": "Oppenheimer",
+    "director": "Christopher Nolan",
+    "genre": "Drama",
+    "year": 2023,
+    "score": 5,
+    "synopsis": "The father of the atomic bomb grapples with the moral weight of his creation in a grandiose, anxious biopic.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt15398776/"
+  },
+  {
+    "title": "The Power of the Dog",
+    "director": "Jane Campion",
+    "genre": "Drama",
+    "year": 2021,
+    "score": 5,
+    "synopsis": "A brutal Montana rancher terrorises his brother's new wife and her son until something unexpected shifts the power.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt10293406/"
+  },
+  {
+    "title": "Roma",
+    "director": "Alfonso Cuarón",
+    "genre": "Drama",
+    "year": 2018,
+    "score": 5,
+    "synopsis": "A year in the life of a Mexico City housekeeper navigating personal crisis against the backdrop of 1970s social upheaval.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt6155172/"
+  },
+  {
+    "title": "The Banshees of Inisherin",
+    "director": "Martin McDonagh",
+    "genre": "Drama",
+    "year": 2022,
+    "score": 5,
+    "synopsis": "On a small Irish island, one man abruptly ends a lifelong friendship with no explanation — and refuses to give one.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt11813216/"
+  },
+  {
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "genre": "Sci-Fi",
+    "year": 2014,
+    "score": 4,
+    "synopsis": "A team of astronauts travels through a wormhole near Saturn searching for a habitable planet as Earth dies.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0816692/"
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "director": "Wes Anderson",
+    "genre": "Comedy",
+    "year": 2014,
+    "score": 4,
+    "synopsis": "A legendary concierge and his young protégé become embroiled in a murder, a heist, and a war across a fictional European hotel.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2278388/"
+  },
+  {
+    "title": "Get Out",
+    "director": "Jordan Peele",
+    "genre": "Horror",
+    "year": 2017,
+    "score": 4,
+    "synopsis": "A Black photographer visits his white girlfriend's family estate and discovers something deeply, horrifyingly wrong.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt5052448/"
+  },
+  {
+    "title": "Hereditary",
+    "director": "Ari Aster",
+    "genre": "Horror",
+    "year": 2018,
+    "score": 4,
+    "synopsis": "A grieving family is haunted by a sinister presence after uncovering disturbing secrets about their ancestry.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt7784604/"
+  },
+  {
+    "title": "Dune",
+    "director": "Denis Villeneuve",
+    "genre": "Sci-Fi",
+    "year": 2021,
+    "score": 4,
+    "synopsis": "A noble family becomes embroiled in a war for control of the universe's most precious resource on a hostile desert planet.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1160419/"
+  },
+  {
+    "title": "Knives Out",
+    "director": "Rian Johnson",
+    "genre": "Mystery/Thriller",
+    "year": 2019,
+    "score": 4,
+    "synopsis": "A whodunit that pulls the rug out early and turns into something far more interesting: a chase between a killer and a detective.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt8946378/"
+  },
+  {
+    "title": "Gone Girl",
+    "director": "David Fincher",
+    "genre": "Mystery/Thriller",
+    "year": 2014,
+    "score": 4,
+    "synopsis": "A man becomes the prime suspect in his wife's disappearance, while media circus and dark revelations tear his reality apart.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2267998/"
+  },
+  {
+    "title": "Gravity",
+    "director": "Alfonso Cuarón",
+    "genre": "Sci-Fi",
+    "year": 2013,
+    "score": 4,
+    "synopsis": "Two astronauts are stranded in orbit after their shuttle is destroyed, fighting physics and panic to survive.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1454468/"
+  },
+  {
+    "title": "Sicario",
+    "director": "Denis Villeneuve",
+    "genre": "Action",
+    "year": 2015,
+    "score": 4,
+    "synopsis": "An idealistic FBI agent is drawn into a murky government operation to destabilise a Mexican drug cartel.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt3397884/"
+  },
+  {
+    "title": "A Quiet Place",
+    "director": "John Krasinski",
+    "genre": "Horror",
+    "year": 2018,
+    "score": 4,
+    "synopsis": "A family is forced to live in near silence after mysterious creatures hunt by sound in a tense, inventive creature feature.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt6644200/"
+  },
+  {
+    "title": "The Favourite",
+    "director": "Yorgos Lanthimos",
+    "genre": "Drama",
+    "year": 2018,
+    "score": 4,
+    "synopsis": "Two cousins compete viciously for the favour of the ailing Queen Anne in a dark, blackly comic period film.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt5083738/"
+  },
+  {
+    "title": "Once Upon a Time in Hollywood",
+    "director": "Quentin Tarantino",
+    "genre": "Comedy",
+    "year": 2019,
+    "score": 4,
+    "synopsis": "A fading TV actor and his stuntman navigate 1969 Hollywood while Sharon Tate's world unfolds next door.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt7131622/"
+  },
+  {
+    "title": "The Irishman",
+    "director": "Martin Scorsese",
+    "genre": "Mystery/Thriller",
+    "year": 2019,
+    "score": 4,
+    "synopsis": "An ageing hitman reflects on his decades of service to the mob and the disappearance of union boss Jimmy Hoffa.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1302006/"
+  },
+  {
+    "title": "Marriage Story",
+    "director": "Noah Baumbach",
+    "genre": "Drama",
+    "year": 2019,
+    "score": 4,
+    "synopsis": "A stage director and an actress navigate the legal and emotional anguish of divorce while trying not to destroy each other.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt7653254/"
+  },
+  {
+    "title": "All Quiet on the Western Front",
+    "director": "Edward Berger",
+    "genre": "Drama",
+    "year": 2022,
+    "score": 4,
+    "synopsis": "A young German soldier's naive patriotism is ground to dust in the mud of WWI's Western Front.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1016150/"
+  },
+  {
+    "title": "The Zone of Interest",
+    "director": "Jonathan Glazer",
+    "genre": "Drama",
+    "year": 2023,
+    "score": 4,
+    "synopsis": "The commandant of Auschwitz and his family build an idyllic life in a house directly beside the camp walls.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt7160372/"
+  },
+  {
+    "title": "Nomadland",
+    "director": "Chloé Zhao",
+    "genre": "Drama",
+    "year": 2020,
+    "score": 4,
+    "synopsis": "After losing her job and home, a woman in her sixties sets off as a nomad through the American West.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt9770150/"
+  },
+  {
+    "title": "Hell or High Water",
+    "director": "David Mackenzie",
+    "genre": "Mystery/Thriller",
+    "year": 2016,
+    "score": 4,
+    "synopsis": "Two brothers rob banks across Texas to save their family ranch while a retiring ranger pursues them across the drought-cracked plains.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2582782/"
+  },
+  {
+    "title": "12 Years a Slave",
+    "director": "Steve McQueen",
+    "genre": "Drama",
+    "year": 2013,
+    "score": 4,
+    "synopsis": "A free Black man in New York is kidnapped and sold into slavery in the antebellum South, fighting to survive and reclaim his life.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt2024544/"
+  },
+  {
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "director": "Martin McDonagh",
+    "genre": "Drama",
+    "year": 2017,
+    "score": 4,
+    "synopsis": "A grieving mother takes on the local police department after her daughter's murder goes unsolved in a darkly comic drama.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt5027774/"
+  },
+  {
+    "title": "Zodiac",
+    "director": "David Fincher",
+    "genre": "Mystery/Thriller",
+    "year": 2007,
+    "score": 4,
+    "synopsis": "A cartoonist, a reporter, and a detective become obsessed with identifying the Zodiac Killer over two decades of dead ends.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt0443706/"
+  },
+  {
+    "title": "The Batman",
+    "director": "Matt Reeves",
+    "genre": "Action",
+    "year": 2022,
+    "score": 4,
+    "synopsis": "A young, vengeance-driven Batman tracks a serial killer taunting Gotham's elite in a grounded neo-noir detective thriller.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt1877830/"
+  },
+  {
+    "title": "La La Land",
+    "director": "Damien Chazelle",
+    "genre": "Romance",
+    "year": 2016,
+    "score": 3,
+    "synopsis": "A jazz pianist and an aspiring actress fall in love in Los Angeles while chasing dreams that may pull them apart.",
+    "status": { "type": "watched" },
+    "link": "https://www.imdb.com/title/tt3783958/"
+  }
+]

@@ -1,0 +1,83 @@
+<div class="media-shelf" [class.body-lock]="selectedItem">
+  <!-- Intro overlay: glitch -> black -> CRT power-on -->
+  <div
+    class="intro-overlay"
+    *ngIf="introPhase !== 'ready'"
+    [class.phase-glitch]="introPhase === 'glitch'"
+    [class.phase-black]="introPhase === 'black'"
+    [class.phase-crt]="introPhase === 'crt'"
+  >
+    <div class="glitch-text" *ngIf="introPhase === 'glitch'">{{ introWord }}</div>
+    <ng-container *ngIf="introPhase === 'crt'">
+      <div class="crt-mask crt-mask-top"></div>
+      <div class="crt-mask crt-mask-bottom"></div>
+      <div class="crt-line"></div>
+      <div class="scanlines"></div>
+    </ng-container>
+  </div>
+
+  <!-- Scene -->
+  <div class="media-scene">
+    <div class="shelf-scroll" #shelfScroll>
+      <div class="shelf-row" *ngFor="let shelf of shelves">
+        <div class="shelf">
+          <div class="shelf-plank"></div>
+          <div class="shelf-cases">
+            <div
+              class="cd-case"
+              *ngFor="let item of shelf"
+              [style.background-color]="caseColor(item)"
+              (click)="openCase(item)"
+            >
+              <div class="cd-case-spine"></div>
+              <span class="case-title">{{ item.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tablet pull-out overlay -->
+  <div class="tablet-backdrop" *ngIf="selectedItem" (click)="closeCase()">
+    <div class="tablet-stage" (click)="$event.stopPropagation()">
+      <div class="open-case" [style.background-color]="caseColor(selectedItem)"></div>
+      <div class="tablet">
+        <div class="tablet-bezel">
+          <div class="tablet-screen">
+            <h2>{{ selectedItem.title }}</h2>
+
+            <ng-container *ngIf="kind === 'movie'">
+              <p class="meta" *ngIf="selectedItem.director">Director: {{ selectedItem.director }}</p>
+              <p class="meta" *ngIf="selectedItem.year">Year: {{ selectedItem.year }}</p>
+              <p class="meta" *ngIf="selectedItem.genre">Genre: {{ selectedItem.genre }}</p>
+            </ng-container>
+
+            <ng-container *ngIf="kind === 'tv'">
+              <p class="meta" *ngIf="selectedItem.creator">Creator: {{ selectedItem.creator }}</p>
+              <p class="meta" *ngIf="selectedItem.seasons">Seasons: {{ selectedItem.seasons }}</p>
+              <p class="meta" *ngIf="selectedItem.genre">Genre: {{ selectedItem.genre }}</p>
+            </ng-container>
+
+            <ng-container *ngIf="kind === 'game'">
+              <p class="meta" *ngIf="selectedItem.studio">Studio: {{ selectedItem.studio }}</p>
+              <p class="meta" *ngIf="selectedItem.genre">Genre: {{ selectedItem.genre }}</p>
+              <p class="meta" *ngIf="selectedItem.platform">Platform: {{ selectedItem.platform }}</p>
+              <p class="meta" *ngIf="selectedItem.hours">Playtime: {{ selectedItem.hours }}h</p>
+            </ng-container>
+
+            <div class="stars">
+              <span *ngFor="let filled of stars(selectedItem.score)" [class.filled]="filled">&#9733;</span>
+            </div>
+
+            <p class="meta" *ngIf="selectedItem.status">Status: {{ selectedItem.status.type }}</p>
+
+            <p class="synopsis" *ngIf="selectedItem.synopsis">{{ selectedItem.synopsis }}</p>
+
+            <a class="link" *ngIf="selectedItem.link" [href]="selectedItem.link" target="_blank" rel="noopener">More info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

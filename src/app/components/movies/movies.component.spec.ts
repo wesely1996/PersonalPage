@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { environment } from '../../../environments/environment';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 import { MoviesComponent } from './movies.component';
 
 describe('MoviesComponent', () => {
@@ -9,6 +10,7 @@ describe('MoviesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MoviesComponent],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MoviesComponent);
@@ -20,7 +22,14 @@ describe('MoviesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should expose csv url from environment', () => {
-    expect(component.csv).toBe(environment.moviesCsvUrl);
+  it('should expose a genre color map', () => {
+    expect(component.genreColors).toBeTruthy();
+    expect(typeof component.genreColors).toBe('object');
+  });
+
+  it('should include expected movie genres in the color map', () => {
+    expect(component.genreColors['Drama']).toBeDefined();
+    expect(component.genreColors['Action']).toBeDefined();
+    expect(component.genreColors['Sci-Fi']).toBeDefined();
   });
 });

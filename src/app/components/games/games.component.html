@@ -1,7 +1,6 @@
-<div>
-  <!-- <app-data-table [title]="'Games'" [csvUrl]="csv"></app-data-table> -->
-  <div class="absolute-position top-8vh flex-center-top">
-    <h1 class="text-center text-light mt-4">Games</h1>
-  </div>
-  <app-work-in-progress></app-work-in-progress>
-</div>
+<app-media-shelf
+  dataUrl="json/games.json"
+  introWord="GAMES"
+  kind="game"
+  [colorMap]="genreColors"
+></app-media-shelf>

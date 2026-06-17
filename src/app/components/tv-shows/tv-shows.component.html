@@ -1,7 +1,6 @@
-<div>
-  <!-- <app-data-table [title]="'TV Shows'" [csvUrl]="csv"></app-data-table> -->
-  <div class="absolute-position top-8vh flex-center-top">
-    <h1 class="text-center text-light mt-4">TV shows</h1>
-  </div>
-  <app-work-in-progress></app-work-in-progress>
-</div>
+<app-media-shelf
+  dataUrl="json/tv-shows.json"
+  introWord="TV SHOWS"
+  kind="tv"
+  [colorMap]="genreColors"
+></app-media-shelf>
