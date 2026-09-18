@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Choosing a French article</title>
+  <desc id="d">A decision path. First question: a specific thing, or things in general, including after aimer, adorer, préférer? If yes use le, la, l', les. If not: one or several countable items? If yes use un, une, des. If not: an unmeasured amount of a mass? If yes use du, de la, de l', des. Then a final check: after a negation (except with être) or a quantity word, un, une, des, du and de la become de or d', as in pas de chien and beaucoup de pain, but le stays in je n'aime pas le café. Footer lists the contractions au, aux, du, des.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Which article? Ask what you mean</text>
+
+    <!-- questions -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="40" y="60" width="400" height="60" rx="6"/>
+      <rect x="40" y="156" width="400" height="60" rx="6"/>
+      <rect x="40" y="252" width="400" height="60" rx="6"/>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="56" y="86">Specific thing, or things in general</text>
+      <text x="56" y="106" fill="#7fbf8f">(also after aimer, adorer, préférer)?</text>
+      <text x="56" y="182">One or several countable items?</text>
+      <text x="56" y="202" fill="#7fbf8f">(a dog, some friends)</text>
+      <text x="56" y="278">An unmeasured amount of a mass?</text>
+      <text x="56" y="298" fill="#7fbf8f">(some bread, some water, patience)</text>
+    </g>
+
+    <!-- no arrows -->
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="240" y1="120" x2="240" y2="154"/>
+      <line x1="240" y1="216" x2="240" y2="250"/>
+      <line x1="440" y1="90" x2="498" y2="90"/>
+      <line x1="440" y1="186" x2="498" y2="186"/>
+      <line x1="440" y1="282" x2="498" y2="282"/>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="250" y="142">no</text>
+      <text x="250" y="238">no</text>
+      <text x="455" y="82">yes</text>
+      <text x="455" y="178">yes</text>
+      <text x="455" y="274">yes</text>
+    </g>
+
+    <!-- results -->
+    <g fill="#062b0f" stroke-width="1.5">
+      <rect x="500" y="60" width="260" height="60" rx="6" stroke="#00ff41"/>
+      <rect x="500" y="156" width="260" height="60" rx="6" stroke="#39e6ff"/>
+      <rect x="500" y="252" width="260" height="60" rx="6" stroke="#39e6ff"/>
+    </g>
+    <text x="515" y="86" font-size="15" font-weight="bold" fill="#00ff41">le / la / l' / les</text>
+    <text x="515" y="108" font-size="13" fill="#d8ffd8">J'aime le café.</text>
+    <text x="515" y="182" font-size="15" font-weight="bold" fill="#39e6ff">un / une / des</text>
+    <text x="515" y="204" font-size="13" fill="#d8ffd8">un chien, des amis</text>
+    <text x="515" y="278" font-size="15" font-weight="bold" fill="#39e6ff">du / de la / de l'</text>
+    <text x="515" y="300" font-size="13" fill="#d8ffd8">du pain, de l'eau</text>
+
+    <!-- final check -->
+    <line x1="630" y1="312" x2="630" y2="354" stroke="#ffb000" stroke-width="1.5" marker-end="url(#arr)"/>
+    <polyline points="760,186 780,186 780,380 762,380" fill="none" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+    <rect x="40" y="356" width="720" height="104" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="56" y="382" font-size="14" font-weight="bold" fill="#ffb000">THEN: after a negation (not être) or a quantity word</text>
+    <text x="56" y="410" font-size="15" fill="#d8ffd8">un / une / des / du / de la  →  <tspan fill="#ffb000" font-weight="bold">de (d')</tspan></text>
+    <text x="56" y="436" font-size="13" fill="#7fbf8f">pas de chien, beaucoup de pain, un kilo de tomates</text>
+    <text x="56" y="454" font-size="13" fill="#7fbf8f">but le/la/les stay: je n'aime pas le café</text>
+
+    <!-- contractions -->
+    <text x="400" y="494" text-anchor="middle" font-size="14" xml:space="preserve" fill="#d8ffd8">à + le = <tspan fill="#00ff41">au</tspan>   à + les = <tspan fill="#00ff41">aux</tspan>   de + le = <tspan fill="#00ff41">du</tspan>   de + les = <tspan fill="#00ff41">des</tspan></text>
+    <text x="400" y="520" text-anchor="middle" font-size="13" fill="#7fbf8f">with être the article stays: ce n'est pas un chien</text>
+  </g>
+</svg>

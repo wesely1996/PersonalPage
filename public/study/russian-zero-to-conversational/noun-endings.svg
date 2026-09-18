@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 530" role="img" aria-labelledby="t d">
+  <title id="t">From the last letter of a noun to its gender and endings</title>
+  <desc id="d">Decision chart. A noun ending in a consonant or й is masculine (стол: столы, стола, столу, столом, о столе). Ending in а or я is feminine (книга: книги, книгу, книге, книгой, о книге). Ending in о, е or мя is neuter (окно: окна, окну, окном, об окне). Ending in ь can be either, so learn it (тетрадь is feminine; nouns in ость are feminine). Exception: папа, дядя and мужчина end in а but are masculine.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Last letter, gender, endings</text>
+
+    <!-- start -->
+    <rect x="260" y="54" width="280" height="44" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="400" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">What is the last letter?</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <path d="M400,98 L400,112 L107,112 L107,132"/>
+      <path d="M400,112 L302,112 L302,132"/>
+      <path d="M400,112 L497,112 L497,132"/>
+      <path d="M400,112 L692,112 L692,132"/>
+    </g>
+
+    <!-- branch boxes -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="20" y="134" width="175" height="40" rx="6"/>
+      <rect x="215" y="134" width="175" height="40" rx="6"/>
+      <rect x="410" y="134" width="175" height="40" rx="6"/>
+      <rect x="605" y="134" width="175" height="40" rx="6"/>
+    </g>
+    <g font-size="15" fill="#ffb000" text-anchor="middle">
+      <text x="107" y="159">consonant, -й</text>
+      <text x="302" y="159">-а, -я</text>
+      <text x="497" y="159">-о, -е, -мя</text>
+      <text x="692" y="159">-ь</text>
+    </g>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="107" y1="174" x2="107" y2="192"/>
+      <line x1="302" y1="174" x2="302" y2="192"/>
+      <line x1="497" y1="174" x2="497" y2="192"/>
+      <line x1="692" y1="174" x2="692" y2="192"/>
+    </g>
+
+    <!-- gender headers -->
+    <rect x="20" y="194" width="175" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="107" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">MASCULINE</text>
+    <rect x="215" y="194" width="175" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="302" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">FEMININE</text>
+    <rect x="410" y="194" width="175" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="497" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">NEUTER</text>
+    <rect x="605" y="194" width="175" height="40" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="692" y="220" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">m OR f</text>
+
+    <!-- ending panels -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="20" y="244" width="175" height="190" rx="6"/>
+      <rect x="215" y="244" width="175" height="190" rx="6"/>
+      <rect x="410" y="244" width="175" height="190" rx="6"/>
+      <rect x="605" y="244" width="175" height="190" rx="6"/>
+    </g>
+
+    <g font-size="13">
+      <text x="32" y="268" font-size="15" font-weight="bold" fill="#d8ffd8">стол</text>
+      <text x="32" y="292" fill="#7fbf8f">pl</text><text x="77" y="292" fill="#d8ffd8">столы</text>
+      <text x="32" y="314" fill="#7fbf8f">gen</text><text x="77" y="314" fill="#d8ffd8">стола</text>
+      <text x="32" y="336" fill="#7fbf8f">dat</text><text x="77" y="336" fill="#d8ffd8">столу</text>
+      <text x="32" y="358" fill="#7fbf8f">inst</text><text x="77" y="358" fill="#d8ffd8">столом</text>
+      <text x="32" y="380" fill="#7fbf8f">prep</text><text x="77" y="380" fill="#d8ffd8">о столе</text>
+      <text x="32" y="410" fill="#39e6ff">people: acc = gen</text>
+
+      <text x="227" y="268" font-size="15" font-weight="bold" fill="#d8ffd8">книга</text>
+      <text x="227" y="292" fill="#7fbf8f">pl</text><text x="272" y="292" fill="#d8ffd8">книги</text>
+      <text x="227" y="314" fill="#7fbf8f">gen</text><text x="272" y="314" fill="#d8ffd8">книги</text>
+      <text x="227" y="336" fill="#7fbf8f">acc</text><text x="272" y="336" fill="#ffb000">книгу</text>
+      <text x="227" y="358" fill="#7fbf8f">dat</text><text x="272" y="358" fill="#d8ffd8">книге</text>
+      <text x="227" y="380" fill="#7fbf8f">inst</text><text x="272" y="380" fill="#d8ffd8">книгой</text>
+      <text x="227" y="402" fill="#7fbf8f">prep</text><text x="272" y="402" fill="#d8ffd8">о книге</text>
+
+      <text x="422" y="268" font-size="15" font-weight="bold" fill="#d8ffd8">окно</text>
+      <text x="422" y="292" fill="#7fbf8f">pl</text><text x="467" y="292" fill="#d8ffd8">окна</text>
+      <text x="422" y="314" fill="#7fbf8f">gen</text><text x="467" y="314" fill="#d8ffd8">окна</text>
+      <text x="422" y="336" fill="#7fbf8f">dat</text><text x="467" y="336" fill="#d8ffd8">окну</text>
+      <text x="422" y="358" fill="#7fbf8f">inst</text><text x="467" y="358" fill="#d8ffd8">окном</text>
+      <text x="422" y="380" fill="#7fbf8f">prep</text><text x="467" y="380" fill="#d8ffd8">об окне</text>
+      <text x="422" y="410" fill="#39e6ff">acc = nom</text>
+
+      <text x="617" y="268" font-size="15" font-weight="bold" fill="#d8ffd8">тетрадь (f)</text>
+      <text x="617" y="292" fill="#7fbf8f">gen</text><text x="662" y="292" fill="#d8ffd8">тетради</text>
+      <text x="617" y="314" fill="#7fbf8f">dat</text><text x="662" y="314" fill="#d8ffd8">тетради</text>
+      <text x="617" y="336" fill="#7fbf8f">inst</text><text x="662" y="336" fill="#d8ffd8">тетрадью</text>
+      <text x="617" y="358" fill="#7fbf8f">prep</text><text x="662" y="358" fill="#d8ffd8">о тетради</text>
+      <text x="617" y="388" fill="#39e6ff">день (m): дня</text>
+      <text x="617" y="410" fill="#39e6ff">-ость: always f</text>
+    </g>
+
+    <rect x="20" y="452" width="760" height="56" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="35" y="476" font-size="13" fill="#ff4d4d" font-weight="bold">WATCH OUT</text>
+    <text x="130" y="476" font-size="13" fill="#d8ffd8">папа, дядя, мужчина end in -а but are masculine.</text>
+    <text x="130" y="496" font-size="13" fill="#d8ffd8">имя, время (-мя) are neuter. Spelling rule: книги, not книгы.</text>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">Stem-changing boot verbs</title>
+  <desc id="d">Three conjugation grids for querer (e to ie), poder (o to ue) and pedir (e to i). A boot shape outlines the yo, tu, el and ellos forms, where the stressed stem vowel changes; the nosotros and vosotros forms sit outside the boot and stay regular. More verbs of each type are listed below each grid.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Boot verbs: the stem changes inside the boot</text>
+    <text x="400" y="56" text-anchor="middle" font-size="13" fill="#7fbf8f">The stem vowel changes only when it is stressed. nosotros/vosotros stress the ending.</text>
+
+    <!-- headers -->
+    <g text-anchor="middle" font-size="16" font-weight="bold">
+      <text x="145" y="92" fill="#ffb000">e -&gt; ie  querer</text>
+      <text x="400" y="92" fill="#ffb000">o -&gt; ue  poder</text>
+      <text x="655" y="92" fill="#ffb000">e -&gt; i  pedir</text>
+    </g>
+
+    <!-- grid cells -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1">
+      <rect x="30" y="106" width="115" height="44"/><rect x="145" y="106" width="115" height="44"/>
+      <rect x="30" y="150" width="115" height="44"/><rect x="145" y="150" width="115" height="44"/>
+      <rect x="30" y="194" width="115" height="44"/><rect x="145" y="194" width="115" height="44"/>
+      <rect x="285" y="106" width="115" height="44"/><rect x="400" y="106" width="115" height="44"/>
+      <rect x="285" y="150" width="115" height="44"/><rect x="400" y="150" width="115" height="44"/>
+      <rect x="285" y="194" width="115" height="44"/><rect x="400" y="194" width="115" height="44"/>
+      <rect x="540" y="106" width="115" height="44"/><rect x="655" y="106" width="115" height="44"/>
+      <rect x="540" y="150" width="115" height="44"/><rect x="655" y="150" width="115" height="44"/>
+      <rect x="540" y="194" width="115" height="44"/><rect x="655" y="194" width="115" height="44"/>
+    </g>
+
+    <!-- boots -->
+    <g fill="none" stroke="#ffb000" stroke-width="2.5" stroke-linejoin="round" filter="url(#glow)">
+      <path d="M33,109 L142,109 L142,191 L257,191 L257,235 L33,235 Z"/>
+      <path d="M288,109 L397,109 L397,191 L512,191 L512,235 L288,235 Z"/>
+      <path d="M543,109 L652,109 L652,191 L767,191 L767,235 L543,235 Z"/>
+    </g>
+
+    <g text-anchor="middle" font-size="15">
+      <text x="87" y="133" fill="#d8ffd8">quiero</text>
+      <text x="87" y="177" fill="#d8ffd8">quieres</text>
+      <text x="87" y="221" fill="#d8ffd8">quiere</text>
+      <text x="202" y="133" fill="#7fbf8f">queremos</text>
+      <text x="202" y="177" fill="#7fbf8f">queréis</text>
+      <text x="202" y="221" fill="#d8ffd8">quieren</text>
+
+      <text x="342" y="133" fill="#d8ffd8">puedo</text>
+      <text x="342" y="177" fill="#d8ffd8">puedes</text>
+      <text x="342" y="221" fill="#d8ffd8">puede</text>
+      <text x="457" y="133" fill="#7fbf8f">podemos</text>
+      <text x="457" y="177" fill="#7fbf8f">podéis</text>
+      <text x="457" y="221" fill="#d8ffd8">pueden</text>
+
+      <text x="597" y="133" fill="#d8ffd8">pido</text>
+      <text x="597" y="177" fill="#d8ffd8">pides</text>
+      <text x="597" y="221" fill="#d8ffd8">pide</text>
+      <text x="712" y="133" fill="#7fbf8f">pedimos</text>
+      <text x="712" y="177" fill="#7fbf8f">pedís</text>
+      <text x="712" y="221" fill="#d8ffd8">piden</text>
+    </g>
+
+    <!-- more verbs -->
+    <g font-size="13" fill="#d8ffd8">
+      <text x="30" y="266" fill="#00ff41" font-weight="bold">also:</text>
+      <text x="30" y="288">pensar, empezar,</text>
+      <text x="30" y="308">entender, preferir,</text>
+      <text x="30" y="328">cerrar, sentir, tener*</text>
+
+      <text x="285" y="266" fill="#00ff41" font-weight="bold">also:</text>
+      <text x="285" y="288">dormir, volver, costar,</text>
+      <text x="285" y="308">encontrar, recordar,</text>
+      <text x="285" y="328">jugar (u -&gt; ue)</text>
+
+      <text x="540" y="266" fill="#00ff41" font-weight="bold">also (-ir only):</text>
+      <text x="540" y="288">servir, repetir,</text>
+      <text x="540" y="308">seguir, vestirse,</text>
+      <text x="540" y="328">decir* (yo digo)</text>
+    </g>
+
+    <line x1="30" y1="350" x2="770" y2="350" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="400" y="374" text-anchor="middle" font-size="13" fill="#7fbf8f">Rows: yo / tú / él, ella, usted   |   Right column: nosotros / vosotros / ellos, ustedes</text>
+    <text x="400" y="398" text-anchor="middle" font-size="13" fill="#7fbf8f">* tener and decir also have an irregular yo form: tengo, digo.</text>
+  </g>
+</svg>

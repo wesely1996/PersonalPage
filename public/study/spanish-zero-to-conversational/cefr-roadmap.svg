@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Spanish roadmap from zero to low B1</title>
+  <desc id="d">Five stages from A0 to low B1 over sixteen weeks: sounds and greetings; gender, the present tense and ser/estar; irregular verbs, gustar and plans; past tenses, pronouns and por/para; and a first taste of the subjunctive with longer conversations.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Roadmap: zero to conversational in 16 weeks</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="95" y1="120" x2="95" y2="134"/>
+      <line x1="95" y1="196" x2="95" y2="210"/>
+      <line x1="95" y1="272" x2="95" y2="286"/>
+      <line x1="95" y1="348" x2="95" y2="362"/>
+    </g>
+
+    <rect x="40" y="60" width="110" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="95" y="96" text-anchor="middle" font-size="16" font-weight="bold" fill="#d8ffd8">A0</text>
+    <rect x="165" y="60" width="595" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="180" y="84" font-size="15" font-weight="bold" fill="#00ff41">Zero - week 1</text>
+    <text x="180" y="106" font-size="13" fill="#d8ffd8">sounds, stress rules, greetings, tú vs usted, numbers 0-20</text>
+
+    <rect x="40" y="136" width="110" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="95" y="172" text-anchor="middle" font-size="16" font-weight="bold" fill="#d8ffd8">A1</text>
+    <rect x="165" y="136" width="595" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="180" y="160" font-size="15" font-weight="bold" fill="#00ff41">Survival - weeks 2-5</text>
+    <text x="180" y="182" font-size="13" fill="#d8ffd8">gender, articles, regular present, ser/estar, hay, questions</text>
+
+    <rect x="40" y="212" width="110" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="95" y="248" text-anchor="middle" font-size="16" font-weight="bold" fill="#d8ffd8">A2</text>
+    <rect x="165" y="212" width="595" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="180" y="236" font-size="15" font-weight="bold" fill="#00ff41">Everyday - weeks 6-9</text>
+    <text x="180" y="258" font-size="13" fill="#d8ffd8">irregulars, boot verbs, gustar, ir a + inf, reflexives, -ndo</text>
+
+    <rect x="40" y="288" width="110" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="95" y="324" text-anchor="middle" font-size="16" font-weight="bold" fill="#39e6ff">A2+</text>
+    <rect x="165" y="288" width="595" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="180" y="312" font-size="15" font-weight="bold" fill="#39e6ff">Storyteller - weeks 10-13</text>
+    <text x="180" y="334" font-size="13" fill="#d8ffd8">preterite vs imperfect, object pronouns, por/para, commands</text>
+
+    <rect x="40" y="364" width="110" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="95" y="400" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">B1-</text>
+    <rect x="165" y="364" width="595" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="180" y="388" font-size="15" font-weight="bold" fill="#ffb000">Conversational - weeks 14-16</text>
+    <text x="180" y="410" font-size="13" fill="#d8ffd8">quiero que / ojalá + subjunctive, opinions, 20-minute chats</text>
+
+    <text x="400" y="458" text-anchor="middle" font-size="13" fill="#7fbf8f">At about 1.5 hours a day (~170 hours total) expect a solid A2</text>
+    <text x="400" y="478" text-anchor="middle" font-size="13" fill="#7fbf8f">with B1 moments on familiar topics. Keep going to reach full B1.</text>
+  </g>
+</svg>

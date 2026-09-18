@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Passé composé versus imparfait on a timeline</title>
+  <desc id="d">A timeline. A long continuous band labelled imparfait holds the background: il pleuvait, j'étais fatigué, je lisais. Three sharp event markers labelled passé composé cut across it: le téléphone a sonné, j'ai répondu, je suis sorti. Bottom panels list signal words: d'habitude, tous les jours, souvent, pendant que for the imparfait; hier, soudain, tout à coup, une fois, samedi dernier for the passé composé.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Imparfait sets the scene, passé composé acts</text>
+
+    <text x="60" y="80" font-size="15" font-weight="bold" fill="#39e6ff">IMPARFAIT</text>
+    <text x="60" y="102" font-size="13" fill="#7fbf8f">background, description, in progress: no clear start or end</text>
+
+    <rect x="60" y="116" width="680" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="80" y="142" font-size="15" fill="#d8ffd8">Il pleuvait. J'étais fatigué. Je lisais...</text>
+    <text x="80" y="164" font-size="13" fill="#7fbf8f">(it was raining, I was tired, I was reading...)</text>
+
+    <!-- time axis -->
+    <line x1="40" y1="232" x2="760" y2="232" stroke="#0f7a2a" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="760" y="254" text-anchor="end" font-size="13" fill="#7fbf8f">time</text>
+
+    <!-- event markers -->
+    <g stroke="#ffb000" stroke-width="2">
+      <line x1="560" y1="106" x2="560" y2="232"/>
+      <line x1="640" y1="106" x2="640" y2="232"/>
+      <line x1="715" y1="106" x2="715" y2="232"/>
+    </g>
+    <g fill="#ffb000">
+      <circle cx="560" cy="232" r="6"/>
+      <circle cx="640" cy="232" r="6"/>
+      <circle cx="715" cy="232" r="6"/>
+    </g>
+    <g font-size="15" font-weight="bold" fill="#ffb000">
+      <text x="568" y="212">1</text>
+      <text x="648" y="212">2</text>
+      <text x="723" y="212">3</text>
+    </g>
+
+    <!-- event boxes -->
+    <g stroke="#ffb000" stroke-width="1.5" fill="#062b0f">
+      <rect x="60" y="272" width="220" height="60" rx="6"/>
+      <rect x="290" y="272" width="220" height="60" rx="6"/>
+      <rect x="520" y="272" width="220" height="60" rx="6"/>
+    </g>
+    <g font-size="14">
+      <text x="74" y="296" fill="#ffb000" font-weight="bold">1</text>
+      <text x="94" y="296" fill="#d8ffd8">le téléphone</text>
+      <text x="94" y="318" fill="#d8ffd8">a sonné</text>
+      <text x="304" y="296" fill="#ffb000" font-weight="bold">2</text>
+      <text x="324" y="296" fill="#d8ffd8">j'ai répondu</text>
+      <text x="324" y="318" fill="#7fbf8f">(I answered)</text>
+      <text x="534" y="296" fill="#ffb000" font-weight="bold">3</text>
+      <text x="554" y="296" fill="#d8ffd8">je suis sorti</text>
+      <text x="554" y="318" fill="#7fbf8f">(I went out)</text>
+    </g>
+    <text x="400" y="360" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">PASSÉ COMPOSÉ: completed events that move the story</text>
+
+    <!-- signal words -->
+    <rect x="40" y="384" width="350" height="116" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="55" y="410" font-size="14" font-weight="bold" fill="#39e6ff">Imparfait signals</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="55" y="436">d'habitude, tous les jours,</text>
+      <text x="55" y="458">souvent, pendant que,</text>
+      <text x="55" y="480">quand j'étais petit...</text>
+    </g>
+
+    <rect x="410" y="384" width="350" height="116" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="425" y="410" font-size="14" font-weight="bold" fill="#ffb000">Passé composé signals</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="425" y="436">hier, soudain, tout à coup,</text>
+      <text x="425" y="458">une fois, samedi dernier,</text>
+      <text x="425" y="480">ensuite, puis, enfin</text>
+    </g>
+  </g>
+</svg>

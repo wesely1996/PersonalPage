@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-labelledby="t d">
+  <title id="t">The six Russian cases and their question words</title>
+  <desc id="d">A wheel of six cases around a center. Nominative: кто, что, the subject. Accusative: кого, что, куда, object and destination. Genitive: кого, чего, of, нет, numbers. Dative: кому, чему, to or for, likes, age. Instrumental: кем, чем, с кем, with, tool, profession. Prepositional: где, о ком, о чём, location and about. Each shows the forms of книга and брат and a suggested learning order.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Six cases, six sets of questions</text>
+
+    <!-- spokes -->
+    <g stroke="#0f7a2a" stroke-width="1.5">
+      <line x1="400" y1="330" x2="400" y2="115"/>
+      <line x1="400" y1="330" x2="670" y2="235"/>
+      <line x1="400" y1="330" x2="670" y2="425"/>
+      <line x1="400" y1="330" x2="400" y2="545"/>
+      <line x1="400" y1="330" x2="130" y2="425"/>
+      <line x1="400" y1="330" x2="130" y2="235"/>
+    </g>
+
+    <!-- hub -->
+    <circle cx="400" cy="330" r="82" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="400" y="316" text-anchor="middle" font-size="18" font-weight="bold" fill="#00ff41" filter="url(#glow)">CASE</text>
+    <text x="400" y="340" text-anchor="middle" font-size="13" fill="#d8ffd8">= the noun's</text>
+    <text x="400" y="358" text-anchor="middle" font-size="13" fill="#d8ffd8">job in the</text>
+    <text x="400" y="376" text-anchor="middle" font-size="13" fill="#d8ffd8">sentence</text>
+
+    <!-- Nominative (top) -->
+    <rect x="290" y="60" width="220" height="110" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+    <text x="302" y="84" font-size="15" font-weight="bold" fill="#d8ffd8">NOMINATIVE</text>
+    <text x="498" y="84" text-anchor="end" font-size="13" fill="#7fbf8f">base</text>
+    <text x="302" y="106" font-size="15" fill="#ffb000">кто? что?</text>
+    <text x="302" y="128" font-size="13" fill="#d8ffd8">subject, dictionary</text>
+    <text x="302" y="150" font-size="13" fill="#39e6ff">книга, брат</text>
+
+    <!-- Accusative (top right) -->
+    <rect x="560" y="180" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="572" y="204" font-size="15" font-weight="bold" fill="#d8ffd8">ACCUSATIVE</text>
+    <text x="768" y="204" text-anchor="end" font-size="13" fill="#ffb000">#2</text>
+    <text x="572" y="226" font-size="15" fill="#ffb000">кого? что? куда?</text>
+    <text x="572" y="248" font-size="13" fill="#d8ffd8">object, destination</text>
+    <text x="572" y="270" font-size="13" fill="#39e6ff">книгу, брата</text>
+
+    <!-- Genitive (bottom right) -->
+    <rect x="560" y="370" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="572" y="394" font-size="15" font-weight="bold" fill="#d8ffd8">GENITIVE</text>
+    <text x="768" y="394" text-anchor="end" font-size="13" fill="#ffb000">#3</text>
+    <text x="572" y="416" font-size="15" fill="#ffb000">кого? чего?</text>
+    <text x="572" y="438" font-size="13" fill="#d8ffd8">of, нет, numbers, у</text>
+    <text x="572" y="460" font-size="13" fill="#39e6ff">книги, брата</text>
+
+    <!-- Dative (bottom) -->
+    <rect x="290" y="490" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="302" y="514" font-size="15" font-weight="bold" fill="#d8ffd8">DATIVE</text>
+    <text x="498" y="514" text-anchor="end" font-size="13" fill="#ffb000">#4</text>
+    <text x="302" y="536" font-size="15" fill="#ffb000">кому? чему?</text>
+    <text x="302" y="558" font-size="13" fill="#d8ffd8">to/for, likes, age</text>
+    <text x="302" y="580" font-size="13" fill="#39e6ff">книге, брату</text>
+
+    <!-- Instrumental (bottom left) -->
+    <rect x="20" y="370" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="32" y="394" font-size="15" font-weight="bold" fill="#d8ffd8">INSTRUMENTAL</text>
+    <text x="228" y="394" text-anchor="end" font-size="13" fill="#ffb000">#5</text>
+    <text x="32" y="416" font-size="15" fill="#ffb000">кем? чем?</text>
+    <text x="32" y="438" font-size="13" fill="#d8ffd8">with, tool, profession</text>
+    <text x="32" y="460" font-size="13" fill="#39e6ff">книгой, братом</text>
+
+    <!-- Prepositional (top left) -->
+    <rect x="20" y="180" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="32" y="204" font-size="15" font-weight="bold" fill="#d8ffd8">PREPOSITIONAL</text>
+    <text x="228" y="204" text-anchor="end" font-size="13" fill="#ffb000">#1</text>
+    <text x="32" y="226" font-size="15" fill="#ffb000">где? о чём?</text>
+    <text x="32" y="248" font-size="13" fill="#d8ffd8">location, about</text>
+    <text x="32" y="270" font-size="13" fill="#39e6ff">о книге, о брате</text>
+
+    <text x="400" y="628" text-anchor="middle" font-size="13" fill="#7fbf8f">#1-#5 = suggested learning order. Blue = forms of книга (book) and брат (brother).</text>
+  </g>
+</svg>

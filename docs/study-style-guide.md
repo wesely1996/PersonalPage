@@ -33,6 +33,7 @@ Each topic lives in `public/study/<slug>/`:
 - `## Cheat sheet` and `## Where to go next` are still required.
 - SVG text containing non-Latin script: `font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif"`
   (CJK glyphs are roughly 1em wide, not 0.6em — size boxes accordingly).
+  For Japanese modules put Japanese fonts first (`'Noto Sans JP', 'Yu Gothic', 'Meiryo'`) so kanji use Japanese letterforms.
 
 ## SVG rules (matrix aesthetic)
 - Standalone file: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 H" role="img" aria-labelledby="t d">`

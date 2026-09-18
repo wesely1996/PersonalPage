@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Imperfective process versus perfective result on a timeline</title>
+  <desc id="d">Three timelines. Imperfective читал: a long striped band for a process lasting two hours, with no end point in focus. Perfective прочитал: a faint dashed process ending in a bright point labeled result, book finished. Sequence: three perfective points in a row, пришёл, поужинал, лёг спать, meaning came home, had dinner, went to bed.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+    <pattern id="stripe" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#062b0f"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#00ff41" stroke-width="3"/>
+    </pattern>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Aspect: the film vs the photo</text>
+
+    <!-- Lane 1: imperfective -->
+    <rect x="20" y="56" width="760" height="150" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="35" y="86" font-size="15" font-weight="bold" fill="#00ff41">IMPERFECTIVE</text>
+    <text x="35" y="108" font-size="15" fill="#d8ffd8">читать</text>
+    <text x="35" y="130" font-size="13" fill="#7fbf8f">process,</text>
+    <text x="35" y="148" font-size="13" fill="#7fbf8f">duration,</text>
+    <text x="35" y="166" font-size="13" fill="#7fbf8f">habit</text>
+
+    <line x1="200" y1="140" x2="760" y2="140" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrd)"/>
+    <text x="755" y="160" text-anchor="end" font-size="13" fill="#7fbf8f">time</text>
+    <rect x="250" y="126" width="360" height="28" rx="6" fill="url(#stripe)" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="430" y="112" text-anchor="middle" font-size="13" fill="#d8ffd8">reading... reading... reading...</text>
+    <text x="215" y="180" font-size="13" fill="#d8ffd8">Вчера я два часа читал.</text>
+    <text x="215" y="198" font-size="13" fill="#7fbf8f">Yesterday I read (was reading) for two hours.</text>
+
+    <!-- Lane 2: perfective -->
+    <rect x="20" y="222" width="760" height="150" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="35" y="252" font-size="15" font-weight="bold" fill="#ffb000">PERFECTIVE</text>
+    <text x="35" y="274" font-size="15" fill="#d8ffd8">прочитать</text>
+    <text x="35" y="296" font-size="13" fill="#7fbf8f">one action,</text>
+    <text x="35" y="314" font-size="13" fill="#7fbf8f">completed,</text>
+    <text x="35" y="332" font-size="13" fill="#7fbf8f">result</text>
+
+    <line x1="200" y1="306" x2="760" y2="306" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrd)"/>
+    <text x="755" y="326" text-anchor="end" font-size="13" fill="#7fbf8f">time</text>
+    <line x1="250" y1="306" x2="600" y2="306" stroke="#7fbf8f" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="610" cy="306" r="11" fill="#ffb000" filter="url(#glow)"/>
+    <text x="610" y="282" text-anchor="middle" font-size="13" fill="#ffb000">result: book finished</text>
+    <text x="215" y="346" font-size="13" fill="#d8ffd8">Вчера я прочитал книгу.</text>
+    <text x="215" y="364" font-size="13" fill="#7fbf8f">Yesterday I read the book (to the end).</text>
+
+    <!-- Lane 3: sequence -->
+    <rect x="20" y="388" width="760" height="112" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="35" y="418" font-size="15" font-weight="bold" fill="#ffb000">SEQUENCE</text>
+    <text x="35" y="440" font-size="13" fill="#7fbf8f">each step is</text>
+    <text x="35" y="458" font-size="13" fill="#7fbf8f">a perfective</text>
+    <text x="35" y="476" font-size="13" fill="#7fbf8f">result</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="312" y1="430" x2="458" y2="430"/>
+      <line x1="522" y1="430" x2="658" y2="430"/>
+    </g>
+    <circle cx="300" cy="430" r="9" fill="#ffb000"/>
+    <circle cx="490" cy="430" r="9" fill="#ffb000"/>
+    <circle cx="680" cy="430" r="9" fill="#ffb000"/>
+    <g font-size="15" fill="#d8ffd8" text-anchor="middle">
+      <text x="300" y="466">пришёл</text>
+      <text x="490" y="466">поужинал</text>
+      <text x="680" y="466">лёг спать</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f" text-anchor="middle">
+      <text x="300" y="486">came home</text>
+      <text x="490" y="486">had dinner</text>
+      <text x="680" y="486">went to bed</text>
+    </g>
+  </g>
+</svg>

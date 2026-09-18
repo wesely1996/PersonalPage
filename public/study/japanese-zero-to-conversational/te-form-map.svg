@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Te-form conjugation map</title>
+  <desc id="d">Map from dictionary-form endings to te-form endings with examples. u-verbs: u, tsu, ru become tte; mu, bu, nu become nde; ku becomes ite; gu becomes ide; su becomes shite; the exception iku becomes itte. ru-verbs drop ru and add te. Irregular suru becomes shite and kuru becomes kite. The past ta-form follows the same rules with ta or da.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">The te-form: one ending in, one ending out</text>
+    <g font-size="13" font-weight="bold" fill="#7fbf8f">
+      <text x="40" y="64">DICTIONARY ENDING</text>
+      <text x="250" y="64">TE-FORM</text>
+      <text x="400" y="64">EXAMPLES</text>
+    </g>
+
+    <!-- boxes: ending (40-200), te (250-360) -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="40" y="76" width="180" height="42" rx="6"/>
+      <rect x="40" y="126" width="180" height="42" rx="6"/>
+      <rect x="40" y="176" width="180" height="42" rx="6"/>
+      <rect x="40" y="226" width="180" height="42" rx="6"/>
+      <rect x="40" y="276" width="180" height="42" rx="6"/>
+      <rect x="40" y="326" width="180" height="42" rx="6" stroke="#ff4d4d"/>
+      <rect x="40" y="386" width="180" height="42" rx="6" stroke="#39e6ff"/>
+      <rect x="40" y="436" width="180" height="42" rx="6" stroke="#ffb000"/>
+      <rect x="250" y="76" width="110" height="42" rx="6" stroke="#00ff41"/>
+      <rect x="250" y="126" width="110" height="42" rx="6" stroke="#00ff41"/>
+      <rect x="250" y="176" width="110" height="42" rx="6" stroke="#00ff41"/>
+      <rect x="250" y="226" width="110" height="42" rx="6" stroke="#00ff41"/>
+      <rect x="250" y="276" width="110" height="42" rx="6" stroke="#00ff41"/>
+      <rect x="250" y="326" width="110" height="42" rx="6" stroke="#ff4d4d"/>
+      <rect x="250" y="386" width="110" height="42" rx="6" stroke="#39e6ff"/>
+      <rect x="250" y="436" width="110" height="42" rx="6" stroke="#ffb000"/>
+    </g>
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="222" y1="97" x2="246" y2="97"/>
+      <line x1="222" y1="147" x2="246" y2="147"/>
+      <line x1="222" y1="197" x2="246" y2="197"/>
+      <line x1="222" y1="247" x2="246" y2="247"/>
+      <line x1="222" y1="297" x2="246" y2="297"/>
+      <line x1="222" y1="347" x2="246" y2="347"/>
+      <line x1="222" y1="407" x2="246" y2="407"/>
+      <line x1="222" y1="457" x2="246" y2="457"/>
+    </g>
+
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="18" fill="#d8ffd8">
+      <!-- endings -->
+      <text x="56" y="104">う つ る</text>
+      <text x="56" y="154">む ぶ ぬ</text>
+      <text x="56" y="204">く</text>
+      <text x="56" y="254">ぐ</text>
+      <text x="56" y="304">す</text>
+      <text x="56" y="354" fill="#ff4d4d">行く</text>
+      <text x="56" y="414" fill="#39e6ff">る</text>
+      <text x="56" y="464" fill="#ffb000">する くる</text>
+      <!-- te endings -->
+      <text x="305" y="104" text-anchor="middle" fill="#00ff41">って</text>
+      <text x="305" y="154" text-anchor="middle" fill="#00ff41">んで</text>
+      <text x="305" y="204" text-anchor="middle" fill="#00ff41">いて</text>
+      <text x="305" y="254" text-anchor="middle" fill="#00ff41">いで</text>
+      <text x="305" y="304" text-anchor="middle" fill="#00ff41">して</text>
+      <text x="305" y="354" text-anchor="middle" fill="#ff4d4d">行って</text>
+      <text x="305" y="414" text-anchor="middle" fill="#39e6ff">て</text>
+      <text x="305" y="464" text-anchor="middle" fill="#ffb000">して きて</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="146" y="102">u tsu ru</text>
+      <text x="146" y="152">mu bu nu</text>
+      <text x="146" y="202">ku</text>
+      <text x="146" y="252">gu</text>
+      <text x="146" y="302">su</text>
+      <text x="146" y="352">iku</text>
+      <text x="146" y="412">ru-verb</text>
+    </g>
+
+    <!-- examples -->
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="16" fill="#d8ffd8">
+      <text x="400" y="103">買う→買って</text>
+      <text x="522" y="103">待つ→待って</text>
+      <text x="644" y="103">帰る→帰って</text>
+      <text x="400" y="153">飲む→飲んで</text>
+      <text x="522" y="153">遊ぶ→遊んで</text>
+      <text x="644" y="153">死ぬ→死んで</text>
+      <text x="400" y="203">書く→書いて</text>
+      <text x="522" y="203">聞く→聞いて</text>
+      <text x="400" y="253">泳ぐ→泳いで</text>
+      <text x="522" y="253">急ぐ→急いで</text>
+      <text x="400" y="303">話す→話して</text>
+      <text x="522" y="303">貸す→貸して</text>
+      <text x="400" y="413">食べる→食べて</text>
+      <text x="544" y="413">見る→見て</text>
+      <text x="644" y="413">起きる→起きて</text>
+    </g>
+    <text x="400" y="352" font-size="13" fill="#ff4d4d">the one exception: iku -> itte, not *iite</text>
+    <text x="400" y="462" font-size="13" fill="#ffb000">shite, kite  (benkyou shite, mottekite)</text>
+    <text x="400" y="386" font-size="13" fill="#7fbf8f">GROUP 2</text>
+    <text x="400" y="436" font-size="13" fill="#7fbf8f">GROUP 3</text>
+
+    <line x1="40" y1="498" x2="760" y2="498" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="40" y="524" font-size="14" fill="#d8ffd8">Past plain (ta-form) = same sound changes: <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">飲んだ  書いた  行った  食べた</tspan></text>
+    <text x="40" y="546" font-size="13" fill="#7fbf8f">Just swap te for ta and de for da.</text>
+  </g>
+</svg>

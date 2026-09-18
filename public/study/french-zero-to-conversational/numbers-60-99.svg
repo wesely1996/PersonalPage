@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">French numbers 60 to 99</title>
+  <desc id="d">A number line from 60 to 100 split into four bands. 60 to 69 is soixante plus 0 to 9. 70 to 79 is soixante plus 10 to 19, so 70 is soixante-dix and 71 is soixante et onze. 80 to 89 is quatre-vingt, four twenties, plus 0 to 9. 90 to 99 is quatre-vingt plus 10 to 19, so 90 is quatre-vingt-dix and 97 is quatre-vingt-dix-sept. Notes: et appears in 21 to 71 but not 81 or 91; quatre-vingts takes an s only when nothing follows; Belgium and Switzerland use septante and nonante, and parts of Switzerland huitante.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">70 to 99: French counts in twenties</text>
+
+    <!-- number line bands -->
+    <g font-size="13" text-anchor="middle">
+      <text x="145" y="84" fill="#00ff41">soixante + 0..9</text>
+      <text x="315" y="84" fill="#39e6ff">soixante + 10..19</text>
+      <text x="485" y="84" fill="#00ff41">quatre-vingt + 0..9</text>
+      <text x="655" y="84" fill="#ffb000">quatre-vingt + 10..19</text>
+    </g>
+    <rect x="60" y="96" width="168" height="18" fill="#0f7a2a"/>
+    <rect x="230" y="96" width="168" height="18" fill="#39e6ff"/>
+    <rect x="400" y="96" width="168" height="18" fill="#0f7a2a"/>
+    <rect x="570" y="96" width="170" height="18" fill="#ffb000"/>
+    <g font-size="14" fill="#d8ffd8" text-anchor="middle">
+      <text x="60" y="136">60</text>
+      <text x="230" y="136">70</text>
+      <text x="400" y="136">80</text>
+      <text x="570" y="136">90</text>
+      <text x="740" y="136">100</text>
+    </g>
+
+    <!-- four boxes: x = 27 + i*188, width 182 -->
+    <rect x="27" y="160" width="182" height="170" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="215" y="160" width="182" height="170" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <rect x="403" y="160" width="182" height="170" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="591" y="160" width="182" height="170" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+
+    <g font-size="15" font-weight="bold">
+      <text x="39" y="186" fill="#00ff41">60-69</text>
+      <text x="227" y="186" fill="#39e6ff">70-79</text>
+      <text x="415" y="186" fill="#00ff41">80-89</text>
+      <text x="603" y="186" fill="#ffb000">90-99</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="39" y="208">60 + n</text>
+      <text x="227" y="208">60 + 10..19</text>
+      <text x="415" y="208">4 × 20 + n</text>
+      <text x="603" y="208">4 × 20 + 10..19</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="39" y="236">61 soixante et un</text>
+      <text x="39" y="260">65 soixante-cinq</text>
+      <text x="39" y="284">69 soixante-neuf</text>
+
+      <text x="227" y="236">70 soixante-dix</text>
+      <text x="227" y="260">71 soixante et onze</text>
+      <text x="227" y="284">75 soixante-quinze</text>
+      <text x="227" y="308">79 soixante-dix-neuf</text>
+
+      <text x="415" y="236">80 quatre-vingts</text>
+      <text x="415" y="260">81 quatre-vingt-un</text>
+      <text x="415" y="284">88 quatre-vingt-huit</text>
+
+      <text x="603" y="236">90 quatre-vingt-dix</text>
+      <text x="603" y="260">91 quatre-vingt-onze</text>
+      <text x="603" y="284">97 quatre-vingt-</text>
+      <text x="627" y="308">dix-sept</text>
+    </g>
+
+    <!-- rules -->
+    <rect x="27" y="348" width="746" height="80" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="42" y="372" font-size="14" font-weight="bold" fill="#ffb000">RULES</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="42" y="396">- "et" only in 21, 31, 41, 51, 61 and 71 (never 81 or 91)</text>
+      <text x="42" y="418">- quatre-vingts has an s only when nothing follows: 80 vs 81</text>
+    </g>
+
+    <!-- regional -->
+    <rect x="27" y="440" width="746" height="66" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="42" y="464" font-size="14" font-weight="bold" fill="#39e6ff">BELGIUM &amp; SWITZERLAND</text>
+    <text x="42" y="490" font-size="13" fill="#d8ffd8">70 = septante · 90 = nonante · 80 = huitante (parts of Switzerland)</text>
+  </g>
+</svg>
