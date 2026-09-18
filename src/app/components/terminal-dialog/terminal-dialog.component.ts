@@ -12,6 +12,7 @@ import { WebBrowserComponent } from '../web-browser/web-browser.component';
 import { ArticleComponent } from '../article/article.component';
 import { PdfViewerComponent } from '../pdf-viewer/pdf-viewer.component';
 import { RecipeDetailsComponent } from '../recipe-details/recipe-details.component';
+import { StudyArticleComponent } from '../study/study-article/study-article.component';
 
 @Component({
   selector: 'app-terminal-dialog',
@@ -22,6 +23,7 @@ import { RecipeDetailsComponent } from '../recipe-details/recipe-details.compone
     ArticleComponent,
     PdfViewerComponent,
     RecipeDetailsComponent,
+    StudyArticleComponent,
   ],
   templateUrl: './terminal-dialog.component.html',
   styleUrls: ['./terminal-dialog.component.scss'],
