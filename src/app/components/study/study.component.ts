@@ -75,6 +75,9 @@ export class StudyComponent implements OnInit {
   }
 
   onMenuKeydown(event: KeyboardEvent, index: number) {
+    if (event.ctrlKey || event.metaKey || event.altKey) {
+      return;
+    }
     const count = this.topics.length;
     let next: number | null = null;
     switch (event.key) {

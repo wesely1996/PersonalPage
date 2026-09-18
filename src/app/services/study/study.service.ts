@@ -92,6 +92,10 @@ export function renderStudyMarkdown(markdown: string): RenderedStudy {
       },
       link({ href, title, tokens }: Tokens.Link): string {
         const text = this.parser.parseInline(tokens);
+        // Only allow web, mail, in-page and relative targets.
+        if (/^\s*[a-z][a-z0-9+.-]*:/i.test(href) && !/^(https?|mailto):/i.test(href)) {
+          return text;
+        }
         const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
         const external = /^https?:\/\//i.test(href)
           ? ' target="_blank" rel="noopener noreferrer"'

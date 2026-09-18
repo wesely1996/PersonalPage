@@ -64,6 +64,12 @@ describe('renderStudyMarkdown', () => {
     expect(html).toContain('<a href="#intro">b</a>');
   });
 
+  it('drops links with unsafe protocols', () => {
+    const { html } = renderStudyMarkdown('[x](javascript:alert(1)) [m](mailto:a@b.c)');
+    expect(html).not.toContain('javascript:');
+    expect(html).toContain('href="mailto:a@b.c"');
+  });
+
   it('wraps tables in a scroll container', () => {
     const { html } = renderStudyMarkdown('| a | b |\n|---|---|\n| 1 | 2 |');
     expect(html).toContain('<div class="table-wrap"><table>');
