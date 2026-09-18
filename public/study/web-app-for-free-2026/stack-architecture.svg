@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">The zero-dollar stack</title>
+<desc id="d">Architecture of the example app: code goes from laptop to GitHub, GitHub Actions deploys a Cloudflare Worker with static assets and migrates a Supabase Postgres database; the browser talks to both.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">THE $0 STACK IN THIS ARTICLE</text>
+<text x="400" y="56" font-size="13" fill="#7fbf8f" text-anchor="middle">Cloudflare Workers + Supabase + GitHub</text>
+<rect x="20" y="76" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="130" y="100" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">YOUR LAPTOP</text>
+<text x="130" y="122" font-size="13" fill="#d8ffd8" text-anchor="middle">VS Code, Node 24, git</text>
+<text x="130" y="141" font-size="13" fill="#d8ffd8" text-anchor="middle">Vite + React + TS</text>
+<text x="130" y="160" font-size="13" fill="#d8ffd8" text-anchor="middle">wrangler, supabase CLI</text>
+<rect x="290" y="76" width="220" height="110" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="400" y="100" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">GITHUB</text>
+<text x="400" y="122" font-size="13" fill="#d8ffd8" text-anchor="middle">repo + pull requests</text>
+<text x="400" y="141" font-size="13" fill="#d8ffd8" text-anchor="middle">Actions: CI + deploy</text>
+<text x="400" y="160" font-size="13" fill="#d8ffd8" text-anchor="middle">encrypted secrets</text>
+<rect x="560" y="76" width="220" height="110" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+<text x="670" y="100" font-size="15" fill="#ffb000" text-anchor="middle" font-weight="bold">OBSERVABILITY</text>
+<text x="670" y="122" font-size="13" fill="#d8ffd8" text-anchor="middle">Sentry: errors</text>
+<text x="670" y="141" font-size="13" fill="#d8ffd8" text-anchor="middle">CF Web Analytics</text>
+<text x="670" y="160" font-size="13" fill="#d8ffd8" text-anchor="middle">UptimeRobot: pings</text>
+<line x1="240" y1="131" x2="288" y2="131" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<text x="264" y="124" font-size="13" fill="#7fbf8f" text-anchor="middle">push</text>
+<rect x="20" y="240" width="370" height="180" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="205" y="262" font-size="13" fill="#00ff41" text-anchor="middle" font-weight="bold">CLOUDFLARE (edge, 300+ cities)</text>
+<rect x="35" y="278" width="165" height="125" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="117.5" y="302" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">STATIC ASSETS</text>
+<text x="117.5" y="324" font-size="13" fill="#d8ffd8" text-anchor="middle">React build</text>
+<text x="117.5" y="343" font-size="13" fill="#d8ffd8" text-anchor="middle">(dist/) served</text>
+<text x="117.5" y="362" font-size="13" fill="#d8ffd8" text-anchor="middle">from cache,</text>
+<text x="117.5" y="381" font-size="13" fill="#d8ffd8" text-anchor="middle">free + unmetered</text>
+<rect x="210" y="278" width="165" height="125" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="292.5" y="302" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">WORKER</text>
+<text x="292.5" y="324" font-size="13" fill="#d8ffd8" text-anchor="middle">handles /api/*</text>
+<text x="292.5" y="343" font-size="13" fill="#d8ffd8" text-anchor="middle">verifies JWT</text>
+<text x="292.5" y="362" font-size="13" fill="#d8ffd8" text-anchor="middle">fetches link</text>
+<text x="292.5" y="381" font-size="13" fill="#d8ffd8" text-anchor="middle">titles</text>
+<rect x="410" y="240" width="370" height="180" rx="6" fill="#020a02" stroke="#39e6ff" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="595" y="262" font-size="13" fill="#39e6ff" text-anchor="middle" font-weight="bold">SUPABASE (one region)</text>
+<rect x="425" y="278" width="165" height="125" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="507.5" y="302" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">AUTH</text>
+<text x="507.5" y="324" font-size="13" fill="#d8ffd8" text-anchor="middle">GitHub login,</text>
+<text x="507.5" y="343" font-size="13" fill="#d8ffd8" text-anchor="middle">issues JWTs</text>
+<text x="507.5" y="362" font-size="13" fill="#d8ffd8" text-anchor="middle">(access +</text>
+<text x="507.5" y="381" font-size="13" fill="#d8ffd8" text-anchor="middle">refresh)</text>
+<rect x="600" y="278" width="165" height="125" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="682.5" y="302" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">POSTGRES</text>
+<text x="682.5" y="324" font-size="13" fill="#d8ffd8" text-anchor="middle">bookmarks</text>
+<text x="682.5" y="343" font-size="13" fill="#d8ffd8" text-anchor="middle">table, RLS</text>
+<text x="682.5" y="362" font-size="13" fill="#d8ffd8" text-anchor="middle">policies, auto</text>
+<text x="682.5" y="381" font-size="13" fill="#d8ffd8" text-anchor="middle">REST Data API</text>
+<path d="M340,186 L340,215 L205,215 L205,238" fill="none" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="243.8" y="196.0" width="56.4" height="19" fill="#020a02"/>
+<text x="272" y="209" font-size="13" fill="#7fbf8f" text-anchor="middle">deploy</text>
+<path d="M460,186 L460,215 L595,215 L595,238" fill="none" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="495.8" y="196.0" width="64.4" height="19" fill="#020a02"/>
+<text x="528" y="209" font-size="13" fill="#39e6ff" text-anchor="middle">migrate</text>
+<rect x="200" y="475" width="400" height="50" rx="6" fill="#062b0f" stroke="#d8ffd8" stroke-width="1.5"/>
+<text x="400" y="499" font-size="14" fill="#d8ffd8" text-anchor="middle" font-weight="bold">USERS' BROWSERS</text>
+<text x="400" y="519" font-size="13" fill="#7fbf8f" text-anchor="middle">supabase-js + fetch('/api/...')</text>
+<line x1="250" y1="473" x2="120" y2="405" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="330" y1="473" x2="292" y2="405" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="480" y1="473" x2="507" y2="405" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="560" y1="473" x2="682" y2="405" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="375" y1="340" x2="423" y2="340" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="395.0" y="427.0" width="249.8" height="19" fill="#020a02"/>
+<text x="399" y="440" font-size="13" fill="#39e6ff">direct calls, protected by RLS</text>
+</svg>

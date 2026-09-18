@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">Row level security in action</title>
+<desc id="d">Three callers run the same select query against the bookmarks table; the RLS policy filters rows so Alice sees only her rows, Bob only his, and an anonymous caller sees nothing.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">ROW LEVEL SECURITY: SAME QUERY, DIFFERENT ROWS</text>
+<text x="400" y="56" font-size="13" fill="#7fbf8f" text-anchor="middle">select * from bookmarks;</text>
+<rect x="20" y="95" width="190" height="70" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="115" y="119" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">ALICE</text>
+<text x="115" y="141" font-size="13" fill="#d8ffd8" text-anchor="middle">JWT sub = a1</text>
+<rect x="20" y="195" width="190" height="70" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="115" y="219" font-size="15" fill="#39e6ff" text-anchor="middle" font-weight="bold">BOB</text>
+<text x="115" y="241" font-size="13" fill="#d8ffd8" text-anchor="middle">JWT sub = b2</text>
+<rect x="20" y="295" width="190" height="70" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="115" y="319" font-size="15" fill="#ff4d4d" text-anchor="middle" font-weight="bold">ANONYMOUS</text>
+<text x="115" y="341" font-size="13" fill="#d8ffd8" text-anchor="middle">no JWT</text>
+<rect x="270" y="80" width="260" height="300" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/>
+<text x="400" y="104" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">POSTGRES</text>
+<rect x="285" y="116" width="230" height="62" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+<text x="400" y="140" font-size="14" fill="#ffb000" text-anchor="middle" font-weight="bold">POLICY</text>
+<text x="400" y="160" font-size="13" fill="#d8ffd8" text-anchor="middle">auth.uid() = user_id</text>
+<text x="295" y="204" font-size="13" fill="#7fbf8f">user_id</text>
+<text x="370" y="204" font-size="13" fill="#7fbf8f">title</text>
+<rect x="285" y="211" width="230" height="24" rx="4" fill="#062b0f" stroke="#00ff41" stroke-width="1"/>
+<text x="295" y="228" font-size="13" fill="#00ff41">a1</text>
+<text x="370" y="228" font-size="13" fill="#00ff41">react docs</text>
+<rect x="285" y="239" width="230" height="24" rx="4" fill="#062b0f" stroke="#39e6ff" stroke-width="1"/>
+<text x="295" y="256" font-size="13" fill="#39e6ff">b2</text>
+<text x="370" y="256" font-size="13" fill="#39e6ff">recipe blog</text>
+<rect x="285" y="267" width="230" height="24" rx="4" fill="#062b0f" stroke="#00ff41" stroke-width="1"/>
+<text x="295" y="284" font-size="13" fill="#00ff41">a1</text>
+<text x="370" y="284" font-size="13" fill="#00ff41">sql tutorial</text>
+<rect x="285" y="295" width="230" height="24" rx="4" fill="#062b0f" stroke="#39e6ff" stroke-width="1"/>
+<text x="295" y="312" font-size="13" fill="#39e6ff">b2</text>
+<text x="370" y="312" font-size="13" fill="#39e6ff">bike repair</text>
+<rect x="285" y="323" width="230" height="24" rx="4" fill="#062b0f" stroke="#00ff41" stroke-width="1"/>
+<text x="295" y="340" font-size="13" fill="#00ff41">a1</text>
+<text x="370" y="340" font-size="13" fill="#00ff41">fonts list</text>
+<rect x="590" y="95" width="190" height="70" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="685" y="119" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">3 rows</text>
+<text x="685" y="141" font-size="13" fill="#d8ffd8" text-anchor="middle">a1 only</text>
+<rect x="590" y="195" width="190" height="70" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="685" y="219" font-size="15" fill="#39e6ff" text-anchor="middle" font-weight="bold">2 rows</text>
+<text x="685" y="241" font-size="13" fill="#d8ffd8" text-anchor="middle">b2 only</text>
+<rect x="590" y="295" width="190" height="70" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="685" y="319" font-size="15" fill="#ff4d4d" text-anchor="middle" font-weight="bold">0 rows</text>
+<text x="685" y="341" font-size="13" fill="#d8ffd8" text-anchor="middle">not an error</text>
+<line x1="210" y1="130" x2="268" y2="130" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="210" y1="230" x2="268" y2="230" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="210" y1="330" x2="268" y2="330" stroke="#ff4d4d" stroke-width="1.6" marker-end="url(#ar)"/>
+<line x1="530" y1="130" x2="588" y2="130" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="530" y1="230" x2="588" y2="230" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="530" y1="330" x2="588" y2="330" stroke="#ff4d4d" stroke-width="1.6" marker-end="url(#ar)"/>
+<text x="400" y="408" font-size="13" fill="#7fbf8f" text-anchor="middle">The filter runs inside the database - no app code can forget it.</text>
+</svg>

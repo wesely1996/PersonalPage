@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Window function frames</title>
+  <desc id="d">One partition of eight rows ordered by day, with row 5 as the current row. Rows 5 and 6 share the same day and are peers. Frame A, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW, covers rows 3 to 5 and sums to 140. Frame B, the default RANGE UNBOUNDED PRECEDING AND CURRENT ROW, covers rows 1 to 6 because it includes peers and sums to 350. Frame C, no ORDER BY, covers the whole partition and sums to 450.</desc>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">WINDOW FRAMES: SUM(total) OVER (...)</text>
+    <text x="40" y="66" font-size="13" fill="#7fbf8f">one partition, ORDER BY day</text>
+
+    <!-- header -->
+    <rect x="40" y="78" width="300" height="32" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="52" y="99" font-size="14" font-weight="bold" fill="#00ff41">#</text>
+    <text x="100" y="99" font-size="14" font-weight="bold" fill="#00ff41">day</text>
+    <text x="230" y="99" font-size="14" font-weight="bold" fill="#00ff41">total</text>
+
+    <!-- rows: top = 110 + (i-1)*40 -->
+    <rect x="40" y="110" width="300" height="320" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="40" y1="150" x2="340" y2="150" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="190" x2="340" y2="190" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="230" x2="340" y2="230" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="270" x2="340" y2="270" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="310" x2="340" y2="310" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="350" x2="340" y2="350" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="390" x2="340" y2="390" stroke="#0f7a2a" stroke-width="1"/>
+    <!-- peer group highlight (rows 5 and 6) -->
+    <rect x="42" y="272" width="296" height="76" fill="none" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <!-- current row -->
+    <rect x="44" y="274" width="292" height="34" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="22" y="296" font-size="16" font-weight="bold" fill="#00ff41">&gt;</text>
+
+    <text x="52" y="136" font-size="14" fill="#7fbf8f">1</text><text x="100" y="136" font-size="14" fill="#d8ffd8">Jun 01</text><text x="230" y="136" font-size="14" fill="#d8ffd8">100</text>
+    <text x="52" y="176" font-size="14" fill="#7fbf8f">2</text><text x="100" y="176" font-size="14" fill="#d8ffd8">Jun 02</text><text x="230" y="176" font-size="14" fill="#d8ffd8">50</text>
+    <text x="52" y="216" font-size="14" fill="#7fbf8f">3</text><text x="100" y="216" font-size="14" fill="#d8ffd8">Jun 03</text><text x="230" y="216" font-size="14" fill="#d8ffd8">70</text>
+    <text x="52" y="256" font-size="14" fill="#7fbf8f">4</text><text x="100" y="256" font-size="14" fill="#d8ffd8">Jun 04</text><text x="230" y="256" font-size="14" fill="#d8ffd8">30</text>
+    <text x="52" y="296" font-size="14" font-weight="bold" fill="#00ff41">5</text><text x="100" y="296" font-size="14" font-weight="bold" fill="#ffb000">Jun 05</text><text x="230" y="296" font-size="14" font-weight="bold" fill="#00ff41">40</text>
+    <text x="52" y="336" font-size="14" fill="#7fbf8f">6</text><text x="100" y="336" font-size="14" fill="#ffb000">Jun 05</text><text x="230" y="336" font-size="14" fill="#d8ffd8">60</text>
+    <text x="52" y="376" font-size="14" fill="#7fbf8f">7</text><text x="100" y="376" font-size="14" fill="#d8ffd8">Jun 06</text><text x="230" y="376" font-size="14" fill="#d8ffd8">20</text>
+    <text x="52" y="416" font-size="14" fill="#7fbf8f">8</text><text x="100" y="416" font-size="14" fill="#d8ffd8">Jun 07</text><text x="230" y="416" font-size="14" fill="#d8ffd8">80</text>
+
+    <!-- frame brackets -->
+    <!-- A: rows 3-5 -->
+    <path d="M372,192 L382,192 L382,308 L372,308" fill="none" stroke="#39e6ff" stroke-width="2"/>
+    <text x="388" y="254" font-size="14" font-weight="bold" fill="#39e6ff">A</text>
+    <!-- B: rows 1-6 -->
+    <path d="M412,112 L422,112 L422,348 L412,348" fill="none" stroke="#ffb000" stroke-width="2"/>
+    <text x="428" y="234" font-size="14" font-weight="bold" fill="#ffb000">B</text>
+    <!-- C: rows 1-8 -->
+    <path d="M452,112 L462,112 L462,428 L452,428" fill="none" stroke="#00ff41" stroke-width="2"/>
+    <text x="468" y="274" font-size="14" font-weight="bold" fill="#00ff41">C</text>
+
+    <!-- legend -->
+    <rect x="500" y="86" width="285" height="96" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="512" y="108" font-size="14" font-weight="bold" fill="#39e6ff">A  ROWS BETWEEN</text>
+    <text x="512" y="128" font-size="13" fill="#d8ffd8">2 PRECEDING AND CURRENT ROW</text>
+    <text x="512" y="148" font-size="13" fill="#d8ffd8">rows 3..5</text>
+    <text x="512" y="168" font-size="13" fill="#39e6ff">sum = 70+30+40 = 140</text>
+
+    <rect x="500" y="196" width="285" height="116" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="512" y="218" font-size="14" font-weight="bold" fill="#ffb000">B  default with ORDER BY</text>
+    <text x="512" y="238" font-size="13" fill="#d8ffd8">RANGE UNBOUNDED PRECEDING</text>
+    <text x="512" y="258" font-size="13" fill="#d8ffd8">AND CURRENT ROW, incl. peers</text>
+    <text x="512" y="278" font-size="13" fill="#ffb000">rows 1..6: sum = 350</text>
+    <text x="512" y="298" font-size="13" fill="#7fbf8f">(ROWS mode would give 290)</text>
+
+    <rect x="500" y="326" width="285" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="512" y="348" font-size="14" font-weight="bold" fill="#00ff41">C  no ORDER BY in OVER</text>
+    <text x="512" y="368" font-size="13" fill="#d8ffd8">frame = whole partition</text>
+    <text x="512" y="388" font-size="13" fill="#d8ffd8">rows 1..8</text>
+    <text x="512" y="408" font-size="13" fill="#00ff41">sum = 450 on every row</text>
+
+    <text x="40" y="468" font-size="13" fill="#7fbf8f">&gt; = current row (5). Dashed amber box = peers: same ORDER BY value (Jun 05).</text>
+  </g>
+</svg>

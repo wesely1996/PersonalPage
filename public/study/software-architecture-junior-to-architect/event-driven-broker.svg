@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 430" role="img" aria-labelledby="t d">
+  <title id="t">Event-driven architecture with a message broker</title>
+  <desc id="d">The order service publishes an OrderPlaced event to a topic in a broker. The topic is a partitioned log. Inventory, Billing, Email and Analytics services each consume the event independently with their own offsets. A message that keeps failing is moved to a dead-letter queue.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#00ff41" filter="url(#glow)">PUBLISH ONCE, CONSUME INDEPENDENTLY</text>
+
+    <!-- Producer -->
+    <rect x="25" y="170" width="160" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="105" y="197" text-anchor="middle" font-size="15" fill="#d8ffd8">Order service</text>
+    <text x="105" y="217" text-anchor="middle" font-size="13" fill="#7fbf8f">producer</text>
+    <text x="105" y="258" text-anchor="middle" font-size="13" fill="#7fbf8f">does not know</text>
+    <text x="105" y="276" text-anchor="middle" font-size="13" fill="#7fbf8f">who listens</text>
+
+    <line x1="185" y1="200" x2="296" y2="200" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrCyan)"/>
+    <text x="240" y="190" text-anchor="middle" font-size="13" fill="#39e6ff">OrderPlaced</text>
+    <text x="240" y="219" text-anchor="middle" font-size="13" fill="#7fbf8f">publish</text>
+
+    <!-- Broker -->
+    <rect x="300" y="60" width="200" height="270" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="400" y="85" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">BROKER</text>
+    <text x="400" y="110" text-anchor="middle" font-size="13" fill="#d8ffd8">topic: orders</text>
+    <text x="316" y="160" font-size="13" fill="#7fbf8f">p0</text>
+    <text x="316" y="210" font-size="13" fill="#7fbf8f">p1</text>
+    <g fill="#020a02" stroke="#00ff41" stroke-width="1.5">
+      <rect x="342" y="142" width="24" height="26"/><rect x="368" y="142" width="24" height="26"/><rect x="394" y="142" width="24" height="26"/><rect x="420" y="142" width="24" height="26"/><rect x="446" y="142" width="24" height="26"/>
+      <rect x="342" y="192" width="24" height="26"/><rect x="368" y="192" width="24" height="26"/><rect x="394" y="192" width="24" height="26"/><rect x="420" y="192" width="24" height="26"/>
+    </g>
+    <rect x="446" y="142" width="24" height="26" fill="#39e6ff" fill-opacity="0.35" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="400" y="250" text-anchor="middle" font-size="13" fill="#d8ffd8">append-only log</text>
+    <text x="400" y="270" text-anchor="middle" font-size="13" fill="#7fbf8f">per-group offsets</text>
+    <text x="400" y="290" text-anchor="middle" font-size="13" fill="#7fbf8f">order per key</text>
+    <text x="400" y="310" text-anchor="middle" font-size="13" fill="#7fbf8f">(key = orderId)</text>
+
+    <!-- Consumers -->
+    <g stroke="#00ff41" stroke-width="2">
+      <line x1="500" y1="130" x2="578" y2="80" marker-end="url(#arr)"/>
+      <line x1="500" y1="170" x2="578" y2="158" marker-end="url(#arr)"/>
+      <line x1="500" y1="220" x2="578" y2="236" marker-end="url(#arr)"/>
+      <line x1="500" y1="260" x2="578" y2="314" marker-end="url(#arr)"/>
+    </g>
+    <g font-size="15" fill="#d8ffd8">
+      <rect x="580" y="52" width="195" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="595" y="75">Inventory</text>
+      <rect x="580" y="130" width="195" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="595" y="153">Billing</text>
+      <rect x="580" y="208" width="195" height="56" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+      <text x="595" y="231">Email</text>
+      <rect x="580" y="286" width="195" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="595" y="309">Analytics</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="595" y="96">reserve stock</text>
+      <text x="595" y="174">charge card</text>
+      <text x="595" y="252">send receipt</text>
+      <text x="595" y="330">update dashboards</text>
+    </g>
+
+    <!-- DLQ -->
+    <path d="M 775 236 L 790 236 L 790 390 L 492 390" fill="none" stroke="#ff4d4d" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrRed)"/>
+    <text x="700" y="362" font-size="13" fill="#ff4d4d">after N</text>
+    <text x="700" y="380" font-size="13" fill="#ff4d4d">failures</text>
+    <rect x="315" y="370" width="175" height="40" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="402" y="395" text-anchor="middle" font-size="13" fill="#ff4d4d">dead-letter queue</text>
+    <text x="25" y="395" font-size="13" fill="#7fbf8f">consumers must be idempotent</text>
+  </g>
+</svg>

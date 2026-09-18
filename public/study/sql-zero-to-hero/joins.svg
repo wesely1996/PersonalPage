@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570" role="img" aria-labelledby="t d">
+  <title id="t">Join types as row matching</title>
+  <desc id="d">products ThinkPad X1, Pixel 9 and USB-C Cable are matched to categories Laptops, Phones and Garden on category_id. ThinkPad matches Laptops, Pixel matches Phones, the cable and Garden have no partner. INNER JOIN keeps the two matched pairs, LEFT JOIN also keeps the cable with NULL, RIGHT JOIN also keeps Garden with NULL, FULL JOIN keeps both.</desc>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">JOINS AS ROW MATCHING</text>
+
+    <!-- products input -->
+    <text x="40" y="78" font-size="15" font-weight="bold" fill="#00ff41">products</text>
+    <rect x="40" y="88" width="230" height="28" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="50" y="107" font-size="13" font-weight="bold" fill="#00ff41">name</text>
+    <text x="200" y="107" font-size="13" font-weight="bold" fill="#00ff41">cat_id</text>
+    <rect x="40" y="116" width="230" height="84" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="40" y1="144" x2="270" y2="144" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="40" y1="172" x2="270" y2="172" stroke="#0f7a2a" stroke-width="1"/>
+    <text x="50" y="135" font-size="13" fill="#d8ffd8">ThinkPad X1</text><text x="200" y="135" font-size="13" fill="#d8ffd8">3</text>
+    <text x="50" y="163" font-size="13" fill="#d8ffd8">Pixel 9</text><text x="200" y="163" font-size="13" fill="#d8ffd8">4</text>
+    <text x="50" y="191" font-size="13" fill="#ff4d4d">USB-C Cable</text><text x="200" y="191" font-size="13" fill="#ffb000">NULL</text>
+
+    <!-- categories input -->
+    <text x="530" y="78" font-size="15" font-weight="bold" fill="#00ff41">categories</text>
+    <rect x="530" y="88" width="230" height="28" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="540" y="107" font-size="13" font-weight="bold" fill="#00ff41">id</text>
+    <text x="600" y="107" font-size="13" font-weight="bold" fill="#00ff41">name</text>
+    <rect x="530" y="116" width="230" height="84" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="530" y1="144" x2="760" y2="144" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="530" y1="172" x2="760" y2="172" stroke="#0f7a2a" stroke-width="1"/>
+    <text x="540" y="135" font-size="13" fill="#d8ffd8">3</text><text x="600" y="135" font-size="13" fill="#d8ffd8">Laptops</text>
+    <text x="540" y="163" font-size="13" fill="#d8ffd8">4</text><text x="600" y="163" font-size="13" fill="#d8ffd8">Phones</text>
+    <text x="540" y="191" font-size="13" fill="#ff4d4d">7</text><text x="600" y="191" font-size="13" fill="#ff4d4d">Garden</text>
+
+    <!-- matching -->
+    <text x="400" y="78" text-anchor="middle" font-size="13" fill="#7fbf8f">ON p.cat_id = c.id</text>
+    <line x1="270" y1="130" x2="530" y2="130" stroke="#39e6ff" stroke-width="2"/>
+    <line x1="270" y1="158" x2="530" y2="158" stroke="#39e6ff" stroke-width="2"/>
+    <text x="400" y="124" text-anchor="middle" font-size="13" fill="#39e6ff">match</text>
+    <text x="400" y="152" text-anchor="middle" font-size="13" fill="#39e6ff">match</text>
+    <text x="282" y="191" font-size="13" fill="#ff4d4d">no partner</text>
+    <text x="518" y="191" text-anchor="end" font-size="13" fill="#ff4d4d">no partner</text>
+
+    <!-- INNER -->
+    <rect x="30" y="230" width="355" height="142" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="45" y="256" font-size="15" font-weight="bold" fill="#00ff41">INNER JOIN</text>
+    <text x="160" y="256" font-size="13" fill="#7fbf8f">matched pairs only</text>
+    <text x="45" y="284" font-size="13" fill="#d8ffd8">ThinkPad X1</text><text x="190" y="284" font-size="13" fill="#0f7a2a">|</text><text x="210" y="284" font-size="13" fill="#d8ffd8">Laptops</text>
+    <text x="45" y="306" font-size="13" fill="#d8ffd8">Pixel 9</text><text x="190" y="306" font-size="13" fill="#0f7a2a">|</text><text x="210" y="306" font-size="13" fill="#d8ffd8">Phones</text>
+    <text x="45" y="350" font-size="13" fill="#ff4d4d">dropped: USB-C Cable, Garden</text>
+
+    <!-- LEFT -->
+    <rect x="415" y="230" width="355" height="142" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="430" y="256" font-size="15" font-weight="bold" fill="#00ff41">LEFT JOIN</text>
+    <text x="535" y="256" font-size="13" fill="#7fbf8f">+ unmatched products</text>
+    <text x="430" y="284" font-size="13" fill="#d8ffd8">ThinkPad X1</text><text x="575" y="284" font-size="13" fill="#0f7a2a">|</text><text x="595" y="284" font-size="13" fill="#d8ffd8">Laptops</text>
+    <text x="430" y="306" font-size="13" fill="#d8ffd8">Pixel 9</text><text x="575" y="306" font-size="13" fill="#0f7a2a">|</text><text x="595" y="306" font-size="13" fill="#d8ffd8">Phones</text>
+    <text x="430" y="328" font-size="13" fill="#d8ffd8">USB-C Cable</text><text x="575" y="328" font-size="13" fill="#0f7a2a">|</text><text x="595" y="328" font-size="13" fill="#ffb000">NULL</text>
+    <text x="430" y="350" font-size="13" fill="#ff4d4d">dropped: Garden</text>
+
+    <!-- RIGHT -->
+    <rect x="30" y="392" width="355" height="142" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="45" y="418" font-size="15" font-weight="bold" fill="#00ff41">RIGHT JOIN</text>
+    <text x="160" y="418" font-size="13" fill="#7fbf8f">+ unmatched categories</text>
+    <text x="45" y="446" font-size="13" fill="#d8ffd8">ThinkPad X1</text><text x="190" y="446" font-size="13" fill="#0f7a2a">|</text><text x="210" y="446" font-size="13" fill="#d8ffd8">Laptops</text>
+    <text x="45" y="468" font-size="13" fill="#d8ffd8">Pixel 9</text><text x="190" y="468" font-size="13" fill="#0f7a2a">|</text><text x="210" y="468" font-size="13" fill="#d8ffd8">Phones</text>
+    <text x="45" y="490" font-size="13" fill="#ffb000">NULL</text><text x="190" y="490" font-size="13" fill="#0f7a2a">|</text><text x="210" y="490" font-size="13" fill="#d8ffd8">Garden</text>
+    <text x="45" y="512" font-size="13" fill="#ff4d4d">dropped: USB-C Cable</text>
+
+    <!-- FULL -->
+    <rect x="415" y="392" width="355" height="142" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="430" y="418" font-size="15" font-weight="bold" fill="#00ff41">FULL JOIN</text>
+    <text x="535" y="418" font-size="13" fill="#7fbf8f">keep both sides</text>
+    <text x="430" y="446" font-size="13" fill="#d8ffd8">ThinkPad X1</text><text x="575" y="446" font-size="13" fill="#0f7a2a">|</text><text x="595" y="446" font-size="13" fill="#d8ffd8">Laptops</text>
+    <text x="430" y="468" font-size="13" fill="#d8ffd8">Pixel 9</text><text x="575" y="468" font-size="13" fill="#0f7a2a">|</text><text x="595" y="468" font-size="13" fill="#d8ffd8">Phones</text>
+    <text x="430" y="490" font-size="13" fill="#d8ffd8">USB-C Cable</text><text x="575" y="490" font-size="13" fill="#0f7a2a">|</text><text x="595" y="490" font-size="13" fill="#ffb000">NULL</text>
+    <text x="430" y="512" font-size="13" fill="#ffb000">NULL</text><text x="575" y="512" font-size="13" fill="#0f7a2a">|</text><text x="595" y="512" font-size="13" fill="#d8ffd8">Garden</text>
+
+    <text x="400" y="552" text-anchor="middle" font-size="13" fill="#7fbf8f">CROSS JOIN pairs every row with every row: 3 x 3 = 9 rows</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Context map of an e-commerce company</title>
+  <desc id="d">Six bounded contexts: Catalog, Ordering (the core domain), Billing, Shipping, Identity and a legacy ERP. Catalog is upstream of Ordering via an open host service. Ordering is upstream supplier to Billing in a customer-supplier relationship. Ordering publishes events in a published language to Shipping. Ordering conforms to the Identity provider's model. Shipping protects itself from the legacy ERP with an anticorruption layer.</desc>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">CONTEXT MAP: E-COMMERCE</text>
+
+    <!-- relationship lines (under boxes) -->
+    <g stroke="#00ff41" stroke-width="2" fill="none">
+      <line x1="200" y1="140" x2="340" y2="200"/>
+      <line x1="495" y1="215" x2="620" y2="140"/>
+      <line x1="495" y1="260" x2="620" y2="340"/>
+      <line x1="200" y1="340" x2="340" y2="280"/>
+    </g>
+    <line x1="495" y1="440" x2="585" y2="410" stroke="#ffb000" stroke-width="2"/>
+
+    <!-- contexts -->
+    <g font-size="16" text-anchor="middle">
+      <rect x="40" y="70" width="190" height="70" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="135" y="100" fill="#d8ffd8">Catalog</text>
+      <rect x="305" y="200" width="190" height="80" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2.5"/>
+      <text x="400" y="235" fill="#ffb000" font-weight="bold">Ordering</text>
+      <rect x="570" y="70" width="190" height="70" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="665" y="100" fill="#d8ffd8">Billing</text>
+      <rect x="570" y="340" width="190" height="70" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="665" y="370" fill="#d8ffd8">Shipping</text>
+      <rect x="40" y="340" width="190" height="70" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+      <text x="135" y="370" fill="#d8ffd8">Identity</text>
+      <rect x="305" y="410" width="190" height="64" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="400" y="438" fill="#d8ffd8">Legacy ERP</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#7fbf8f">
+      <text x="135" y="122">supporting</text>
+      <text x="400" y="258" fill="#ffb000">CORE domain</text>
+      <text x="665" y="122">supporting</text>
+      <text x="665" y="392">supporting</text>
+      <text x="135" y="392">generic (bought)</text>
+      <text x="400" y="460">external, old model</text>
+    </g>
+
+    <!-- ACL bar on Shipping -->
+    <rect x="578" y="402" width="40" height="14" fill="#ffb000"/>
+
+    <!-- relationship labels with background -->
+    <g font-size="13" text-anchor="middle">
+      <rect x="198" y="158" width="144" height="22" fill="#020a02"/>
+      <text x="270" y="174" fill="#d8ffd8">Open Host Service</text>
+      <rect x="490" y="165" width="144" height="22" fill="#020a02"/>
+      <text x="562" y="181" fill="#d8ffd8">Customer-Supplier</text>
+      <rect x="486" y="288" width="152" height="22" fill="#020a02"/>
+      <text x="562" y="304" fill="#d8ffd8">Published Language</text>
+      <rect x="230" y="300" width="86" height="22" fill="#020a02"/>
+      <text x="273" y="316" fill="#d8ffd8">Conformist</text>
+      <text x="580" y="462" fill="#ffb000">Anticorruption Layer</text>
+    </g>
+
+    <!-- U / D markers -->
+    <g font-size="13" font-weight="bold">
+      <text x="206" y="158" fill="#39e6ff">U</text>
+      <text x="346" y="194" fill="#ffb000">D</text>
+      <text x="500" y="234" fill="#39e6ff">U</text>
+      <text x="628" y="160" fill="#ffb000">D</text>
+      <text x="505" y="283" fill="#39e6ff">U</text>
+      <text x="628" y="334" fill="#ffb000">D</text>
+      <text x="185" y="334" fill="#39e6ff">U</text>
+      <text x="295" y="275" fill="#ffb000">D</text>
+      <text x="500" y="428" fill="#39e6ff">U</text>
+      <text x="552" y="408" fill="#ffb000">D</text>
+    </g>
+
+    <text x="400" y="506" text-anchor="middle" font-size="13" fill="#7fbf8f">U = upstream (its model flows down) / D = downstream (adapts or protects itself)</text>
+  </g>
+</svg>

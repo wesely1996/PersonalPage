@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+  <title id="t">Cohesion and coupling compared</title>
+  <desc id="d">Left panel: three modules each containing a mix of order, billing and email code, with many red dependency lines crossing between modules. Right panel: three modules named Orders, Billing and Email, each containing only its own concern, connected by two narrow interface arrows.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <!-- panel frames -->
+    <rect x="15" y="15" width="375" height="390" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <rect x="410" y="15" width="375" height="390" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="202" y="45" text-anchor="middle" font-size="16" font-weight="bold" fill="#ff4d4d">LOW COHESION, HIGH COUPLING</text>
+    <text x="597" y="45" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41" filter="url(#glow)">HIGH COHESION, LOW COUPLING</text>
+
+    <!-- LEFT: tangled modules -->
+    <rect x="35" y="75" width="150" height="120" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="220" y="75" width="150" height="120" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <rect x="127" y="240" width="150" height="130" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="45" y="94" font-size="13" fill="#7fbf8f">utils</text>
+    <text x="230" y="94" font-size="13" fill="#7fbf8f">services</text>
+    <text x="137" y="363" font-size="13" fill="#7fbf8f">helpers</text>
+
+    <!-- red coupling lines (drawn first, under the nodes) -->
+    <g stroke="#ff4d4d" stroke-width="1.5" fill="none">
+      <line x1="75" y1="125" x2="260" y2="165"/>
+      <line x1="75" y1="125" x2="167" y2="330"/>
+      <line x1="145" y1="165" x2="330" y2="125"/>
+      <line x1="145" y1="165" x2="237" y2="290"/>
+      <line x1="145" y1="125" x2="260" y2="125"/>
+      <line x1="75" y1="165" x2="167" y2="290"/>
+      <line x1="330" y1="165" x2="237" y2="330"/>
+      <line x1="260" y1="165" x2="237" y2="290"/>
+    </g>
+    <!-- nodes: O orders, B billing, E email -->
+    <g font-size="13" font-weight="bold" text-anchor="middle">
+      <circle cx="75" cy="125" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="75" y="130" fill="#00ff41">O</text>
+      <circle cx="145" cy="125" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="145" y="130" fill="#39e6ff">B</text>
+      <circle cx="75" cy="165" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="75" y="170" fill="#ffb000">E</text>
+      <circle cx="145" cy="165" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="145" y="170" fill="#00ff41">O</text>
+
+      <circle cx="260" cy="125" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="260" y="130" fill="#39e6ff">B</text>
+      <circle cx="330" cy="125" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="330" y="130" fill="#00ff41">O</text>
+      <circle cx="260" cy="165" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="260" y="170" fill="#ffb000">E</text>
+      <circle cx="330" cy="165" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="330" y="170" fill="#39e6ff">B</text>
+
+      <circle cx="167" cy="290" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="167" y="295" fill="#ffb000">E</text>
+      <circle cx="237" cy="290" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="237" y="295" fill="#00ff41">O</text>
+      <circle cx="167" cy="330" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="167" y="335" fill="#39e6ff">B</text>
+      <circle cx="237" cy="330" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="237" y="335" fill="#ffb000">E</text>
+    </g>
+    <text x="202" y="393" text-anchor="middle" font-size="13" fill="#ff4d4d">one change ripples into every module</text>
+
+    <!-- RIGHT: cohesive modules -->
+    <rect x="430" y="75" width="150" height="120" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="615" y="75" width="150" height="120" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="522" y="240" width="150" height="120" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="440" y="94" font-size="13" fill="#d8ffd8">Orders</text>
+    <text x="625" y="94" font-size="13" fill="#d8ffd8">Billing</text>
+    <text x="532" y="259" font-size="13" fill="#d8ffd8">Email</text>
+
+    <g font-size="13" font-weight="bold" text-anchor="middle">
+      <circle cx="470" cy="125" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="470" y="130" fill="#00ff41">O</text>
+      <circle cx="540" cy="125" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="540" y="130" fill="#00ff41">O</text>
+      <circle cx="470" cy="165" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="470" y="170" fill="#00ff41">O</text>
+      <circle cx="540" cy="165" r="13" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="540" y="170" fill="#00ff41">O</text>
+
+      <circle cx="655" cy="125" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="655" y="130" fill="#39e6ff">B</text>
+      <circle cx="725" cy="125" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="725" y="130" fill="#39e6ff">B</text>
+      <circle cx="655" cy="165" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="655" y="170" fill="#39e6ff">B</text>
+      <circle cx="725" cy="165" r="13" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/><text x="725" y="170" fill="#39e6ff">B</text>
+
+      <circle cx="562" cy="290" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="562" y="295" fill="#ffb000">E</text>
+      <circle cx="632" cy="290" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="632" y="295" fill="#ffb000">E</text>
+      <circle cx="562" cy="330" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="562" y="335" fill="#ffb000">E</text>
+      <circle cx="632" cy="330" r="13" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/><text x="632" y="335" fill="#ffb000">E</text>
+    </g>
+
+    <!-- narrow interfaces -->
+    <line x1="580" y1="135" x2="613" y2="135" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="545" y1="195" x2="565" y2="238" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="597" y="220" font-size="13" fill="#7fbf8f">interface</text>
+    <text x="597" y="390" text-anchor="middle" font-size="13" fill="#00ff41">changes stay inside one module</text>
+
+    <text x="400" y="433" text-anchor="middle" font-size="13" fill="#7fbf8f">O = order logic / B = billing logic / E = email logic</text>
+  </g>
+</svg>

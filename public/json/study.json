@@ -1,0 +1,80 @@
+[
+  {
+    "track": "Engineering",
+    "slug": "web-app-for-free-2026",
+    "title": "How to Build a Web App for Free, from Zero (2026)",
+    "summary": "From a blank folder to a deployed app with auth, a database, CI/CD and HTTPS, without spending a cent.",
+    "from": "zero",
+    "to": "deployed",
+    "readingMinutes": 45,
+    "figures": 9,
+    "tags": [
+      "web",
+      "full-stack",
+      "deployment",
+      "free tier"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "linux-zero-to-master",
+    "title": "Linux: From Zero to Master",
+    "summary": "The shell, the filesystem, permissions, processes, networking, scripting and what happens under the hood.",
+    "from": "zero",
+    "to": "master",
+    "readingMinutes": 47,
+    "figures": 8,
+    "tags": [
+      "linux",
+      "shell",
+      "bash",
+      "sysadmin"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "sql-zero-to-hero",
+    "title": "SQL: From Zero to Hero",
+    "summary": "Queries, joins, window functions, indexes, transactions and query plans, all on one running example.",
+    "from": "zero",
+    "to": "hero",
+    "readingMinutes": 55,
+    "figures": 8,
+    "tags": [
+      "sql",
+      "postgresql",
+      "databases"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "sql-vs-nosql",
+    "title": "SQL vs NoSQL: Choosing the Right Database",
+    "summary": "Data models, consistency, scaling and trade-offs, with one domain modelled in every kind of database.",
+    "from": "confused",
+    "to": "decisive",
+    "readingMinutes": 47,
+    "figures": 8,
+    "tags": [
+      "databases",
+      "nosql",
+      "data modeling"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "software-architecture-junior-to-architect",
+    "title": "Software Architecture: From Junior to Architect",
+    "summary": "How design thinking grows with your career, from clean functions to systems, teams and trade-offs.",
+    "from": "junior",
+    "to": "architect",
+    "readingMinutes": 60,
+    "figures": 9,
+    "tags": [
+      "architecture",
+      "design patterns",
+      "system design",
+      "career"
+    ]
+  }
+]

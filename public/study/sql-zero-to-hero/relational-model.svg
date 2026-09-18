@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 510" role="img" aria-labelledby="t d">
+  <title id="t">The relational model: tables, keys and a foreign key</title>
+  <desc id="d">Two tables, customers and orders. customers.customer_id is the primary key; orders.customer_id is a foreign key referencing it. An order for customer 99 is rejected because no such customer exists.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">THE RELATIONAL MODEL</text>
+
+    <!-- customers table -->
+    <text x="30" y="68" font-size="16" font-weight="bold" fill="#00ff41">customers</text>
+    <text x="85" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffb000">PK</text>
+    <rect x="30" y="100" width="350" height="32" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="40" y="121" font-size="14" font-weight="bold" fill="#00ff41">customer_id</text>
+    <text x="150" y="121" font-size="14" font-weight="bold" fill="#00ff41">full_name</text>
+    <text x="300" y="121" font-size="14" font-weight="bold" fill="#00ff41">country</text>
+    <rect x="30" y="132" width="350" height="96" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="30" y1="164" x2="380" y2="164" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="30" y1="196" x2="380" y2="196" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="140" y1="100" x2="140" y2="228" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="290" y1="100" x2="290" y2="228" stroke="#0f7a2a" stroke-width="1"/>
+    <text x="40" y="153" font-size="14" fill="#ffb000">1</text>
+    <text x="150" y="153" font-size="14" fill="#d8ffd8">Ada Lovelace</text>
+    <text x="300" y="153" font-size="14" fill="#d8ffd8">UK</text>
+    <text x="40" y="185" font-size="14" fill="#ffb000">2</text>
+    <text x="150" y="185" font-size="14" fill="#d8ffd8">Alan Turing</text>
+    <text x="300" y="185" font-size="14" fill="#d8ffd8">UK</text>
+    <text x="40" y="217" font-size="14" fill="#ffb000">3</text>
+    <text x="150" y="217" font-size="14" fill="#d8ffd8">Grace Hopper</text>
+    <text x="300" y="217" font-size="14" fill="#d8ffd8">US</text>
+
+    <!-- orders table -->
+    <text x="420" y="68" font-size="16" font-weight="bold" fill="#00ff41">orders</text>
+    <text x="470" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffb000">PK</text>
+    <text x="585" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#39e6ff">FK</text>
+    <rect x="420" y="100" width="350" height="32" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="430" y="121" font-size="14" font-weight="bold" fill="#00ff41">order_id</text>
+    <text x="530" y="121" font-size="14" font-weight="bold" fill="#00ff41">customer_id</text>
+    <text x="660" y="121" font-size="14" font-weight="bold" fill="#00ff41">status</text>
+    <rect x="420" y="132" width="350" height="96" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="420" y1="164" x2="770" y2="164" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="420" y1="196" x2="770" y2="196" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="520" y1="100" x2="520" y2="228" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="650" y1="100" x2="650" y2="228" stroke="#0f7a2a" stroke-width="1"/>
+    <text x="430" y="153" font-size="14" fill="#ffb000">1</text>
+    <text x="530" y="153" font-size="14" fill="#39e6ff">1</text>
+    <text x="660" y="153" font-size="14" fill="#d8ffd8">paid</text>
+    <text x="430" y="185" font-size="14" fill="#ffb000">2</text>
+    <text x="530" y="185" font-size="14" fill="#39e6ff">2</text>
+    <text x="660" y="185" font-size="14" fill="#d8ffd8">shipped</text>
+    <text x="430" y="217" font-size="14" fill="#ffb000">4</text>
+    <text x="530" y="217" font-size="14" fill="#39e6ff">3</text>
+    <text x="660" y="217" font-size="14" fill="#d8ffd8">paid</text>
+    <!-- rejected row -->
+    <rect x="420" y="232" width="350" height="30" rx="6" fill="none" stroke="#ff4d4d" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="430" y="252" font-size="14" fill="#ff4d4d">8</text>
+    <text x="530" y="252" font-size="14" fill="#ff4d4d">99</text>
+    <text x="660" y="252" font-size="14" fill="#ff4d4d">REJECTED</text>
+
+    <!-- FK arrow -->
+    <path d="M585,266 L585,292 L85,292 L85,234" fill="none" stroke="#39e6ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="335" y="314" text-anchor="middle" font-size="13" fill="#7fbf8f">orders.customer_id REFERENCES customers.customer_id</text>
+
+    <!-- explanation boxes -->
+    <rect x="30" y="335" width="360" height="112" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="45" y="362" font-size="15" font-weight="bold" fill="#ffb000">PRIMARY KEY</text>
+    <text x="45" y="388" font-size="14" fill="#d8ffd8">unique and never NULL, so every</text>
+    <text x="45" y="410" font-size="14" fill="#d8ffd8">row can be addressed: id 3 is</text>
+    <text x="45" y="432" font-size="14" fill="#d8ffd8">exactly one customer</text>
+
+    <rect x="410" y="335" width="360" height="112" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="425" y="362" font-size="15" font-weight="bold" fill="#39e6ff">FOREIGN KEY</text>
+    <text x="425" y="388" font-size="14" fill="#d8ffd8">must match an existing key</text>
+    <text x="425" y="410" font-size="14" fill="#d8ffd8">(or be NULL). Enforced by the</text>
+    <text x="425" y="432" font-size="14" fill="#d8ffd8">database on every write</text>
+
+    <text x="400" y="482" text-anchor="middle" font-size="13" fill="#ff4d4d">INSERT order 8 for customer 99 -&gt; ERROR: violates foreign key constraint</text>
+  </g>
+</svg>
