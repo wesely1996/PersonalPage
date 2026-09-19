@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 530" role="img" aria-labelledby="t d">
+  <title id="t">Map of the most useful measure words</title>
+  <desc id="d">Number plus measure word plus noun. The general measure word 个 gè sits in the center, surrounded by eight specific ones: 本 for books, 张 for flat things, 只 for animals, 条 for long thin things, 杯 for cups of drinks, 件 for clothes and matters, 辆 for vehicles, and 位 for people politely.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Number + MEASURE WORD + noun</text>
+    <text x="400" y="62" text-anchor="middle" font-size="16" fill="#d8ffd8">三 <tspan fill="#ffb000" font-weight="bold">个</tspan> 人  sān ge rén  (three people)</text>
+
+    <!-- connectors -->
+    <g stroke="#0f7a2a" stroke-width="1.5">
+      <line x1="315" y1="300" x2="280" y2="137"/>
+      <line x1="315" y1="300" x2="280" y2="237"/>
+      <line x1="315" y1="300" x2="280" y2="337"/>
+      <line x1="315" y1="300" x2="280" y2="437"/>
+      <line x1="485" y1="300" x2="520" y2="137"/>
+      <line x1="485" y1="300" x2="520" y2="237"/>
+      <line x1="485" y1="300" x2="520" y2="337"/>
+      <line x1="485" y1="300" x2="520" y2="437"/>
+    </g>
+
+    <!-- hub -->
+    <rect x="315" y="240" width="170" height="120" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="400" y="290" text-anchor="middle" font-size="40" fill="#ffb000" filter="url(#glow)">个</text>
+    <text x="400" y="320" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">gè (ge)</text>
+    <text x="400" y="344" text-anchor="middle" font-size="13" fill="#d8ffd8">default, people</text>
+
+    <!-- left boxes -->
+    <g fill="#062b0f" stroke="#00ff41" stroke-width="1.5">
+      <rect x="30" y="95" width="250" height="84" rx="6"/>
+      <rect x="30" y="195" width="250" height="84" rx="6"/>
+      <rect x="30" y="295" width="250" height="84" rx="6"/>
+      <rect x="30" y="395" width="250" height="84" rx="6"/>
+      <rect x="520" y="95" width="250" height="84" rx="6"/>
+      <rect x="520" y="195" width="250" height="84" rx="6"/>
+      <rect x="520" y="295" width="250" height="84" rx="6"/>
+      <rect x="520" y="395" width="250" height="84" rx="6"/>
+    </g>
+    <g font-size="26" fill="#00ff41">
+      <text x="46" y="133">本</text>
+      <text x="46" y="233">张</text>
+      <text x="46" y="333">只</text>
+      <text x="46" y="433">条</text>
+      <text x="536" y="133">杯</text>
+      <text x="536" y="233">件</text>
+      <text x="536" y="333">辆</text>
+      <text x="536" y="433">位</text>
+    </g>
+    <g font-size="14" fill="#39e6ff" font-weight="bold">
+      <text x="84" y="122">běn</text>
+      <text x="84" y="222">zhāng</text>
+      <text x="84" y="322">zhī</text>
+      <text x="84" y="422">tiáo</text>
+      <text x="574" y="122">bēi</text>
+      <text x="574" y="222">jiàn</text>
+      <text x="574" y="322">liàng</text>
+      <text x="574" y="422">wèi</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="84" y="140">books, volumes</text>
+      <text x="84" y="240">flat things</text>
+      <text x="84" y="340">most animals</text>
+      <text x="84" y="440">long, thin things</text>
+      <text x="574" y="140">a cup/glass of</text>
+      <text x="574" y="240">clothes, matters</text>
+      <text x="574" y="340">vehicles</text>
+      <text x="574" y="440">people (polite)</text>
+    </g>
+    <g font-size="14" fill="#7fbf8f">
+      <text x="46" y="166">一本书 yì běn shū</text>
+      <text x="46" y="266">两张票 liǎng zhāng piào</text>
+      <text x="46" y="366">三只猫 sān zhī māo</text>
+      <text x="46" y="466">一条鱼 yì tiáo yú</text>
+      <text x="536" y="166">一杯咖啡 yì bēi kāfēi</text>
+      <text x="536" y="266">一件衣服 yí jiàn yīfu</text>
+      <text x="536" y="366">一辆车 yí liàng chē</text>
+      <text x="536" y="466">两位老师 liǎng wèi lǎoshī</text>
+    </g>
+    <text x="400" y="514" text-anchor="middle" font-size="13" fill="#7fbf8f">Unsure? 个 is the safe fallback in speech. Use 两 liǎng, not 二 èr, before a measure word.</text>
+  </g>
+</svg>

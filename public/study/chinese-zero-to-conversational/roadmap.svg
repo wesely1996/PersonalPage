@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Sixteen-week roadmap from zero toward HSK 3</title>
+  <desc id="d">Five phases: weeks 1-2 sounds and pinyin; weeks 3-5 survival phrases, numbers and 是 有 在 at HSK 1 level; weeks 6-9 grammar core at HSK 2 level; weeks 10-13 complements and 把 with graded readers at HSK 3 grammar; weeks 14-16 conversation practice and a mock exam. Cumulative word targets rise from about 60 to about 800.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">16 weeks at ~10 hours/week</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="95" y1="130" x2="95" y2="144"/>
+      <line x1="95" y1="216" x2="95" y2="230"/>
+      <line x1="95" y1="302" x2="95" y2="316"/>
+      <line x1="95" y1="388" x2="95" y2="402"/>
+    </g>
+
+    <!-- phase boxes: label | content | words -->
+    <g fill="#062b0f" stroke-width="1.5">
+      <rect x="40" y="60" width="110" height="70" rx="6" stroke="#0f7a2a"/>
+      <rect x="165" y="60" width="470" height="70" rx="6" stroke="#0f7a2a"/>
+      <rect x="650" y="60" width="110" height="70" rx="6" stroke="#0f7a2a"/>
+
+      <rect x="40" y="146" width="110" height="70" rx="6" stroke="#00ff41"/>
+      <rect x="165" y="146" width="470" height="70" rx="6" stroke="#00ff41"/>
+      <rect x="650" y="146" width="110" height="70" rx="6" stroke="#00ff41"/>
+
+      <rect x="40" y="232" width="110" height="70" rx="6" stroke="#00ff41"/>
+      <rect x="165" y="232" width="470" height="70" rx="6" stroke="#00ff41"/>
+      <rect x="650" y="232" width="110" height="70" rx="6" stroke="#00ff41"/>
+
+      <rect x="40" y="318" width="110" height="70" rx="6" stroke="#39e6ff"/>
+      <rect x="165" y="318" width="470" height="70" rx="6" stroke="#39e6ff"/>
+      <rect x="650" y="318" width="110" height="70" rx="6" stroke="#39e6ff"/>
+
+      <rect x="40" y="404" width="110" height="70" rx="6" stroke="#ffb000" stroke-width="2"/>
+      <rect x="165" y="404" width="470" height="70" rx="6" stroke="#ffb000" stroke-width="2"/>
+      <rect x="650" y="404" width="110" height="70" rx="6" stroke="#ffb000" stroke-width="2"/>
+    </g>
+
+    <g text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">
+      <text x="95" y="101">WK 1-2</text>
+      <text x="95" y="187">WK 3-5</text>
+      <text x="95" y="273">WK 6-9</text>
+      <text x="95" y="359">WK 10-13</text>
+      <text x="95" y="445" fill="#ffb000">WK 14-16</text>
+    </g>
+
+    <g font-size="15" font-weight="bold">
+      <text x="180" y="86" fill="#00ff41">Sounds</text>
+      <text x="180" y="172" fill="#00ff41">Survival  (HSK 1 range)</text>
+      <text x="180" y="258" fill="#00ff41">Grammar core  (HSK 2 range)</text>
+      <text x="180" y="344" fill="#39e6ff">Complements  (HSK 3 grammar)</text>
+      <text x="180" y="430" fill="#ffb000">Conversation</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="180" y="110">pinyin, 4 tones + neutral, sandhi, IME, first 60 words</text>
+      <text x="180" y="196">greetings, numbers, money, time; 是 有 在, 吗, 呢</text>
+      <text x="180" y="282">measure words, 了 过, 不 vs 没, question words, 比</text>
+      <text x="180" y="368">得, results, directions, 把, 着; graded readers</text>
+      <text x="180" y="454">tutor 2-3x/week, shadowing, mock HSK 3 paper</text>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="705" y="92" font-size="18" font-weight="bold" fill="#00ff41">~60</text>
+      <text x="705" y="178" font-size="18" font-weight="bold" fill="#00ff41">~250</text>
+      <text x="705" y="264" font-size="18" font-weight="bold" fill="#00ff41">~450</text>
+      <text x="705" y="350" font-size="18" font-weight="bold" fill="#39e6ff">~650</text>
+      <text x="705" y="436" font-size="18" font-weight="bold" fill="#ffb000">~800</text>
+      <g font-size="13" fill="#7fbf8f">
+        <text x="705" y="116">words</text>
+        <text x="705" y="202">words</text>
+        <text x="705" y="288">words</text>
+        <text x="705" y="374">words</text>
+        <text x="705" y="460">words</text>
+      </g>
+    </g>
+
+    <text x="400" y="506" text-anchor="middle" font-size="13" fill="#7fbf8f">HSK 2.0 word lists: HSK 1 = 150, HSK 2 = 300, HSK 3 = 600 words (cumulative).</text>
+    <text x="400" y="528" text-anchor="middle" font-size="13" fill="#7fbf8f">Plan 2-3 more months of reading and listening to pass HSK 3 comfortably.</text>
+  </g>
+</svg>

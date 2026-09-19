@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 590" role="img" aria-labelledby="t d">
+  <title id="t">Spanish pronunciation map: vowels and tricky consonants</title>
+  <desc id="d">The five pure Spanish vowels with English approximations and example words, followed by a table of consonants that trip up English speakers: single r versus rr, j and soft g, hard g, c and z with the Spain versus Latin America split, ll and y, ñ, b and v, silent h, and qu.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Five pure vowels, a handful of traps</text>
+
+    <!-- vowels -->
+    <g stroke="#00ff41" stroke-width="1.5" fill="#062b0f">
+      <rect x="40" y="52" width="132" height="96" rx="6"/>
+      <rect x="187" y="52" width="132" height="96" rx="6"/>
+      <rect x="334" y="52" width="132" height="96" rx="6"/>
+      <rect x="481" y="52" width="132" height="96" rx="6"/>
+      <rect x="628" y="52" width="132" height="96" rx="6"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="106" y="84" font-size="26" font-weight="bold" fill="#00ff41">a</text>
+      <text x="106" y="108" font-size="13" fill="#d8ffd8">ah (father)</text>
+      <text x="106" y="132" font-size="14" fill="#ffb000">casa</text>
+      <text x="253" y="84" font-size="26" font-weight="bold" fill="#00ff41">e</text>
+      <text x="253" y="108" font-size="13" fill="#d8ffd8">eh (bet)</text>
+      <text x="253" y="132" font-size="14" fill="#ffb000">mesa</text>
+      <text x="400" y="84" font-size="26" font-weight="bold" fill="#00ff41">i</text>
+      <text x="400" y="108" font-size="13" fill="#d8ffd8">ee (see)</text>
+      <text x="400" y="132" font-size="14" fill="#ffb000">sí, libro</text>
+      <text x="547" y="84" font-size="26" font-weight="bold" fill="#00ff41">o</text>
+      <text x="547" y="108" font-size="13" fill="#d8ffd8">oh (short)</text>
+      <text x="547" y="132" font-size="14" fill="#ffb000">poco</text>
+      <text x="694" y="84" font-size="26" font-weight="bold" fill="#00ff41">u</text>
+      <text x="694" y="108" font-size="13" fill="#d8ffd8">oo (moon)</text>
+      <text x="694" y="132" font-size="14" fill="#ffb000">luna</text>
+    </g>
+    <text x="400" y="174" text-anchor="middle" font-size="13" fill="#7fbf8f">Short and pure, no glide: "no" is [no], never English "noh-oo".</text>
+
+    <!-- consonant table -->
+    <rect x="40" y="192" width="720" height="360" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="55" y="216" font-size="14" font-weight="bold" fill="#00ff41">SPELLING</text>
+    <text x="225" y="216" font-size="14" font-weight="bold" fill="#00ff41">SOUND</text>
+    <text x="585" y="216" font-size="14" font-weight="bold" fill="#00ff41">EXAMPLES</text>
+    <line x1="40" y1="226" x2="760" y2="226" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="210" y1="198" x2="210" y2="546" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="570" y1="198" x2="570" y2="546" stroke="#0f7a2a" stroke-width="1"/>
+
+    <g font-size="13">
+      <text x="55" y="250" fill="#ffb000">r (inside word)</text>
+      <text x="225" y="250" fill="#d8ffd8">one quick tap, like US "butter"</text>
+      <text x="585" y="250" fill="#d8ffd8">pero, caro, hablar</text>
+
+      <text x="55" y="282" fill="#ffb000">rr, initial r</text>
+      <text x="225" y="282" fill="#d8ffd8">trill: several fast taps</text>
+      <text x="585" y="282" fill="#d8ffd8">perro, carro, rojo</text>
+
+      <text x="55" y="314" fill="#ffb000">j, g + e/i</text>
+      <text x="225" y="314" fill="#d8ffd8">rough h from the throat ("loch")</text>
+      <text x="585" y="314" fill="#d8ffd8">jamón, gente, ojo</text>
+
+      <text x="55" y="346" fill="#ffb000">g + a/o/u</text>
+      <text x="225" y="346" fill="#d8ffd8">hard g as in "go" (gue/gui too)</text>
+      <text x="585" y="346" fill="#d8ffd8">gato, guerra</text>
+
+      <text x="55" y="378" fill="#ffb000">c + e/i, z</text>
+      <text x="225" y="378" fill="#39e6ff">Spain: "th" in thin / Americas: s</text>
+      <text x="585" y="378" fill="#d8ffd8">cena, zapato</text>
+
+      <text x="55" y="410" fill="#ffb000">ll, y</text>
+      <text x="225" y="410" fill="#d8ffd8">y as in "yes" (Argentina: sh)</text>
+      <text x="585" y="410" fill="#d8ffd8">llamo, yo, calle</text>
+
+      <text x="55" y="442" fill="#ffb000">ñ</text>
+      <text x="225" y="442" fill="#d8ffd8">ny as in "canyon"</text>
+      <text x="585" y="442" fill="#d8ffd8">niño, año</text>
+
+      <text x="55" y="474" fill="#ffb000">b, v</text>
+      <text x="225" y="474" fill="#d8ffd8">same sound; softer between vowels</text>
+      <text x="585" y="474" fill="#d8ffd8">vaso, beber, vivir</text>
+
+      <text x="55" y="506" fill="#ffb000">h</text>
+      <text x="225" y="506" fill="#ff4d4d">always silent</text>
+      <text x="585" y="506" fill="#d8ffd8">hola, hay, ahora</text>
+
+      <text x="55" y="538" fill="#ffb000">qu + e/i</text>
+      <text x="225" y="538" fill="#d8ffd8">k (the u is silent)</text>
+      <text x="585" y="538" fill="#d8ffd8">queso, quiero</text>
+    </g>
+    <text x="400" y="576" text-anchor="middle" font-size="13" fill="#7fbf8f">Spelling is phonetic: once you know these rules you can read any word aloud.</text>
+  </g>
+</svg>

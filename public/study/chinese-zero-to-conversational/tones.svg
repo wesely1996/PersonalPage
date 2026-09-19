@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 490" role="img" aria-labelledby="t d">
+  <title id="t">The four Mandarin tones and the neutral tone on a 1-5 pitch scale</title>
+  <desc id="d">Pitch contours on a five-level scale: first tone high level 55 (mā, mother), second tone rising 35 (má, hemp), third tone low dipping 214 (mǎ, horse), fourth tone falling 51 (mà, scold), and the short neutral tone (ma, question particle).</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Tones: pitch shape on a 1 (low) to 5 (high) scale</text>
+
+    <!-- grid -->
+    <g stroke="#0f7a2a" stroke-width="1" stroke-dasharray="4 5">
+      <line x1="95" y1="90" x2="770" y2="90"/>
+      <line x1="95" y1="150" x2="770" y2="150"/>
+      <line x1="95" y1="210" x2="770" y2="210"/>
+      <line x1="95" y1="270" x2="770" y2="270"/>
+      <line x1="95" y1="330" x2="770" y2="330"/>
+    </g>
+    <g font-size="13" fill="#7fbf8f" text-anchor="end">
+      <text x="85" y="95">5 high</text>
+      <text x="85" y="155">4</text>
+      <text x="85" y="215">3 mid</text>
+      <text x="85" y="275">2</text>
+      <text x="85" y="335">1 low</text>
+    </g>
+    <g stroke="#0f7a2a" stroke-width="1.5">
+      <line x1="240" y1="70" x2="240" y2="345"/>
+      <line x1="380" y1="70" x2="380" y2="345"/>
+      <line x1="520" y1="70" x2="520" y2="345"/>
+      <line x1="660" y1="70" x2="660" y2="345"/>
+    </g>
+
+    <!-- contours -->
+    <g fill="none" stroke="#00ff41" stroke-width="4" stroke-linecap="round" marker-end="url(#arr)" filter="url(#glow)">
+      <path d="M120,90 L215,90"/>
+      <path d="M262,210 L355,95"/>
+      <path d="M400,270 Q445,345 500,155"/>
+      <path d="M540,92 L635,325"/>
+    </g>
+    <path d="M702,240 L724,252" fill="none" stroke="#ffb000" stroke-width="4" stroke-linecap="round" marker-end="url(#arrA)"/>
+
+    <!-- labels -->
+    <g text-anchor="middle">
+      <text x="170" y="372" font-size="15" font-weight="bold" fill="#00ff41">1st  55</text>
+      <text x="310" y="372" font-size="15" font-weight="bold" fill="#00ff41">2nd  35</text>
+      <text x="450" y="372" font-size="15" font-weight="bold" fill="#00ff41">3rd  214</text>
+      <text x="590" y="372" font-size="15" font-weight="bold" fill="#00ff41">4th  51</text>
+      <text x="715" y="372" font-size="15" font-weight="bold" fill="#ffb000">neutral</text>
+
+      <text x="170" y="402" font-size="20" fill="#d8ffd8">mā 妈</text>
+      <text x="310" y="402" font-size="20" fill="#d8ffd8">má 麻</text>
+      <text x="450" y="402" font-size="20" fill="#d8ffd8">mǎ 马</text>
+      <text x="590" y="402" font-size="20" fill="#d8ffd8">mà 骂</text>
+      <text x="715" y="402" font-size="20" fill="#d8ffd8">ma 吗</text>
+
+      <text x="170" y="426" font-size="13" fill="#7fbf8f">mother</text>
+      <text x="310" y="426" font-size="13" fill="#7fbf8f">hemp</text>
+      <text x="450" y="426" font-size="13" fill="#7fbf8f">horse</text>
+      <text x="590" y="426" font-size="13" fill="#7fbf8f">to scold</text>
+      <text x="715" y="426" font-size="13" fill="#7fbf8f">question</text>
+
+      <text x="170" y="446" font-size="13" fill="#39e6ff">high, flat</text>
+      <text x="310" y="446" font-size="13" fill="#39e6ff">rising "huh?"</text>
+      <text x="450" y="446" font-size="13" fill="#39e6ff">low, creaky</text>
+      <text x="590" y="446" font-size="13" fill="#39e6ff">sharp "No!"</text>
+      <text x="715" y="446" font-size="13" fill="#39e6ff">short, light</text>
+    </g>
+    <text x="400" y="476" text-anchor="middle" font-size="13" fill="#7fbf8f">In real speech the 3rd tone is mostly just low (21); the full dip appears when stressed or alone.</text>
+  </g>
+</svg>

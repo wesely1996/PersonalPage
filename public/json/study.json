@@ -1,0 +1,160 @@
+[
+  {
+    "track": "Engineering",
+    "slug": "web-app-for-free-2026",
+    "title": "How to Build a Web App for Free, from Zero (2026)",
+    "summary": "From a blank folder to a deployed app with auth, a database, CI/CD and HTTPS, without spending a cent.",
+    "from": "zero",
+    "to": "deployed",
+    "readingMinutes": 45,
+    "figures": 9,
+    "tags": [
+      "web",
+      "full-stack",
+      "deployment",
+      "free tier"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "linux-zero-to-master",
+    "title": "Linux: From Zero to Master",
+    "summary": "The shell, the filesystem, permissions, processes, networking, scripting and what happens under the hood.",
+    "from": "zero",
+    "to": "master",
+    "readingMinutes": 47,
+    "figures": 8,
+    "tags": [
+      "linux",
+      "shell",
+      "bash",
+      "sysadmin"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "sql-zero-to-hero",
+    "title": "SQL: From Zero to Hero",
+    "summary": "Queries, joins, window functions, indexes, transactions and query plans, all on one running example.",
+    "from": "zero",
+    "to": "hero",
+    "readingMinutes": 55,
+    "figures": 8,
+    "tags": [
+      "sql",
+      "postgresql",
+      "databases"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "sql-vs-nosql",
+    "title": "SQL vs NoSQL: Choosing the Right Database",
+    "summary": "Data models, consistency, scaling and trade-offs, with one domain modelled in every kind of database.",
+    "from": "confused",
+    "to": "decisive",
+    "readingMinutes": 47,
+    "figures": 8,
+    "tags": [
+      "databases",
+      "nosql",
+      "data modeling"
+    ]
+  },
+  {
+    "track": "Engineering",
+    "slug": "software-architecture-junior-to-architect",
+    "title": "Software Architecture: From Junior to Architect",
+    "summary": "How design thinking grows with your career, from clean functions to systems, teams and trade-offs.",
+    "from": "junior",
+    "to": "architect",
+    "readingMinutes": 60,
+    "figures": 9,
+    "tags": [
+      "architecture",
+      "design patterns",
+      "system design",
+      "career"
+    ]
+  },
+  {
+    "track": "Languages",
+    "slug": "russian-zero-to-conversational",
+    "title": "Russian: From Zero to Conversational",
+    "summary": "Cyrillic in a weekend, then cases, aspect and verbs of motion, step by step, until you can hold a real conversation.",
+    "from": "zero",
+    "to": "conversational",
+    "readingMinutes": 74,
+    "figures": 8,
+    "tags": [
+      "russian",
+      "cyrillic",
+      "grammar",
+      "A2-B1"
+    ]
+  },
+  {
+    "track": "Languages",
+    "slug": "chinese-zero-to-conversational",
+    "title": "Mandarin Chinese: From Zero to Conversational",
+    "summary": "Tones, pinyin and how characters really work, then the grammar and vocabulary for everyday conversations.",
+    "from": "zero",
+    "to": "conversational",
+    "readingMinutes": 66,
+    "figures": 8,
+    "tags": [
+      "mandarin",
+      "pinyin",
+      "hanzi",
+      "HSK 3"
+    ]
+  },
+  {
+    "track": "Languages",
+    "slug": "french-zero-to-conversational",
+    "title": "French: From Zero to Conversational",
+    "summary": "Pronunciation that finally makes sense, the core tenses and pronouns, and the phrases you will actually use.",
+    "from": "zero",
+    "to": "conversational",
+    "readingMinutes": 70,
+    "figures": 8,
+    "tags": [
+      "french",
+      "pronunciation",
+      "grammar",
+      "A2-B1"
+    ]
+  },
+  {
+    "track": "Languages",
+    "slug": "spanish-zero-to-conversational",
+    "title": "Spanish: From Zero to Conversational",
+    "summary": "Ser vs estar, the past tenses and object pronouns, with a map of how Spanish differs across countries.",
+    "from": "zero",
+    "to": "conversational",
+    "readingMinutes": 75,
+    "figures": 8,
+    "tags": [
+      "spanish",
+      "grammar",
+      "dialects",
+      "A2-B1"
+    ]
+  },
+  {
+    "track": "Languages",
+    "slug": "japanese-zero-to-conversational",
+    "title": "Japanese: From Zero to Conversational",
+    "summary": "Hiragana, katakana and your first kanji, then particles, verb forms and politeness levels for daily life.",
+    "from": "zero",
+    "to": "conversational",
+    "readingMinutes": 95,
+    "figures": 8,
+    "tags": [
+      "japanese",
+      "kana",
+      "kanji",
+      "JLPT N4"
+    ]
+  }
+]

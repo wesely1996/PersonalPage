@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">How to classify a Japanese verb</title>
+  <desc id="d">Flowchart: start from the dictionary form. If it is suru or kuru, it is irregular (group 3). Otherwise, if it does not end in -iru or -eru, it is a u-verb (group 1). If it does end in -iru or -eru, check the exception list (kaeru, hairu, hashiru, shiru, kiru, iru meaning need): exceptions are u-verbs, everything else is a ru-verb (group 2). Each group box shows how the polite masu form is built.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Which verb group? Ask three questions</text>
+
+    <!-- left column: start + questions -->
+    <rect x="40" y="58" width="280" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="180" y="82" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">Dictionary form</text>
+    <text x="180" y="102" text-anchor="middle" font-size="13" fill="#d8ffd8">every verb ends in an -u sound</text>
+
+    <rect x="40" y="146" width="280" height="50" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="180" y="176" text-anchor="middle" font-size="15" fill="#ffb000">1. Is it <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif">する</tspan> or <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif">くる</tspan>?</text>
+
+    <rect x="40" y="236" width="280" height="50" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="180" y="266" text-anchor="middle" font-size="15" fill="#ffb000">2. Ends in -iru / -eru?</text>
+
+    <rect x="40" y="326" width="280" height="76" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="180" y="352" text-anchor="middle" font-size="15" fill="#ffb000">3. On the exception list?</text>
+    <text x="180" y="384" text-anchor="middle" font-size="15" font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#d8ffd8">帰る 入る 走る 知る 切る 要る</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="180" y1="114" x2="180" y2="142"/>
+      <line x1="180" y1="196" x2="180" y2="232"/>
+      <line x1="180" y1="286" x2="180" y2="322"/>
+      <line x1="320" y1="171" x2="436" y2="171"/>
+      <line x1="320" y1="261" x2="436" y2="261"/>
+      <line x1="320" y1="380" x2="436" y2="380"/>
+    </g>
+    <line x1="320" y1="340" x2="436" y2="296" stroke="#ffb000" stroke-width="1.5" marker-end="url(#arrA)"/>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="190" y="222">no</text>
+      <text x="190" y="312">yes</text>
+      <text x="340" y="164">yes</text>
+      <text x="340" y="254">no</text>
+      <text x="360" y="396">no</text>
+      <text x="344" y="316" fill="#ffb000">yes</text>
+    </g>
+
+    <!-- right column: results -->
+    <rect x="440" y="136" width="320" height="76" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="456" y="160" font-size="15" font-weight="bold" fill="#39e6ff">GROUP 3: irregular</text>
+    <text x="456" y="184" font-size="15" font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#d8ffd8">する→します   くる→きます</text>
+    <text x="456" y="204" font-size="13" fill="#7fbf8f">also noun + suru: benkyou suru</text>
+
+    <rect x="440" y="226" width="320" height="76" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="456" y="250" font-size="15" font-weight="bold" fill="#00ff41">GROUP 1: u-verbs (godan)</text>
+    <text x="456" y="274" font-size="15" font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#d8ffd8">書く→書きます  飲む→飲みます</text>
+    <text x="456" y="294" font-size="13" fill="#7fbf8f">last -u becomes -i, add masu</text>
+
+    <rect x="440" y="342" width="320" height="76" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="456" y="366" font-size="15" font-weight="bold" fill="#00ff41">GROUP 2: ru-verbs (ichidan)</text>
+    <text x="456" y="390" font-size="15" font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#d8ffd8">食べる→食べます  見る→見ます</text>
+    <text x="456" y="410" font-size="13" fill="#7fbf8f">drop ru, add masu</text>
+
+    <line x1="40" y1="440" x2="760" y2="440" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="40" y="466" font-size="13" fill="#d8ffd8">Why it matters: the group decides every conjugation that follows.</text>
+    <text x="40" y="490" font-size="13" fill="#d8ffd8">Exceptions look like ru-verbs but act like u-verbs: <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#ffb000">帰る→帰ります</tspan>, never <tspan fill="#ff4d4d">*kaemasu</tspan>.</text>
+  </g>
+</svg>

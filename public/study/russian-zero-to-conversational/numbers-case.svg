@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="t d">
+  <title id="t">Which noun form follows a number</title>
+  <desc id="d">A strip of numbers 1 to 25 colored by the noun form they take, then three columns. Numbers ending in 1: nominative singular, одна книга, один год, один рубль. Numbers ending in 2, 3, 4: genitive singular, две книги, два года, три рубля. 5 to 20 and numbers ending in 5 to 9 or 0: genitive plural, пять книг, пять лет, пять рублей. 11 to 14 always take the genitive plural.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">The last number word picks the case</text>
+
+    <!-- number strip 1..25, cell 28px from x=50 -->
+    <g stroke-width="1.5" fill="#062b0f">
+      <rect x="50" y="56" width="28" height="32" stroke="#00ff41"/>
+      <rect x="78" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="106" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="134" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="162" y="56" width="448" height="32" stroke="#ffb000"/>
+      <rect x="610" y="56" width="28" height="32" stroke="#00ff41"/>
+      <rect x="638" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="666" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="694" y="56" width="28" height="32" stroke="#39e6ff"/>
+      <rect x="722" y="56" width="28" height="32" stroke="#ffb000"/>
+    </g>
+    <g font-size="13" text-anchor="middle">
+      <text x="64" y="77" fill="#00ff41">1</text>
+      <text x="92" y="77" fill="#39e6ff">2</text><text x="120" y="77" fill="#39e6ff">3</text><text x="148" y="77" fill="#39e6ff">4</text>
+      <text x="176" y="77" fill="#ffb000">5</text><text x="204" y="77" fill="#ffb000">6</text><text x="232" y="77" fill="#ffb000">7</text><text x="260" y="77" fill="#ffb000">8</text><text x="288" y="77" fill="#ffb000">9</text><text x="316" y="77" fill="#ffb000">10</text>
+      <text x="344" y="77" fill="#ffb000">11</text><text x="372" y="77" fill="#ffb000">12</text><text x="400" y="77" fill="#ffb000">13</text><text x="428" y="77" fill="#ffb000">14</text><text x="456" y="77" fill="#ffb000">15</text><text x="484" y="77" fill="#ffb000">16</text>
+      <text x="512" y="77" fill="#ffb000">17</text><text x="540" y="77" fill="#ffb000">18</text><text x="568" y="77" fill="#ffb000">19</text><text x="596" y="77" fill="#ffb000">20</text>
+      <text x="624" y="77" fill="#00ff41">21</text>
+      <text x="652" y="77" fill="#39e6ff">22</text><text x="680" y="77" fill="#39e6ff">23</text><text x="708" y="77" fill="#39e6ff">24</text>
+      <text x="736" y="77" fill="#ffb000">25</text>
+    </g>
+    <text x="386" y="108" text-anchor="middle" font-size="13" fill="#7fbf8f">11-14 look like 1-4 but end in "-teen": genitive plural</text>
+
+    <!-- Column 1 -->
+    <rect x="30" y="126" width="235" height="230" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="45" y="152" font-size="15" font-weight="bold" fill="#00ff41">ENDS IN 1</text>
+    <text x="45" y="172" font-size="13" fill="#7fbf8f">1, 21, 31, 101 ...</text>
+    <text x="45" y="192" font-size="13" fill="#d8ffd8">nominative singular</text>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="45" y="232">одна книга</text>
+      <text x="45" y="262">один год</text>
+      <text x="45" y="292">один рубль</text>
+      <text x="45" y="322">21 год</text>
+    </g>
+    <text x="45" y="344" font-size="13" fill="#7fbf8f">1 has gender: один/одна</text>
+
+    <!-- Column 2 -->
+    <rect x="283" y="126" width="235" height="230" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="298" y="152" font-size="15" font-weight="bold" fill="#39e6ff">ENDS IN 2, 3, 4</text>
+    <text x="298" y="172" font-size="13" fill="#7fbf8f">2-4, 22-24, 33 ...</text>
+    <text x="298" y="192" font-size="13" fill="#d8ffd8">genitive singular</text>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="298" y="232">две книги</text>
+      <text x="298" y="262">два года</text>
+      <text x="298" y="292">три рубля</text>
+      <text x="298" y="322">22 года</text>
+    </g>
+    <text x="298" y="344" font-size="13" fill="#7fbf8f">2 has gender: два/две</text>
+
+    <!-- Column 3 -->
+    <rect x="536" y="126" width="235" height="230" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="551" y="152" font-size="15" font-weight="bold" fill="#ffb000">5 AND UP</text>
+    <text x="551" y="172" font-size="13" fill="#7fbf8f">5-20, 25-30, 0 ...</text>
+    <text x="551" y="192" font-size="13" fill="#d8ffd8">genitive plural</text>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="551" y="232">пять книг</text>
+      <text x="551" y="262">пять лет</text>
+      <text x="551" y="292">пять рублей</text>
+      <text x="551" y="322">11 рублей</text>
+    </g>
+    <text x="551" y="344" font-size="13" fill="#7fbf8f">год -> лет (irregular)</text>
+
+    <text x="400" y="392" text-anchor="middle" font-size="13" fill="#d8ffd8">Ages use it too: Мне 21 год. Мне 22 года. Мне 25 лет.</text>
+    <text x="400" y="416" text-anchor="middle" font-size="13" fill="#7fbf8f">Same rule for час, минута, рубль: два часа, пять минут, сто рублей.</text>
+  </g>
+</svg>

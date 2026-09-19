@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">French roadmap from A0 to B1</title>
+  <desc id="d">Six stages. Weeks 1 to 2: first sounds, vowels, nasals, liaison, greetings, tu and vous. Weeks 3 to 5, A1 survival: articles, gender, être and avoir, -er verbs, adjectives, negation. Weeks 6 to 9, A1 to A2: irregular verbs, questions, food, shopping, directions, time. Weeks 10 to 12, A2 storytelling: passé composé with avoir and être, imparfait. Weeks 13 to 16, A2 to B1 conversational: pronouns, futur simple, conditionnel, ten-minute conversations. Beyond: B1 to B2 with the subjunctive, relative pronouns, podcasts, novels and the DELF B1.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Roadmap: zero to conversational</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="95" y1="120" x2="95" y2="134"/>
+      <line x1="95" y1="196" x2="95" y2="210"/>
+      <line x1="95" y1="272" x2="95" y2="286"/>
+      <line x1="95" y1="348" x2="95" y2="362"/>
+      <line x1="95" y1="424" x2="95" y2="438"/>
+    </g>
+
+    <rect x="30" y="60" width="130" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="95" y="96" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 1-2</text>
+    <rect x="175" y="60" width="595" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="190" y="84" font-size="15" font-weight="bold" fill="#00ff41">A0: first sounds</text>
+    <text x="190" y="106" font-size="13" fill="#d8ffd8">alphabet, vowels, nasals, liaison, greetings, tu and vous</text>
+
+    <rect x="30" y="136" width="130" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="95" y="172" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 3-5</text>
+    <rect x="175" y="136" width="595" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="190" y="160" font-size="15" font-weight="bold" fill="#00ff41">A1: survival</text>
+    <text x="190" y="182" font-size="13" fill="#d8ffd8">articles, gender, être and avoir, -er verbs, adjectives, negation</text>
+
+    <rect x="30" y="212" width="130" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="95" y="248" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 6-9</text>
+    <rect x="175" y="212" width="595" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="190" y="236" font-size="15" font-weight="bold" fill="#00ff41">A1 → A2: everyday life</text>
+    <text x="190" y="258" font-size="13" fill="#d8ffd8">irregular verbs, questions, food, shopping, directions, time</text>
+
+    <rect x="30" y="288" width="130" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="95" y="324" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 10-12</text>
+    <rect x="175" y="288" width="595" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="190" y="312" font-size="15" font-weight="bold" fill="#00ff41">A2: storytelling</text>
+    <text x="190" y="334" font-size="13" fill="#d8ffd8">passé composé with avoir and être, imparfait, your weekend</text>
+
+    <rect x="30" y="364" width="130" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="95" y="400" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 13-16</text>
+    <rect x="175" y="364" width="595" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="190" y="388" font-size="15" font-weight="bold" fill="#39e6ff">A2 → low B1: conversational</text>
+    <text x="190" y="410" font-size="13" fill="#d8ffd8">le/lui/y/en, futur simple, conditionnel, 10-minute conversations</text>
+
+    <rect x="30" y="440" width="130" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="95" y="476" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">BEYOND</text>
+    <rect x="175" y="440" width="595" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="190" y="464" font-size="15" font-weight="bold" fill="#ffb000">B1 → B2: independent</text>
+    <text x="190" y="486" font-size="13" fill="#d8ffd8">subjunctive, qui/que/dont, podcasts, novels, DELF B1</text>
+
+    <text x="400" y="534" text-anchor="middle" font-size="13" fill="#7fbf8f">About 10-12 hours a week. Half the time? Double the weeks.</text>
+  </g>
+</svg>

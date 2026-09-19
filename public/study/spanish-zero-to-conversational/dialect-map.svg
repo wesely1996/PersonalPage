@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" role="img" aria-labelledby="t d">
+  <title id="t">Schematic map of major Spanish dialect zones</title>
+  <desc id="d">A schematic, not geographic, layout of Spanish dialect zones. In the Americas: the United States, Mexico and Central America, the Caribbean, the Andean region, the Rio de la Plata, Paraguay and Chile, each with two or three signature features such as voseo, seseo and weakened s. Across the Atlantic: Spain, with vosotros and distincion, and Equatorial Guinea. A note advises copying one accent and learning to recognize the others.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">One language, many accents (schematic)</text>
+    <text x="272" y="52" text-anchor="middle" font-size="13" fill="#7fbf8f">THE AMERICAS (~90% of native speakers)</text>
+    <text x="657" y="52" text-anchor="middle" font-size="13" fill="#7fbf8f">EUROPE / AFRICA</text>
+    <line x1="530" y1="44" x2="530" y2="510" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+    <!-- USA -->
+    <rect x="30" y="64" width="235" height="100" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="42" y="88" font-size="15" font-weight="bold" fill="#00ff41">United States</text>
+    <text x="42" y="110" font-size="13" fill="#d8ffd8">40M+ speak it at home</text>
+    <text x="42" y="130" font-size="13" fill="#d8ffd8">mostly Mexican and</text>
+    <text x="42" y="150" font-size="13" fill="#d8ffd8">Caribbean roots</text>
+
+    <!-- Mexico & CA -->
+    <rect x="30" y="176" width="235" height="100" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="42" y="200" font-size="15" font-weight="bold" fill="#00ff41">Mexico + C. America</text>
+    <text x="42" y="222" font-size="13" fill="#d8ffd8">ustedes, never vosotros</text>
+    <text x="42" y="242" font-size="13" fill="#d8ffd8">seseo: cena = "sena"</text>
+    <text x="42" y="262" font-size="13" fill="#39e6ff">vos in much of C. America</text>
+
+    <!-- Andean -->
+    <rect x="30" y="288" width="235" height="100" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="42" y="312" font-size="15" font-weight="bold" fill="#00ff41">Andean</text>
+    <text x="42" y="334" font-size="13" fill="#d8ffd8">Colombia, Peru, Ecuador,</text>
+    <text x="42" y="354" font-size="13" fill="#d8ffd8">Bolivia: clear, careful</text>
+    <text x="42" y="374" font-size="13" fill="#d8ffd8">usted even among friends</text>
+
+    <!-- Chile -->
+    <rect x="30" y="400" width="235" height="100" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="42" y="424" font-size="15" font-weight="bold" fill="#00ff41">Chile</text>
+    <text x="42" y="446" font-size="13" fill="#d8ffd8">fast, final s softened</text>
+    <text x="42" y="466" font-size="13" fill="#d8ffd8">slang: po, cachai,</text>
+    <text x="42" y="486" font-size="13" fill="#d8ffd8">al tiro (right away)</text>
+
+    <!-- Caribbean -->
+    <rect x="280" y="176" width="235" height="100" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="292" y="200" font-size="15" font-weight="bold" fill="#00ff41">Caribbean</text>
+    <text x="292" y="222" font-size="13" fill="#d8ffd8">Cuba, Puerto Rico,</text>
+    <text x="292" y="242" font-size="13" fill="#d8ffd8">Dominican Rep., Venezuela</text>
+    <text x="292" y="262" font-size="13" fill="#d8ffd8">s often breathed or dropped</text>
+
+    <!-- Rio de la Plata -->
+    <rect x="280" y="288" width="235" height="100" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="292" y="312" font-size="15" font-weight="bold" fill="#ffb000">Río de la Plata</text>
+    <text x="292" y="334" font-size="13" fill="#d8ffd8">Argentina, Uruguay</text>
+    <text x="292" y="354" font-size="13" fill="#39e6ff">voseo: vos sos, vos tenés</text>
+    <text x="292" y="374" font-size="13" fill="#d8ffd8">ll/y = "sh": calle, yo</text>
+
+    <!-- Paraguay -->
+    <rect x="280" y="400" width="235" height="100" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="292" y="424" font-size="15" font-weight="bold" fill="#00ff41">Paraguay</text>
+    <text x="292" y="446" font-size="13" fill="#39e6ff">vos, like Argentina</text>
+    <text x="292" y="466" font-size="13" fill="#d8ffd8">widely bilingual with</text>
+    <text x="292" y="486" font-size="13" fill="#d8ffd8">Guaraní</text>
+
+    <!-- Spain -->
+    <rect x="545" y="64" width="225" height="140" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="557" y="88" font-size="15" font-weight="bold" fill="#00ff41">Spain</text>
+    <text x="557" y="110" font-size="13" fill="#39e6ff">vosotros (informal pl.)</text>
+    <text x="557" y="130" font-size="13" fill="#d8ffd8">distinción: z/ce = th</text>
+    <text x="557" y="150" font-size="13" fill="#d8ffd8">(south + Canaries: s)</text>
+    <text x="557" y="170" font-size="13" fill="#d8ffd8">he comido for "today"</text>
+    <text x="557" y="190" font-size="13" fill="#d8ffd8">vale = OK</text>
+
+    <!-- Equatorial Guinea -->
+    <rect x="545" y="216" width="225" height="80" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="557" y="240" font-size="15" font-weight="bold" fill="#00ff41">Equatorial Guinea</text>
+    <text x="557" y="262" font-size="13" fill="#d8ffd8">official language in</text>
+    <text x="557" y="282" font-size="13" fill="#d8ffd8">Central Africa</text>
+
+    <!-- Advice -->
+    <rect x="545" y="316" width="225" height="184" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="557" y="340" font-size="15" font-weight="bold" fill="#ffb000">For learners</text>
+    <text x="557" y="364" font-size="13" fill="#d8ffd8">Copy ONE accent.</text>
+    <text x="557" y="386" font-size="13" fill="#d8ffd8">Learn to recognize</text>
+    <text x="557" y="406" font-size="13" fill="#d8ffd8">the rest.</text>
+    <text x="557" y="430" font-size="13" fill="#d8ffd8">Grammar and spelling</text>
+    <text x="557" y="450" font-size="13" fill="#d8ffd8">are nearly identical.</text>
+    <text x="557" y="474" font-size="13" fill="#d8ffd8">Everyone understands</text>
+    <text x="557" y="494" font-size="13" fill="#d8ffd8">everyone.</text>
+
+    <text x="400" y="534" text-anchor="middle" font-size="13" fill="#7fbf8f">Official in 20 countries plus Puerto Rico. Boxes show zones, not borders.</text>
+  </g>
+</svg>

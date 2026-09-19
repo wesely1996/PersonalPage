@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="t d">
+  <title id="t">Logical query processing order</title>
+  <desc id="d">A pipeline of eight stages: 1 FROM and JOIN, 2 WHERE, 3 GROUP BY, 4 HAVING, 5 SELECT, 6 DISTINCT, 7 ORDER BY, 8 LIMIT and OFFSET. Below, the order in which a query is written is compared with the order in which it is evaluated.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">LOGICAL QUERY PROCESSING ORDER</text>
+
+    <!-- row 1 -->
+    <rect x="20" y="70" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="32" y="96" font-size="16" font-weight="bold" fill="#00ff41">1 FROM/JOIN</text>
+    <text x="32" y="122" font-size="13" fill="#7fbf8f">build the working</text>
+    <text x="32" y="142" font-size="13" fill="#7fbf8f">set of rows</text>
+
+    <rect x="215" y="70" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="227" y="96" font-size="16" font-weight="bold" fill="#00ff41">2 WHERE</text>
+    <text x="227" y="122" font-size="13" fill="#7fbf8f">filter rows</text>
+    <text x="227" y="142" font-size="13" fill="#ff4d4d">no aggregates</text>
+    <text x="227" y="158" font-size="13" fill="#ff4d4d">no SELECT aliases</text>
+
+    <rect x="410" y="70" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="422" y="96" font-size="16" font-weight="bold" fill="#00ff41">3 GROUP BY</text>
+    <text x="422" y="122" font-size="13" fill="#7fbf8f">collapse rows</text>
+    <text x="422" y="142" font-size="13" fill="#7fbf8f">into groups</text>
+
+    <rect x="605" y="70" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="617" y="96" font-size="16" font-weight="bold" fill="#00ff41">4 HAVING</text>
+    <text x="617" y="122" font-size="13" fill="#7fbf8f">filter groups</text>
+    <text x="617" y="142" font-size="13" fill="#7fbf8f">aggregates OK</text>
+
+    <line x1="185" y1="118" x2="213" y2="118" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="380" y1="118" x2="408" y2="118" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="575" y1="118" x2="603" y2="118" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- connector row 1 to row 2 -->
+    <path d="M687,166 L687,200 L102,200 L102,228" fill="none" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- row 2 -->
+    <rect x="20" y="230" width="165" height="96" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="32" y="256" font-size="16" font-weight="bold" fill="#ffb000">5 SELECT</text>
+    <text x="32" y="282" font-size="13" fill="#7fbf8f">expressions,</text>
+    <text x="32" y="302" font-size="13" fill="#7fbf8f">aliases, windows</text>
+
+    <rect x="215" y="230" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="227" y="256" font-size="16" font-weight="bold" fill="#00ff41">6 DISTINCT</text>
+    <text x="227" y="282" font-size="13" fill="#7fbf8f">drop duplicate</text>
+    <text x="227" y="302" font-size="13" fill="#7fbf8f">result rows</text>
+
+    <rect x="410" y="230" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="422" y="256" font-size="16" font-weight="bold" fill="#00ff41">7 ORDER BY</text>
+    <text x="422" y="282" font-size="13" fill="#7fbf8f">sort; aliases</text>
+    <text x="422" y="302" font-size="13" fill="#7fbf8f">are visible here</text>
+
+    <rect x="605" y="230" width="165" height="96" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="617" y="256" font-size="16" font-weight="bold" fill="#00ff41">8 LIMIT</text>
+    <text x="617" y="282" font-size="13" fill="#7fbf8f">OFFSET / FETCH:</text>
+    <text x="617" y="302" font-size="13" fill="#7fbf8f">cut the result</text>
+
+    <line x1="185" y1="278" x2="213" y2="278" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="380" y1="278" x2="408" y2="278" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="575" y1="278" x2="603" y2="278" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- written vs evaluated -->
+    <rect x="20" y="350" width="750" height="72" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="32" y="378" font-size="13" font-weight="bold" fill="#7fbf8f">written:</text>
+    <text x="140" y="378" font-size="13" fill="#d8ffd8">SELECT . FROM . WHERE . GROUP BY . HAVING . ORDER BY . LIMIT</text>
+    <text x="32" y="404" font-size="13" font-weight="bold" fill="#7fbf8f">runs as:</text>
+    <text x="140" y="404" font-size="13" fill="#39e6ff">FROM &gt; WHERE &gt; GROUP BY &gt; HAVING &gt; SELECT &gt; ORDER BY &gt; LIMIT</text>
+  </g>
+</svg>

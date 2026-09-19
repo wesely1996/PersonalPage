@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">The house of être</title>
+  <desc id="d">A house whose rooms hold the verbs that form the passé composé with être: naître and mourir, monter and descendre on the stairs, rester and tomber, entrer and sortir, arriver and partir at the front door, aller and venir, with their past participles. A side panel lists the re- verbs revenir, rentrer, retourner, devenir and passer; another notes that all reflexive verbs use être. The bottom panel shows agreement: il est allé, elle est allée, ils sont partis, elles sont parties.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">La maison d'être</text>
+
+    <!-- roof -->
+    <polygon points="400,44 625,150 175,150" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="400" y="124" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffb000" filter="url(#glow)">ÊTRE</text>
+
+    <!-- walls -->
+    <rect x="190" y="150" width="420" height="320" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <line x1="190" y1="310" x2="610" y2="310" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="330" y1="150" x2="330" y2="310" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="470" y1="150" x2="470" y2="310" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="330" y1="310" x2="330" y2="470" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="470" y1="310" x2="470" y2="470" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <!-- upper floor -->
+    <g text-anchor="middle">
+      <text x="260" y="188" font-size="15" font-weight="bold" fill="#d8ffd8">naître</text>
+      <text x="260" y="212" font-size="15" font-weight="bold" fill="#d8ffd8">mourir</text>
+      <text x="260" y="238" font-size="13" fill="#7fbf8f">né / mort</text>
+      <text x="260" y="286" font-size="13" fill="#7fbf8f">(life and death)</text>
+
+      <text x="400" y="180" font-size="15" font-weight="bold" fill="#d8ffd8">monter ↑</text>
+      <text x="400" y="204" font-size="15" font-weight="bold" fill="#d8ffd8">descendre ↓</text>
+      <text x="400" y="226" font-size="13" fill="#7fbf8f">monté/descendu</text>
+
+      <text x="540" y="188" font-size="15" font-weight="bold" fill="#d8ffd8">rester</text>
+      <text x="540" y="212" font-size="15" font-weight="bold" fill="#d8ffd8">tomber</text>
+      <text x="540" y="238" font-size="13" fill="#7fbf8f">resté / tombé</text>
+    </g>
+    <!-- stairs -->
+    <polyline points="345,302 345,290 367,290 367,278 389,278 389,266 411,266 411,254 433,254 433,242 455,242" fill="none" stroke="#39e6ff" stroke-width="1.5"/>
+    <!-- window with falling arrow -->
+    <rect x="515" y="252" width="50" height="34" rx="3" fill="#020a02" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="590" y1="258" x2="590" y2="300" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <!-- ground floor -->
+    <g text-anchor="middle">
+      <text x="260" y="348" font-size="15" font-weight="bold" fill="#d8ffd8">entrer</text>
+      <text x="260" y="372" font-size="15" font-weight="bold" fill="#d8ffd8">sortir</text>
+      <text x="260" y="398" font-size="13" fill="#7fbf8f">entré / sorti</text>
+
+      <text x="400" y="336" font-size="15" font-weight="bold" fill="#d8ffd8">arriver</text>
+      <text x="400" y="358" font-size="15" font-weight="bold" fill="#d8ffd8">partir</text>
+      <text x="400" y="378" font-size="13" fill="#7fbf8f">arrivé/parti</text>
+
+      <text x="540" y="348" font-size="15" font-weight="bold" fill="#d8ffd8">aller</text>
+      <text x="540" y="372" font-size="15" font-weight="bold" fill="#d8ffd8">venir</text>
+      <text x="540" y="398" font-size="13" fill="#7fbf8f">allé / venu</text>
+    </g>
+    <!-- door -->
+    <rect x="370" y="392" width="60" height="78" rx="3" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/>
+    <circle cx="420" cy="434" r="3" fill="#ffb000"/>
+
+    <!-- left panel: re- verbs -->
+    <rect x="20" y="170" width="155" height="236" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="32" y="196" font-size="14" font-weight="bold" fill="#00ff41">ALSO:</text>
+    <g font-size="14" fill="#d8ffd8">
+      <text x="32" y="226">revenir</text>
+      <text x="32" y="254">rentrer</text>
+      <text x="32" y="282">retourner</text>
+      <text x="32" y="310">devenir</text>
+      <text x="32" y="338">passer (par)</text>
+    </g>
+    <text x="32" y="372" font-size="13" fill="#7fbf8f">revenu, rentré,</text>
+    <text x="32" y="392" font-size="13" fill="#7fbf8f">devenu, passé</text>
+
+    <!-- right panel: reflexives -->
+    <rect x="625" y="170" width="155" height="236" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="637" y="196" font-size="14" font-weight="bold" fill="#39e6ff">+ ALL</text>
+    <text x="637" y="216" font-size="14" font-weight="bold" fill="#39e6ff">REFLEXIVES</text>
+    <g font-size="14" fill="#d8ffd8">
+      <text x="637" y="248">se lever</text>
+      <text x="637" y="274">s'habiller</text>
+      <text x="637" y="300">se coucher</text>
+    </g>
+    <text x="637" y="336" font-size="13" fill="#7fbf8f">je me suis</text>
+    <text x="637" y="356" font-size="13" fill="#7fbf8f">levé(e)</text>
+
+    <!-- agreement -->
+    <rect x="20" y="490" width="760" height="94" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="400" y="516" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">Agreement: the participle matches the subject</text>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="120" y="546">il est allé</text>
+      <text x="440" y="546">elle est allé<tspan fill="#ffb000">e</tspan></text>
+      <text x="120" y="572">ils sont parti<tspan fill="#ffb000">s</tspan></text>
+      <text x="440" y="572">elles sont parti<tspan fill="#ffb000">es</tspan></text>
+    </g>
+  </g>
+</svg>

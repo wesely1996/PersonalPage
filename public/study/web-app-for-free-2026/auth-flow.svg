@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">Login and authenticated request flow</title>
+<desc id="d">Sequence diagram: the browser signs in with GitHub through Supabase Auth, receives a JWT session, queries Postgres through the Data API with the token, and calls the Worker which validates the token with Supabase Auth.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">AUTH FLOW: OAUTH LOGIN -&gt; JWT -&gt; API CALLS</text>
+<rect x="18" y="62" width="124" height="36" rx="6" fill="#062b0f" stroke="#d8ffd8" stroke-width="1.5"/>
+<text x="80" y="85" font-size="14" fill="#d8ffd8" text-anchor="middle" font-weight="bold">BROWSER</text>
+<line x1="80" y1="98" x2="80" y2="505" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="208" y="62" width="124" height="36" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="270" y="85" font-size="14" fill="#39e6ff" text-anchor="middle" font-weight="bold">SUPABASE AUTH</text>
+<line x1="270" y1="98" x2="270" y2="505" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="368" y="62" width="124" height="36" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+<text x="430" y="85" font-size="14" fill="#7fbf8f" text-anchor="middle" font-weight="bold">GITHUB</text>
+<line x1="430" y1="98" x2="430" y2="505" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="518" y="62" width="124" height="36" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="580" y="85" font-size="14" fill="#39e6ff" text-anchor="middle" font-weight="bold">DATA API+PG</text>
+<line x1="580" y1="98" x2="580" y2="505" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+<rect x="663" y="62" width="124" height="36" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="725" y="85" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">WORKER</text>
+<line x1="725" y1="98" x2="725" y2="505" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="82" y1="130" x2="267" y2="130" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="102.5" y="111.0" width="145.0" height="19" fill="#020a02"/>
+<text x="175" y="124" font-size="13" fill="#d8ffd8" text-anchor="middle">1 signInWithOAuth</text>
+<line x1="272" y1="168" x2="427" y2="168" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="269.4" y="149.0" width="161.1" height="19" fill="#020a02"/>
+<text x="350" y="162" font-size="13" fill="#d8ffd8" text-anchor="middle">2 redirect: consent</text>
+<line x1="428" y1="206" x2="273" y2="206" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="301.7" y="187.0" width="96.7" height="19" fill="#020a02"/>
+<text x="350" y="200" font-size="13" fill="#39e6ff" text-anchor="middle">3 ?code=...</text>
+<line x1="268" y1="244" x2="83" y2="244" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="82.3" y="225.0" width="185.3" height="19" fill="#020a02"/>
+<text x="175" y="238" font-size="13" fill="#39e6ff" text-anchor="middle">4 session: JWT+refresh</text>
+<line x1="82" y1="282" x2="577" y2="282" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="225.3" y="263.0" width="209.5" height="19" fill="#020a02"/>
+<text x="330" y="276" font-size="13" fill="#d8ffd8" text-anchor="middle">5 select ... (Bearer JWT)</text>
+<line x1="578" y1="320" x2="83" y2="320" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="237.3" y="301.0" width="185.3" height="19" fill="#020a02"/>
+<text x="330" y="314" font-size="13" fill="#39e6ff" text-anchor="middle">6 only rows RLS allows</text>
+<line x1="82" y1="358" x2="722" y2="358" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="269.5" y="339.0" width="265.9" height="19" fill="#020a02"/>
+<text x="402.5" y="352" font-size="13" fill="#d8ffd8" text-anchor="middle">7 POST /api/preview (Bearer JWT)</text>
+<line x1="723" y1="396" x2="273" y2="396" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="404.8" y="377.0" width="185.3" height="19" fill="#020a02"/>
+<text x="497.5" y="390" font-size="13" fill="#d8ffd8" text-anchor="middle">8 getUser(jwt): valid?</text>
+<line x1="272" y1="434" x2="722" y2="434" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="457.2" y="415.0" width="80.5" height="19" fill="#020a02"/>
+<text x="497.5" y="428" font-size="13" fill="#39e6ff" text-anchor="middle">9 user id</text>
+<line x1="723" y1="472" x2="83" y2="472" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<rect x="321.9" y="453.0" width="161.1" height="19" fill="#020a02"/>
+<text x="402.5" y="466" font-size="13" fill="#39e6ff" text-anchor="middle">10 { title: "..." }</text>
+<rect x="20" y="510" width="760" height="40" rx="6" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/>
+<text x="400" y="535" font-size="13" fill="#ffb000" text-anchor="middle">access JWT is short-lived (1 h default); supabase-js refreshes it</text>
+</svg>

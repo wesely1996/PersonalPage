@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">DynamoDB single-table design</title>
+  <desc id="d">One DynamoDB table holds customers, orders, order items and products using generic PK and SK attributes. Items that are read together share a partition key, such as CUST#c42 for a profile and its orders, or ORDER#1001 for its line items. Below, four access patterns each map to a single Query or GetItem call with a key condition, so no joins are needed.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="42" text-anchor="middle" font-size="21" font-weight="bold" fill="#00ff41" filter="url(#glow)">SINGLE-TABLE DESIGN (DYNAMODB)</text>
+
+    <!-- table -->
+    <rect x="20" y="70" width="760" height="224" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="20" y1="102" x2="780" y2="102" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="20" y1="198" x2="780" y2="198" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="20" y1="262" x2="780" y2="262" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="180" y1="70" x2="180" y2="294" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="430" y1="70" x2="430" y2="294" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="14" font-weight="bold" fill="#00ff41">
+      <text x="32" y="92">PK</text>
+      <text x="192" y="92">SK</text>
+      <text x="442" y="92">ATTRIBUTES</text>
+    </g>
+    <g font-size="13">
+      <text x="32" y="123" fill="#ffb000">CUST#c42</text>
+      <text x="192" y="123" fill="#d8ffd8">PROFILE</text>
+      <text x="442" y="123" fill="#7fbf8f">name=Ada, email=ada@example.com</text>
+
+      <text x="32" y="155" fill="#ffb000">CUST#c42</text>
+      <text x="192" y="155" fill="#d8ffd8">ORDER#2026-09-01#1001</text>
+      <text x="442" y="155" fill="#7fbf8f">total=139, status=SHIPPED</text>
+
+      <text x="32" y="187" fill="#ffb000">CUST#c42</text>
+      <text x="192" y="187" fill="#d8ffd8">ORDER#2026-08-12#0987</text>
+      <text x="442" y="187" fill="#7fbf8f">total=54, status=DELIVERED</text>
+
+      <text x="32" y="219" fill="#39e6ff">ORDER#1001</text>
+      <text x="192" y="219" fill="#d8ffd8">ITEM#KB-01</text>
+      <text x="442" y="219" fill="#7fbf8f">qty=1, price=89</text>
+
+      <text x="32" y="251" fill="#39e6ff">ORDER#1001</text>
+      <text x="192" y="251" fill="#d8ffd8">ITEM#MS-07</text>
+      <text x="442" y="251" fill="#7fbf8f">qty=2, price=25</text>
+
+      <text x="32" y="283" fill="#d8ffd8">PRODUCT#KB-01</text>
+      <text x="192" y="283" fill="#d8ffd8">DETAILS</text>
+      <text x="442" y="283" fill="#7fbf8f">name=Keyboard, stock=42</text>
+    </g>
+
+    <!-- access patterns -->
+    <rect x="20" y="312" width="760" height="174" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="35" y="338" font-size="14" font-weight="bold" fill="#ffb000">ACCESS PATTERN</text>
+    <text x="250" y="338" font-size="14" font-weight="bold" fill="#ffb000">ONE REQUEST</text>
+    <g font-size="13">
+      <text x="35" y="366" fill="#d8ffd8">profile + orders</text>
+      <text x="250" y="366" fill="#00ff41">Query PK=CUST#c42</text>
+      <text x="35" y="392" fill="#d8ffd8">orders in Aug 2026</text>
+      <text x="250" y="392" fill="#00ff41">Query PK=CUST#c42, SK begins_with ORDER#2026-08</text>
+      <text x="35" y="418" fill="#d8ffd8">items of order 1001</text>
+      <text x="250" y="418" fill="#00ff41">Query PK=ORDER#1001, SK begins_with ITEM#</text>
+      <text x="35" y="444" fill="#d8ffd8">product details</text>
+      <text x="250" y="444" fill="#00ff41">GetItem PK=PRODUCT#KB-01, SK=DETAILS</text>
+      <text x="400" y="474" text-anchor="middle" fill="#7fbf8f">No joins: what you read together shares a partition key.</text>
+    </g>
+  </g>
+</svg>

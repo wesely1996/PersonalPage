@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 545" role="img" aria-labelledby="t d">
+  <title id="t">Polyglot persistence with CQRS</title>
+  <desc id="d">Clients send commands to a write API backed by PostgreSQL as the single system of record. Changes are captured with CDC and published to an event stream such as Kafka, which feeds purpose-built read stores: Redis for caching, OpenSearch for full-text search, a vector index for similarity search and ClickHouse for analytics. A read API serves queries from those projections, which lag slightly behind the source of truth.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+    <marker id="arra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#00ff41" filter="url(#glow)">POLYGLOT PERSISTENCE + CQRS</text>
+
+    <rect x="320" y="62" width="160" height="38" rx="6" fill="#062b0f" stroke="#d8ffd8" stroke-width="1.5"/>
+    <text x="400" y="86" text-anchor="middle" font-size="14" fill="#d8ffd8">CLIENTS</text>
+
+    <line x1="360" y1="100" x2="222" y2="133" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="440" y1="100" x2="578" y2="133" stroke="#39e6ff" stroke-width="1.5" marker-end="url(#arrc)"/>
+    <text x="300" y="112" text-anchor="end" font-size="13" fill="#00ff41">commands</text>
+    <text x="500" y="112" font-size="13" fill="#39e6ff">queries</text>
+
+    <!-- write side -->
+    <rect x="40" y="135" width="260" height="45" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="170" y="163" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">WRITE API</text>
+    <line x1="170" y1="180" x2="170" y2="223" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <rect x="40" y="225" width="260" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="170" y="250" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">POSTGRESQL</text>
+    <text x="170" y="272" text-anchor="middle" font-size="13" fill="#d8ffd8">system of record, ACID</text>
+    <line x1="170" y1="285" x2="170" y2="328" stroke="#ffb000" stroke-width="1.5" marker-end="url(#arra)"/>
+    <text x="180" y="312" font-size="13" fill="#ffb000">CDC / outbox</text>
+    <rect x="40" y="330" width="260" height="45" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="170" y="358" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffb000">EVENT STREAM (Kafka)</text>
+
+    <!-- bus -->
+    <line x1="300" y1="352" x2="420" y2="352" stroke="#ffb000" stroke-width="1.5"/>
+    <line x1="420" y1="237" x2="420" y2="417" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="316" y="344" font-size="13" fill="#ffb000">events</text>
+    <g stroke="#ffb000" stroke-width="1.5">
+      <line x1="420" y1="237" x2="498" y2="237" marker-end="url(#arra)"/>
+      <line x1="420" y1="297" x2="498" y2="297" marker-end="url(#arra)"/>
+      <line x1="420" y1="357" x2="498" y2="357" marker-end="url(#arra)"/>
+      <line x1="420" y1="417" x2="498" y2="417" marker-end="url(#arra)"/>
+    </g>
+
+    <!-- read side -->
+    <rect x="500" y="135" width="250" height="45" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="625" y="163" text-anchor="middle" font-size="14" font-weight="bold" fill="#39e6ff">READ API</text>
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="500" y="217" width="250" height="40" rx="6"/>
+      <rect x="500" y="277" width="250" height="40" rx="6"/>
+      <rect x="500" y="337" width="250" height="40" rx="6"/>
+      <rect x="500" y="397" width="250" height="40" rx="6"/>
+    </g>
+    <g font-size="13">
+      <text x="512" y="242" font-weight="bold" fill="#d8ffd8">REDIS</text>
+      <text x="600" y="242" fill="#7fbf8f">cache, sessions</text>
+      <text x="512" y="302" font-weight="bold" fill="#d8ffd8">OPENSEARCH</text>
+      <text x="600" y="302" fill="#7fbf8f">full-text</text>
+      <text x="512" y="362" font-weight="bold" fill="#d8ffd8">VECTORS</text>
+      <text x="600" y="362" fill="#7fbf8f">similarity (RAG)</text>
+      <text x="512" y="422" font-weight="bold" fill="#d8ffd8">CLICKHOUSE</text>
+      <text x="600" y="422" fill="#7fbf8f">analytics</text>
+    </g>
+    <g stroke="#39e6ff" stroke-width="1.5">
+      <line x1="770" y1="158" x2="750" y2="158"/>
+      <line x1="770" y1="158" x2="770" y2="417"/>
+      <line x1="770" y1="237" x2="753" y2="237" marker-end="url(#arrc)"/>
+      <line x1="770" y1="297" x2="753" y2="297" marker-end="url(#arrc)"/>
+      <line x1="770" y1="357" x2="753" y2="357" marker-end="url(#arrc)"/>
+      <line x1="770" y1="417" x2="753" y2="417" marker-end="url(#arrc)"/>
+    </g>
+
+    <g font-size="13" text-anchor="middle">
+      <text x="400" y="488" fill="#d8ffd8">Commands change one source of truth; queries read</text>
+      <text x="400" y="508" fill="#d8ffd8">purpose-built projections derived from it.</text>
+      <text x="400" y="530" fill="#7fbf8f">Projections lag behind by milliseconds to seconds.</text>
+    </g>
+  </g>
+</svg>

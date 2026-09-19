@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" role="img" aria-labelledby="t d">
+  <title id="t">Standard streams, redirection and pipes</title>
+  <desc id="d">Every process has three standard file descriptors: 0 stdin, 1 stdout and 2 stderr, each of which can be redirected to files. A pipeline connects stdout of each command to stdin of the next, while stderr bypasses the pipe.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+    <marker id="arrr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Three streams per process</text>
+
+    <!-- source -->
+    <rect x="40" y="90" width="170" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="125" y="115" text-anchor="middle" font-size="14" fill="#d8ffd8">keyboard</text>
+    <text x="125" y="137" text-anchor="middle" font-size="13" fill="#7fbf8f">or  &lt; input.txt</text>
+
+    <!-- process -->
+    <rect x="315" y="70" width="170" height="130" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="400" y="98" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41">process</text>
+    <text x="400" y="128" text-anchor="middle" font-size="13" fill="#d8ffd8">fd 0  stdin</text>
+    <text x="400" y="150" text-anchor="middle" font-size="13" fill="#d8ffd8">fd 1  stdout</text>
+    <text x="400" y="172" text-anchor="middle" font-size="13" fill="#ff4d4d">fd 2  stderr</text>
+
+    <!-- stdout sink -->
+    <rect x="590" y="62" width="170" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="675" y="87" text-anchor="middle" font-size="14" fill="#d8ffd8">terminal</text>
+    <text x="675" y="109" text-anchor="middle" font-size="13" fill="#7fbf8f">or &gt; out  &gt;&gt; out</text>
+
+    <!-- stderr sink -->
+    <rect x="590" y="150" width="170" height="60" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="675" y="175" text-anchor="middle" font-size="14" fill="#d8ffd8">terminal</text>
+    <text x="675" y="197" text-anchor="middle" font-size="13" fill="#7fbf8f">or 2&gt; err  2&gt;&amp;1</text>
+
+    <line x1="210" y1="120" x2="313" y2="120" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrc)"/>
+    <text x="262" y="110" text-anchor="middle" font-size="13" fill="#39e6ff">0</text>
+    <line x1="485" y1="92" x2="588" y2="92" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="536" y="84" text-anchor="middle" font-size="13" fill="#00ff41">1</text>
+    <line x1="485" y1="180" x2="588" y2="180" stroke="#ff4d4d" stroke-width="2" marker-end="url(#arrr)"/>
+    <text x="536" y="172" text-anchor="middle" font-size="13" fill="#ff4d4d">2</text>
+
+    <line x1="40" y1="240" x2="760" y2="240" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+    <text x="400" y="274" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41">A pipeline: who is hitting 404s?</text>
+
+    <g font-size="14" text-anchor="middle">
+      <rect x="25" y="296" width="150" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="100" y="326" fill="#d8ffd8">grep ' 404 ' log</text>
+      <rect x="225" y="296" width="150" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="300" y="326" fill="#d8ffd8">cut -d' ' -f1</text>
+      <rect x="425" y="296" width="150" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="500" y="326" fill="#d8ffd8">sort</text>
+      <rect x="625" y="296" width="150" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="700" y="326" fill="#d8ffd8">uniq -c</text>
+    </g>
+
+    <g stroke="#39e6ff" stroke-width="2">
+      <line x1="175" y1="321" x2="223" y2="321" marker-end="url(#arrc)"/>
+      <line x1="375" y1="321" x2="423" y2="321" marker-end="url(#arrc)"/>
+      <line x1="575" y1="321" x2="623" y2="321" marker-end="url(#arrc)"/>
+    </g>
+    <g font-size="16" font-weight="bold" fill="#39e6ff" text-anchor="middle">
+      <text x="199" y="312">|</text>
+      <text x="399" y="312">|</text>
+      <text x="599" y="312">|</text>
+    </g>
+
+    <g stroke="#ff4d4d" stroke-width="1.5" stroke-dasharray="4 3">
+      <line x1="100" y1="346" x2="100" y2="378" marker-end="url(#arrr)"/>
+      <line x1="300" y1="346" x2="300" y2="378" marker-end="url(#arrr)"/>
+      <line x1="500" y1="346" x2="500" y2="378" marker-end="url(#arrr)"/>
+      <line x1="700" y1="346" x2="700" y2="378" marker-end="url(#arrr)"/>
+    </g>
+    <text x="400" y="398" text-anchor="middle" font-size="13" fill="#ff4d4d">stderr of every stage still goes straight to the terminal</text>
+
+    <text x="400" y="430" text-anchor="middle" font-size="13" fill="#d8ffd8">each | wires stdout (1) of the left into stdin (0) of the right</text>
+    <text x="400" y="452" text-anchor="middle" font-size="13" fill="#7fbf8f">add 2&gt;&amp;1 (or |&amp; in bash) to send stderr down the pipe too</text>
+  </g>
+</svg>

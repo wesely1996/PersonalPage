@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 485" role="img" aria-labelledby="t d">
+  <title id="t">Replication versus sharding</title>
+  <desc id="d">Left: replication, where the app writes to one primary that streams changes to read-only replicas; it scales reads and gives failover, but every node holds all the data and writes still go to one node. Right: sharding, where a router maps each key to one of three shards holding different ranges of customers; it scales writes and storage, but cross-shard queries and transactions become hard. Real systems combine both.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+    <marker id="arra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="42" text-anchor="middle" font-size="21" font-weight="bold" fill="#00ff41" filter="url(#glow)">REPLICATION VS SHARDING</text>
+
+    <!-- Replication -->
+    <rect x="20" y="70" width="365" height="380" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="202" y="94" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">REPLICATION: COPY EVERYTHING</text>
+    <rect x="132" y="104" width="140" height="34" rx="6" fill="#020a02" stroke="#d8ffd8" stroke-width="1.5"/>
+    <text x="202" y="126" text-anchor="middle" font-size="14" fill="#d8ffd8">APP</text>
+
+    <rect x="40" y="190" width="130" height="60" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="2"/>
+    <text x="105" y="214" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">PRIMARY</text>
+    <text x="105" y="236" text-anchor="middle" font-size="13" fill="#d8ffd8">all rows, R+W</text>
+
+    <rect x="40" y="320" width="130" height="50" rx="6" fill="#020a02" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="105" y="341" text-anchor="middle" font-size="14" fill="#d8ffd8">REPLICA A</text>
+    <text x="105" y="360" text-anchor="middle" font-size="13" fill="#7fbf8f">all rows, R</text>
+    <rect x="225" y="320" width="130" height="50" rx="6" fill="#020a02" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="290" y="341" text-anchor="middle" font-size="14" fill="#d8ffd8">REPLICA B</text>
+    <text x="290" y="360" text-anchor="middle" font-size="13" fill="#7fbf8f">all rows, R</text>
+
+    <line x1="170" y1="138" x2="125" y2="188" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="240" y1="138" x2="288" y2="318" stroke="#39e6ff" stroke-width="1.5" marker-end="url(#arrc)"/>
+    <line x1="105" y1="250" x2="105" y2="318" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arra)"/>
+    <line x1="170" y1="240" x2="238" y2="318" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arra)"/>
+    <g font-size="13">
+      <text x="140" y="160" text-anchor="end" fill="#00ff41">writes</text>
+      <text x="274" y="222" fill="#39e6ff">reads</text>
+      <text x="113" y="292" fill="#ffb000">log</text>
+      <text x="35" y="398" fill="#00ff41">+ more reads, failover, HA</text>
+      <text x="35" y="418" fill="#ff4d4d">- every node stores ALL data</text>
+      <text x="35" y="438" fill="#ff4d4d">- all writes hit one primary</text>
+    </g>
+
+    <!-- Sharding -->
+    <rect x="400" y="70" width="380" height="380" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="590" y="94" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">SHARDING: SPLIT THE DATA</text>
+    <rect x="515" y="104" width="150" height="50" rx="6" fill="#020a02" stroke="#d8ffd8" stroke-width="1.5"/>
+    <text x="590" y="124" text-anchor="middle" font-size="14" fill="#d8ffd8">ROUTER</text>
+    <text x="590" y="144" text-anchor="middle" font-size="13" fill="#7fbf8f">key -&gt; shard</text>
+
+    <line x1="560" y1="154" x2="470" y2="198" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="590" y1="154" x2="590" y2="198" stroke="#ffb000" stroke-width="2" marker-end="url(#arra)"/>
+    <line x1="620" y1="154" x2="710" y2="198" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+
+    <rect x="410" y="200" width="110" height="80" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="535" y="200" width="110" height="80" rx="6" fill="#020a02" stroke="#ffb000" stroke-width="2"/>
+    <rect x="660" y="200" width="110" height="80" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/>
+    <g text-anchor="middle">
+      <text x="465" y="225" font-size="14" font-weight="bold" fill="#00ff41">SHARD 1</text>
+      <text x="465" y="247" font-size="13" fill="#d8ffd8">cust A-H</text>
+      <text x="465" y="268" font-size="13" fill="#7fbf8f">+ replicas</text>
+      <text x="590" y="225" font-size="14" font-weight="bold" fill="#ffb000">SHARD 2</text>
+      <text x="590" y="247" font-size="13" fill="#d8ffd8">cust I-Q</text>
+      <text x="590" y="268" font-size="13" fill="#7fbf8f">+ replicas</text>
+      <text x="715" y="225" font-size="14" font-weight="bold" fill="#00ff41">SHARD 3</text>
+      <text x="715" y="247" font-size="13" fill="#d8ffd8">cust R-Z</text>
+      <text x="715" y="268" font-size="13" fill="#7fbf8f">+ replicas</text>
+    </g>
+    <g font-size="13">
+      <text x="415" y="312" fill="#ffb000">name = 'Kim' -&gt; shard 2 only</text>
+      <text x="415" y="334" fill="#7fbf8f">no key in query -&gt; ask all 3</text>
+      <text x="415" y="398" fill="#00ff41">+ writes and storage scale out</text>
+      <text x="415" y="418" fill="#ff4d4d">- cross-shard joins/txns are hard</text>
+      <text x="415" y="438" fill="#ff4d4d">- the shard key is a big decision</text>
+    </g>
+    <text x="400" y="473" text-anchor="middle" font-size="13" fill="#7fbf8f">Production systems do both: every shard is itself a replica set.</text>
+  </g>
+</svg>

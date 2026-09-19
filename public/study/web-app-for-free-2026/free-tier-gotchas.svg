@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">Free-tier gotchas map</title>
+<desc id="d">Six cards describe common free-tier traps: sleeping databases, cold starts, hard caps, expiring resources, non-commercial terms and uncapped pay-as-you-go billing, each with a defense.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">FREE-TIER GOTCHAS (AND THE FIX)</text>
+<text x="400" y="56" font-size="13" fill="#7fbf8f" text-anchor="middle">at the time of writing (2026) - always re-check the pricing page</text>
+<rect x="20" y="76" width="246" height="196" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+<text x="143" y="102" font-size="15" fill="#ffb000" text-anchor="middle" font-weight="bold">SLEEPING DATABASES</text>
+<text x="32" y="132" font-size="13" fill="#d8ffd8">Supabase Free pauses a</text>
+<text x="32" y="154" font-size="13" fill="#d8ffd8">project after 1 week idle;</text>
+<text x="32" y="176" font-size="13" fill="#d8ffd8">Neon scales to zero after</text>
+<text x="32" y="198" font-size="13" fill="#d8ffd8">5 min idle (fast resume)</text>
+<line x1="32" y1="224" x2="254" y2="224" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="32" y="250" font-size="13" fill="#00ff41">fix: expect a slow wake</text>
+<rect x="277" y="76" width="246" height="196" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+<text x="400" y="102" font-size="15" fill="#ffb000" text-anchor="middle" font-weight="bold">COLD STARTS</text>
+<text x="289" y="132" font-size="13" fill="#d8ffd8">Render Free web services</text>
+<text x="289" y="154" font-size="13" fill="#d8ffd8">sleep after 15 min idle</text>
+<text x="289" y="176" font-size="13" fill="#d8ffd8">and take about a minute</text>
+<text x="289" y="198" font-size="13" fill="#d8ffd8">to wake up again</text>
+<line x1="289" y1="224" x2="511" y2="224" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="289" y="250" font-size="13" fill="#00ff41">fix: edge functions</text>
+<rect x="534" y="76" width="246" height="196" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+<text x="657" y="102" font-size="15" fill="#ffb000" text-anchor="middle" font-weight="bold">HARD CAPS</text>
+<text x="546" y="132" font-size="13" fill="#d8ffd8">Netlify/Vercel free pause</text>
+<text x="546" y="154" font-size="13" fill="#d8ffd8">the site at the limit;</text>
+<text x="546" y="176" font-size="13" fill="#d8ffd8">Workers Free fails calls</text>
+<text x="546" y="198" font-size="13" fill="#d8ffd8">past 100k requests/day</text>
+<line x1="546" y1="224" x2="768" y2="224" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="546" y="250" font-size="13" fill="#00ff41">fix: cache + alerts</text>
+<rect x="20" y="290" width="246" height="196" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="143" y="316" font-size="15" fill="#ff4d4d" text-anchor="middle" font-weight="bold">EXPIRING THINGS</text>
+<text x="32" y="346" font-size="13" fill="#d8ffd8">Render Free Postgres</text>
+<text x="32" y="368" font-size="13" fill="#d8ffd8">expires 30 days after</text>
+<text x="32" y="390" font-size="13" fill="#d8ffd8">creation; Fly.io has only</text>
+<text x="32" y="412" font-size="13" fill="#d8ffd8">a short trial for new users</text>
+<line x1="32" y1="438" x2="254" y2="438" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="32" y="464" font-size="13" fill="#00ff41">fix: read fine print</text>
+<rect x="277" y="290" width="246" height="196" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="400" y="316" font-size="15" fill="#ff4d4d" text-anchor="middle" font-weight="bold">NON-COMMERCIAL</text>
+<text x="289" y="346" font-size="13" fill="#d8ffd8">Vercel Hobby is for</text>
+<text x="289" y="368" font-size="13" fill="#d8ffd8">personal, non-commercial</text>
+<text x="289" y="390" font-size="13" fill="#d8ffd8">use only; selling on it</text>
+<text x="289" y="412" font-size="13" fill="#d8ffd8">breaks the terms</text>
+<line x1="289" y1="438" x2="511" y2="438" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="289" y="464" font-size="13" fill="#00ff41">fix: commercial-OK host</text>
+<rect x="534" y="290" width="246" height="196" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="657" y="316" font-size="15" fill="#ff4d4d" text-anchor="middle" font-weight="bold">SURPRISE BILLS</text>
+<text x="546" y="346" font-size="13" fill="#d8ffd8">pay-as-you-go plans</text>
+<text x="546" y="368" font-size="13" fill="#d8ffd8">(Firebase Blaze, Fly.io)</text>
+<text x="546" y="390" font-size="13" fill="#d8ffd8">have no hard ceiling;</text>
+<text x="546" y="412" font-size="13" fill="#d8ffd8">a loop can cost real money</text>
+<line x1="546" y1="438" x2="768" y2="438" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="546" y="464" font-size="13" fill="#00ff41">fix: budgets + alerts</text>
+</svg>

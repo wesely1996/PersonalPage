@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">From git push to production</title>
+<desc id="d">Eight-stage pipeline: branch, pull request, CI checks and preview, then merge, database migration, Worker deploy and verification, with failing checks blocking the merge.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">FROM GIT PUSH TO PRODUCTION</text>
+<text x="400" y="56" font-size="13" fill="#7fbf8f" text-anchor="middle">GitHub Actions does the boring parts every time</text>
+<rect x="20" y="80" width="172" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="106" y="104" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">1 BRANCH</text>
+<text x="106" y="126" font-size="13" fill="#d8ffd8" text-anchor="middle">git switch -c</text>
+<text x="106" y="145" font-size="13" fill="#d8ffd8" text-anchor="middle">feat/tags</text>
+<rect x="216" y="80" width="172" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="302" y="104" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">2 PULL REQUEST</text>
+<text x="302" y="126" font-size="13" fill="#d8ffd8" text-anchor="middle">push + open PR</text>
+<text x="302" y="145" font-size="13" fill="#d8ffd8" text-anchor="middle">describe change</text>
+<rect x="412" y="80" width="172" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="498" y="104" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">3 CI CHECKS</text>
+<text x="498" y="126" font-size="13" fill="#d8ffd8" text-anchor="middle">lint, typecheck</text>
+<text x="498" y="145" font-size="13" fill="#d8ffd8" text-anchor="middle">test, build</text>
+<rect x="608" y="80" width="172" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="694" y="104" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">4 PREVIEW</text>
+<text x="694" y="126" font-size="13" fill="#d8ffd8" text-anchor="middle">upload version</text>
+<text x="694" y="145" font-size="13" fill="#d8ffd8" text-anchor="middle">click-test it</text>
+<rect x="20" y="260" width="172" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<text x="106" y="284" font-size="14" fill="#00ff41" text-anchor="middle" font-weight="bold">5 MERGE</text>
+<text x="106" y="306" font-size="13" fill="#d8ffd8" text-anchor="middle">review, squash</text>
+<text x="106" y="325" font-size="13" fill="#d8ffd8" text-anchor="middle">into main</text>
+<rect x="216" y="260" width="172" height="90" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="302" y="284" font-size="14" fill="#39e6ff" text-anchor="middle" font-weight="bold">6 MIGRATE DB</text>
+<text x="302" y="306" font-size="13" fill="#d8ffd8" text-anchor="middle">supabase</text>
+<text x="302" y="325" font-size="13" fill="#d8ffd8" text-anchor="middle">db push</text>
+<rect x="412" y="260" width="172" height="90" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="498" y="284" font-size="14" fill="#39e6ff" text-anchor="middle" font-weight="bold">7 DEPLOY</text>
+<text x="498" y="306" font-size="13" fill="#d8ffd8" text-anchor="middle">wrangler deploy</text>
+<text x="498" y="325" font-size="13" fill="#d8ffd8" text-anchor="middle">to the edge</text>
+<rect x="608" y="260" width="172" height="90" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="694" y="284" font-size="14" fill="#39e6ff" text-anchor="middle" font-weight="bold">8 VERIFY</text>
+<text x="694" y="306" font-size="13" fill="#d8ffd8" text-anchor="middle">smoke test,</text>
+<text x="694" y="325" font-size="13" fill="#d8ffd8" text-anchor="middle">watch Sentry</text>
+<line x1="192" y1="125" x2="214" y2="125" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="192" y1="305" x2="214" y2="305" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="388" y1="125" x2="410" y2="125" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="388" y1="305" x2="410" y2="305" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<line x1="584" y1="125" x2="606" y2="125" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<line x1="584" y1="305" x2="606" y2="305" stroke="#39e6ff" stroke-width="1.6" marker-end="url(#ac)"/>
+<path d="M694,170 L694,215 L106,215 L106,258" fill="none" stroke="#00ff41" stroke-width="1.6" marker-end="url(#ag)"/>
+<rect x="287.2" y="196.0" width="225.6" height="19" fill="#020a02"/>
+<text x="400" y="209" font-size="13" fill="#00ff41" text-anchor="middle">all checks green + approved</text>
+<text x="400" y="240" font-size="13" fill="#7fbf8f" text-anchor="middle">PR pipeline (every push)  |  deploy pipeline (main only)</text>
+<rect x="20" y="375" width="760" height="80" rx="6" fill="#020a02" stroke="#ff4d4d" stroke-width="1.5"/>
+<text x="400" y="400" font-size="13" fill="#ff4d4d" text-anchor="middle">A red check blocks the merge (branch protection). Fix, push, repeat.</text>
+<text x="400" y="424" font-size="13" fill="#ffb000" text-anchor="middle">Secrets come from GitHub Actions secrets, never from the repo.</text>
+<text x="400" y="444" font-size="13" fill="#7fbf8f" text-anchor="middle">Public repos: hosted runner minutes are free (2026).</text>
+</svg>

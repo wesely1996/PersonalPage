@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Containers are namespaces plus cgroups</title>
+  <desc id="d">Two containers on one host, each with its own set of namespaces (pid, net, mnt, uts, ipc, user, cgroup) and an overlay root filesystem, constrained by cgroup v2 limits and all sharing a single Linux kernel. Below, the tool chain from docker or podman down to the runtime and kernel syscalls.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">A container is just a fenced-in process</text>
+
+    <!-- container A -->
+    <rect x="40" y="56" width="340" height="200" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="56" y="80" font-size="15" font-weight="bold" fill="#00ff41">container "web": nginx</text>
+    <text x="56" y="102" font-size="13" fill="#d8ffd8">PID 1 inside = PID 4211 on host</text>
+    <!-- container B -->
+    <rect x="420" y="56" width="340" height="200" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="436" y="80" font-size="15" font-weight="bold" fill="#00ff41">container "db": postgres</text>
+    <text x="436" y="102" font-size="13" fill="#d8ffd8">PID 1 inside = PID 4390 on host</text>
+
+    <g font-size="13" text-anchor="middle" fill="#39e6ff">
+      <g stroke="#39e6ff" stroke-width="1.5" fill="#020a02">
+        <rect x="56" y="116" width="70" height="26" rx="6"/>
+        <rect x="134" y="116" width="70" height="26" rx="6"/>
+        <rect x="212" y="116" width="70" height="26" rx="6"/>
+        <rect x="290" y="116" width="70" height="26" rx="6"/>
+        <rect x="56" y="150" width="70" height="26" rx="6"/>
+        <rect x="134" y="150" width="70" height="26" rx="6"/>
+        <rect x="212" y="150" width="70" height="26" rx="6"/>
+        <rect x="436" y="116" width="70" height="26" rx="6"/>
+        <rect x="514" y="116" width="70" height="26" rx="6"/>
+        <rect x="592" y="116" width="70" height="26" rx="6"/>
+        <rect x="670" y="116" width="70" height="26" rx="6"/>
+        <rect x="436" y="150" width="70" height="26" rx="6"/>
+        <rect x="514" y="150" width="70" height="26" rx="6"/>
+        <rect x="592" y="150" width="70" height="26" rx="6"/>
+      </g>
+      <text x="91" y="134">pid</text>
+      <text x="169" y="134">net</text>
+      <text x="247" y="134">mnt</text>
+      <text x="325" y="134">uts</text>
+      <text x="91" y="168">ipc</text>
+      <text x="169" y="168">user</text>
+      <text x="247" y="168">cgroup</text>
+      <text x="471" y="134">pid</text>
+      <text x="549" y="134">net</text>
+      <text x="627" y="134">mnt</text>
+      <text x="705" y="134">uts</text>
+      <text x="471" y="168">ipc</text>
+      <text x="549" y="168">user</text>
+      <text x="627" y="168">cgroup</text>
+    </g>
+
+    <g font-size="13" fill="#7fbf8f">
+      <text x="56" y="206">rootfs: overlayfs image layers</text>
+      <text x="56" y="228">eth0 172.17.0.2, own hostname</text>
+      <text x="436" y="206">rootfs: overlayfs image layers</text>
+      <text x="436" y="228">eth0 172.17.0.3, own hostname</text>
+    </g>
+
+    <!-- cgroups -->
+    <rect x="40" y="276" width="720" height="62" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="56" y="300" font-size="15" font-weight="bold" fill="#ffb000">cgroups v2: what each container may USE</text>
+    <text x="56" y="322" font-size="13" fill="#d8ffd8">cpu.max   memory.max   pids.max   io.max   (+ usage accounting)</text>
+
+    <!-- kernel -->
+    <rect x="40" y="352" width="720" height="62" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="56" y="376" font-size="15" font-weight="bold" fill="#00ff41">ONE shared Linux kernel</text>
+    <text x="56" y="398" font-size="13" fill="#d8ffd8">namespaces limit what a process can SEE; cgroups limit what it can USE</text>
+
+    <!-- toolchain -->
+    <text x="40" y="450" font-size="14" font-weight="bold" fill="#7fbf8f">Who does what when you type "docker run" / "podman run":</text>
+    <g font-size="13" text-anchor="middle">
+      <rect x="40" y="466" width="160" height="56" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <text x="120" y="490" fill="#d8ffd8">docker CLI</text>
+      <text x="120" y="510" fill="#d8ffd8">podman CLI</text>
+      <rect x="226" y="466" width="160" height="56" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <text x="306" y="490" fill="#d8ffd8">dockerd+containerd</text>
+      <text x="306" y="510" fill="#d8ffd8">podman + conmon</text>
+      <rect x="412" y="466" width="160" height="56" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <text x="492" y="490" fill="#d8ffd8">OCI runtime</text>
+      <text x="492" y="510" fill="#d8ffd8">runc or crun</text>
+      <rect x="598" y="466" width="162" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="679" y="490" fill="#00ff41">clone(CLONE_NEW*)</text>
+      <text x="679" y="510" fill="#00ff41">+ cgroup writes</text>
+    </g>
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="200" y1="494" x2="224" y2="494"/>
+      <line x1="386" y1="494" x2="410" y2="494"/>
+      <line x1="572" y1="494" x2="596" y2="494"/>
+    </g>
+  </g>
+</svg>

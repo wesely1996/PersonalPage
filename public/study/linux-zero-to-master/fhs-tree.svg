@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">The Linux filesystem hierarchy</title>
+  <desc id="d">Tree of the top-level directories under root with the purpose of each; proc, sys and run are virtual filesystems generated in memory, the rest live on disk.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">One tree, rooted at /</text>
+
+    <rect x="40" y="48" width="60" height="30" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="70" y="69" text-anchor="middle" font-size="18" font-weight="bold" fill="#00ff41">/</text>
+
+    <line x1="70" y1="78" x2="70" y2="538" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g stroke="#0f7a2a" stroke-width="1.5">
+      <line x1="70" y1="96" x2="100" y2="96"/>
+      <line x1="70" y1="130" x2="100" y2="130"/>
+      <line x1="70" y1="164" x2="100" y2="164"/>
+      <line x1="70" y1="198" x2="100" y2="198"/>
+      <line x1="70" y1="232" x2="100" y2="232"/>
+      <line x1="70" y1="266" x2="100" y2="266"/>
+      <line x1="70" y1="300" x2="100" y2="300"/>
+      <line x1="70" y1="334" x2="100" y2="334"/>
+      <line x1="70" y1="368" x2="100" y2="368"/>
+      <line x1="70" y1="402" x2="100" y2="402"/>
+      <line x1="70" y1="436" x2="100" y2="436"/>
+      <line x1="70" y1="470" x2="100" y2="470"/>
+      <line x1="70" y1="504" x2="100" y2="504"/>
+      <line x1="70" y1="538" x2="100" y2="538"/>
+    </g>
+
+    <g font-size="14" font-weight="bold">
+      <rect x="100" y="83" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="101" fill="#00ff41">/bin</text>
+      <rect x="100" y="117" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="135" fill="#00ff41">/boot</text>
+      <rect x="100" y="151" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="169" fill="#00ff41">/dev</text>
+      <rect x="100" y="185" width="110" height="26" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="112" y="203" fill="#ffb000">/etc</text>
+      <rect x="100" y="219" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="237" fill="#00ff41">/home</text>
+      <rect x="100" y="253" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="271" fill="#00ff41">/root</text>
+      <rect x="100" y="287" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="305" fill="#00ff41">/tmp</text>
+      <rect x="100" y="321" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="339" fill="#00ff41">/usr</text>
+      <rect x="100" y="355" width="110" height="26" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="112" y="373" fill="#ffb000">/var</text>
+      <rect x="100" y="389" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="407" fill="#00ff41">/opt</text>
+      <rect x="100" y="423" width="110" height="26" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="112" y="441" fill="#39e6ff">/proc</text>
+      <rect x="100" y="457" width="110" height="26" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="112" y="475" fill="#39e6ff">/sys</text>
+      <rect x="100" y="491" width="110" height="26" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="112" y="509" fill="#39e6ff">/run</text>
+      <rect x="100" y="525" width="110" height="26" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="112" y="543" fill="#00ff41">/mnt /media</text>
+    </g>
+
+    <g font-size="13" fill="#d8ffd8">
+      <text x="225" y="101">user commands; usually a symlink to /usr/bin (merged /usr)</text>
+      <text x="225" y="135">kernel (vmlinuz), initramfs, bootloader files</text>
+      <text x="225" y="169">device files: /dev/sda, /dev/nvme0n1, /dev/null, /dev/tty</text>
+      <text x="225" y="203">system-wide configuration, almost all plain text</text>
+      <text x="225" y="237">users' personal directories (/home/alice)</text>
+      <text x="225" y="271">home directory of the root user</text>
+      <text x="225" y="305">scratch space; often a tmpfs, wiped on reboot</text>
+      <text x="225" y="339">installed software: /usr/bin, /usr/lib, /usr/share</text>
+      <text x="225" y="373">variable data: /var/log, caches, spools, databases</text>
+      <text x="225" y="407">self-contained third-party software bundles</text>
+      <text x="225" y="441">live view of processes and kernel state (procfs)</text>
+      <text x="225" y="475">devices, drivers and kernel objects (sysfs)</text>
+      <text x="225" y="509">runtime state since boot: PID files, sockets</text>
+      <text x="225" y="543">mount points for temporary and removable media</text>
+    </g>
+
+    <g font-size="13">
+      <rect x="100" y="570" width="14" height="14" rx="3" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="122" y="582" fill="#7fbf8f">on disk</text>
+      <rect x="220" y="570" width="14" height="14" rx="3" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="242" y="582" fill="#7fbf8f">where admins live (config, logs)</text>
+      <rect x="530" y="570" width="14" height="14" rx="3" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="552" y="582" fill="#7fbf8f">virtual, in memory</text>
+    </g>
+  </g>
+</svg>

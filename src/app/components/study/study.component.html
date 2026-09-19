@@ -1,0 +1,77 @@
+<section class="study">
+  <header class="study-head">
+    <p class="prompt" aria-hidden="true">
+      <span class="path">~/archive/study</span>
+      <span class="sigil">$</span>
+      <span class="cmd">ls -l modules/</span>
+    </p>
+    <h1>Study</h1>
+    <p class="lede">
+      Long-form guides with diagrams, each taking you from first steps to
+      confident practice. Pick a module to open it in the terminal.
+    </p>
+    <p class="keys" aria-hidden="true">
+      <kbd>&uarr;</kbd><kbd>&darr;</kbd> move <kbd>Enter</kbd> open
+    </p>
+  </header>
+
+  @if (loading) {
+  <p class="state">Reading modules/<span class="cursor"></span></p>
+  } @else if (error) {
+  <p class="state state-error">{{ error }}</p>
+  } @else {
+  @for (group of tracks; track group.name) {
+  <section class="track" [attr.aria-labelledby]="'track-' + $index">
+    <h2 class="track-title" [id]="'track-' + $index">
+      {{ group.name }}
+      <span class="track-count">{{ group.topics.length }} modules</span>
+    </h2>
+    <ol class="modules">
+    @for (topic of group.topics; track topic.slug; let j = $index) {
+    @let i = group.offset + j;
+    <li>
+      <button
+        #moduleButton
+        type="button"
+        class="module"
+        [style.animation-delay.ms]="i * 70"
+        (click)="open(topic, i)"
+        (keydown)="onMenuKeydown($event, i)"
+      >
+        <span class="module-order" aria-hidden="true">{{ order(j) }}</span>
+        <span class="module-main">
+          <span class="module-title">{{ topic.title }}</span>
+          <span class="module-summary">{{ topic.summary }}</span>
+          <span class="module-tags">
+            @for (tag of topic.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+            }
+          </span>
+        </span>
+        <span class="module-meta">
+          <span class="range">
+            <span class="range-from">{{ topic.from }}</span>
+            <span class="range-line" aria-hidden="true"></span>
+            <span class="range-to">{{ topic.to }}</span>
+          </span>
+          <span class="stats">
+            {{ topic.readingMinutes }} min read, {{ topic.figures }} figures
+          </span>
+        </span>
+      </button>
+    </li>
+    }
+    </ol>
+  </section>
+  }
+  }
+</section>
+
+@if (selected) {
+<app-terminal-dialog
+  [title]="'~/study/' + selected.slug + '.md'"
+  [component]="'study'"
+  [componentData]="selected"
+  (closeDialogEvent)="close()"
+></app-terminal-dialog>
+}

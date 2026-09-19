@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Russian learning roadmap by stage</title>
+  <desc id="d">Six stages from the alphabet to low B1: script and sounds, survival, first cases, past and plans, conversational A2 at week 16, then months five to nine toward B1, each with its week range, CEFR level, cumulative hours and main skills.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Roadmap: zero to conversational Russian</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="100" y1="120" x2="100" y2="134"/>
+      <line x1="100" y1="196" x2="100" y2="210"/>
+      <line x1="100" y1="272" x2="100" y2="286"/>
+      <line x1="100" y1="348" x2="100" y2="362"/>
+      <line x1="100" y1="424" x2="100" y2="438"/>
+    </g>
+
+    <!-- Stage 0 -->
+    <rect x="30" y="60" width="140" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="100" y="86" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 1-2</text>
+    <text x="100" y="106" text-anchor="middle" font-size="13" fill="#7fbf8f">pre-A1</text>
+    <rect x="185" y="60" width="585" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="200" y="84" font-size="15" font-weight="bold" fill="#00ff41">Script and sounds</text>
+    <text x="755" y="84" text-anchor="end" font-size="13" fill="#ffb000">~20 h</text>
+    <text x="200" y="106" font-size="13" fill="#d8ffd8">Cyrillic, stress, vowel reduction, hard vs soft consonants</text>
+
+    <!-- Stage 1 -->
+    <rect x="30" y="136" width="140" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="100" y="162" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 3-5</text>
+    <text x="100" y="182" text-anchor="middle" font-size="13" fill="#7fbf8f">A1 start</text>
+    <rect x="185" y="136" width="585" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="200" y="160" font-size="15" font-weight="bold" fill="#00ff41">Survival</text>
+    <text x="755" y="160" text-anchor="end" font-size="13" fill="#ffb000">~50 h</text>
+    <text x="200" y="182" font-size="13" fill="#d8ffd8">greetings, ты / вы, present tense, questions, prepositional case</text>
+
+    <!-- Stage 2 -->
+    <rect x="30" y="212" width="140" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="100" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 6-8</text>
+    <text x="100" y="258" text-anchor="middle" font-size="13" fill="#7fbf8f">A1</text>
+    <rect x="185" y="212" width="585" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="200" y="236" font-size="15" font-weight="bold" fill="#00ff41">First cases</text>
+    <text x="755" y="236" text-anchor="end" font-size="13" fill="#ffb000">~80 h</text>
+    <text x="200" y="258" font-size="13" fill="#d8ffd8">accusative, genitive, adjectives, у меня есть / нет, numbers</text>
+
+    <!-- Stage 3 -->
+    <rect x="30" y="288" width="140" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="100" y="314" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 9-12</text>
+    <text x="100" y="334" text-anchor="middle" font-size="13" fill="#7fbf8f">A1 to A2</text>
+    <rect x="185" y="288" width="585" height="60" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="200" y="312" font-size="15" font-weight="bold" fill="#00ff41">Past and plans</text>
+    <text x="755" y="312" text-anchor="end" font-size="13" fill="#ffb000">~120 h</text>
+    <text x="200" y="334" font-size="13" fill="#d8ffd8">past tense, dative, instrumental, aspect pairs, two futures</text>
+
+    <!-- Stage 4 -->
+    <rect x="30" y="364" width="140" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="100" y="390" text-anchor="middle" font-size="15" font-weight="bold" fill="#d8ffd8">WEEKS 13-16</text>
+    <text x="100" y="410" text-anchor="middle" font-size="13" fill="#7fbf8f">A2</text>
+    <rect x="185" y="364" width="585" height="60" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="200" y="388" font-size="15" font-weight="bold" fill="#39e6ff">Conversational</text>
+    <text x="755" y="388" text-anchor="end" font-size="13" fill="#ffb000">~160 h</text>
+    <text x="200" y="410" font-size="13" fill="#d8ffd8">motion verbs, dates, imperatives, dialogues, full review</text>
+
+    <!-- Stage 5 -->
+    <rect x="30" y="440" width="140" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="100" y="466" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffb000">MONTHS 5-9</text>
+    <text x="100" y="486" text-anchor="middle" font-size="13" fill="#7fbf8f">toward B1</text>
+    <rect x="185" y="440" width="585" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="200" y="464" font-size="15" font-weight="bold" fill="#ffb000">Volume</text>
+    <text x="755" y="464" text-anchor="end" font-size="13" fill="#ffb000">~400 h</text>
+    <text x="200" y="486" font-size="13" fill="#d8ffd8">genitive plural, prefixed motion, graded readers, weekly talks</text>
+
+    <text x="400" y="534" text-anchor="middle" font-size="13" fill="#7fbf8f">Hours are cumulative, at 8-10 focused hours a week. Stages overlap in practice.</text>
+  </g>
+</svg>

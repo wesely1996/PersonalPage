@@ -1,0 +1,74 @@
+<div class="study-reader" [class.toc-open]="tocOpen">
+  <nav class="study-toc" aria-label="Contents">
+    <p class="toc-heading">Contents</p>
+    <ol>
+      @for (entry of toc; track entry.id) {
+      <li [class.sub]="entry.depth === 3">
+        <button
+          type="button"
+          [class.active]="entry.id === activeId"
+          [attr.aria-current]="entry.id === activeId ? 'location' : null"
+          (click)="goTo(entry.id)"
+        >
+          {{ entry.text }}
+        </button>
+      </li>
+      }
+    </ol>
+  </nav>
+
+  <div class="study-scroll" #scroller (scroll)="onScroll()">
+    @if (topic) {
+    <header class="study-hero">
+      <p class="hero-range">
+        <span>{{ topic.from }}</span>
+        <span class="hero-arrow" aria-hidden="true"></span>
+        <span class="hero-to">{{ topic.to }}</span>
+      </p>
+      <h1>{{ topic.title }}</h1>
+      <p class="hero-summary">{{ topic.summary }}</p>
+      <p class="hero-stats">
+        {{ topic.readingMinutes }} min read, {{ topic.figures }} figures,
+        {{ sectionCount }} sections
+      </p>
+    </header>
+    }
+
+    @if (loading) {
+    <p class="study-state">Loading module<span class="study-cursor"></span></p>
+    } @else if (error) {
+    <p class="study-state study-state-error">{{ error }}</p>
+    } @else if (html) {
+    <article
+      class="study-body"
+      [innerHTML]="html"
+      (click)="onBodyClick($event)"
+    ></article>
+    <p class="study-eof">
+      <button type="button" (click)="toTop()">Back to top</button>
+    </p>
+    }
+  </div>
+
+  <div class="study-status">
+    <button
+      type="button"
+      class="status-toc"
+      [attr.aria-expanded]="tocOpen"
+      (click)="tocOpen = !tocOpen"
+    >
+      Contents
+    </button>
+    <span class="status-mode" aria-hidden="true">READ</span>
+    <span class="status-section">
+      @if (sectionCount) {
+      <span class="status-count">{{ activeIndex + 1 }}/{{ sectionCount }}</span>
+      {{ activeSectionTitle }}
+      }
+    </span>
+    <span class="status-progress">
+      <span class="status-bar" aria-hidden="true">[{{ progressBar() }}]</span>
+      {{ progress }}%
+    </span>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Preterite versus imperfect on a timeline</title>
+  <desc id="d">A timeline where the imperfect is a long band of ongoing background action (leia un libro) and the preterite appears as sharp points for completed events (sono el telefono, me levante, conteste). Below, two panels list what each tense does and the time expressions that usually trigger it.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Imperfect sets the scene, preterite moves the plot</text>
+
+    <rect x="30" y="50" width="740" height="214" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <!-- axis -->
+    <line x1="60" y1="180" x2="740" y2="180" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="60" y="200" font-size="13" fill="#7fbf8f">past</text>
+    <text x="740" y="168" text-anchor="end" font-size="13" fill="#7fbf8f">now</text>
+
+    <!-- imperfect band -->
+    <rect x="120" y="132" width="380" height="30" rx="6" fill="#020a02" stroke="#39e6ff" stroke-width="2"/>
+    <text x="280" y="152" text-anchor="middle" font-size="13" fill="#39e6ff">leía un libro (imperfect: ongoing)</text>
+    <line x1="120" y1="162" x2="120" y2="180" stroke="#39e6ff" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="500" y1="162" x2="500" y2="180" stroke="#39e6ff" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+    <!-- preterite spikes -->
+    <line x1="480" y1="94" x2="480" y2="180" stroke="#ffb000" stroke-width="2.5"/>
+    <circle cx="480" cy="180" r="6" fill="#ffb000"/>
+    <text x="480" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffb000">sonó el teléfono (preterite)</text>
+
+    <circle cx="600" cy="180" r="6" fill="#ffb000"/>
+    <circle cx="690" cy="180" r="6" fill="#ffb000"/>
+    <text x="600" y="206" text-anchor="middle" font-size="13" fill="#ffb000">me levanté</text>
+    <text x="690" y="206" text-anchor="middle" font-size="13" fill="#ffb000">contesté</text>
+
+    <text x="400" y="232" text-anchor="middle" font-size="14" fill="#d8ffd8">Leía un libro cuando sonó el teléfono. Me levanté y contesté.</text>
+    <text x="400" y="252" text-anchor="middle" font-size="13" fill="#7fbf8f">I was reading a book when the phone rang. I got up and answered.</text>
+
+    <!-- preterite panel -->
+    <rect x="30" y="280" width="360" height="190" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="210" y="306" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffb000">PRETERITE (snapshot)</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="45" y="332">completed, countable events</text>
+      <text x="45" y="352">beginnings and endings</text>
+      <text x="45" y="378" fill="#7fbf8f">triggers:</text>
+      <text x="45" y="398">ayer, anoche, el año pasado,</text>
+      <text x="45" y="418">una vez, de repente, en 2019</text>
+      <text x="45" y="450" fill="#ffb000">Fui a la playa el verano pasado.</text>
+    </g>
+
+    <!-- imperfect panel -->
+    <rect x="410" y="280" width="360" height="190" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="590" y="306" text-anchor="middle" font-size="17" font-weight="bold" fill="#39e6ff">IMPERFECT (video)</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="425" y="332">background, habits, description</text>
+      <text x="425" y="352">time, age, feelings, "was -ing"</text>
+      <text x="425" y="378" fill="#7fbf8f">triggers:</text>
+      <text x="425" y="398">siempre, todos los días,</text>
+      <text x="425" y="418">de niño, mientras, a menudo</text>
+      <text x="425" y="450" fill="#39e6ff">Iba a la playa cada verano.</text>
+    </g>
+
+    <text x="400" y="500" text-anchor="middle" font-size="13" fill="#7fbf8f">Ask: is this a finished event on the timeline, or the backdrop around it?</text>
+  </g>
+</svg>

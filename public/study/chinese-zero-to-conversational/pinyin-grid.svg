@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" role="img" aria-labelledby="t d">
+  <title id="t">Pinyin initials grouped by mouth position, and the main groups of finals</title>
+  <desc id="d">The 21 pinyin initials in six rows: lips b p m f, tongue tip d t n l, back of tongue g k h, palatal j q x, retroflex zh ch sh r, and dental z c s, with a pronunciation hint for each. Below, the finals grouped into simple, compound, nasal, i-, u- and ü- groups.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Pinyin = initial + final + tone</text>
+
+    <!-- initials panel -->
+    <rect x="30" y="52" width="740" height="300" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="50" y="78" font-size="15" font-weight="bold" fill="#00ff41">INITIALS (21)</text>
+    <text x="230" y="78" font-size="13" fill="#7fbf8f">sound</text>
+    <text x="390" y="78" font-size="13" fill="#7fbf8f">how to say it</text>
+    <line x1="45" y1="88" x2="755" y2="88" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <g font-size="14" fill="#d8ffd8">
+      <text x="50" y="118">lips</text>
+      <text x="50" y="160">tongue tip</text>
+      <text x="50" y="202">back of tongue</text>
+      <text x="50" y="244" fill="#ffb000">palatal</text>
+      <text x="50" y="286" fill="#ffb000">retroflex</text>
+      <text x="50" y="328" fill="#ffb000">dental</text>
+    </g>
+    <g font-size="17" font-weight="bold">
+      <text x="230" y="118" fill="#00ff41">b p m f</text>
+      <text x="230" y="160" fill="#00ff41">d t n l</text>
+      <text x="230" y="202" fill="#00ff41">g k h</text>
+      <text x="230" y="244" fill="#ffb000">j q x</text>
+      <text x="230" y="286" fill="#ffb000">zh ch sh r</text>
+      <text x="230" y="328" fill="#ffb000">z c s</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="390" y="118">b is unaspirated; p = b plus a puff</text>
+      <text x="390" y="160">same pattern: d soft, t with a puff</text>
+      <text x="390" y="202">h is raspy, like Scottish "loch"</text>
+      <text x="390" y="244">tip down, smile: q~"ch"eese, x~"sh"e</text>
+      <text x="390" y="286">tongue curled back: zh~"j"ug, r~"r"un</text>
+      <text x="390" y="328">z = "ds" in kids, c = "ts" in cats</text>
+    </g>
+    <g stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4">
+      <line x1="45" y1="132" x2="755" y2="132"/>
+      <line x1="45" y1="174" x2="755" y2="174"/>
+      <line x1="45" y1="216" x2="755" y2="216"/>
+      <line x1="45" y1="258" x2="755" y2="258"/>
+      <line x1="45" y1="300" x2="755" y2="300"/>
+    </g>
+
+    <!-- finals panel -->
+    <rect x="30" y="366" width="740" height="200" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="50" y="392" font-size="15" font-weight="bold" fill="#39e6ff">FINALS (main groups)</text>
+    <line x1="45" y1="402" x2="755" y2="402" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="14">
+      <text x="50" y="428" fill="#7fbf8f">simple</text>
+      <text x="50" y="452" fill="#7fbf8f">compound</text>
+      <text x="50" y="476" fill="#7fbf8f">nasal</text>
+      <text x="50" y="500" fill="#7fbf8f">i- group</text>
+      <text x="50" y="524" fill="#7fbf8f">u- group</text>
+      <text x="50" y="548" fill="#7fbf8f">ü- group</text>
+    </g>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="200" y="428">a  o  e  i  u  ü</text>
+      <text x="200" y="452">ai  ei  ao  ou</text>
+      <text x="200" y="476">an  en  ang  eng  ong   (-n front, -ng back)</text>
+      <text x="200" y="500">ia  ie  iao  iu  ian  in  iang  ing  iong</text>
+      <text x="200" y="524">ua  uo  uai  ui  uan  un  uang</text>
+      <text x="200" y="548">üe  üan  ün   (after j q x y the dots vanish)</text>
+    </g>
+  </g>
+</svg>

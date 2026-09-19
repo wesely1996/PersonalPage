@@ -1,0 +1,308 @@
+@use "styles/theme.scss" as variables;
+
+$dim: #0f7a2a;
+$ink: #d8ffd8;
+$muted: #7fbf8f;
+
+.study {
+  position: absolute;
+  top: variables.$layout-top-offset;
+  left: variables.$layout-side-offset;
+  right: variables.$layout-side-offset;
+  bottom: variables.$layout-bottom-offset;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+  background: variables.$color-background-08;
+  font-family: variables.$font-terminal;
+  color: $ink;
+  overflow-y: auto;
+  scrollbar-color: variables.$color-primary variables.$color-background;
+}
+
+.study-head {
+  max-width: 72ch;
+  margin-bottom: 2rem;
+
+  .prompt {
+    margin: 0 0 1.25rem;
+    color: $muted;
+    font-size: variables.$font-p-size;
+
+    .path {
+      color: variables.$color-primary;
+    }
+    .sigil {
+      margin: 0 0.4ch;
+    }
+    .cmd {
+      color: $ink;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: variables.$color-primary;
+    text-shadow: 0 0 18px rgba(0, 255, 0, 0.45);
+  }
+
+  .lede {
+    margin: 1rem 0 0.75rem;
+    font-size: variables.$font-base-size;
+    line-height: 1.6;
+    color: $ink;
+  }
+
+  .keys {
+    margin: 0;
+    font-size: variables.$font-p-size;
+    color: $muted;
+
+    kbd {
+      display: inline-block;
+      min-width: 1.4em;
+      margin-right: 0.3em;
+      padding: 0 0.3em;
+      border: 1px solid $dim;
+      border-radius: 3px;
+      text-align: center;
+      font-family: inherit;
+      color: $ink;
+    }
+    kbd + kbd {
+      margin-left: -0.1em;
+    }
+  }
+}
+
+.state {
+  color: variables.$color-primary;
+
+  &.state-error {
+    color: variables.$color-error-red;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: variables.$color-primary;
+  animation: blink 1s steps(1) infinite;
+}
+
+.track + .track {
+  margin-top: 3rem;
+}
+
+.track-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 0.75rem;
+  font-size: variables.$font-h2-size;
+  color: variables.$color-primary;
+
+  &::before {
+    content: "./";
+    color: $dim;
+  }
+
+  .track-count {
+    margin-left: auto;
+    padding-left: 1rem;
+    font-size: variables.$font-p-size;
+    font-weight: normal;
+    color: $muted;
+  }
+}
+
+.modules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $dim;
+}
+
+.module {
+  display: grid;
+  grid-template-columns: 3.5ch minmax(0, 1fr) minmax(14rem, auto);
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%;
+  padding: 1.25rem 1rem;
+  border: 0;
+  border-bottom: 1px solid $dim;
+  background: transparent;
+  color: $ink;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  animation: print-line 0.35s steps(8, end) both;
+
+  // The selection bar: the row inverts like a highlighted line in a TUI menu.
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background: variables.$color-primary;
+    color: #000;
+
+    .module-order,
+    .module-title,
+    .module-summary,
+    .stats,
+    .range-from,
+    .range-to {
+      color: #000;
+      text-shadow: none;
+    }
+    .range-line {
+      background: #000;
+      &::after {
+        border-left-color: #000;
+      }
+    }
+    .tag {
+      border-color: #000;
+      color: #000;
+    }
+  }
+
+  &:focus-visible {
+    box-shadow: inset 0 0 0 3px #000, 0 0 0 2px variables.$color-primary;
+  }
+}
+
+.module-order {
+  font-size: variables.$font-h3-size;
+  font-weight: variables.$font-weight-bold;
+  color: $dim;
+}
+
+.module-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.module-title {
+  font-size: variables.$font-h3-size;
+  font-weight: variables.$font-weight-bold;
+  line-height: 1.3;
+  color: variables.$color-primary;
+}
+
+.module-summary {
+  max-width: 64ch;
+  font-size: variables.$font-p-size;
+  line-height: 1.6;
+  color: $ink;
+}
+
+.module-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0 0.5ch;
+  border: 1px solid $dim;
+  font-size: 0.75rem;
+  color: $muted;
+}
+
+.module-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: variables.$font-p-size;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  gap: 0.6ch;
+  white-space: nowrap;
+
+  .range-from {
+    color: $muted;
+  }
+  .range-to {
+    color: variables.$color-primary;
+    font-weight: variables.$font-weight-bold;
+  }
+}
+
+.range-line {
+  position: relative;
+  flex: 1 1 3rem;
+  min-width: 2rem;
+  height: 1px;
+  background: $dim;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: -4px;
+    border-left: 6px solid $dim;
+    border-top: 4.5px solid transparent;
+    border-bottom: 4.5px solid transparent;
+  }
+}
+
+.stats {
+  color: $muted;
+}
+
+@media (max-width: variables.$breakpoint-desktop) {
+  .study {
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .module {
+    grid-template-columns: 2.5ch minmax(0, 1fr);
+    gap: 0.75rem 1rem;
+  }
+
+  .module-meta {
+    grid-column: 2;
+  }
+
+  .range-line {
+    flex: 0 0 3rem;
+  }
+
+  .study-head .keys {
+    display: none;
+  }
+}
+
+@keyframes print-line {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .module,
+  .cursor {
+    animation: none;
+  }
+}
