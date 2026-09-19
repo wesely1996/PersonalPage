@@ -8,7 +8,8 @@
     "build-prod": "ng build --configuration production --base-href \"https://wesely1996.github.io/PersonalPage/\" && npx angular-cli-ghpages --dir=dist/personal-page/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "tests": "ng test --watch=false --browsers ChromeHeadless"
+    "tests": "ng test --watch=false --browsers ChromeHeadless",
+    "test:ci": "ng test --watch=false --browsers ChromeHeadlessCI"
   },
   "private": true,
   "dependencies": {
