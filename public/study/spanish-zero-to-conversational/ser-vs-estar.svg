@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 510" role="img" aria-labelledby="t d">
+  <title id="t">Ser versus estar: DOCTOR and PLACE</title>
+  <desc id="d">Two columns. SER, remembered as DOCTOR: description, occupation, characteristic, time and date, origin, relationship, each with an example. ESTAR, remembered as PLACE: position, location, action in progress, condition, emotion, each with an example. Below, adjectives whose meaning changes with the verb: aburrido, listo, malo and rico, plus the event and death exceptions.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Ser vs estar: what it IS vs how/where it IS</text>
+
+    <!-- SER -->
+    <rect x="30" y="52" width="360" height="258" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="210" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#00ff41" filter="url(#glow)">SER = DOCTOR</text>
+    <text x="210" y="102" text-anchor="middle" font-size="13" fill="#7fbf8f">identity, essence, "what"</text>
+    <g font-size="13">
+      <text x="45" y="134" font-size="15" font-weight="bold" fill="#00ff41">D</text>
+      <text x="65" y="134" fill="#d8ffd8">Description</text>
+      <text x="190" y="134" fill="#ffb000">Es alta y simpática.</text>
+      <text x="45" y="164" font-size="15" font-weight="bold" fill="#00ff41">O</text>
+      <text x="65" y="164" fill="#d8ffd8">Occupation</text>
+      <text x="190" y="164" fill="#ffb000">Soy estudiante.</text>
+      <text x="45" y="194" font-size="15" font-weight="bold" fill="#00ff41">C</text>
+      <text x="65" y="194" fill="#d8ffd8">Characteristic</text>
+      <text x="190" y="194" fill="#ffb000">Eres muy paciente.</text>
+      <text x="45" y="224" font-size="15" font-weight="bold" fill="#00ff41">T</text>
+      <text x="65" y="224" fill="#d8ffd8">Time, date</text>
+      <text x="190" y="224" fill="#ffb000">Son las tres.</text>
+      <text x="45" y="254" font-size="15" font-weight="bold" fill="#00ff41">O</text>
+      <text x="65" y="254" fill="#d8ffd8">Origin</text>
+      <text x="190" y="254" fill="#ffb000">Somos de México.</text>
+      <text x="45" y="284" font-size="15" font-weight="bold" fill="#00ff41">R</text>
+      <text x="65" y="284" fill="#d8ffd8">Relationship</text>
+      <text x="190" y="284" fill="#ffb000">Ana es mi hermana.</text>
+    </g>
+
+    <!-- ESTAR -->
+    <rect x="410" y="52" width="360" height="258" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="590" y="80" text-anchor="middle" font-size="18" font-weight="bold" fill="#39e6ff" filter="url(#glow)">ESTAR = PLACE</text>
+    <text x="590" y="102" text-anchor="middle" font-size="13" fill="#7fbf8f">state, location, "how / where"</text>
+    <g font-size="13">
+      <text x="425" y="134" font-size="15" font-weight="bold" fill="#39e6ff">P</text>
+      <text x="445" y="134" fill="#d8ffd8">Position</text>
+      <text x="570" y="134" fill="#ffb000">Está sentado.</text>
+      <text x="425" y="164" font-size="15" font-weight="bold" fill="#39e6ff">L</text>
+      <text x="445" y="164" fill="#d8ffd8">Location</text>
+      <text x="570" y="164" fill="#ffb000">Lima está en Perú.</text>
+      <text x="425" y="194" font-size="15" font-weight="bold" fill="#39e6ff">A</text>
+      <text x="445" y="194" fill="#d8ffd8">Action -ndo</text>
+      <text x="570" y="194" fill="#ffb000">Estoy comiendo.</text>
+      <text x="425" y="224" font-size="15" font-weight="bold" fill="#39e6ff">C</text>
+      <text x="445" y="224" fill="#d8ffd8">Condition</text>
+      <text x="570" y="224" fill="#ffb000">El café está frío.</text>
+      <text x="425" y="254" font-size="15" font-weight="bold" fill="#39e6ff">E</text>
+      <text x="445" y="254" fill="#d8ffd8">Emotion</text>
+      <text x="570" y="254" fill="#ffb000">Estamos contentos.</text>
+      <text x="445" y="290" fill="#7fbf8f">Test: "Is this a state?"</text>
+    </g>
+
+    <!-- meaning changes -->
+    <rect x="30" y="326" width="740" height="164" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="400" y="350" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">Same adjective, different meaning</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="60" y="376" fill="#00ff41">es aburrido</text><text x="170" y="376">- he is boring</text>
+      <text x="420" y="376" fill="#39e6ff">está aburrido</text><text x="545" y="376">- he is bored</text>
+      <text x="60" y="398" fill="#00ff41">es listo</text><text x="170" y="398">- he is clever</text>
+      <text x="420" y="398" fill="#39e6ff">está listo</text><text x="545" y="398">- he is ready</text>
+      <text x="60" y="420" fill="#00ff41">es malo</text><text x="170" y="420">- he is bad</text>
+      <text x="420" y="420" fill="#39e6ff">está malo</text><text x="545" y="420">- he is ill</text>
+      <text x="60" y="442" fill="#00ff41">es rico</text><text x="170" y="442">- he is rich</text>
+      <text x="420" y="442" fill="#39e6ff">está rico</text><text x="545" y="442">- it is tasty</text>
+    </g>
+    <text x="400" y="474" text-anchor="middle" font-size="13" fill="#ff4d4d">Traps: events use ser (La fiesta es aquí). Death uses estar (Está muerto).</text>
+  </g>
+</svg>

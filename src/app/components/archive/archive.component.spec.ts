@@ -22,9 +22,9 @@ describe('ArchiveComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should render six navigation links', () => {
+  it('should render seven navigation links', () => {
     const links: NodeListOf<HTMLAnchorElement> = fixture.nativeElement.querySelectorAll('a');
-    expect(links.length).toBe(6);
+    expect(links.length).toBe(7);
   });
 
   it('should include links for all archive sections', () => {
@@ -37,6 +37,7 @@ describe('ArchiveComponent', () => {
     expect(hrefs).toContain('/archive/library');
     expect(hrefs).toContain('/archive/games');
     expect(hrefs).toContain('/archive/tv-shows');
+    expect(hrefs).toContain('/archive/study');
   });
 
   it('should render the container with a single scrollable row', () => {

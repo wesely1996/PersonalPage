@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+  <title id="t">Monolith, modular monolith and microservices</title>
+  <desc id="d">Three columns. The monolith is one deployable box whose four parts call each other freely and share one database. The modular monolith is one deployable box with four modules that talk only through public interfaces and own a schema each in one database. Microservices are four separately deployed services, each with its own database, talking over the network.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="140" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41" filter="url(#glow)">MONOLITH</text>
+    <text x="400" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000" filter="url(#glow)">MODULAR MONOLITH</text>
+    <text x="660" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41" filter="url(#glow)">MICROSERVICES</text>
+    <line x1="270" y1="55" x2="270" y2="430" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 6"/>
+    <line x1="530" y1="55" x2="530" y2="430" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+    <!-- Monolith -->
+    <rect x="30" y="65" width="220" height="220" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="42" y="84" font-size="13" fill="#7fbf8f">1 deployable</text>
+    <g stroke="#ff4d4d" stroke-width="1.5">
+      <line x1="90" y1="130" x2="190" y2="130"/>
+      <line x1="90" y1="130" x2="190" y2="230"/>
+      <line x1="190" y1="130" x2="90" y2="230"/>
+      <line x1="90" y1="230" x2="190" y2="230"/>
+      <line x1="90" y1="130" x2="90" y2="230"/>
+      <line x1="190" y1="130" x2="190" y2="230"/>
+    </g>
+    <g font-size="13" text-anchor="middle">
+      <rect x="55" y="112" width="70" height="36" rx="6" fill="#020a02" stroke="#7fbf8f" stroke-width="1.5"/><text x="90" y="135" fill="#d8ffd8">orders</text>
+      <rect x="155" y="112" width="70" height="36" rx="6" fill="#020a02" stroke="#7fbf8f" stroke-width="1.5"/><text x="190" y="135" fill="#d8ffd8">billing</text>
+      <rect x="55" y="212" width="70" height="36" rx="6" fill="#020a02" stroke="#7fbf8f" stroke-width="1.5"/><text x="90" y="235" fill="#d8ffd8">stock</text>
+      <rect x="155" y="212" width="70" height="36" rx="6" fill="#020a02" stroke="#7fbf8f" stroke-width="1.5"/><text x="190" y="235" fill="#d8ffd8">users</text>
+    </g>
+    <line x1="140" y1="285" x2="140" y2="313" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="75" y="315" width="130" height="40" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+    <text x="140" y="340" text-anchor="middle" font-size="13" fill="#d8ffd8">one shared DB</text>
+    <text x="140" y="395" text-anchor="middle" font-size="13" fill="#d8ffd8">no enforced boundaries</text>
+    <text x="140" y="415" text-anchor="middle" font-size="13" fill="#ff4d4d">cheap now, mud later</text>
+
+    <!-- Modular monolith -->
+    <rect x="290" y="65" width="220" height="220" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="302" y="84" font-size="13" fill="#7fbf8f">1 deployable</text>
+    <g font-size="13" text-anchor="middle">
+      <rect x="305" y="100" width="85" height="70" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="347" y="130" fill="#d8ffd8">orders</text>
+      <rect x="410" y="100" width="85" height="70" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="452" y="130" fill="#d8ffd8">billing</text>
+      <rect x="305" y="195" width="85" height="70" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="347" y="225" fill="#d8ffd8">stock</text>
+      <rect x="410" y="195" width="85" height="70" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/><text x="452" y="225" fill="#d8ffd8">users</text>
+    </g>
+    <!-- public interface nubs -->
+    <g fill="#ffb000">
+      <rect x="384" y="140" width="12" height="12"/>
+      <rect x="341" y="164" width="12" height="12"/>
+    </g>
+    <line x1="396" y1="146" x2="408" y2="146" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="347" y1="176" x2="347" y2="193" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="400" y="280" text-anchor="middle" font-size="13" fill="#ffb000">public APIs only</text>
+    <line x1="400" y1="285" x2="400" y2="313" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="320" y="315" width="160" height="40" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+    <line x1="360" y1="315" x2="360" y2="355" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="400" y1="315" x2="400" y2="355" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="440" y1="315" x2="440" y2="355" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="400" y="372" text-anchor="middle" font-size="13" fill="#7fbf8f">schema per module</text>
+    <text x="400" y="395" text-anchor="middle" font-size="13" fill="#d8ffd8">boundaries checked in CI</text>
+    <text x="400" y="415" text-anchor="middle" font-size="13" fill="#ffb000">the pragmatic default</text>
+
+    <!-- Microservices -->
+    <g stroke="#39e6ff" stroke-width="1.5" stroke-dasharray="5 4" fill="none">
+      <line x1="645" y1="105" x2="673" y2="105" marker-end="url(#arrCyan)"/>
+      <line x1="566" y1="130" x2="566" y2="203" marker-end="url(#arrCyan)"/>
+      <line x1="645" y1="130" x2="673" y2="203" marker-end="url(#arrCyan)"/>
+      <line x1="754" y1="130" x2="754" y2="203" marker-end="url(#arrCyan)"/>
+    </g>
+    <g font-size="13" text-anchor="middle">
+      <rect x="555" y="80" width="90" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/><text x="600" y="110" fill="#d8ffd8">orders</text>
+      <rect x="675" y="80" width="90" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/><text x="720" y="110" fill="#d8ffd8">billing</text>
+      <rect x="555" y="205" width="90" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/><text x="600" y="235" fill="#d8ffd8">stock</text>
+      <rect x="675" y="205" width="90" height="50" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/><text x="720" y="235" fill="#d8ffd8">users</text>
+    </g>
+    <!-- own DBs -->
+    <g fill="#020a02" stroke="#7fbf8f" stroke-width="1.5">
+      <rect x="578" y="138" width="44" height="18" rx="6"/>
+      <rect x="698" y="138" width="44" height="18" rx="6"/>
+      <rect x="578" y="263" width="44" height="18" rx="6"/>
+      <rect x="698" y="263" width="44" height="18" rx="6"/>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#7fbf8f">
+      <text x="600" y="152">db</text><text x="720" y="152">db</text>
+      <text x="600" y="277">db</text><text x="720" y="277">db</text>
+    </g>
+    <text x="660" y="325" text-anchor="middle" font-size="13" fill="#39e6ff">- - network calls</text>
+    <text x="660" y="345" text-anchor="middle" font-size="13" fill="#7fbf8f">(can fail, can be slow)</text>
+    <text x="660" y="395" text-anchor="middle" font-size="13" fill="#d8ffd8">N deploys, DB per service</text>
+    <text x="660" y="415" text-anchor="middle" font-size="13" fill="#ff4d4d">autonomy, high ops cost</text>
+  </g>
+</svg>

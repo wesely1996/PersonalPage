@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-labelledby="t d">
+  <title id="t">Hard and soft vowel pairs, and vowel reduction</title>
+  <desc id="d">Top: five vowel pairs. а э ы о у follow a hard consonant; я е и ё ю follow a soft one, as in лук versus люк. Bottom: unstressed о is pronounced like a, as in молоко said malako, and unstressed е and я are pronounced like a short i, as in сестра said sistra.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Vowels do two jobs</text>
+
+    <!-- Panel A: pairs -->
+    <rect x="30" y="56" width="740" height="190" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="45" y="82" font-size="15" font-weight="bold" fill="#00ff41">1. The vowel tells you if the consonant before it is hard or soft</text>
+
+    <text x="45" y="130" font-size="15" font-weight="bold" fill="#d8ffd8">HARD</text>
+    <text x="45" y="148" font-size="13" fill="#7fbf8f">plain</text>
+    <text x="45" y="200" font-size="15" font-weight="bold" fill="#ffb000">SOFT</text>
+    <text x="45" y="218" font-size="13" fill="#7fbf8f">tongue up, "y"</text>
+
+    <g stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="200" y1="142" x2="200" y2="172"/>
+      <line x1="270" y1="142" x2="270" y2="172"/>
+      <line x1="340" y1="142" x2="340" y2="172"/>
+      <line x1="410" y1="142" x2="410" y2="172"/>
+      <line x1="480" y1="142" x2="480" y2="172"/>
+    </g>
+    <g font-size="28" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="200" y="134">а</text><text x="270" y="134">э</text><text x="340" y="134">ы</text><text x="410" y="134">о</text><text x="480" y="134">у</text>
+    </g>
+    <g font-size="28" font-weight="bold" fill="#ffb000" text-anchor="middle">
+      <text x="200" y="202">я</text><text x="270" y="202">е</text><text x="340" y="202">и</text><text x="410" y="202">ё</text><text x="480" y="202">ю</text>
+    </g>
+
+    <line x1="530" y1="100" x2="530" y2="230" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="550" y="112" font-size="13" fill="#7fbf8f">minimal pairs</text>
+    <text x="550" y="138" font-size="13" fill="#d8ffd8">лук / люк</text>
+    <text x="550" y="156" font-size="13" fill="#7fbf8f">onion / hatch</text>
+    <text x="550" y="182" font-size="13" fill="#d8ffd8">быть / бить</text>
+    <text x="550" y="200" font-size="13" fill="#7fbf8f">to be / to hit</text>
+    <text x="550" y="226" font-size="13" fill="#d8ffd8">мат / мать (ь)</text>
+
+    <!-- Panel B: reduction -->
+    <text x="45" y="276" font-size="15" font-weight="bold" fill="#00ff41">2. Only the stressed vowel is said in full</text>
+    <text x="755" y="276" text-anchor="end" font-size="13" fill="#ffb000">amber = stressed</text>
+
+    <rect x="30" y="290" width="360" height="130" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="45" y="316" font-size="15" font-weight="bold" fill="#d8ffd8">unstressed о sounds like a</text>
+    <text x="45" y="350" font-size="18" fill="#d8ffd8">молок<tspan fill="#ffb000" font-weight="bold">о</tspan></text>
+    <text x="210" y="350" font-size="15" fill="#39e6ff">[malako]</text>
+    <text x="45" y="380" font-size="18" fill="#d8ffd8">хорош<tspan fill="#ffb000" font-weight="bold">о</tspan></text>
+    <text x="210" y="380" font-size="15" fill="#39e6ff">[kharasho]</text>
+    <text x="45" y="408" font-size="13" fill="#7fbf8f">"akanye": milk, good</text>
+
+    <rect x="410" y="290" width="360" height="130" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="425" y="316" font-size="15" font-weight="bold" fill="#d8ffd8">unstressed е, я sound like i</text>
+    <text x="425" y="350" font-size="18" fill="#d8ffd8">сестр<tspan fill="#ffb000" font-weight="bold">а</tspan></text>
+    <text x="590" y="350" font-size="15" fill="#39e6ff">[sistra]</text>
+    <text x="425" y="380" font-size="18" fill="#d8ffd8">яз<tspan fill="#ffb000" font-weight="bold">ы</tspan>к</text>
+    <text x="590" y="380" font-size="15" fill="#39e6ff">[yizyk]</text>
+    <text x="425" y="408" font-size="13" fill="#7fbf8f">"ikanye": sister, language</text>
+  </g>
+</svg>

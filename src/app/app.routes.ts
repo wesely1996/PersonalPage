@@ -69,5 +69,12 @@ export const routes: Routes = [
         (m) => m.TvShowsComponent
       ),
   },
+  {
+    path: 'archive/study',
+    loadComponent: () =>
+      import('./components/study/study.component').then(
+        (m) => m.StudyComponent
+      ),
+  },
   { path: '**', redirectTo: '' },
 ];

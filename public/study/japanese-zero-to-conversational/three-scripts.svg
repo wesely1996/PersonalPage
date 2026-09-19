@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+  <title id="t">Three Japanese scripts in one sentence</title>
+  <desc id="d">The sentence watashi wa koohii o nomimasu (I drink coffee) split into chunks: kanji for the meaning-bearing words watashi and the stem of nomu, hiragana for the particles wa and o and the verb ending mimasu, katakana for the loanword koohii. Three panels summarize what each script is used for.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Three scripts, one sentence</text>
+
+    <!-- sentence chunks -->
+    <g stroke-width="2" fill="#062b0f">
+      <rect x="110" y="62" width="52" height="60" rx="6" stroke="#ffb000"/>
+      <rect x="170" y="62" width="52" height="60" rx="6" stroke="#00ff41"/>
+      <rect x="230" y="62" width="142" height="60" rx="6" stroke="#39e6ff"/>
+      <rect x="380" y="62" width="52" height="60" rx="6" stroke="#00ff41"/>
+      <rect x="440" y="62" width="52" height="60" rx="6" stroke="#ffb000"/>
+      <rect x="500" y="62" width="112" height="60" rx="6" stroke="#00ff41"/>
+    </g>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="30" text-anchor="middle">
+      <text x="136" y="103" fill="#ffb000">私</text>
+      <text x="196" y="103" fill="#00ff41">は</text>
+      <text x="301" y="103" fill="#39e6ff">コーヒー</text>
+      <text x="406" y="103" fill="#00ff41">を</text>
+      <text x="466" y="103" fill="#ffb000">飲</text>
+      <text x="556" y="103" fill="#00ff41">みます</text>
+      <text x="632" y="103" fill="#d8ffd8">。</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#d8ffd8">
+      <text x="136" y="142">watashi</text>
+      <text x="196" y="142">wa</text>
+      <text x="301" y="142">koohii</text>
+      <text x="406" y="142">o</text>
+      <text x="466" y="142">no</text>
+      <text x="556" y="142">mimasu</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#7fbf8f">
+      <text x="136" y="160">I</text>
+      <text x="196" y="160">topic</text>
+      <text x="301" y="160">coffee</text>
+      <text x="406" y="160">object</text>
+      <text x="511" y="160">drink (polite)</text>
+    </g>
+    <text x="400" y="190" text-anchor="middle" font-size="14" fill="#d8ffd8">"I drink coffee."  Note: no spaces between words.</text>
+
+    <!-- panels -->
+    <rect x="40" y="212" width="230" height="200" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <rect x="285" y="212" width="230" height="200" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <rect x="530" y="212" width="230" height="200" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+
+    <g font-size="16" font-weight="bold" text-anchor="middle">
+      <text x="155" y="238" fill="#00ff41">HIRAGANA</text>
+      <text x="400" y="238" fill="#39e6ff">KATAKANA</text>
+      <text x="645" y="238" fill="#ffb000">KANJI</text>
+    </g>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="26" text-anchor="middle">
+      <text x="155" y="276" fill="#00ff41">あ い う</text>
+      <text x="400" y="276" fill="#39e6ff">ア イ ウ</text>
+      <text x="645" y="276" fill="#ffb000">日 本 語</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="54" y="306">46 rounded sound signs</text>
+      <text x="54" y="328">particles: wa, o, ni ...</text>
+      <text x="54" y="350">verb/adjective endings</text>
+      <text x="54" y="372">native words, kids' books</text>
+      <text x="54" y="394" fill="#7fbf8f">learn first: week 1</text>
+
+      <text x="299" y="306">same 46 sounds, angular</text>
+      <text x="299" y="328">loanwords: koohii, pan</text>
+      <text x="299" y="350">foreign names</text>
+      <text x="299" y="372">emphasis, sound effects</text>
+      <text x="299" y="394" fill="#7fbf8f">learn second: week 2</text>
+
+      <text x="544" y="306">2,136 joyo characters</text>
+      <text x="544" y="328">each carries meaning</text>
+      <text x="544" y="350">noun, verb, adj stems</text>
+      <text x="544" y="372">~300 for JLPT N4</text>
+      <text x="544" y="394" fill="#7fbf8f">learn slowly: forever</text>
+    </g>
+    <text x="400" y="436" text-anchor="middle" font-size="13" fill="#7fbf8f">Kanji give meaning, hiragana give grammar, katakana mark the foreign.</text>
+  </g>
+</svg>

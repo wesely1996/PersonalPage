@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" role="img" aria-labelledby="t d">
+  <title id="t">A short history of databases, 1970 to 2025</title>
+  <desc id="d">Vertical timeline grouped into four eras: the relational era from Codd's 1970 paper to open-source SQL, the web-scale NoSQL wave with the Bigtable and Dynamo papers and MongoDB, Redis and Cassandra, the NewSQL era starting with Spanner, and the convergence era with Postgres JSONB, MongoDB transactions, pgvector and 2025 releases.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="44" text-anchor="middle" font-size="21" fill="#00ff41" filter="url(#glow)" font-weight="bold">DATABASE HISTORY: 1970 - 2025</text>
+    <text x="400" y="70" text-anchor="middle" font-size="14" fill="#7fbf8f">from one model to many, and back toward convergence</text>
+
+    <!-- era bands -->
+    <rect x="30" y="93" width="170" height="148" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="115" y="162" text-anchor="middle" font-size="14" fill="#00ff41">RELATIONAL</text>
+    <text x="115" y="180" text-anchor="middle" font-size="14" fill="#00ff41">ERA</text>
+
+    <rect x="30" y="245" width="170" height="110" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="115" y="296" text-anchor="middle" font-size="14" fill="#ffb000">WEB-SCALE</text>
+    <text x="115" y="314" text-anchor="middle" font-size="14" fill="#ffb000">NOSQL WAVE</text>
+
+    <rect x="30" y="359" width="170" height="34" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="115" y="381" text-anchor="middle" font-size="14" fill="#39e6ff">NEWSQL</text>
+
+    <rect x="30" y="397" width="170" height="148" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="115" y="466" text-anchor="middle" font-size="14" fill="#d8ffd8">CONVERGENCE</text>
+    <text x="115" y="484" text-anchor="middle" font-size="14" fill="#d8ffd8">ERA</text>
+
+    <!-- spine -->
+    <line x1="300" y1="100" x2="300" y2="540" stroke="#0f7a2a" stroke-width="2"/>
+
+    <g font-size="14">
+      <text x="280" y="115" text-anchor="end" fill="#00ff41">1970</text>
+      <circle cx="300" cy="110" r="6" fill="#00ff41"/>
+      <text x="318" y="115" fill="#d8ffd8">Codd publishes the relational model (IBM)</text>
+
+      <text x="280" y="153" text-anchor="end" fill="#00ff41">1979</text>
+      <circle cx="300" cy="148" r="6" fill="#00ff41"/>
+      <text x="318" y="153" fill="#d8ffd8">Oracle V2: early commercial SQL database</text>
+
+      <text x="280" y="191" text-anchor="end" fill="#00ff41">1986</text>
+      <circle cx="300" cy="186" r="6" fill="#00ff41"/>
+      <text x="318" y="191" fill="#d8ffd8">SQL becomes an ANSI standard</text>
+
+      <text x="280" y="229" text-anchor="end" fill="#00ff41">1995-96</text>
+      <circle cx="300" cy="224" r="6" fill="#00ff41"/>
+      <text x="318" y="229" fill="#d8ffd8">MySQL and PostgreSQL: open-source SQL</text>
+
+      <text x="280" y="267" text-anchor="end" fill="#ffb000">2006</text>
+      <circle cx="300" cy="262" r="6" fill="#ffb000"/>
+      <text x="318" y="267" fill="#d8ffd8">Google Bigtable paper (wide-column)</text>
+
+      <text x="280" y="305" text-anchor="end" fill="#ffb000">2007</text>
+      <circle cx="300" cy="300" r="6" fill="#ffb000"/>
+      <text x="318" y="305" fill="#d8ffd8">Amazon Dynamo paper (leaderless key-value)</text>
+
+      <text x="280" y="343" text-anchor="end" fill="#ffb000">2008-09</text>
+      <circle cx="300" cy="338" r="6" fill="#ffb000"/>
+      <text x="318" y="343" fill="#d8ffd8">Cassandra, MongoDB, Redis; "NoSQL" is named</text>
+
+      <text x="280" y="381" text-anchor="end" fill="#39e6ff">2012</text>
+      <circle cx="300" cy="376" r="6" fill="#39e6ff"/>
+      <text x="318" y="381" fill="#d8ffd8">Google Spanner paper: global ACID SQL</text>
+
+      <text x="280" y="419" text-anchor="end" fill="#d8ffd8">2014</text>
+      <circle cx="300" cy="414" r="6" fill="#d8ffd8"/>
+      <text x="318" y="419" fill="#d8ffd8">PostgreSQL 9.4 adds JSONB</text>
+
+      <text x="280" y="457" text-anchor="end" fill="#d8ffd8">2018</text>
+      <circle cx="300" cy="452" r="6" fill="#d8ffd8"/>
+      <text x="318" y="457" fill="#d8ffd8">MongoDB 4.0: multi-document ACID</text>
+
+      <text x="280" y="495" text-anchor="end" fill="#d8ffd8">2021</text>
+      <circle cx="300" cy="490" r="6" fill="#d8ffd8"/>
+      <text x="318" y="495" fill="#d8ffd8">pgvector: vector search inside Postgres</text>
+
+      <text x="280" y="533" text-anchor="end" fill="#d8ffd8">2025</text>
+      <circle cx="300" cy="528" r="6" fill="#d8ffd8"/>
+      <text x="318" y="533" fill="#d8ffd8">PG 18, Aurora DSQL GA, MongoDB 8.2</text>
+    </g>
+    <text x="400" y="568" text-anchor="middle" font-size="13" fill="#7fbf8f">The models did not replace each other - they borrowed each other's best ideas.</text>
+  </g>
+</svg>

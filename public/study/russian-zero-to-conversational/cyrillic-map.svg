@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">The Cyrillic alphabet grouped by familiarity</title>
+  <desc id="d">Thirty-three Russian letters in four groups: five true friends that look and sound like English (А К М О Т), seven false friends that look English but sound different (В Е Н Р С У Х), thirteen new shapes with familiar sounds, and eight genuinely new sounds or signs (Ж Ц Ч Ш Щ Ы Ъ Ь).</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Cyrillic in four groups</text>
+
+    <!-- Panel 1: true friends -->
+    <rect x="30" y="60" width="360" height="190" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="45" y="86" font-size="15" font-weight="bold" fill="#00ff41">1. TRUE FRIENDS (5)</text>
+    <text x="45" y="106" font-size="13" fill="#7fbf8f">look and sound like English</text>
+    <g font-size="26" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="80" y="165">Аа</text><text x="145" y="165">Кк</text><text x="210" y="165">Мм</text><text x="275" y="165">Оо</text><text x="340" y="165">Тт</text>
+    </g>
+    <g font-size="13" fill="#00ff41" text-anchor="middle">
+      <text x="80" y="190">a</text><text x="145" y="190">k</text><text x="210" y="190">m</text><text x="275" y="190">o</text><text x="340" y="190">t</text>
+    </g>
+    <text x="45" y="232" font-size="13" fill="#7fbf8f">free points: read them today</text>
+
+    <!-- Panel 2: false friends -->
+    <rect x="410" y="60" width="360" height="190" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="425" y="86" font-size="15" font-weight="bold" fill="#ff4d4d">2. FALSE FRIENDS (7)</text>
+    <text x="425" y="106" font-size="13" fill="#7fbf8f">look English, sound different</text>
+    <g font-size="26" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="440" y="160">Вв</text><text x="490" y="160">Ее</text><text x="540" y="160">Нн</text><text x="590" y="160">Рр</text><text x="640" y="160">Сс</text><text x="690" y="160">Уу</text><text x="740" y="160">Хх</text>
+    </g>
+    <g font-size="13" fill="#ffb000" text-anchor="middle">
+      <text x="440" y="185">v</text><text x="490" y="185">ye</text><text x="540" y="185">n</text><text x="590" y="185">r</text><text x="640" y="185">s</text><text x="690" y="185">oo</text><text x="740" y="185">kh</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f" text-anchor="middle">
+      <text x="440" y="205">not B</text><text x="490" y="205">not E</text><text x="540" y="205">not H</text><text x="590" y="205">not P</text><text x="640" y="205">not C</text><text x="690" y="205">not Y</text><text x="740" y="205">not X</text>
+    </g>
+    <text x="425" y="235" font-size="13" fill="#d8ffd8">РЕСТОРАН = restoran</text>
+
+    <!-- Panel 3: new shapes, familiar sounds -->
+    <rect x="30" y="270" width="360" height="190" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="45" y="296" font-size="15" font-weight="bold" fill="#00ff41">3. NEW SHAPES (13)</text>
+    <text x="45" y="316" font-size="13" fill="#7fbf8f">unfamiliar look, familiar sound</text>
+    <g font-size="24" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="60" y="354">Бб</text><text x="110" y="354">Гг</text><text x="160" y="354">Дд</text><text x="210" y="354">Зз</text><text x="260" y="354">Ии</text><text x="310" y="354">Йй</text><text x="360" y="354">Лл</text>
+      <text x="60" y="416">Пп</text><text x="110" y="416">Фф</text><text x="160" y="416">Ээ</text><text x="210" y="416">Юю</text><text x="260" y="416">Яя</text><text x="310" y="416">Ёё</text>
+    </g>
+    <g font-size="13" fill="#00ff41" text-anchor="middle">
+      <text x="60" y="376">b</text><text x="110" y="376">g</text><text x="160" y="376">d</text><text x="210" y="376">z</text><text x="260" y="376">ee</text><text x="310" y="376">y</text><text x="360" y="376">l</text>
+      <text x="60" y="438">p</text><text x="110" y="438">f</text><text x="160" y="438">e</text><text x="210" y="438">yu</text><text x="260" y="438">ya</text><text x="310" y="438">yo</text>
+    </g>
+
+    <!-- Panel 4: new sounds -->
+    <rect x="410" y="270" width="360" height="190" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="425" y="296" font-size="15" font-weight="bold" fill="#39e6ff">4. NEW SOUNDS (8)</text>
+    <text x="425" y="316" font-size="13" fill="#7fbf8f">sounds or signs English lacks</text>
+    <g font-size="24" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="442" y="364">Жж</text><text x="484" y="364">Цц</text><text x="526" y="364">Чч</text><text x="568" y="364">Шш</text><text x="610" y="364">Щщ</text><text x="652" y="364">Ыы</text><text x="694" y="364">Ъъ</text><text x="736" y="364">Ьь</text>
+    </g>
+    <g font-size="13" fill="#00ff41" text-anchor="middle">
+      <text x="442" y="390">zh</text><text x="484" y="390">ts</text><text x="526" y="390">ch</text><text x="568" y="390">sh</text><text x="610" y="390">shch</text><text x="652" y="390">y</text><text x="694" y="390">hard</text><text x="736" y="390">soft</text>
+    </g>
+    <text x="425" y="424" font-size="13" fill="#d8ffd8">Ы: say "ee" with tongue pulled back</text>
+    <text x="425" y="444" font-size="13" fill="#d8ffd8">Ъ, Ь: no sound of their own</text>
+
+    <text x="400" y="495" text-anchor="middle" font-size="13" fill="#7fbf8f">5 + 7 + 13 + 8 = 33 letters. Master groups 1-2 on day one.</text>
+  </g>
+</svg>

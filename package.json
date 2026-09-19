@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "tests": "ng test --watch=false --browsers ChromeHeadless",
-    "test:ci": "ng test --watch=false --browsers ChromeHeadlessCI"
+    "study:stats": "node scripts/study-stats.mjs"
   },
   "private": true,
   "dependencies": {

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" role="img" aria-labelledby="t d">
+  <title id="t">Por versus para</title>
+  <desc id="d">An action in the centre: por points back to the cause, route or exchange behind it, para points forward to the goal, destination or deadline ahead. Two columns list six uses of each with a Spanish example and English gloss, and a footer lists fixed expressions with por.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+    <marker id="arrC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Por looks back, para looks ahead</text>
+
+    <!-- strip -->
+    <rect x="330" y="72" width="140" height="44" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="400" y="99" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">ACTION</text>
+    <line x1="90" y1="94" x2="326" y2="94" stroke="#ffb000" stroke-width="2" marker-start="url(#arrA)"/>
+    <line x1="474" y1="94" x2="710" y2="94" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrC)"/>
+    <text x="210" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffb000">POR: cause, route, swap</text>
+    <text x="210" y="114" text-anchor="middle" font-size="13" fill="#7fbf8f">why? through what?</text>
+    <text x="590" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#39e6ff">PARA: goal, target, deadline</text>
+    <text x="590" y="114" text-anchor="middle" font-size="13" fill="#7fbf8f">what for? to where?</text>
+
+    <!-- POR column -->
+    <rect x="30" y="140" width="360" height="310" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="210" y="166" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffb000">POR</text>
+    <g font-size="13">
+      <text x="45" y="198" fill="#ffb000">cause</text>
+      <text x="150" y="198" fill="#d8ffd8">Gracias por la ayuda.</text>
+      <text x="150" y="215" fill="#7fbf8f">Thanks for the help.</text>
+      <text x="45" y="243" fill="#ffb000">through</text>
+      <text x="150" y="243" fill="#d8ffd8">Paseamos por el parque.</text>
+      <text x="150" y="260" fill="#7fbf8f">We walked through the park.</text>
+      <text x="45" y="288" fill="#ffb000">exchange</text>
+      <text x="150" y="288" fill="#d8ffd8">Lo compré por 10 euros.</text>
+      <text x="150" y="305" fill="#7fbf8f">I bought it for 10 euros.</text>
+      <text x="45" y="333" fill="#ffb000">duration</text>
+      <text x="150" y="333" fill="#d8ffd8">Estudié por dos horas.</text>
+      <text x="150" y="350" fill="#7fbf8f">I studied for two hours.</text>
+      <text x="45" y="378" fill="#ffb000">means</text>
+      <text x="150" y="378" fill="#d8ffd8">Hablamos por teléfono.</text>
+      <text x="150" y="395" fill="#7fbf8f">We talked on the phone.</text>
+      <text x="45" y="423" fill="#ffb000">rate</text>
+      <text x="150" y="423" fill="#d8ffd8">tres veces por semana</text>
+      <text x="150" y="440" fill="#7fbf8f">three times a week</text>
+    </g>
+
+    <!-- PARA column -->
+    <rect x="410" y="140" width="360" height="310" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="590" y="166" text-anchor="middle" font-size="17" font-weight="bold" fill="#39e6ff">PARA</text>
+    <g font-size="13">
+      <text x="425" y="198" fill="#39e6ff">purpose</text>
+      <text x="530" y="198" fill="#d8ffd8">Estudio para aprender.</text>
+      <text x="530" y="215" fill="#7fbf8f">I study (in order) to learn.</text>
+      <text x="425" y="243" fill="#39e6ff">destination</text>
+      <text x="530" y="243" fill="#d8ffd8">Salgo para Madrid.</text>
+      <text x="530" y="260" fill="#7fbf8f">I'm leaving for Madrid.</text>
+      <text x="425" y="288" fill="#39e6ff">deadline</text>
+      <text x="530" y="288" fill="#d8ffd8">Es para el viernes.</text>
+      <text x="530" y="305" fill="#7fbf8f">It's due on Friday.</text>
+      <text x="425" y="333" fill="#39e6ff">recipient</text>
+      <text x="530" y="333" fill="#d8ffd8">Este regalo es para ti.</text>
+      <text x="530" y="350" fill="#7fbf8f">This gift is for you.</text>
+      <text x="425" y="378" fill="#39e6ff">opinion</text>
+      <text x="530" y="378" fill="#d8ffd8">Para mí, es fácil.</text>
+      <text x="530" y="395" fill="#7fbf8f">For me, it's easy.</text>
+      <text x="425" y="423" fill="#39e6ff">employer</text>
+      <text x="530" y="423" fill="#d8ffd8">Trabaja para mi tío.</text>
+      <text x="530" y="440" fill="#7fbf8f">She works for my uncle.</text>
+    </g>
+
+    <text x="400" y="484" text-anchor="middle" font-size="13" fill="#d8ffd8">Fixed: por favor, por fin, por eso, por supuesto, por ejemplo, por cierto</text>
+    <text x="400" y="508" text-anchor="middle" font-size="13" fill="#7fbf8f">Test: can you say "in order to" or "headed for"? Then it is para.</text>
+  </g>
+</svg>

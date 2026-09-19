@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="t d">
+  <title id="t">Japanese sentence skeleton: particles tag roles, verb goes last</title>
+  <desc id="d">The sentence watashi wa maiasa eki de tomodachi to koohii o nomimasu split into chunks, each followed by a particle that marks its role: topic, time, place of action, companion, object, and the verb at the end. Below, two reorderings that mean the same thing, and a comparison of English subject-verb-object with Japanese subject-object-verb order.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Chunks + particles, verb last</text>
+
+    <g fill="#062b0f" stroke-width="2">
+      <rect x="35" y="62" width="100" height="84" rx="6" stroke="#0f7a2a"/>
+      <rect x="145" y="62" width="100" height="84" rx="6" stroke="#0f7a2a"/>
+      <rect x="255" y="62" width="100" height="84" rx="6" stroke="#0f7a2a"/>
+      <rect x="365" y="62" width="110" height="84" rx="6" stroke="#0f7a2a"/>
+      <rect x="485" y="62" width="140" height="84" rx="6" stroke="#0f7a2a"/>
+      <rect x="635" y="62" width="130" height="84" rx="6" stroke="#39e6ff"/>
+    </g>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="22" text-anchor="middle" fill="#d8ffd8">
+      <text x="85" y="102">私<tspan fill="#ffb000">は</tspan></text>
+      <text x="195" y="102">毎朝</text>
+      <text x="305" y="102">駅<tspan fill="#ffb000">で</tspan></text>
+      <text x="420" y="102">友達<tspan fill="#ffb000">と</tspan></text>
+      <text x="555" y="102">コーヒー<tspan fill="#ffb000">を</tspan></text>
+      <text x="700" y="102" fill="#39e6ff">飲みます</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#7fbf8f">
+      <text x="85" y="132">watashi wa</text>
+      <text x="195" y="132">maiasa</text>
+      <text x="305" y="132">eki de</text>
+      <text x="420" y="132">tomodachi to</text>
+      <text x="555" y="132">koohii o</text>
+      <text x="700" y="132">nomimasu</text>
+    </g>
+    <g font-size="13" text-anchor="middle" font-weight="bold" fill="#ffb000">
+      <text x="85" y="170">TOPIC (wa)</text>
+      <text x="195" y="170" fill="#7fbf8f">TIME (none)</text>
+      <text x="305" y="170">PLACE (de)</text>
+      <text x="420" y="170">WITH (to)</text>
+      <text x="555" y="170">OBJECT (o)</text>
+      <text x="700" y="170" fill="#39e6ff">VERB, last</text>
+    </g>
+    <g font-size="13" text-anchor="middle" fill="#d8ffd8">
+      <text x="85" y="190">as for me</text>
+      <text x="195" y="190">each morning</text>
+      <text x="305" y="190">at station</text>
+      <text x="420" y="190">with a friend</text>
+      <text x="555" y="190">coffee</text>
+      <text x="700" y="190">drink (polite)</text>
+    </g>
+
+    <line x1="40" y1="214" x2="760" y2="214" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="40" y="240" font-size="14" fill="#00ff41">Particles carry the roles, so chunks can move. Same meaning:</text>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="20" fill="#d8ffd8">
+      <text x="60" y="274">毎朝、私<tspan fill="#ffb000">は</tspan>駅<tspan fill="#ffb000">で</tspan>友達<tspan fill="#ffb000">と</tspan>コーヒー<tspan fill="#ffb000">を</tspan><tspan fill="#39e6ff">飲みます</tspan>。</text>
+      <text x="60" y="326">私<tspan fill="#ffb000">は</tspan>友達<tspan fill="#ffb000">と</tspan>毎朝駅<tspan fill="#ffb000">で</tspan>コーヒー<tspan fill="#ffb000">を</tspan><tspan fill="#39e6ff">飲みます</tspan>。</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="60" y="294">Maiasa, watashi wa eki de tomodachi to koohii o nomimasu.</text>
+      <text x="60" y="346">Watashi wa tomodachi to maiasa eki de koohii o nomimasu.</text>
+    </g>
+
+    <line x1="40" y1="366" x2="760" y2="366" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="14" font-weight="bold" fill="#00ff41">
+      <text x="40" y="404">English</text>
+      <text x="40" y="450">Japanese</text>
+    </g>
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="160" y="384" width="150" height="30" rx="6"/>
+      <rect x="360" y="384" width="150" height="30" rx="6"/>
+      <rect x="560" y="384" width="150" height="30" rx="6"/>
+      <rect x="160" y="430" width="150" height="30" rx="6"/>
+      <rect x="360" y="430" width="150" height="30" rx="6"/>
+      <rect x="560" y="430" width="150" height="30" rx="6" stroke="#39e6ff"/>
+    </g>
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="312" y1="399" x2="356" y2="399"/>
+      <line x1="512" y1="399" x2="556" y2="399"/>
+      <line x1="312" y1="445" x2="356" y2="445"/>
+      <line x1="512" y1="445" x2="556" y2="445"/>
+    </g>
+    <g font-size="14" text-anchor="middle" fill="#d8ffd8">
+      <text x="235" y="404">Subject: I</text>
+      <text x="435" y="404" fill="#39e6ff">Verb: drink</text>
+      <text x="635" y="404">Object: coffee</text>
+      <text x="235" y="450">Topic + wa</text>
+      <text x="435" y="450">Object + o</text>
+      <text x="635" y="450" fill="#39e6ff">Verb</text>
+    </g>
+  </g>
+</svg>

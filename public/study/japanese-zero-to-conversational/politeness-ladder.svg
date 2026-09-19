@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Politeness levels in Japanese</title>
+  <desc id="d">A staircase of speech levels rising with formality and social distance: casual plain form for friends and family, polite desu/masu form for strangers and coworkers (where learners should start), and keigo at the top, split into sonkeigo that raises the other person's actions and kenjougo that lowers your own. The verbs taberu (eat) and iku (go) are shown at each level.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Speech levels: same verb, three registers</text>
+    <line x1="60" y1="62" x2="740" y2="62" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="400" y="56" text-anchor="middle" font-size="13" fill="#7fbf8f">more formal / more social distance</text>
+
+    <!-- step 1: casual -->
+    <rect x="40" y="296" width="230" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="2"/>
+    <text x="56" y="322" font-size="15" font-weight="bold" fill="#d8ffd8">CASUAL (plain)</text>
+    <text x="56" y="344" font-size="13" fill="#7fbf8f">friends, family, kids</text>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="18" fill="#d8ffd8">
+      <text x="56" y="380">食べる？</text>
+      <text x="56" y="420">行く</text>
+    </g>
+    <text x="150" y="378" font-size="13" fill="#7fbf8f">taberu?</text>
+    <text x="150" y="418" font-size="13" fill="#7fbf8f">iku</text>
+
+    <!-- step 2: polite -->
+    <rect x="285" y="206" width="230" height="250" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="301" y="232" font-size="15" font-weight="bold" fill="#00ff41">POLITE (desu/masu)</text>
+    <text x="301" y="254" font-size="13" fill="#7fbf8f">strangers, teachers,</text>
+    <text x="301" y="272" font-size="13" fill="#7fbf8f">coworkers, shops</text>
+    <rect x="301" y="286" width="130" height="26" rx="6" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="366" y="304" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffb000">START HERE</text>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="18" fill="#d8ffd8">
+      <text x="301" y="350">食べますか</text>
+      <text x="301" y="410">行きます</text>
+    </g>
+    <text x="301" y="372" font-size="13" fill="#7fbf8f">tabemasu ka?</text>
+    <text x="301" y="432" font-size="13" fill="#7fbf8f">ikimasu</text>
+
+    <!-- step 3: keigo -->
+    <rect x="530" y="86" width="230" height="180" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="546" y="112" font-size="15" font-weight="bold" fill="#ffb000">KEIGO: sonkeigo</text>
+    <text x="546" y="134" font-size="13" fill="#7fbf8f">raises THEIR actions</text>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="18" fill="#d8ffd8">
+      <text x="546" y="168">召し上がりますか</text>
+      <text x="546" y="226">いらっしゃいます</text>
+    </g>
+    <text x="546" y="190" font-size="13" fill="#7fbf8f">meshiagarimasu ka?</text>
+    <text x="546" y="248" font-size="13" fill="#7fbf8f">irasshaimasu</text>
+
+    <rect x="530" y="276" width="230" height="180" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="546" y="302" font-size="15" font-weight="bold" fill="#ffb000">KEIGO: kenjougo</text>
+    <text x="546" y="324" font-size="13" fill="#7fbf8f">lowers YOUR actions</text>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="18" fill="#d8ffd8">
+      <text x="546" y="358">いただきます</text>
+      <text x="546" y="416">参ります</text>
+    </g>
+    <text x="546" y="380" font-size="13" fill="#7fbf8f">itadakimasu</text>
+    <text x="546" y="438" font-size="13" fill="#7fbf8f">mairimasu</text>
+
+    <text x="40" y="488" font-size="13" fill="#d8ffd8">Rows: <tspan fill="#00ff41">eat</tspan> (taberu), then <tspan fill="#00ff41">go</tspan> (iku). Learners: master polite, recognize keigo.</text>
+  </g>
+</svg>

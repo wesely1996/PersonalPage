@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" role="img" aria-labelledby="t d">
+  <title id="t">Normalizing an order spreadsheet from UNF to 3NF</title>
+  <desc id="d">Four stages. UNF: one row per order with a list of items in one cell. 1NF: one row per order item, but product_name depends only on product_id, part of the key. 2NF: products split out, but customer country depends on email rather than the order. 3NF: customers split out, so every fact is stored once.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">NORMALIZING AN ORDER SHEET</text>
+
+    <!-- UNF -->
+    <rect x="20" y="55" width="100" height="100" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="70" y="98" text-anchor="middle" font-size="20" font-weight="bold" fill="#ff4d4d">UNF</text>
+    <text x="70" y="122" text-anchor="middle" font-size="13" fill="#7fbf8f">raw sheet</text>
+    <rect x="130" y="55" width="650" height="100" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="142" y="80" font-size="13" fill="#00ff41" xml:space="preserve">order | email           | country | items</text>
+    <text x="142" y="102" font-size="13" fill="#d8ffd8" xml:space="preserve">1     | ada@example.com | UK      | ThinkPad X1 x1, USB-C Cable x2</text>
+    <text x="142" y="140" font-size="13" fill="#ff4d4d">list in one cell: no index, no join, no constraint</text>
+    <line x1="70" y1="155" x2="70" y2="173" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 1NF -->
+    <rect x="20" y="175" width="100" height="100" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="70" y="218" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffb000">1NF</text>
+    <text x="70" y="242" text-anchor="middle" font-size="13" fill="#7fbf8f">atomic</text>
+    <rect x="130" y="175" width="650" height="100" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="142" y="198" font-size="13" fill="#00ff41" xml:space="preserve">order | product_id | product_name | qty | email</text>
+    <text x="142" y="218" font-size="13" fill="#d8ffd8" xml:space="preserve">1     | 1          | ThinkPad X1  | 1   | ada@example.com</text>
+    <text x="142" y="238" font-size="13" fill="#d8ffd8" xml:space="preserve">1     | 6          | USB-C Cable  | 2   | ada@example.com</text>
+    <text x="142" y="262" font-size="13" fill="#ffb000">product_name depends on product_id only: part of the key</text>
+    <line x1="70" y1="275" x2="70" y2="293" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 2NF -->
+    <rect x="20" y="295" width="100" height="100" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="70" y="338" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffb000">2NF</text>
+    <text x="70" y="362" text-anchor="middle" font-size="13" fill="#7fbf8f">whole key</text>
+    <rect x="130" y="295" width="650" height="100" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="142" y="322" font-size="13" fill="#d8ffd8" xml:space="preserve">order_items(order_id, product_id, qty)   products(product_id, name)</text>
+    <text x="142" y="346" font-size="13" fill="#d8ffd8" xml:space="preserve">orders(order_id, email, country)</text>
+    <text x="142" y="378" font-size="13" fill="#ffb000">country depends on the customer, not the order: transitive</text>
+    <line x1="70" y1="395" x2="70" y2="413" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 3NF -->
+    <rect x="20" y="415" width="100" height="100" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="70" y="458" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">3NF</text>
+    <text x="70" y="482" text-anchor="middle" font-size="13" fill="#7fbf8f">key only</text>
+    <rect x="130" y="415" width="650" height="100" rx="6" fill="none" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="142" y="442" font-size="13" fill="#d8ffd8" xml:space="preserve">order_items(order_id, product_id, qty)   products(product_id, name)</text>
+    <text x="142" y="466" font-size="13" fill="#d8ffd8" xml:space="preserve">orders(order_id, customer_id)   customers(customer_id, email, country)</text>
+    <text x="142" y="498" font-size="13" fill="#00ff41">each fact stored once: the key, the whole key, nothing but the key</text>
+  </g>
+</svg>

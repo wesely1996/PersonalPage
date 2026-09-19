@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d" font-family="'Courier New', monospace">
+<title id="t">Database schema of the bookmark app</title>
+<desc id="d">Entity relationship diagram: auth.users has many collections and many bookmarks; a collection has many bookmarks; every row carries user_id for row level security.</desc>
+<rect width="100%" height="100%" fill="#020a02"/>
+<defs>
+<filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+<marker id="ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/></marker>
+<marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/></marker>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ff4d4d"/></marker>
+<marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+</defs>
+<text x="400" y="34" font-size="20" fill="#00ff41" text-anchor="middle" font-weight="bold" filter="url(#glow)">SCHEMA: LINKSHELF</text>
+<text x="400" y="56" font-size="13" fill="#7fbf8f" text-anchor="middle">one user -&gt; many collections -&gt; many bookmarks</text>
+<rect x="20" y="90" width="210" height="108" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+<line x1="20" y1="122" x2="230" y2="122" stroke="#39e6ff" stroke-width="1.5"/>
+<text x="125" y="112" font-size="15" fill="#39e6ff" text-anchor="middle" font-weight="bold">auth.users</text>
+<text x="32" y="144" font-size="13" fill="#ffb000">id</text>
+<text x="218" y="144" font-size="13" fill="#7fbf8f" text-anchor="end">uuid PK</text>
+<text x="32" y="166" font-size="13" fill="#d8ffd8">email</text>
+<text x="218" y="166" font-size="13" fill="#7fbf8f" text-anchor="end">text</text>
+<text x="32" y="188" font-size="13" fill="#d8ffd8">...</text>
+<text x="218" y="188" font-size="13" fill="#7fbf8f" text-anchor="end">managed</text>
+<rect x="290" y="90" width="230" height="130" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<line x1="290" y1="122" x2="520" y2="122" stroke="#00ff41" stroke-width="1.5"/>
+<text x="405" y="112" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">collections</text>
+<text x="302" y="144" font-size="13" fill="#ffb000">id</text>
+<text x="508" y="144" font-size="13" fill="#7fbf8f" text-anchor="end">uuid PK</text>
+<text x="302" y="166" font-size="13" fill="#d8ffd8">user_id</text>
+<text x="508" y="166" font-size="13" fill="#7fbf8f" text-anchor="end">uuid FK</text>
+<text x="302" y="188" font-size="13" fill="#d8ffd8">name</text>
+<text x="508" y="188" font-size="13" fill="#7fbf8f" text-anchor="end">text</text>
+<text x="302" y="210" font-size="13" fill="#d8ffd8">created_at</text>
+<text x="508" y="210" font-size="13" fill="#7fbf8f" text-anchor="end">timestamptz</text>
+<rect x="560" y="90" width="220" height="218" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+<line x1="560" y1="122" x2="780" y2="122" stroke="#00ff41" stroke-width="1.5"/>
+<text x="670" y="112" font-size="15" fill="#00ff41" text-anchor="middle" font-weight="bold">bookmarks</text>
+<text x="572" y="144" font-size="13" fill="#ffb000">id</text>
+<text x="768" y="144" font-size="13" fill="#7fbf8f" text-anchor="end">uuid PK</text>
+<text x="572" y="166" font-size="13" fill="#d8ffd8">user_id</text>
+<text x="768" y="166" font-size="13" fill="#7fbf8f" text-anchor="end">uuid FK</text>
+<text x="572" y="188" font-size="13" fill="#d8ffd8">collection_id</text>
+<text x="768" y="188" font-size="13" fill="#7fbf8f" text-anchor="end">uuid FK?</text>
+<text x="572" y="210" font-size="13" fill="#d8ffd8">url</text>
+<text x="768" y="210" font-size="13" fill="#7fbf8f" text-anchor="end">text</text>
+<text x="572" y="232" font-size="13" fill="#d8ffd8">title</text>
+<text x="768" y="232" font-size="13" fill="#7fbf8f" text-anchor="end">text</text>
+<text x="572" y="254" font-size="13" fill="#d8ffd8">note</text>
+<text x="768" y="254" font-size="13" fill="#7fbf8f" text-anchor="end">text</text>
+<text x="572" y="276" font-size="13" fill="#d8ffd8">tags</text>
+<text x="768" y="276" font-size="13" fill="#7fbf8f" text-anchor="end">text[]</text>
+<text x="572" y="298" font-size="13" fill="#d8ffd8">created_at</text>
+<text x="768" y="298" font-size="13" fill="#7fbf8f" text-anchor="end">timestamptz</text>
+<line x1="230" y1="150" x2="288" y2="150" stroke="#00ff41" stroke-width="1.6"/>
+<text x="236" y="144" font-size="13" fill="#ffb000">1</text>
+<text x="282" y="144" font-size="13" fill="#ffb000" text-anchor="end">N</text>
+<line x1="520" y1="150" x2="558" y2="150" stroke="#00ff41" stroke-width="1.6"/>
+<text x="525" y="144" font-size="13" fill="#ffb000">1</text>
+<text x="555" y="144" font-size="13" fill="#ffb000" text-anchor="end">N</text>
+<path d="M125,198 L125,300 L558,300" fill="none" stroke="#00ff41" stroke-width="1.6"/>
+<text x="133" y="220" font-size="13" fill="#ffb000">1</text>
+<text x="550" y="294" font-size="13" fill="#ffb000" text-anchor="end">N</text>
+<rect x="319.9" y="281.0" width="40.2" height="19" fill="#020a02"/>
+<text x="340" y="294" font-size="13" fill="#7fbf8f" text-anchor="middle">owns</text>
+<rect x="20" y="360" width="760" height="74" rx="6" fill="#020a02" stroke="#0f7a2a" stroke-width="1.5"/>
+<text x="36" y="386" font-size="13" fill="#d8ffd8">Every row carries user_id (default auth.uid()), so one RLS rule -</text>
+<text x="36" y="410" font-size="13" fill="#7fbf8f">"user_id = auth.uid()" - isolates each user's data. on delete cascade.</text>
+</svg>

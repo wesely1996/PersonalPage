@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" role="img" aria-labelledby="t d">
+  <title id="t">Where object pronouns go</title>
+  <desc id="d">A table of direct and indirect object pronouns by person, then a flow: with a single conjugated verb the pronoun goes before it; with an infinitive or -ndo form it can go before the conjugated verb or be attached to the end; with an affirmative command it must be attached, and with a negative command it goes before. A final box explains the order indirect-then-direct and the change of le and les to se.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Object pronouns: which one, and where</text>
+
+    <!-- table -->
+    <rect x="30" y="50" width="740" height="110" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="13" text-anchor="middle" fill="#7fbf8f">
+      <text x="270" y="76">yo</text>
+      <text x="340" y="76">tú</text>
+      <text x="430" y="76">él/ella/Ud.</text>
+      <text x="525" y="76">nosotros</text>
+      <text x="610" y="76">vosotros</text>
+      <text x="700" y="76">ellos/Uds.</text>
+    </g>
+    <line x1="30" y1="86" x2="770" y2="86" stroke="#0f7a2a" stroke-width="1"/>
+    <text x="45" y="114" font-size="13" fill="#00ff41">Direct (what/whom)</text>
+    <text x="45" y="144" font-size="13" fill="#39e6ff">Indirect (to whom)</text>
+    <g font-size="15" text-anchor="middle" fill="#d8ffd8">
+      <text x="270" y="114">me</text>
+      <text x="340" y="114">te</text>
+      <text x="430" y="114">lo / la</text>
+      <text x="525" y="114">nos</text>
+      <text x="610" y="114">os</text>
+      <text x="700" y="114">los / las</text>
+      <text x="270" y="144">me</text>
+      <text x="340" y="144">te</text>
+      <text x="430" y="144">le</text>
+      <text x="525" y="144">nos</text>
+      <text x="610" y="144">os</text>
+      <text x="700" y="144">les</text>
+    </g>
+
+    <!-- question -->
+    <rect x="250" y="178" width="300" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="400" y="203" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">What is the verb form?</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <path d="M300,218 L145,254"/>
+      <line x1="400" y1="218" x2="400" y2="252"/>
+      <path d="M500,218 L655,254"/>
+    </g>
+
+    <!-- box 1 -->
+    <rect x="30" y="258" width="230" height="160" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="145" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">Conjugated verb</text>
+    <text x="145" y="304" text-anchor="middle" font-size="13" fill="#ffb000">BEFORE the verb</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="45" y="334">Lo veo.</text>
+      <text x="45" y="356">No lo veo.</text>
+      <text x="45" y="378">Te lo compro.</text>
+      <text x="45" y="400">Me han llamado.</text>
+    </g>
+
+    <!-- box 2 -->
+    <rect x="285" y="258" width="230" height="160" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="400" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#39e6ff">Infinitive / -ndo</text>
+    <text x="400" y="304" text-anchor="middle" font-size="13" fill="#ffb000">before OR attached</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="300" y="334">Lo voy a ver.</text>
+      <text x="300" y="356">Voy a verlo.</text>
+      <text x="300" y="378">Lo estoy leyendo.</text>
+      <text x="300" y="400">Estoy leyéndolo.</text>
+    </g>
+
+    <!-- box 3 -->
+    <rect x="540" y="258" width="230" height="160" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="655" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffb000">Command</text>
+    <text x="655" y="304" text-anchor="middle" font-size="13" fill="#ffb000">yes: attached / no: before</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="555" y="334">¡Hazlo!</text>
+      <text x="555" y="356">¡Dámelo!</text>
+      <text x="555" y="378">¡No lo hagas!</text>
+      <text x="555" y="400">¡No me lo des!</text>
+    </g>
+
+    <!-- rules -->
+    <rect x="30" y="436" width="740" height="126" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="45" y="460" font-size="14" font-weight="bold" fill="#00ff41">Two pronouns together</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="45" y="484">1. Indirect before direct: me lo, te la, nos los.</text>
+      <text x="45" y="506">2. le/les + lo/la/los/las becomes se: <tspan fill="#ffb000">Se lo doy (a María).</tspan></text>
+      <text x="45" y="528">3. Attaching can shift stress, so add an accent: da + me + lo = dámelo.</text>
+      <text x="45" y="550" fill="#7fbf8f">Never split them and never put them after a plain conjugated verb: *Veo lo.</text>
+    </g>
+  </g>
+</svg>

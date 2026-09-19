@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+  <title id="t">Basic Mandarin sentence template</title>
+  <desc id="d">The slot order Subject, Time, Place, Verb, Object, filled with two examples: 我明天在家看书, I will read at home tomorrow, and 她每天在学校吃午饭, she eats lunch at school every day. Time and place come before the verb, unlike English.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Who + When + Where + Do + What</text>
+
+    <!-- header slots -->
+    <g fill="#062b0f" stroke-width="2">
+      <rect x="40" y="55" width="132" height="50" rx="6" stroke="#00ff41"/>
+      <rect x="187" y="55" width="132" height="50" rx="6" stroke="#ffb000"/>
+      <rect x="334" y="55" width="132" height="50" rx="6" stroke="#ffb000"/>
+      <rect x="481" y="55" width="132" height="50" rx="6" stroke="#39e6ff"/>
+      <rect x="628" y="55" width="132" height="50" rx="6" stroke="#00ff41"/>
+    </g>
+    <g text-anchor="middle" font-size="17" font-weight="bold">
+      <text x="106" y="86" fill="#00ff41">SUBJECT</text>
+      <text x="253" y="86" fill="#ffb000">TIME</text>
+      <text x="400" y="86" fill="#ffb000">PLACE</text>
+      <text x="547" y="86" fill="#39e6ff">VERB</text>
+      <text x="694" y="86" fill="#00ff41">OBJECT</text>
+    </g>
+
+    <!-- example 1 -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="40" y="120" width="132" height="76" rx="6"/>
+      <rect x="187" y="120" width="132" height="76" rx="6"/>
+      <rect x="334" y="120" width="132" height="76" rx="6"/>
+      <rect x="481" y="120" width="132" height="76" rx="6"/>
+      <rect x="628" y="120" width="132" height="76" rx="6"/>
+    </g>
+    <g text-anchor="middle" font-size="26" fill="#d8ffd8">
+      <text x="106" y="158">我</text>
+      <text x="253" y="158">明天</text>
+      <text x="400" y="158">在家</text>
+      <text x="547" y="158">看</text>
+      <text x="694" y="158">书</text>
+    </g>
+    <g text-anchor="middle" font-size="14" fill="#7fbf8f">
+      <text x="106" y="184">wǒ</text>
+      <text x="253" y="184">míngtiān</text>
+      <text x="400" y="184">zài jiā</text>
+      <text x="547" y="184">kàn</text>
+      <text x="694" y="184">shū</text>
+    </g>
+    <text x="400" y="218" text-anchor="middle" font-size="14" fill="#d8ffd8">"I will read (books) at home tomorrow."</text>
+
+    <!-- example 2 -->
+    <g fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5">
+      <rect x="40" y="235" width="132" height="76" rx="6"/>
+      <rect x="187" y="235" width="132" height="76" rx="6"/>
+      <rect x="334" y="235" width="132" height="76" rx="6"/>
+      <rect x="481" y="235" width="132" height="76" rx="6"/>
+      <rect x="628" y="235" width="132" height="76" rx="6"/>
+    </g>
+    <g text-anchor="middle" font-size="26" fill="#d8ffd8">
+      <text x="106" y="273">她</text>
+      <text x="253" y="273">每天</text>
+      <text x="400" y="273">在学校</text>
+      <text x="547" y="273">吃</text>
+      <text x="694" y="273">午饭</text>
+    </g>
+    <g text-anchor="middle" font-size="14" fill="#7fbf8f">
+      <text x="106" y="299">tā</text>
+      <text x="253" y="299">měitiān</text>
+      <text x="400" y="299">zài xuéxiào</text>
+      <text x="547" y="299">chī</text>
+      <text x="694" y="299">wǔfàn</text>
+    </g>
+    <text x="400" y="333" text-anchor="middle" font-size="14" fill="#d8ffd8">"She eats lunch at school every day."</text>
+
+    <!-- notes -->
+    <rect x="40" y="352" width="720" height="84" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="60" y="380" font-size="14" fill="#ffb000">Rule: time and place (with 在) go BEFORE the verb, not at the end.</text>
+    <text x="60" y="404" font-size="14" fill="#d8ffd8">Time may also open the sentence: 明天我在家看书。 (same meaning)</text>
+    <text x="60" y="426" font-size="14" fill="#7fbf8f">Copying English order (verb, then place, then time) sounds broken.</text>
+  </g>
+</svg>

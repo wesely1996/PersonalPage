@@ -41,6 +41,19 @@
       }
     },
     {
+      "name": "study-content",
+      "urls": [
+        "/json/study.json",
+        "/study/**/*.md"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 20,
+        "maxAge": "7d",
+        "timeout": "5s"
+      }
+    },
+    {
       "name": "codex-pdf",
       "urls": [
         "/personal-page-legacy/**/*.pdf"
