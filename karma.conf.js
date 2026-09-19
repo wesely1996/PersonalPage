@@ -30,6 +30,14 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['ChromeHeadless'],
+    customLaunchers: {
+      // Used in CI (--browsers=ChromeHeadlessCI): --no-sandbox avoids
+      // crashes in containerized runners that execute Chrome as root.
+      ChromeHeadlessCI: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox', '--disable-gpu'],
+      },
+    },
     singleRun: false,
     restartOnFileChange: true,
   });
