@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" role="img" aria-labelledby="t d">
+  <title id="t">CAP and PACELC</title>
+  <desc id="d">Left: the CAP triangle of consistency, availability and partition tolerance. Because partitions happen in any networked system, the real choice during a partition is CP (refuse some requests) or AP (answer with possibly stale data). Right: PACELC adds the normal case: if there is a partition choose availability or consistency, else choose latency or consistency, with example systems for PA/EL, PC/EC and PA/EC.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="42" text-anchor="middle" font-size="21" font-weight="bold" fill="#00ff41" filter="url(#glow)">CAP AND PACELC</text>
+
+    <!-- CAP panel -->
+    <rect x="20" y="70" width="365" height="380" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="202" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">CAP: WHEN THE NETWORK SPLITS</text>
+    <line x1="190" y1="158" x2="107" y2="282" stroke="#ff4d4d" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <line x1="214" y1="158" x2="298" y2="282" stroke="#00ff41" stroke-width="2"/>
+    <line x1="117" y1="300" x2="288" y2="300" stroke="#ffb000" stroke-width="2"/>
+    <circle cx="202" cy="140" r="22" fill="#020a02" stroke="#00ff41" stroke-width="2"/>
+    <circle cx="95" cy="300" r="22" fill="#020a02" stroke="#00ff41" stroke-width="2"/>
+    <circle cx="310" cy="300" r="22" fill="#020a02" stroke="#00ff41" stroke-width="2"/>
+    <g font-size="16" font-weight="bold" fill="#d8ffd8" text-anchor="middle">
+      <text x="202" y="146">C</text>
+      <text x="95" y="306">A</text>
+      <text x="310" y="306">P</text>
+    </g>
+    <g font-size="13">
+      <text x="232" y="145" fill="#d8ffd8">Consistency</text>
+      <text x="95" y="342" text-anchor="middle" fill="#d8ffd8">Availability</text>
+      <text x="310" y="342" text-anchor="middle" fill="#d8ffd8">Partition tol.</text>
+      <text x="138" y="226" text-anchor="end" fill="#ff4d4d">CA</text>
+      <text x="268" y="226" fill="#00ff41">CP</text>
+      <text x="202" y="292" text-anchor="middle" fill="#ffb000">AP</text>
+      <text x="35" y="382" fill="#00ff41">CP: on partition, refuse some requests</text>
+      <text x="35" y="404" fill="#ffb000">AP: on partition, answer, maybe stale</text>
+      <text x="35" y="426" fill="#ff4d4d">CA: not an option once there is a network</text>
+    </g>
+
+    <!-- PACELC panel -->
+    <rect x="400" y="70" width="380" height="380" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="590" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#00ff41">PACELC: THE WHOLE STORY</text>
+    <rect x="420" y="112" width="340" height="44" rx="6" fill="#020a02" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="590" y="139" text-anchor="middle" font-size="14" fill="#d8ffd8">Network partition (P)?</text>
+    <line x1="530" y1="156" x2="505" y2="196" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <line x1="650" y1="156" x2="675" y2="196" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <g font-size="13">
+      <text x="508" y="180" text-anchor="end" fill="#7fbf8f">yes</text>
+      <text x="672" y="180" fill="#7fbf8f">no (Else)</text>
+    </g>
+    <rect x="412" y="200" width="174" height="84" rx="6" fill="#020a02" stroke="#00ff41" stroke-width="1.5"/>
+    <rect x="594" y="200" width="174" height="84" rx="6" fill="#020a02" stroke="#39e6ff" stroke-width="1.5"/>
+    <g font-size="13" text-anchor="middle">
+      <text x="499" y="224" font-weight="bold" fill="#00ff41">Choose A or C</text>
+      <text x="499" y="248" fill="#d8ffd8">PA: stay available</text>
+      <text x="499" y="270" fill="#d8ffd8">PC: stay consistent</text>
+      <text x="681" y="224" font-weight="bold" fill="#39e6ff">Choose L or C</text>
+      <text x="681" y="248" fill="#d8ffd8">EL: lowest latency</text>
+      <text x="681" y="270" fill="#d8ffd8">EC: consistent reads</text>
+    </g>
+    <rect x="412" y="300" width="356" height="138" rx="6" fill="#020a02" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="13">
+      <text x="427" y="324" font-size="14" fill="#ffb000">EXAMPLES (default config)</text>
+      <text x="427" y="350" fill="#d8ffd8">PA/EL: Cassandra, ScyllaDB, Riak</text>
+      <text x="427" y="372" fill="#d8ffd8">PC/EC: Spanner, CockroachDB, Yugabyte</text>
+      <text x="427" y="394" fill="#d8ffd8">PA/EC: MongoDB (Abadi, 2012)</text>
+      <text x="427" y="422" fill="#7fbf8f">Most let you tune per query or table.</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">B-tree index lookup and range scan</title>
+  <desc id="d">A three-level B-tree. The root page holds keys 40 and 80, three internal pages hold 20, 60 and 95, and six linked leaf pages hold sorted keys. Looking up 66 follows root, then the internal page with 60, then one leaf, then fetches the row from the table heap. A range scan from 47 to 84 starts at one leaf and walks right along the sibling links.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">B-TREE INDEX LOOKUP</text>
+
+    <!-- legend (top left) -->
+    <text x="20" y="56" font-size="13" font-weight="bold" fill="#ffb000">WHERE id = 66</text>
+    <text x="20" y="74" font-size="13" fill="#7fbf8f">3 page reads, not a full scan</text>
+    <text x="20" y="96" font-size="13" font-weight="bold" fill="#39e6ff">WHERE id BETWEEN 47 AND 84</text>
+    <text x="20" y="114" font-size="13" fill="#7fbf8f">walk right along the leaves</text>
+
+    <!-- root: 325..475, y 70..110 -->
+    <rect x="325" y="70" width="150" height="40" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <line x1="400" y1="70" x2="400" y2="110" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="362" y="96" text-anchor="middle" font-size="15" fill="#d8ffd8">40</text>
+    <text x="437" y="96" text-anchor="middle" font-size="15" fill="#d8ffd8">80</text>
+    <text x="490" y="95" font-size="13" fill="#7fbf8f">root page</text>
+
+    <!-- root to internal -->
+    <line x1="340" y1="110" x2="139" y2="170" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="400" y1="110" x2="395" y2="170" stroke="#ffb000" stroke-width="2"/>
+    <line x1="460" y1="110" x2="651" y2="170" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <!-- internal pages -->
+    <rect x="74" y="170" width="130" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="139" y="196" text-anchor="middle" font-size="15" fill="#d8ffd8">20</text>
+    <rect x="330" y="170" width="130" height="40" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="395" y="196" text-anchor="middle" font-size="15" fill="#d8ffd8">60</text>
+    <rect x="586" y="170" width="130" height="40" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="651" y="196" text-anchor="middle" font-size="15" fill="#d8ffd8">95</text>
+    <text x="726" y="195" font-size="13" fill="#7fbf8f">internal</text>
+
+    <!-- internal to leaves -->
+    <line x1="110" y1="210" x2="75" y2="280" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="168" y1="210" x2="203" y2="280" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="366" y1="210" x2="331" y2="280" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="424" y1="210" x2="459" y2="280" stroke="#ffb000" stroke-width="2"/>
+    <line x1="622" y1="210" x2="587" y2="280" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="680" y1="210" x2="715" y2="280" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <!-- leaves: x = 20,148,276,404,532,660; w = 110; y 280..324 -->
+    <rect x="20" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="42" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">3</text>
+    <text x="75" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">8</text>
+    <text x="108" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">14</text>
+
+    <rect x="148" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="170" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">20</text>
+    <text x="203" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">27</text>
+    <text x="236" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">33</text>
+
+    <rect x="276" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="298" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">41</text>
+    <text x="331" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">47</text>
+    <text x="364" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">55</text>
+
+    <rect x="404" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="426" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">60</text>
+    <text x="459" y="307" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffb000">66</text>
+    <text x="492" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">72</text>
+
+    <rect x="532" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="554" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">80</text>
+    <text x="587" y="307" text-anchor="middle" font-size="14" fill="#39e6ff">84</text>
+    <text x="620" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">90</text>
+
+    <rect x="660" y="280" width="110" height="44" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="682" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">95</text>
+    <text x="715" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">99</text>
+    <text x="748" y="307" text-anchor="middle" font-size="14" fill="#d8ffd8">108</text>
+
+    <!-- sibling links -->
+    <line x1="131" y1="302" x2="146" y2="302" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="259" y1="302" x2="274" y2="302" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="387" y1="302" x2="402" y2="302" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="515" y1="302" x2="530" y2="302" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <line x1="643" y1="302" x2="658" y2="302" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- range scan -->
+    <line x1="310" y1="340" x2="610" y2="340" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrowCyan)"/>
+    <text x="298" y="345" text-anchor="end" font-size="13" fill="#39e6ff">range scan</text>
+    <text x="560" y="378" font-size="13" fill="#7fbf8f">leaf pages: sorted, linked</text>
+
+    <!-- heap -->
+    <line x1="459" y1="324" x2="459" y2="406" stroke="#ffb000" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <rect x="20" y="408" width="750" height="44" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="6 4"/>
+    <text x="32" y="435" font-size="13" fill="#7fbf8f">table heap: rows in no particular order</text>
+    <rect x="409" y="414" width="100" height="32" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="459" y="435" text-anchor="middle" font-size="13" fill="#ffb000">row 66</text>
+    <text x="400" y="482" text-anchor="middle" font-size="13" fill="#7fbf8f">each leaf entry = key + pointer to the row in the heap</text>
+  </g>
+</svg>

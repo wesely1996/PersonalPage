@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580" role="img" aria-labelledby="t d">
+  <title id="t">Elision, liaison and enchaînement</title>
+  <desc id="d">Three ways French links words. Elision drops a vowel in writing: le ami becomes l'ami, je aime becomes j'aime. Liaison pronounces a normally silent final consonant before a vowel: les amis with a z sound, grand homme with a t sound, nous avons with a z sound. Enchaînement slides an already pronounced consonant onto the next word: il arrive, avec elle. Bottom panels list where liaison is required and where it is forbidden.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Linking words: three mechanisms</text>
+
+    <!-- ELISION -->
+    <rect x="30" y="56" width="190" height="90" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="125" y="94" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">ELISION</text>
+    <text x="125" y="118" text-anchor="middle" font-size="13" fill="#7fbf8f">written, mandatory</text>
+    <rect x="235" y="56" width="535" height="90" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="250" y="84" font-size="15" fill="#d8ffd8">le ami → <tspan fill="#00ff41" font-weight="bold">l'ami</tspan></text>
+    <text x="500" y="84" font-size="15" fill="#d8ffd8">je aime → <tspan fill="#00ff41" font-weight="bold">j'aime</tspan></text>
+    <text x="250" y="110" font-size="15" fill="#d8ffd8">si il → <tspan fill="#00ff41" font-weight="bold">s'il</tspan></text>
+    <text x="500" y="110" font-size="15" fill="#d8ffd8">ne ai → <tspan fill="#00ff41" font-weight="bold">n'ai</tspan></text>
+    <text x="250" y="134" font-size="13" fill="#7fbf8f">le la je me te se ne de que + vowel or mute h</text>
+
+    <!-- LIAISON -->
+    <rect x="30" y="160" width="190" height="90" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="125" y="198" text-anchor="middle" font-size="16" font-weight="bold" fill="#39e6ff">LIAISON</text>
+    <text x="125" y="222" text-anchor="middle" font-size="13" fill="#7fbf8f">spoken, by rule</text>
+    <rect x="235" y="160" width="535" height="90" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <g font-size="15" fill="#d8ffd8">
+      <text x="250" y="194">les</text><text x="287" y="194">amis</text>
+      <text x="390" y="194">grand</text><text x="445" y="194">homme</text>
+      <text x="560" y="194">nous</text><text x="606" y="194">avons</text>
+    </g>
+    <g fill="none" stroke="#39e6ff" stroke-width="1.5">
+      <path d="M272,199 Q282,209 292,199"/>
+      <path d="M430,199 Q440,209 450,199"/>
+      <path d="M591,199 Q601,209 611,199"/>
+    </g>
+    <g font-size="13" font-weight="bold" fill="#ffb000" text-anchor="middle">
+      <text x="282" y="178">z</text>
+      <text x="440" y="178">t</text>
+      <text x="601" y="178">z</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="250" y="222">(leh-zah-mee)</text>
+      <text x="390" y="222">(grah(n)-tum)</text>
+      <text x="560" y="222">(noo-zah-voh(n))</text>
+    </g>
+    <text x="250" y="241" font-size="13" fill="#d8ffd8">silent consonant wakes up: s x z → z · d → t</text>
+
+    <!-- ENCHAINEMENT -->
+    <rect x="30" y="264" width="190" height="90" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="125" y="302" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41">ENCHAÎNEMENT</text>
+    <text x="125" y="326" text-anchor="middle" font-size="13" fill="#7fbf8f">spoken, automatic</text>
+    <rect x="235" y="264" width="535" height="90" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="250" y="298" font-size="15" fill="#d8ffd8">il arrive → <tspan fill="#00ff41">(ee-lah-reev)</tspan></text>
+    <text x="250" y="322" font-size="15" fill="#d8ffd8">avec elle → <tspan fill="#00ff41">(ah-veh-kel)</tspan></text>
+    <text x="250" y="344" font-size="13" fill="#7fbf8f">a consonant already pronounced slides onto the next vowel</text>
+
+    <!-- Required / forbidden -->
+    <rect x="30" y="372" width="365" height="184" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="45" y="398" font-size="15" font-weight="bold" fill="#00ff41">LIAISON REQUIRED</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="45" y="426">after determiners: les amis, un ami</text>
+      <text x="45" y="452">pronoun + verb: nous avons, ils ont</text>
+      <text x="45" y="478">BAGS adjective + noun: petit ami</text>
+      <text x="45" y="504">short words: en Italie, chez eux</text>
+      <text x="45" y="530">set phrases: tout à fait</text>
+    </g>
+
+    <rect x="405" y="372" width="365" height="184" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="420" y="398" font-size="15" font-weight="bold" fill="#ff4d4d">LIAISON FORBIDDEN</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="420" y="426">after et: toi et / elle</text>
+      <text x="420" y="452">before h aspiré: les / héros</text>
+      <text x="420" y="478">after a singular noun:</text>
+      <text x="444" y="504">un étudiant / anglais</text>
+    </g>
+    <text x="420" y="538" font-size="13" fill="#7fbf8f">elsewhere optional (formal = more)</text>
+  </g>
+</svg>

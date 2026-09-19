@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570" role="img" aria-labelledby="t d">
+  <title id="t">Family terms: your own family versus someone else's</title>
+  <desc id="d">Table of Japanese family words in two sets: plain humble words used when talking about your own family to outsiders (chichi, haha, ani, ane and so on) and honorific words used for someone else's family (otousan, okaasan, oniisan, oneesan and so on). A note explains that you also address your own older relatives with the honorific set.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Family words: mine (humble) vs yours (honorific)</text>
+    <rect x="40" y="56" width="720" height="434" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="40" y1="100" x2="760" y2="100" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="240" y1="56" x2="240" y2="490" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="500" y1="56" x2="500" y2="490" stroke="#0f7a2a" stroke-width="1.5"/>
+    <rect x="40" y="100" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="160" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="220" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="280" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="340" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="400" width="720" height="30" fill="#062b0f"/>
+    <rect x="40" y="460" width="720" height="30" fill="#062b0f"/>
+    <g font-size="14" font-weight="bold">
+      <text x="52" y="84" fill="#d8ffd8">ENGLISH</text>
+      <text x="252" y="84" fill="#00ff41">MY family (talk about)</text>
+      <text x="512" y="84" fill="#ffb000">YOUR family (+ address)</text>
+    </g>
+    <g font-size="14" fill="#d8ffd8">
+      <text x="52" y="120">father</text>
+      <text x="52" y="150">mother</text>
+      <text x="52" y="180">older brother</text>
+      <text x="52" y="210">older sister</text>
+      <text x="52" y="240">younger brother</text>
+      <text x="52" y="270">younger sister</text>
+      <text x="52" y="300">grandfather</text>
+      <text x="52" y="330">grandmother</text>
+      <text x="52" y="360">husband</text>
+      <text x="52" y="390">wife</text>
+      <text x="52" y="420">son</text>
+      <text x="52" y="450">daughter</text>
+      <text x="52" y="480">family</text>
+    </g>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="17" fill="#d8ffd8">
+      <text x="252" y="122">父</text>
+      <text x="512" y="122">お父さん</text>
+      <text x="252" y="152">母</text>
+      <text x="512" y="152">お母さん</text>
+      <text x="252" y="182">兄</text>
+      <text x="512" y="182">お兄さん</text>
+      <text x="252" y="212">姉</text>
+      <text x="512" y="212">お姉さん</text>
+      <text x="252" y="242">弟</text>
+      <text x="512" y="242">弟さん</text>
+      <text x="252" y="272">妹</text>
+      <text x="512" y="272">妹さん</text>
+      <text x="252" y="302">祖父</text>
+      <text x="512" y="302">おじいさん</text>
+      <text x="252" y="332">祖母</text>
+      <text x="512" y="332">おばあさん</text>
+      <text x="252" y="362">夫</text>
+      <text x="512" y="362">ご主人</text>
+      <text x="252" y="392">妻</text>
+      <text x="512" y="392">奥さん</text>
+      <text x="252" y="422">息子</text>
+      <text x="512" y="422">息子さん</text>
+      <text x="252" y="452">娘</text>
+      <text x="512" y="452">娘さん</text>
+      <text x="252" y="482">家族</text>
+      <text x="512" y="482">ご家族</text>
+    </g>
+    <g font-size="14" fill="#7fbf8f">
+      <text x="362" y="120">chichi</text>
+      <text x="622" y="120">otousan</text>
+      <text x="362" y="150">haha</text>
+      <text x="622" y="150">okaasan</text>
+      <text x="362" y="180">ani</text>
+      <text x="622" y="180">oniisan</text>
+      <text x="362" y="210">ane</text>
+      <text x="622" y="210">oneesan</text>
+      <text x="362" y="240">otouto</text>
+      <text x="622" y="240">otoutosan</text>
+      <text x="362" y="270">imouto</text>
+      <text x="622" y="270">imoutosan</text>
+      <text x="362" y="300">sofu</text>
+      <text x="622" y="300">ojiisan</text>
+      <text x="362" y="330">sobo</text>
+      <text x="622" y="330">obaasan</text>
+      <text x="362" y="360">otto</text>
+      <text x="622" y="360">goshujin</text>
+      <text x="362" y="390">tsuma</text>
+      <text x="622" y="390">okusan</text>
+      <text x="362" y="420">musuko</text>
+      <text x="622" y="420">musukosan</text>
+      <text x="362" y="450">musume</text>
+      <text x="622" y="450">musumesan</text>
+      <text x="362" y="480">kazoku</text>
+      <text x="622" y="480">gokazoku</text>
+    </g>
+    <text x="40" y="520" font-size="13" fill="#d8ffd8">To an outsider: <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">母は先生です。</tspan> (My mother is a teacher.)</text>
+    <text x="40" y="544" font-size="13" fill="#d8ffd8">Calling your own mom: <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#ffb000">お母さん！</tspan> You address older relatives with this set.</text>
+  </g>
+</svg>

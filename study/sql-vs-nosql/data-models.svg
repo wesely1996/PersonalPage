@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">One order, five data models</title>
+  <desc id="d">The same e-commerce order 1001 by customer Ada, with two line items, stored five ways: as three normalized relational tables, as one nested MongoDB document, as opaque values under Redis keys, as rows in a Cassandra partition keyed by customer and sorted by order, and as nodes and edges in a Neo4j graph.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="42" text-anchor="middle" font-size="21" font-weight="bold" fill="#00ff41" filter="url(#glow)">ONE ORDER, FIVE DATA MODELS</text>
+
+    <!-- Relational -->
+    <rect x="20" y="70" width="380" height="240" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="35" y="96" font-size="15" font-weight="bold" fill="#00ff41">RELATIONAL (SQL)</text>
+    <g font-size="13">
+      <text x="35" y="125" fill="#39e6ff">customers(id, name)</text>
+      <text x="51" y="144" fill="#d8ffd8">c42 | Ada Lovelace</text>
+      <text x="35" y="170" fill="#39e6ff">orders(id, customer_id, total)</text>
+      <text x="51" y="189" fill="#d8ffd8">1001 | c42 | 139.00</text>
+      <text x="35" y="215" fill="#39e6ff">order_items(order_id, sku, qty, price)</text>
+      <text x="51" y="234" fill="#d8ffd8">1001 | KB-01 | 1 | 89.00</text>
+      <text x="51" y="253" fill="#d8ffd8">1001 | MS-07 | 2 | 25.00</text>
+      <text x="35" y="292" fill="#7fbf8f">3 tables, joined by keys at read time</text>
+    </g>
+
+    <!-- Document -->
+    <rect x="410" y="70" width="370" height="240" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="425" y="96" font-size="15" font-weight="bold" fill="#00ff41">DOCUMENT (MongoDB)</text>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="425" y="122">{</text>
+      <text x="441" y="140">"_id": 1001,</text>
+      <text x="441" y="158">"customer": {"id":"c42","name":"Ada"},</text>
+      <text x="441" y="176">"items": [</text>
+      <text x="456" y="194">{"sku":"KB-01","qty":1,"price":89},</text>
+      <text x="456" y="212">{"sku":"MS-07","qty":2,"price":25}</text>
+      <text x="441" y="230">],</text>
+      <text x="441" y="248">"total": 139</text>
+      <text x="425" y="266">}</text>
+      <text x="425" y="292" fill="#7fbf8f">1 document = the whole order aggregate</text>
+    </g>
+
+    <!-- Key-value -->
+    <rect x="20" y="325" width="245" height="260" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="35" y="351" font-size="15" font-weight="bold" fill="#00ff41">KEY-VALUE (Redis)</text>
+    <g font-size="13">
+      <text x="35" y="382" fill="#ffb000">order:1001</text>
+      <text x="51" y="401" fill="#d8ffd8">-&gt; opaque blob</text>
+      <text x="74" y="420" fill="#d8ffd8">(JSON / bytes)</text>
+      <text x="35" y="448" fill="#ffb000">cust:c42:orders</text>
+      <text x="51" y="467" fill="#d8ffd8">-&gt; [1001, 987, 950]</text>
+      <text x="35" y="512" fill="#7fbf8f">Fast get/put by the</text>
+      <text x="35" y="531" fill="#7fbf8f">exact key only; no</text>
+      <text x="35" y="550" fill="#7fbf8f">ad-hoc queries.</text>
+    </g>
+
+    <!-- Wide-column -->
+    <rect x="277" y="325" width="245" height="260" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="292" y="351" font-size="15" font-weight="bold" fill="#00ff41">WIDE-COLUMN (Cassandra)</text>
+    <g font-size="13">
+      <text x="292" y="382" fill="#ffb000">partition key: c42</text>
+      <text x="292" y="401" fill="#7fbf8f">clustering: order DESC</text>
+      <rect x="287" y="412" width="225" height="84" rx="6" fill="none" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="5 4"/>
+      <text x="300" y="432" fill="#d8ffd8">1001 | KB-01 | 1</text>
+      <text x="300" y="451" fill="#d8ffd8">1001 | MS-07 | 2</text>
+      <text x="300" y="470" fill="#d8ffd8">0987 | CB-11 | 1</text>
+      <text x="300" y="489" fill="#d8ffd8">0950 | HD-02 | 3</text>
+      <text x="292" y="531" fill="#7fbf8f">One partition per</text>
+      <text x="292" y="550" fill="#7fbf8f">customer, rows kept</text>
+      <text x="292" y="569" fill="#7fbf8f">sorted on disk.</text>
+    </g>
+
+    <!-- Graph -->
+    <rect x="534" y="325" width="246" height="260" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="549" y="351" font-size="15" font-weight="bold" fill="#00ff41">GRAPH (Neo4j)</text>
+    <g stroke-width="1.5" stroke="#00ff41">
+      <line x1="608" y1="400" x2="670" y2="400" marker-end="url(#arr)"/>
+      <line x1="684" y1="423" x2="638" y2="486" marker-end="url(#arr)"/>
+      <line x1="710" y1="426" x2="729" y2="482" marker-end="url(#arr)"/>
+    </g>
+    <g font-size="13">
+      <text x="640" y="390" text-anchor="middle" fill="#39e6ff">PLACED</text>
+      <text x="645" y="460" text-anchor="end" fill="#39e6ff">qty 1</text>
+      <text x="731" y="460" fill="#39e6ff">qty 2</text>
+      <circle cx="580" cy="400" r="28" fill="#020a02" stroke="#ffb000" stroke-width="2"/>
+      <text x="580" y="405" text-anchor="middle" fill="#d8ffd8">Ada</text>
+      <circle cx="700" cy="400" r="28" fill="#020a02" stroke="#00ff41" stroke-width="2"/>
+      <text x="700" y="405" text-anchor="middle" fill="#d8ffd8">1001</text>
+      <circle cx="620" cy="510" r="28" fill="#020a02" stroke="#39e6ff" stroke-width="2"/>
+      <text x="620" y="515" text-anchor="middle" fill="#d8ffd8">KB-01</text>
+      <circle cx="740" cy="510" r="28" fill="#020a02" stroke="#39e6ff" stroke-width="2"/>
+      <text x="740" y="515" text-anchor="middle" fill="#d8ffd8">MS-07</text>
+      <text x="549" y="570" fill="#7fbf8f">edges are stored, not joined</text>
+    </g>
+  </g>
+</svg>

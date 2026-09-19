@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="t d">
+  <title id="t">C4 context and container views of a URL shortener</title>
+  <desc id="d">Context view: a visitor follows short links and a link owner manages links in the URL Shortener system, which checks URLs with an external URL safety API. Container view: a CDN forwards to a stateless redirect service that reads Redis first and the link store on a cache miss; a links API writes to the link store; the redirect service emits click events asynchronously to a click stream, which an aggregator writes into a columnar analytics store.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <marker id="arrCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#39e6ff"/>
+    </marker>
+    <marker id="arrAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffb000"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <!-- CONTEXT -->
+    <text x="20" y="30" font-size="16" font-weight="bold" fill="#00ff41" filter="url(#glow)">1. SYSTEM CONTEXT</text>
+
+    <rect x="30" y="48" width="170" height="54" rx="6" fill="#062b0f" stroke="#d8ffd8" stroke-width="1.5"/>
+    <text x="115" y="70" text-anchor="middle" font-size="14" fill="#d8ffd8">Visitor</text>
+    <text x="115" y="90" text-anchor="middle" font-size="13" fill="#7fbf8f">[person]</text>
+    <rect x="30" y="120" width="170" height="54" rx="6" fill="#062b0f" stroke="#d8ffd8" stroke-width="1.5"/>
+    <text x="115" y="142" text-anchor="middle" font-size="14" fill="#d8ffd8">Link owner</text>
+    <text x="115" y="162" text-anchor="middle" font-size="13" fill="#7fbf8f">[person]</text>
+
+    <rect x="300" y="70" width="200" height="84" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="400" y="104" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">URL Shortener</text>
+    <text x="400" y="128" text-anchor="middle" font-size="13" fill="#7fbf8f">[software system]</text>
+
+    <rect x="590" y="82" width="190" height="60" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="685" y="107" text-anchor="middle" font-size="14" fill="#d8ffd8">URL safety API</text>
+    <text x="685" y="127" text-anchor="middle" font-size="13" fill="#7fbf8f">[external system]</text>
+
+    <line x1="200" y1="75" x2="298" y2="95" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="250" y="66" text-anchor="middle" font-size="13" fill="#7fbf8f">follows</text>
+    <line x1="200" y1="147" x2="298" y2="130" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="250" y="160" text-anchor="middle" font-size="13" fill="#7fbf8f">manages</text>
+    <line x1="500" y1="112" x2="588" y2="112" stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)"/>
+    <text x="544" y="104" text-anchor="middle" font-size="13" fill="#7fbf8f">checks</text>
+
+    <line x1="20" y1="195" x2="780" y2="195" stroke="#0f7a2a" stroke-width="1.5" stroke-dasharray="4 6"/>
+
+    <!-- CONTAINERS -->
+    <text x="20" y="222" font-size="16" font-weight="bold" fill="#00ff41" filter="url(#glow)">2. CONTAINERS (inside URL Shortener)</text>
+    <rect x="20" y="235" width="760" height="350" rx="6" fill="none" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+    <!-- hot path row -->
+    <rect x="40" y="280" width="130" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="105" y="304" text-anchor="middle" font-size="14" fill="#d8ffd8">CDN / edge</text>
+    <text x="105" y="324" text-anchor="middle" font-size="13" fill="#7fbf8f">cache 302s</text>
+
+    <rect x="210" y="280" width="160" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="290" y="304" text-anchor="middle" font-size="14" fill="#d8ffd8">Redirect svc</text>
+    <text x="290" y="324" text-anchor="middle" font-size="13" fill="#7fbf8f">stateless, N pods</text>
+
+    <rect x="410" y="280" width="130" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="475" y="304" text-anchor="middle" font-size="14" fill="#d8ffd8">Redis</text>
+    <text x="475" y="324" text-anchor="middle" font-size="13" fill="#7fbf8f">hot links</text>
+
+    <rect x="590" y="280" width="170" height="56" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="675" y="304" text-anchor="middle" font-size="14" fill="#d8ffd8">Link store</text>
+    <text x="675" y="324" text-anchor="middle" font-size="13" fill="#7fbf8f">key-value / SQL</text>
+
+    <line x1="170" y1="308" x2="208" y2="308" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="370" y1="308" x2="408" y2="308" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="389" y="300" text-anchor="middle" font-size="13" fill="#7fbf8f">1</text>
+    <path d="M 330 280 L 330 258 L 675 258 L 675 278" fill="none" stroke="#00ff41" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+    <text x="560" y="252" text-anchor="middle" font-size="13" fill="#7fbf8f">2 on cache miss</text>
+
+    <!-- write path -->
+    <rect x="590" y="395" width="170" height="56" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="675" y="419" text-anchor="middle" font-size="14" fill="#d8ffd8">Links API</text>
+    <text x="675" y="439" text-anchor="middle" font-size="13" fill="#7fbf8f">auth, URL checks</text>
+    <line x1="675" y1="395" x2="675" y2="338" stroke="#ffb000" stroke-width="2" marker-end="url(#arrAmber)"/>
+    <text x="685" y="372" font-size="13" fill="#ffb000">writes</text>
+
+    <!-- async analytics path -->
+    <line x1="290" y1="336" x2="290" y2="498" stroke="#39e6ff" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrCyan)"/>
+    <text x="300" y="420" font-size="13" fill="#39e6ff">click event (async)</text>
+
+    <rect x="210" y="500" width="160" height="56" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="290" y="524" text-anchor="middle" font-size="14" fill="#d8ffd8">Click stream</text>
+    <text x="290" y="544" text-anchor="middle" font-size="13" fill="#7fbf8f">Kafka or managed</text>
+
+    <rect x="410" y="500" width="130" height="56" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="475" y="524" text-anchor="middle" font-size="14" fill="#d8ffd8">Aggregator</text>
+    <text x="475" y="544" text-anchor="middle" font-size="13" fill="#7fbf8f">consumer</text>
+
+    <rect x="590" y="500" width="170" height="56" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="675" y="524" text-anchor="middle" font-size="14" fill="#d8ffd8">Analytics store</text>
+    <text x="675" y="544" text-anchor="middle" font-size="13" fill="#7fbf8f">columnar</text>
+
+    <line x1="370" y1="528" x2="408" y2="528" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrCyan)"/>
+    <line x1="540" y1="528" x2="588" y2="528" stroke="#39e6ff" stroke-width="2" marker-end="url(#arrCyan)"/>
+
+    <text x="40" y="410" font-size="13" fill="#00ff41">hot path: sync</text>
+    <text x="40" y="430" font-size="13" fill="#39e6ff">analytics: async</text>
+    <text x="40" y="450" font-size="13" fill="#ffb000">writes: cold path</text>
+  </g>
+</svg>

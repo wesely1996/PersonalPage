@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">Reading permission bits</title>
+  <desc id="d">The mode string -rwxr-x--- split into file type and user, group and other triplets, how each triplet converts to octal 7, 5 and 0, what r, w and x mean on files versus directories, and the special setuid, setgid and sticky bits.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">-rwxr-x---  alice devs  deploy.sh</text>
+
+    <g font-size="24" font-weight="bold" text-anchor="middle">
+      <rect x="130" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#7fbf8f" stroke-width="1.5"/>
+      <text x="154" y="92" fill="#7fbf8f">-</text>
+
+      <rect x="190" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="214" y="92" fill="#00ff41">r</text>
+      <rect x="238" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="262" y="92" fill="#00ff41">w</text>
+      <rect x="286" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+      <text x="310" y="92" fill="#00ff41">x</text>
+
+      <rect x="346" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="370" y="92" fill="#39e6ff">r</text>
+      <rect x="394" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="418" y="92" fill="#39e6ff">-</text>
+      <rect x="442" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+      <text x="466" y="92" fill="#39e6ff">x</text>
+
+      <rect x="502" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="526" y="92" fill="#ffb000">-</text>
+      <rect x="550" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="574" y="92" fill="#ffb000">-</text>
+      <rect x="598" y="60" width="48" height="48" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+      <text x="622" y="92" fill="#ffb000">-</text>
+    </g>
+
+    <g stroke-width="1.5" fill="none">
+      <path d="M192 118 V126 H332 V118" stroke="#00ff41"/>
+      <path d="M348 118 V126 H488 V118" stroke="#39e6ff"/>
+      <path d="M504 118 V126 H644 V118" stroke="#ffb000"/>
+    </g>
+
+    <g font-size="14" text-anchor="middle">
+      <text x="154" y="146" fill="#7fbf8f">type</text>
+      <text x="262" y="146" fill="#00ff41" font-weight="bold">user (owner)</text>
+      <text x="418" y="146" fill="#39e6ff" font-weight="bold">group</text>
+      <text x="574" y="146" fill="#ffb000" font-weight="bold">other</text>
+
+      <text x="262" y="176" fill="#d8ffd8">r=4 w=2 x=1</text>
+      <text x="418" y="176" fill="#d8ffd8">r=4 w=0 x=1</text>
+      <text x="574" y="176" fill="#d8ffd8">r=0 w=0 x=0</text>
+
+      <text x="262" y="204" fill="#00ff41" font-size="18" font-weight="bold">4+2+1 = 7</text>
+      <text x="418" y="204" fill="#39e6ff" font-size="18" font-weight="bold">4+0+1 = 5</text>
+      <text x="574" y="204" fill="#ffb000" font-size="18" font-weight="bold">0 = 0</text>
+    </g>
+
+    <text x="400" y="248" text-anchor="middle" font-size="20" font-weight="bold" fill="#d8ffd8">chmod 750 deploy.sh   ==   chmod u=rwx,g=rx,o= deploy.sh</text>
+
+    <rect x="40" y="274" width="350" height="140" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="56" y="300" font-size="15" font-weight="bold" fill="#00ff41">On a FILE</text>
+    <g font-size="14" fill="#d8ffd8">
+      <text x="56" y="330">r  read the contents</text>
+      <text x="56" y="356">w  modify the contents</text>
+      <text x="56" y="382">x  run it as a program</text>
+    </g>
+
+    <rect x="410" y="274" width="350" height="140" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="426" y="300" font-size="15" font-weight="bold" fill="#00ff41">On a DIRECTORY</text>
+    <g font-size="14" fill="#d8ffd8">
+      <text x="426" y="330">r  list the names (ls)</text>
+      <text x="426" y="356">w  create, delete, rename</text>
+      <text x="426" y="382">x  enter and traverse (cd)</text>
+    </g>
+
+    <text x="400" y="452" text-anchor="middle" font-size="13" fill="#ffb000">Special bits (leading 4th digit): 4=setuid  2=setgid  1=sticky</text>
+    <text x="400" y="476" text-anchor="middle" font-size="13" fill="#d8ffd8">chmod 1777 /tmp  gives  drwxrwxrwt     chmod 2775 shared/  gives  drwxrwsr-x</text>
+    <text x="400" y="500" text-anchor="middle" font-size="13" fill="#7fbf8f">umask 022: new files 666-022 = 644, new dirs 777-022 = 755</text>
+  </g>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-labelledby="t d">
+  <title id="t">The three tone sandhi rules every beginner needs</title>
+  <desc id="d">Rule one: two third tones in a row, the first becomes second tone, as in nǐ hǎo said ní hǎo. Rule two: 不 bù becomes bú before a fourth tone. Rule three: 一 yī becomes yí before a fourth tone and yì before first, second and third tones, but stays yī when counting or alone.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Tone sandhi: three rules that change tones</text>
+
+    <g stroke="#00ff41" stroke-width="1.5" marker-end="url(#arr)">
+      <line x1="222" y1="100" x2="246" y2="100"/>
+      <line x1="222" y1="205" x2="246" y2="205"/>
+      <line x1="222" y1="310" x2="246" y2="310"/>
+    </g>
+
+    <!-- rule 1 -->
+    <rect x="40" y="60" width="180" height="80" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="130" y="92" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">3 + 3</text>
+    <text x="130" y="118" text-anchor="middle" font-size="14" fill="#d8ffd8">becomes 2 + 3</text>
+    <rect x="250" y="60" width="510" height="80" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="268" y="90" font-size="16" fill="#d8ffd8">你好 nǐ hǎo  -&gt;  said ní hǎo   (hello)</text>
+    <text x="268" y="120" font-size="16" fill="#d8ffd8">很好 hěn hǎo -&gt;  said hén hǎo  (very good)</text>
+
+    <!-- rule 2 -->
+    <rect x="40" y="165" width="180" height="80" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="130" y="197" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">不 bù</text>
+    <text x="130" y="223" text-anchor="middle" font-size="14" fill="#d8ffd8">bú before 4th</text>
+    <rect x="250" y="165" width="510" height="80" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="268" y="195" font-size="16" fill="#d8ffd8">不是 bú shì (is not)    不要 bú yào (don't)</text>
+    <text x="268" y="225" font-size="16" fill="#7fbf8f">otherwise bù: 不好 bù hǎo   不来 bù lái</text>
+
+    <!-- rule 3 -->
+    <rect x="40" y="270" width="180" height="80" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="130" y="302" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffb000">一 yī</text>
+    <text x="130" y="328" text-anchor="middle" font-size="14" fill="#d8ffd8">yí / yì</text>
+    <rect x="250" y="270" width="510" height="80" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="268" y="300" font-size="16" fill="#d8ffd8">before 4th: 一个 yí ge   一样 yíyàng</text>
+    <text x="268" y="330" font-size="16" fill="#d8ffd8">before 1/2/3: 一天 yì tiān  一起 yìqǐ</text>
+
+    <text x="400" y="382" text-anchor="middle" font-size="13" fill="#7fbf8f">一 stays yī when counting, alone, at the end, or as an ordinal: 第一 dì-yī, 十一 shíyī.</text>
+    <text x="400" y="404" text-anchor="middle" font-size="13" fill="#7fbf8f">Textbooks write the base tone (nǐ hǎo); you pronounce the changed one.</text>
+  </g>
+</svg>

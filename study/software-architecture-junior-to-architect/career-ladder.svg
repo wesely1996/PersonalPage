@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="t d">
+  <title id="t">The altitude model of architectural thinking</title>
+  <desc id="d">Four stacked bands from Junior at the bottom to Staff or Architect at the top. Each band shows the altitude (code, application, system, organisation), the core question asked at that level and typical artefacts. An arrow on the left shows altitude increasing upward.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#00ff41"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">THE ALTITUDE MODEL</text>
+
+    <!-- altitude arrow -->
+    <line x1="34" y1="476" x2="34" y2="64" stroke="#00ff41" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="0" y="0" transform="translate(24 300) rotate(-90)" text-anchor="middle" font-size="13" fill="#7fbf8f">ALTITUDE</text>
+
+    <!-- Staff / Architect -->
+    <rect x="60" y="60" width="720" height="95" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <line x1="285" y1="72" x2="285" y2="143" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="75" y="98" font-size="18" font-weight="bold" fill="#ffb000">STAFF / ARCHITECT</text>
+    <text x="75" y="124" font-size="14" fill="#7fbf8f">altitude: organisation</text>
+    <text x="300" y="98" font-size="14" fill="#d8ffd8">Q: Which decisions matter, and what do they cost?</text>
+    <text x="300" y="124" font-size="13" fill="#7fbf8f">ADRs, context maps, C4, fitness functions</text>
+
+    <!-- Senior -->
+    <rect x="60" y="167" width="720" height="95" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="285" y1="179" x2="285" y2="250" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="75" y="205" font-size="18" font-weight="bold" fill="#00ff41">SENIOR</text>
+    <text x="75" y="231" font-size="14" fill="#7fbf8f">altitude: system</text>
+    <text x="300" y="205" font-size="14" fill="#d8ffd8">Q: How do parts behave under load and failure?</text>
+    <text x="300" y="231" font-size="13" fill="#7fbf8f">services, queues, caches, sagas, SLOs</text>
+
+    <!-- Mid -->
+    <rect x="60" y="274" width="720" height="95" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="285" y1="286" x2="285" y2="357" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="75" y="312" font-size="18" font-weight="bold" fill="#00ff41">MID-LEVEL</text>
+    <text x="75" y="338" font-size="14" fill="#7fbf8f">altitude: application</text>
+    <text x="300" y="312" font-size="14" fill="#d8ffd8">Q: Where does this responsibility belong?</text>
+    <text x="300" y="338" font-size="13" fill="#7fbf8f">layers, ports and adapters, domain model, APIs</text>
+
+    <!-- Junior -->
+    <rect x="60" y="381" width="720" height="95" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <line x1="285" y1="393" x2="285" y2="464" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="75" y="419" font-size="18" font-weight="bold" fill="#00ff41">JUNIOR</text>
+    <text x="75" y="445" font-size="14" fill="#7fbf8f">altitude: code</text>
+    <text x="300" y="419" font-size="14" fill="#d8ffd8">Q: Is this function clear and correct?</text>
+    <text x="300" y="445" font-size="13" fill="#7fbf8f">names, SOLID, patterns, unit tests</text>
+
+    <text x="420" y="505" text-anchor="middle" font-size="13" fill="#39e6ff">Blast radius and feedback time grow with altitude; lower levels never go away.</text>
+  </g>
+</svg>

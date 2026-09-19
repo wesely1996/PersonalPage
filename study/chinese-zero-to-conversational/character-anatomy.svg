@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="t d">
+  <title id="t">Anatomy of a semantic-phonetic character</title>
+  <desc id="d">妈 mā, mother, is built from the radical 女 woman, which hints at meaning, and the component 马 mǎ, horse, which hints at sound. The same sound component appears in 吗 ma, 骂 mà, 码 mǎ and 蚂 mǎ, each with a different meaning radical.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Meaning part + sound part = character</text>
+
+    <!-- big character -->
+    <rect x="60" y="60" width="150" height="160" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="2"/>
+    <text x="135" y="168" text-anchor="middle" font-size="96" fill="#d8ffd8" filter="url(#glow)">妈</text>
+    <text x="135" y="206" text-anchor="middle" font-size="15" fill="#00ff41">mā  mother</text>
+
+    <text x="240" y="152" text-anchor="middle" font-size="28" font-weight="bold" fill="#00ff41">=</text>
+
+    <rect x="270" y="60" width="210" height="160" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="2"/>
+    <text x="375" y="130" text-anchor="middle" font-size="60" fill="#ffb000">女</text>
+    <text x="375" y="168" text-anchor="middle" font-size="15" fill="#d8ffd8">nǚ  woman</text>
+    <text x="375" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffb000">RADICAL: meaning</text>
+
+    <text x="505" y="152" text-anchor="middle" font-size="28" font-weight="bold" fill="#00ff41">+</text>
+
+    <rect x="530" y="60" width="210" height="160" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="2"/>
+    <text x="635" y="130" text-anchor="middle" font-size="60" fill="#39e6ff">马</text>
+    <text x="635" y="168" text-anchor="middle" font-size="15" fill="#d8ffd8">mǎ  horse</text>
+    <text x="635" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#39e6ff">PHONETIC: sound</text>
+
+    <text x="400" y="268" text-anchor="middle" font-size="16" font-weight="bold" fill="#00ff41">One sound component, many characters: the 马 family</text>
+
+    <!-- family -->
+    <g>
+      <rect x="40" y="290" width="132" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <rect x="187" y="290" width="132" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <rect x="334" y="290" width="132" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <rect x="481" y="290" width="132" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+      <rect x="628" y="290" width="132" height="160" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    </g>
+    <g text-anchor="middle" font-size="44" fill="#d8ffd8">
+      <text x="106" y="346">妈</text>
+      <text x="253" y="346">吗</text>
+      <text x="400" y="346">骂</text>
+      <text x="547" y="346">码</text>
+      <text x="694" y="346">蚂</text>
+    </g>
+    <g text-anchor="middle" font-size="16" font-weight="bold" fill="#39e6ff">
+      <text x="106" y="378">mā</text>
+      <text x="253" y="378">ma</text>
+      <text x="400" y="378">mà</text>
+      <text x="547" y="378">mǎ</text>
+      <text x="694" y="378">mǎ</text>
+    </g>
+    <g text-anchor="middle" font-size="13" fill="#d8ffd8">
+      <text x="106" y="402">mother</text>
+      <text x="253" y="402">question</text>
+      <text x="400" y="402">to scold</text>
+      <text x="547" y="402">code, number</text>
+      <text x="694" y="402">ant (蚂蚁)</text>
+    </g>
+    <g text-anchor="middle" font-size="13" fill="#ffb000">
+      <text x="106" y="432">女 woman</text>
+      <text x="253" y="432">口 mouth</text>
+      <text x="400" y="432">口口 mouths</text>
+      <text x="547" y="432">石 stone</text>
+      <text x="694" y="432">虫 insect</text>
+    </g>
+
+    <text x="400" y="482" text-anchor="middle" font-size="13" fill="#7fbf8f">Most characters work this way. The sound hint is approximate: tones and even initials can drift.</text>
+  </g>
+</svg>

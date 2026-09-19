@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t d">
+  <title id="t">Hiragana gojuon chart</title>
+  <desc id="d">The 46 basic hiragana arranged in the traditional grid: columns are consonants (none, k, s, t, n, h, m, y, r, w, and the syllabic n), rows are the vowels a, i, u, e, o. Irregular readings shi, chi, tsu, fu, wo and n are highlighted, with notes on dakuten and handakuten.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Hiragana: the 46 basic signs (gojuon)</text>
+    <text x="400" y="56" text-anchor="middle" font-size="13" fill="#7fbf8f">Read each column top to bottom: consonant + a, i, u, e, o</text>
+    <text x="111" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">-</text>
+    <text x="173" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">k</text>
+    <text x="235" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">s</text>
+    <text x="297" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">t</text>
+    <text x="359" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">n</text>
+    <text x="421" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">h</text>
+    <text x="483" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">m</text>
+    <text x="545" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">y</text>
+    <text x="607" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">r</text>
+    <text x="669" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">w</text>
+    <text x="731" y="84" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">n</text>
+    <text x="62" y="136" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">a</text>
+    <text x="62" y="202" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">i</text>
+    <text x="62" y="268" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">u</text>
+    <text x="62" y="334" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">e</text>
+    <text x="62" y="400" text-anchor="middle" font-size="15" font-weight="bold" fill="#00ff41">o</text>
+    <rect x="83" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="111" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">あ</text>
+    <rect x="83" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="111" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">い</text>
+    <rect x="83" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="111" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">う</text>
+    <rect x="83" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="111" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">え</text>
+    <rect x="83" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="111" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">お</text>
+    <rect x="145" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="173" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">か</text>
+    <rect x="145" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="173" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">き</text>
+    <rect x="145" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="173" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">く</text>
+    <rect x="145" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="173" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">け</text>
+    <rect x="145" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="173" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">こ</text>
+    <rect x="207" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="235" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">さ</text>
+    <rect x="207" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="235" y="198" text-anchor="middle" font-size="26" class="k" fill="#ffb000">し</text>
+    <rect x="207" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="235" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">す</text>
+    <rect x="207" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="235" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">せ</text>
+    <rect x="207" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="235" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">そ</text>
+    <rect x="269" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="297" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">た</text>
+    <rect x="269" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="297" y="198" text-anchor="middle" font-size="26" class="k" fill="#ffb000">ち</text>
+    <rect x="269" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="297" y="264" text-anchor="middle" font-size="26" class="k" fill="#ffb000">つ</text>
+    <rect x="269" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="297" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">て</text>
+    <rect x="269" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="297" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">と</text>
+    <rect x="331" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="359" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">な</text>
+    <rect x="331" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="359" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">に</text>
+    <rect x="331" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="359" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ぬ</text>
+    <rect x="331" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="359" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ね</text>
+    <rect x="331" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="359" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">の</text>
+    <rect x="393" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="421" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">は</text>
+    <rect x="393" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="421" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ひ</text>
+    <rect x="393" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="421" y="264" text-anchor="middle" font-size="26" class="k" fill="#ffb000">ふ</text>
+    <rect x="393" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="421" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">へ</text>
+    <rect x="393" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="421" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ほ</text>
+    <rect x="455" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="483" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ま</text>
+    <rect x="455" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="483" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">み</text>
+    <rect x="455" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="483" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">む</text>
+    <rect x="455" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="483" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">め</text>
+    <rect x="455" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="483" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">も</text>
+    <rect x="517" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="545" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">や</text>
+    <rect x="517" y="165" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="517" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="545" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ゆ</text>
+    <rect x="517" y="297" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="517" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="545" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">よ</text>
+    <rect x="579" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="607" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ら</text>
+    <rect x="579" y="165" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="607" y="198" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">り</text>
+    <rect x="579" y="231" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="607" y="264" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">る</text>
+    <rect x="579" y="297" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="607" y="330" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">れ</text>
+    <rect x="579" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="607" y="396" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">ろ</text>
+    <rect x="641" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="669" y="132" text-anchor="middle" font-size="26" class="k" fill="#d8ffd8">わ</text>
+    <rect x="641" y="165" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="641" y="231" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="641" y="297" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="641" y="363" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="669" y="396" text-anchor="middle" font-size="26" class="k" fill="#ffb000">を</text>
+    <rect x="703" y="99" width="56" height="60" rx="6" fill="#062b0f" stroke="#ffb000" stroke-width="1.5"/>
+    <text x="731" y="132" text-anchor="middle" font-size="26" class="k" fill="#ffb000">ん</text>
+    <rect x="703" y="165" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="703" y="231" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="703" y="297" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <rect x="703" y="363" width="56" height="60" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1" stroke-dasharray="3 4"/>
+    <g font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" font-size="26" text-anchor="middle">
+      <text x="111" y="132" fill="#d8ffd8">あ</text>
+      <text x="111" y="198" fill="#d8ffd8">い</text>
+      <text x="111" y="264" fill="#d8ffd8">う</text>
+      <text x="111" y="330" fill="#d8ffd8">え</text>
+      <text x="111" y="396" fill="#d8ffd8">お</text>
+      <text x="173" y="132" fill="#d8ffd8">か</text>
+      <text x="173" y="198" fill="#d8ffd8">き</text>
+      <text x="173" y="264" fill="#d8ffd8">く</text>
+      <text x="173" y="330" fill="#d8ffd8">け</text>
+      <text x="173" y="396" fill="#d8ffd8">こ</text>
+      <text x="235" y="132" fill="#d8ffd8">さ</text>
+      <text x="235" y="198" fill="#ffb000">し</text>
+      <text x="235" y="264" fill="#d8ffd8">す</text>
+      <text x="235" y="330" fill="#d8ffd8">せ</text>
+      <text x="235" y="396" fill="#d8ffd8">そ</text>
+      <text x="297" y="132" fill="#d8ffd8">た</text>
+      <text x="297" y="198" fill="#ffb000">ち</text>
+      <text x="297" y="264" fill="#ffb000">つ</text>
+      <text x="297" y="330" fill="#d8ffd8">て</text>
+      <text x="297" y="396" fill="#d8ffd8">と</text>
+      <text x="359" y="132" fill="#d8ffd8">な</text>
+      <text x="359" y="198" fill="#d8ffd8">に</text>
+      <text x="359" y="264" fill="#d8ffd8">ぬ</text>
+      <text x="359" y="330" fill="#d8ffd8">ね</text>
+      <text x="359" y="396" fill="#d8ffd8">の</text>
+      <text x="421" y="132" fill="#d8ffd8">は</text>
+      <text x="421" y="198" fill="#d8ffd8">ひ</text>
+      <text x="421" y="264" fill="#ffb000">ふ</text>
+      <text x="421" y="330" fill="#d8ffd8">へ</text>
+      <text x="421" y="396" fill="#d8ffd8">ほ</text>
+      <text x="483" y="132" fill="#d8ffd8">ま</text>
+      <text x="483" y="198" fill="#d8ffd8">み</text>
+      <text x="483" y="264" fill="#d8ffd8">む</text>
+      <text x="483" y="330" fill="#d8ffd8">め</text>
+      <text x="483" y="396" fill="#d8ffd8">も</text>
+      <text x="545" y="132" fill="#d8ffd8">や</text>
+      <text x="545" y="264" fill="#d8ffd8">ゆ</text>
+      <text x="545" y="396" fill="#d8ffd8">よ</text>
+      <text x="607" y="132" fill="#d8ffd8">ら</text>
+      <text x="607" y="198" fill="#d8ffd8">り</text>
+      <text x="607" y="264" fill="#d8ffd8">る</text>
+      <text x="607" y="330" fill="#d8ffd8">れ</text>
+      <text x="607" y="396" fill="#d8ffd8">ろ</text>
+      <text x="669" y="132" fill="#d8ffd8">わ</text>
+      <text x="669" y="396" fill="#ffb000">を</text>
+      <text x="731" y="132" fill="#ffb000">ん</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="40" y="452"><tspan fill="#ffb000">Amber</tspan> = irregular reading. <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif">を</tspan> (said "o") is only the object particle.</text>
+      <text x="40" y="474">As particles <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif">は</tspan> reads "wa", <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif">へ</tspan> reads "e". Dashed cells (yi, ye, wu, wi, we) are unused.</text>
+    </g>
+    <g font-size="13" fill="#d8ffd8">
+      <text x="40" y="504">Dakuten <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">゛</tspan> voices a column:  k→g  s→z  t→d  h→b     e.g. <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">か→が  さ→ざ  た→だ  は→ば</tspan></text>
+      <text x="40" y="528">Handakuten <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">゜</tspan> turns h into p:  <tspan font-family="'Courier New', 'Noto Sans JP', 'Yu Gothic', 'Meiryo', 'Noto Sans CJK JP', sans-serif" fill="#00ff41">は→ぱ  ひ→ぴ  ふ→ぷ  へ→ぺ  ほ→ぽ</tspan></text>
+    </g>
+  </g>
+</svg>

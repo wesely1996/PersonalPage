@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570" role="img" aria-labelledby="t d">
+  <title id="t">Isolation levels versus anomalies, and a lost update</title>
+  <desc id="d">A table of the four SQL isolation levels against dirty reads, non-repeatable reads, phantoms and serialization anomalies. PostgreSQL never allows dirty reads and prevents phantoms at REPEATABLE READ, stricter than the standard. Below, a timeline shows two transactions both reading stock 5 and both writing 4, so one sale is lost.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/>
+    </marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <g font-family="'Courier New', monospace">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">ISOLATION LEVELS AND ANOMALIES</text>
+
+    <!-- header -->
+    <rect x="20" y="52" width="760" height="48" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="30" y="81" font-size="14" font-weight="bold" fill="#00ff41">level</text>
+    <text x="290" y="81" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">dirty read</text>
+    <text x="430" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">non-</text>
+    <text x="430" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">repeatable</text>
+    <text x="570" y="81" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">phantom</text>
+    <text x="710" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">serialization</text>
+    <text x="710" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ff41">anomaly</text>
+
+    <!-- grid -->
+    <rect x="20" y="100" width="760" height="136" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <line x1="20" y1="134" x2="780" y2="134" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="20" y1="168" x2="780" y2="168" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="20" y1="202" x2="780" y2="202" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="220" y1="52" x2="220" y2="236" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="360" y1="52" x2="360" y2="236" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="500" y1="52" x2="500" y2="236" stroke="#0f7a2a" stroke-width="1"/>
+    <line x1="640" y1="52" x2="640" y2="236" stroke="#0f7a2a" stroke-width="1"/>
+
+    <!-- READ UNCOMMITTED -->
+    <text x="30" y="122" font-size="13" fill="#d8ffd8">READ UNCOMMITTED</text>
+    <text x="290" y="122" text-anchor="middle" font-size="13" fill="#ffb000">PG: no</text>
+    <text x="430" y="122" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <text x="570" y="122" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <text x="710" y="122" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <!-- READ COMMITTED -->
+    <text x="30" y="156" font-size="13" fill="#d8ffd8">READ COMMITTED *</text>
+    <text x="290" y="156" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="430" y="156" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <text x="570" y="156" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <text x="710" y="156" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <!-- REPEATABLE READ -->
+    <text x="30" y="190" font-size="13" fill="#d8ffd8">REPEATABLE READ</text>
+    <text x="290" y="190" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="430" y="190" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="570" y="190" text-anchor="middle" font-size="13" fill="#ffb000">PG: no</text>
+    <text x="710" y="190" text-anchor="middle" font-size="13" fill="#ff4d4d">allowed</text>
+    <!-- SERIALIZABLE -->
+    <text x="30" y="224" font-size="13" fill="#d8ffd8">SERIALIZABLE</text>
+    <text x="290" y="224" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="430" y="224" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="570" y="224" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+    <text x="710" y="224" text-anchor="middle" font-size="13" fill="#00ff41">no</text>
+
+    <!-- legend -->
+    <text x="20" y="260" font-size="13" fill="#ff4d4d">allowed = can happen</text>
+    <text x="210" y="260" font-size="13" fill="#00ff41">no = prevented</text>
+    <text x="350" y="260" font-size="13" fill="#ffb000">PG: no = standard allows, PostgreSQL prevents</text>
+    <text x="20" y="280" font-size="13" fill="#7fbf8f">* PostgreSQL default</text>
+
+    <!-- lost update timeline -->
+    <rect x="20" y="298" width="760" height="258" rx="6" fill="none" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="36" y="324" font-size="15" font-weight="bold" fill="#ffb000">LOST UPDATE: read-modify-write in the app, READ COMMITTED</text>
+
+    <text x="36" y="369" font-size="16" font-weight="bold" fill="#39e6ff">T1</text>
+    <line x1="80" y1="364" x2="770" y2="364" stroke="#0f7a2a" stroke-width="1.5"/>
+    <text x="36" y="449" font-size="16" font-weight="bold" fill="#39e6ff">T2</text>
+    <line x1="80" y1="444" x2="770" y2="444" stroke="#0f7a2a" stroke-width="1.5"/>
+
+    <rect x="100" y="346" width="150" height="36" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="175" y="369" text-anchor="middle" font-size="13" fill="#d8ffd8">SELECT -&gt; 5</text>
+    <rect x="265" y="426" width="150" height="36" rx="6" fill="#062b0f" stroke="#39e6ff" stroke-width="1.5"/>
+    <text x="340" y="449" text-anchor="middle" font-size="13" fill="#d8ffd8">SELECT -&gt; 5</text>
+    <rect x="430" y="346" width="150" height="36" rx="6" fill="#062b0f" stroke="#00ff41" stroke-width="1.5"/>
+    <text x="505" y="369" text-anchor="middle" font-size="13" fill="#d8ffd8">SET 4; COMMIT</text>
+    <rect x="595" y="426" width="150" height="36" rx="6" fill="#062b0f" stroke="#ff4d4d" stroke-width="1.5"/>
+    <text x="670" y="449" text-anchor="middle" font-size="13" fill="#ff4d4d">SET 4; COMMIT</text>
+
+    <line x1="100" y1="486" x2="760" y2="486" stroke="#0f7a2a" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <text x="760" y="480" text-anchor="end" font-size="13" fill="#7fbf8f">time</text>
+
+    <text x="36" y="514" font-size="13" fill="#ff4d4d">Two sales, but stock = 4 (should be 3): T1's write is silently lost.</text>
+    <text x="36" y="540" font-size="13" fill="#00ff41">Fix: SET stock = stock - 1 | SELECT ... FOR UPDATE | version check</text>
+  </g>
+</svg>

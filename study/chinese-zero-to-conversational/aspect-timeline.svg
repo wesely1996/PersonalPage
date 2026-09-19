@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 510" role="img" aria-labelledby="t d">
+  <title id="t">What 了, 过 and 着 do on a timeline</title>
+  <desc id="d">Three timelines with a NOW marker. 了 le marks a completed action or a change of state. 过 guo marks an experience that happened at least once at some unspecified time in the past. 着 zhe marks a continuing state that surrounds the moment in focus.</desc>
+  <rect width="100%" height="100%" fill="#020a02"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0f7a2a"/></marker>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g font-family="'Courier New', 'Noto Sans CJK SC', 'Noto Sans JP', 'Microsoft YaHei', 'Yu Gothic', sans-serif">
+    <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#00ff41" filter="url(#glow)">Aspect, not tense: 了 vs 过 vs 着</text>
+
+    <!-- lane boxes -->
+    <g fill="#062b0f" stroke-width="2">
+      <rect x="30" y="52" width="150" height="124" rx="6" stroke="#00ff41"/>
+      <rect x="30" y="196" width="150" height="124" rx="6" stroke="#ffb000"/>
+      <rect x="30" y="340" width="150" height="124" rx="6" stroke="#39e6ff"/>
+    </g>
+    <g text-anchor="middle">
+      <text x="105" y="102" font-size="40" fill="#00ff41">了</text>
+      <text x="105" y="130" font-size="15" font-weight="bold" fill="#d8ffd8">le</text>
+      <text x="105" y="156" font-size="13" fill="#7fbf8f">done / changed</text>
+      <text x="105" y="246" font-size="40" fill="#ffb000">过</text>
+      <text x="105" y="274" font-size="15" font-weight="bold" fill="#d8ffd8">guo</text>
+      <text x="105" y="300" font-size="13" fill="#7fbf8f">ever done</text>
+      <text x="105" y="390" font-size="40" fill="#39e6ff">着</text>
+      <text x="105" y="418" font-size="15" font-weight="bold" fill="#d8ffd8">zhe</text>
+      <text x="105" y="444" font-size="13" fill="#7fbf8f">ongoing state</text>
+    </g>
+
+    <!-- timelines -->
+    <g stroke="#0f7a2a" stroke-width="2" marker-end="url(#arr)">
+      <line x1="205" y1="100" x2="765" y2="100"/>
+      <line x1="205" y1="244" x2="765" y2="244"/>
+      <line x1="205" y1="388" x2="765" y2="388"/>
+    </g>
+    <g stroke="#ffb000" stroke-width="2" stroke-dasharray="4 3">
+      <line x1="580" y1="64" x2="580" y2="116"/>
+      <line x1="580" y1="208" x2="580" y2="260"/>
+      <line x1="580" y1="352" x2="580" y2="404"/>
+    </g>
+    <g font-size="13" fill="#ffb000" text-anchor="middle">
+      <text x="580" y="60">NOW</text>
+      <text x="580" y="204">NOW</text>
+      <text x="580" y="348">NOW</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="210" y="90">past</text>
+      <text x="210" y="234">past</text>
+      <text x="210" y="378">past</text>
+    </g>
+
+    <!-- 了: completed block -->
+    <rect x="400" y="88" width="110" height="24" rx="6" fill="#00ff41"/>
+    <text x="455" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#020a02">eat: DONE</text>
+
+    <!-- 过: vague experience -->
+    <rect x="240" y="232" width="312" height="24" rx="6" fill="none" stroke="#ffb000" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="330" cy="244" r="7" fill="#ffb000"/>
+    <text x="350" y="249" font-size="13" fill="#ffb000">at least once, some time</text>
+
+    <!-- 着: state across now -->
+    <rect x="470" y="376" width="240" height="24" rx="6" fill="#39e6ff" opacity="0.85"/>
+    <text x="590" y="393" text-anchor="middle" font-size="13" font-weight="bold" fill="#020a02">door: OPEN (state)</text>
+
+    <!-- examples -->
+    <g font-size="16" fill="#d8ffd8">
+      <text x="205" y="142">我吃了饭。 wǒ chī le fàn.</text>
+      <text x="205" y="286">我去过中国。 wǒ qù guo Zhōngguó.</text>
+      <text x="205" y="430">门开着。 mén kāi zhe.</text>
+    </g>
+    <g font-size="13" fill="#7fbf8f">
+      <text x="205" y="164">"I ate." Change of state: 下雨了 xià yǔ le "It started raining."</text>
+      <text x="205" y="308">"I have been to China (before)." It is part of your life experience.</text>
+      <text x="205" y="452">"The door is open." 她穿着红衣服 "She is wearing red clothes."</text>
+    </g>
+    <text x="400" y="494" text-anchor="middle" font-size="13" fill="#7fbf8f">None of these is a past tense: 了 can mark a future completion (吃了饭再走 "go after eating").</text>
+  </g>
+</svg>
